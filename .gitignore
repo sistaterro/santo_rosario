@@ -4,6 +4,7 @@ node_modules/
 .DS_Store
 Thumbs.db
 .idea/workspace.xml
+.idea/vcs.xml
 .idea/caches/
 
 # Capacitor/Android generated outputs

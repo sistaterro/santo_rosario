@@ -399,6 +399,11 @@ img{display:block;max-width:100%;}
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 
+.cuentas-screen #rezar{
+  min-height:100svh;
+  padding-top:110px;
+}
+
 /* estrellas de fondo — cielo nocturno mariano */
 #rezar::before{
   content:'';position:absolute;inset:0;
@@ -663,131 +668,4 @@ img{display:block;max-width:100%;}
 
 
 /* ─────────────────────────────────────────────────────────────── */
-/* SECTION: HOME / SELECTOR DE MODO                                */
 /* ─────────────────────────────────────────────────────────────── */
-
-.home-screen{
-  min-height:100svh;
-}
-
-.home-main{
-  min-height:100svh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:clamp(22px,5vw,56px);
-  position:relative;
-}
-
-.home-frame{
-  position:absolute;
-  inset:20px;
-  border:1px solid var(--pergamino-3);
-  pointer-events:none;
-}
-
-.home-frame::before,
-.home-frame::after{
-  content:'';
-  position:absolute;
-  width:16px;
-  height:16px;
-  border:1.5px solid var(--oro);
-}
-
-.home-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
-.home-frame::after{right:-1px;bottom:-1px;border-left:none;border-top:none;}
-
-.home-content{
-  width:min(100%,620px);
-  text-align:center;
-  position:relative;
-  z-index:1;
-}
-
-.home-cross{
-  display:block;
-  margin-bottom:18px;
-  color:var(--oro);
-  font-size:2.4rem;
-}
-
-.home-kicker{
-  margin-bottom:12px;
-}
-
-.home-title{
-  margin-bottom:14px;
-}
-
-.home-today{
-  margin:0 auto 30px;
-  max-width:520px;
-}
-
-.home-actions{
-  display:grid;
-  gap:14px;
-}
-
-.home-choice{
-  display:block;
-  padding:22px 20px;
-  border:1px solid var(--pergamino-3);
-  background:rgba(237,226,192,.55);
-  text-align:left;
-  transition:background .2s,border-color .2s,transform .2s;
-}
-
-.home-choice:active{
-  transform:scale(.99);
-}
-
-.home-choice--primary{
-  background:var(--azul);
-  border-color:var(--azul);
-  color:var(--pergamino);
-}
-
-.home-choice__title{
-  display:block;
-  font-family:var(--cinzel);
-  font-size:1rem;
-  font-weight:600;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  line-height:1.25;
-}
-
-.home-choice__text{
-  display:block;
-  margin-top:8px;
-  font-size:1rem;
-  line-height:1.45;
-  color:var(--tinta-mid);
-}
-
-.home-choice--primary .home-choice__text{
-  color:rgba(245,237,214,.75);
-}
-
-.home-link{
-  display:inline-block;
-  margin-top:24px;
-  font-family:var(--cinzel);
-  font-size:.72rem;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:var(--azul);
-  border-bottom:1px solid currentColor;
-}
-
-@media(max-width:520px){
-  .home-choice{
-    padding:20px 18px;
-  }
-
-  .home-choice__title{
-    font-size:.92rem;
-  }
-}

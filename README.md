@@ -7,8 +7,8 @@ Estructura principal:
 
 ```text
 www/
-  index.html
-  cuentas.html
+  index.html       # inicio informativo
+  cuentas.html     # funcionalidad de rezo con cuentas
   css/styles.css
   js/app.js
 android/

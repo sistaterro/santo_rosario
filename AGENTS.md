@@ -45,8 +45,8 @@ Se han agregado "Run Configurations" en `.idea/runConfigurations/` para facilita
 ## Estructura Relevante
 
 ```text
-www/index.html          Portada / selector simple del MVP
-www/cuentas.html        Pantalla principal de rezo con cuentas
+www/index.html          Inicio informativo: hero, misterios y oraciones
+www/cuentas.html        Funcionalidad del rezo con cuentas sobre fondo azul
 www/css/styles.css      Estilos extraídos del HTML original
 www/js/app.js           JS extraído del HTML original
 android/                Proyecto Android generado por Capacitor
@@ -60,7 +60,7 @@ index.original.html     Copia del HTML monolítico original
 ## Decisiones Tomadas
 
 - Se mantuvo vanilla HTML/CSS/JS. No React, no Kotlin, no Flutter.
-- Se separó el HTML monolítico en `www/cuentas.html`, `www/css/styles.css` y `www/js/app.js`; `www/index.html` ahora es una portada simple.
+- Se separó la paja del trigo: `www/index.html` contiene información/introducción, y `www/cuentas.html` contiene la funcionalidad del rezo con cuentas. El usuario quiere navegar entre HTMLs, no entrar a la funcionalidad por scroll dentro del inicio.
 - Se corrigió mojibake visible en textos españoles del HTML/JS (`MarÃ­a`, `EspÃ­ritu`, etc.).
 - Se eliminó la dependencia a Google Fonts para favorecer funcionamiento offline. Ahora usa fuentes serif del sistema.
 - Se usó `capacitor.config.json` en vez de `capacitor.config.ts` para evitar instalar TypeScript solo para configuración.

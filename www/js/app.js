@@ -48,7 +48,8 @@ function switchMisterio(btn, panelId) {
   document.querySelectorAll('.misterio-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   btn.setAttribute('aria-selected', 'true');
-  document.getElementById(panelId).classList.add('active');
+  const panel = document.getElementById(panelId);
+  if (panel) panel.classList.add('active');
   seleccionarMisteriosPorPanel(panelId, true);
 }
 
@@ -230,6 +231,7 @@ let aveCount   = 0;
 // ── Renderizar cuentas SVG ────────────────────────────────────
 function renderCuentas() {
   const g = document.getElementById('cuentas-group');
+  if (!g) return;
   g.innerHTML = '';
 
   // Distribuir 59 cuentas en círculo (radio 110, centro 100,150)
@@ -281,6 +283,7 @@ function actualizarUI() {
 
   // Fade out → cambiar → fade in
   const textoEl = document.getElementById('texto-oracion');
+  if (!textoEl) return;
   textoEl.style.opacity = '0';
 
   setTimeout(() => {
@@ -292,29 +295,39 @@ function actualizarUI() {
 
   // Misterio label
   const mLabel = document.getElementById('label-misterio');
-  mLabel.textContent = paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : '—';
+  if (mLabel) mLabel.textContent = paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : '—';
 
   // Cuenta label
-  document.getElementById('cuenta-label').textContent = `Cuenta ${pasoActual} / ${SECUENCIA.length - 1}`;
+  const cuentaLabel = document.getElementById('cuenta-label');
+  if (cuentaLabel) cuentaLabel.textContent = `Cuenta ${pasoActual} / ${SECUENCIA.length - 1}`;
 
   // Contador Ave Marías
-  document.getElementById('num-cuenta').textContent = aveCount;
+  const numCuenta = document.getElementById('num-cuenta');
+  if (numCuenta) numCuenta.textContent = aveCount;
 
   // Barra de progreso
   const pct = Math.round((pasoActual / (SECUENCIA.length - 1)) * 100);
-  document.getElementById('prog-fill').style.width = pct + '%';
-  document.getElementById('prog-pct').textContent  = pct + '%';
-  document.getElementById('prog-label').textContent =
-    paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : (pasoActual === 0 ? 'Preparación' : 'Cierre');
+  const progFill = document.getElementById('prog-fill');
+  const progPct = document.getElementById('prog-pct');
+  const progLabel = document.getElementById('prog-label');
+  if (progFill) progFill.style.width = pct + '%';
+  if (progPct) progPct.textContent = pct + '%';
+  if (progLabel) {
+    progLabel.textContent = paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : (pasoActual === 0 ? 'Preparación' : 'Cierre');
+  }
 
   // Cuentas SVG
   renderCuentas();
 
   // Completado
   const esUltimo = pasoActual >= SECUENCIA.length - 1;
-  document.getElementById('rosario-completo').classList.toggle('visible', esUltimo);
-  document.getElementById('btn-avanzar').disabled = esUltimo;
-  document.getElementById('btn-avanzar').style.opacity = esUltimo ? '.4' : '1';
+  const completo = document.getElementById('rosario-completo');
+  const avanzarBtn = document.getElementById('btn-avanzar');
+  if (completo) completo.classList.toggle('visible', esUltimo);
+  if (avanzarBtn) {
+    avanzarBtn.disabled = esUltimo;
+    avanzarBtn.style.opacity = esUltimo ? '.4' : '1';
+  }
 }
 
 // ── Avanzar un paso ───────────────────────────────────────────
@@ -336,8 +349,10 @@ function reiniciar() {
 // Inicializar al cargar
 aplicarMisteriosDelDia();
 SECUENCIA = buildSecuencia();
-renderCuentas();
-actualizarUI();
+if (document.getElementById('cuentas-group')) {
+  renderCuentas();
+  actualizarUI();
+}
 
 
 /* ─────────────────────────────────────────────────────────────── */
@@ -373,7 +388,9 @@ async function permitirBloqueoPantalla() {
   }
 }
 
-mantenerPantallaActiva();
+if (document.getElementById('cuentas-group')) {
+  mantenerPantallaActiva();
+}
 
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible') {
