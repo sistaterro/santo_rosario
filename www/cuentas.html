@@ -24,59 +24,14 @@
 <section id="rezar">
   <div class="shell">
 
-    <div style="text-align:center;margin-bottom:40px;position:relative;z-index:1;">
-      <span class="t-sub" style="color:rgba(245,237,214,.4);display:block;margin-bottom:10px;">Guía interactiva</span>
-      <h1 class="t-heading" style="color:var(--pergamino);">Rezar con cuentas</h1>
-      <div class="divider-oro" style="max-width:320px;margin:16px auto;">
-        <span class="divider-oro__symbol" style="color:var(--oro);">✦</span>
-      </div>
-    </div>
-
-    <div class="rezar-inner">
-
-      <div>
-        <div class="oracion-panel">
-          <span class="t-rubrica oracion-panel__rubrica" id="rubrica-oracion">Apertura del Rosario</span>
-          <div class="oracion-panel__titulo" id="titulo-oracion">Señal de la Cruz</div>
-          <div class="oracion-panel__texto" id="texto-oracion">
-            Por la señal de la Santa Cruz, de nuestros enemigos, líbranos, Señor, Dios nuestro.<br><br>
-            <em>En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.</em>
-          </div>
-          <div class="oracion-panel__footer">
-            <div class="oracion-panel__misterio">
-              <span>Misterio en curso</span>
-              <strong id="label-misterio">—</strong>
-            </div>
-            <span class="t-rubrica" id="cuenta-label" style="color:rgba(245,237,214,.35);">Cuenta 0 / 59</span>
-          </div>
-        </div>
-
-        <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
-          <button class="btn-avanzar" id="btn-avanzar" onclick="avanzar()">
-            Siguiente oración →
-          </button>
-          <button class="btn-reiniciar" onclick="reiniciar()">
-            ↺ Reiniciar
-          </button>
-        </div>
-
-        <div class="rosario-completo" id="rosario-completo" style="margin-top:20px;">
-          <span class="rosario-completo__cruz">✞</span>
-          <div class="rosario-completo__titulo">Rosario completado</div>
-          <p class="t-verso" style="color:rgba(245,237,214,.6);">
-            "Ruega por nosotros, Santa Madre de Dios,<br>
-            para que seamos dignos de las promesas de Cristo."
-          </p>
-        </div>
-      </div>
-
-      <div class="cuentas-panel">
+    <div class="cuentas-panel cuentas-panel--principal">
         <div class="contador-display">
           <span class="contador-display__num" id="num-cuenta">0</span>
           <span class="contador-display__label">Ave Marías rezadas</span>
+          <span class="contador-display__oracion" id="titulo-contador">Señal de la Cruz</span>
         </div>
 
-        <div class="progreso-misterio" style="max-width:320px;width:100%;">
+        <div class="progreso-misterio" style="max-width:360px;width:100%;">
           <div class="progreso-misterio__label">
             <span id="prog-label">Preparación</span>
             <span id="prog-pct">0%</span>
@@ -86,37 +41,23 @@
           </div>
         </div>
 
-        <svg id="rosario-svg" viewBox="-10 -10 220 360" xmlns="http://www.w3.org/2000/svg"
+        <svg id="rosario-svg" viewBox="-12 -12 224 280" xmlns="http://www.w3.org/2000/svg"
              aria-label="Cuentas del rosario" role="img">
-          <g transform="translate(100,320)">
-            <line x1="0" y1="-22" x2="0" y2="10" stroke="var(--oro)" stroke-width="1.5" opacity=".5"/>
-            <line x1="-8" y1="-12" x2="8" y2="-12" stroke="var(--oro)" stroke-width="1.5" opacity=".5"/>
-            <text y="-30" text-anchor="middle" font-family="Cinzel" font-size="7" fill="rgba(245,237,214,.3)" letter-spacing="1">INRI</text>
+          <ellipse cx="100" cy="132" rx="101" ry="116" fill="none" stroke="rgba(255,211,91,.38)" stroke-width="1.2" stroke-dasharray="3 5"/>
+          <g id="btn-centro-avanzar" class="centro-avanzar" role="button" aria-label="Siguiente oración" tabindex="0">
+            <circle cx="100" cy="132" r="24" fill="rgba(6,18,38,.95)" stroke="rgba(255,211,91,.72)" stroke-width="1.35"/>
+            <text x="100" y="126" text-anchor="middle" font-size="21" fill="rgba(255,211,91,.96)">♱</text>
           </g>
-
-          <circle cx="100" cy="150" r="110" fill="none" stroke="rgba(184,144,26,.15)" stroke-width="1" stroke-dasharray="3 5"/>
-          <circle cx="100" cy="150" r="22" fill="rgba(13,31,60,.8)" stroke="rgba(184,144,26,.3)" stroke-width="1"/>
-          <text x="100" y="145" text-anchor="middle" font-size="18" fill="rgba(184,144,26,.6)">♱</text>
-          <text x="100" y="162" text-anchor="middle" font-family="Cinzel" font-size="5.5" fill="rgba(245,237,214,.3)" letter-spacing=".5">MARIA</text>
+          <text x="100" y="146" text-anchor="middle" font-family="Cinzel" font-size="7.8" fill="rgba(255,248,225,.94)" letter-spacing=".25">MARIA</text>
+          <text id="centro-misterio" x="100" y="169" text-anchor="middle" font-family="Cinzel" font-size="7" fill="rgba(255,248,225,.92)" letter-spacing=".15">PREPARACION</text>
 
           <g id="cuentas-group"></g>
         </svg>
 
-        <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;">
-          <span style="display:flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,237,214,.3);">
-            <svg width="10" height="10"><circle cx="5" cy="5" r="4" fill="rgba(245,237,214,.15)" stroke="rgba(245,237,214,.3)" stroke-width="1"/></svg>
-            Pendiente
-          </span>
-          <span style="display:flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,237,214,.3);">
-            <svg width="10" height="10"><circle cx="5" cy="5" r="4" fill="rgba(184,144,26,.8)"/></svg>
-            Rezada
-          </span>
-          <span style="display:flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,237,214,.3);">
-            <svg width="10" height="10"><circle cx="5" cy="5" r="5" fill="rgba(245,237,214,.9)"/></svg>
-            Actual
-          </span>
+        <div class="rosario-completo" id="rosario-completo">
+          <span class="rosario-completo__cruz">✞</span>
+          <div class="rosario-completo__titulo">Rosario completado</div>
         </div>
-      </div>
     </div>
   </div>
 </section>

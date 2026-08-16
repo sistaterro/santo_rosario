@@ -234,29 +234,35 @@ function renderCuentas() {
   if (!g) return;
   g.innerHTML = '';
 
-  // Distribuir 59 cuentas en círculo (radio 110, centro 100,150)
-  // + 1 cuenta de inicio
-  const TOTAL = 59;
-  const cx = 100, cy = 150, r = 110;
+  const cuentasVisibles = SECUENCIA
+    .map((paso, index) => ({ paso, index }))
+    .filter(({ paso }) => paso.ave || paso.o.titulo === 'Padre Nuestro');
+  const TOTAL = cuentasVisibles.length;
+  const cuentaActualIndex = cuentasVisibles.reduce((actual, cuenta) => {
+    return cuenta.index <= pasoActual ? cuenta.index : actual;
+  }, cuentasVisibles[0]?.index ?? 0);
+  const cx = 100, cy = 132, rx = 101, ry = 116;
 
   for (let i = 0; i < TOTAL; i++) {
     const angle = (i / TOTAL) * 2 * Math.PI - Math.PI / 2;
-    const x = cx + r * Math.cos(angle);
-    const y = cy + r * Math.sin(angle);
+    const { paso, index } = cuentasVisibles[i];
+    const esPadre = !paso.ave;
+    const beadRx = esPadre ? rx + 5 : rx;
+    const beadRy = esPadre ? ry + 5 : ry;
+    const x = cx + beadRx * Math.cos(angle);
+    const y = cy + beadRy * Math.sin(angle);
 
-    // Determinar tipo de cuenta: cada 11 pasos = Padre Nuestro (grande)
-    // Las cuentas del padre nuestro van en posiciones 0,11,22,33,44,55 (aprox)
-    const esPadre = [0, 11, 22, 33, 44, 55].includes(i);
-    const radio   = esPadre ? 8 : 5;
+    const esActual = index === cuentaActualIndex;
+    const radio = esActual ? 6.9 : (esPadre ? 5.35 : 3.65);
 
     // Estado: rezada, actual, pendiente
     let fill, stroke;
-    if (i < pasoActual && pasoActual > 0) {
-      fill = 'rgba(184,144,26,.8)'; stroke = 'rgba(212,168,32,.9)';
-    } else if (i === pasoActual) {
-      fill = 'rgba(245,237,214,.9)'; stroke = 'rgba(245,237,214,1)';
+    if (index < pasoActual && pasoActual > 0) {
+      fill = 'rgba(245,182,42,.82)'; stroke = 'rgba(255,218,96,.92)';
+    } else if (esActual) {
+      fill = 'rgba(255,248,225,.98)'; stroke = 'rgba(255,255,255,1)';
     } else {
-      fill = 'rgba(245,237,214,.1)'; stroke = 'rgba(245,237,214,.25)';
+      fill = 'rgba(255,248,225,.18)'; stroke = 'rgba(255,248,225,.48)';
     }
 
     const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
@@ -265,15 +271,71 @@ function renderCuentas() {
     circle.setAttribute('r',  radio);
     circle.setAttribute('fill', fill);
     circle.setAttribute('stroke', stroke);
-    circle.setAttribute('stroke-width', esPadre ? '1.5' : '1');
-    if (i === pasoActual && esPadre) {
-      circle.style.filter = 'drop-shadow(0 0 6px rgba(245,237,214,.8))';
-    } else if (i === pasoActual) {
-      circle.style.filter = 'drop-shadow(0 0 4px rgba(245,237,214,.6))';
+    circle.setAttribute('stroke-width', esActual ? '1.75' : (esPadre ? '1.25' : '.9'));
+    if (esActual && esPadre) {
+      circle.style.filter = 'drop-shadow(0 0 6px rgba(255,248,225,.85))';
+    } else if (esActual) {
+      circle.style.filter = 'drop-shadow(0 0 5px rgba(255,248,225,.7))';
     }
+
+    circle.setAttribute('role', 'button');
+    circle.setAttribute('tabindex', '0');
+    circle.setAttribute('aria-label', `Ir a ${paso.o.titulo}`);
+    circle.addEventListener('click', () => irAPaso(index));
+    circle.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        irAPaso(index);
+      }
+    });
 
     g.appendChild(circle);
   }
+}
+
+function contarAvesHasta(pasoIdx) {
+  return SECUENCIA.slice(0, pasoIdx + 1).filter(paso => paso.ave).length;
+}
+
+function lineasCentroMisterio(texto) {
+  if (!texto) return ['PREPARACION'];
+
+  const limpio = texto.replace(/^La |^El |^Las |^Los /i, '').toUpperCase();
+  const palabras = limpio.split(/\s+/).filter(Boolean);
+  const lineas = [];
+  const maxCaracteres = 15;
+
+  palabras.forEach((palabra) => {
+    if (lineas.length === 0) {
+      lineas.push(palabra);
+      return;
+    }
+
+    const actual = lineas[lineas.length - 1] || '';
+    const candidata = actual ? `${actual} ${palabra}` : palabra;
+
+    if (candidata.length <= maxCaracteres) {
+      lineas[lineas.length - 1] = candidata;
+    } else {
+      lineas.push(palabra);
+    }
+  });
+
+  return lineas.length ? lineas : ['PREPARACION'];
+}
+
+function renderCentroMisterio(elemento, texto) {
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const lineas = lineasCentroMisterio(texto);
+
+  elemento.textContent = '';
+  lineas.forEach((linea, index) => {
+    const tspan = document.createElementNS(svgNS, 'tspan');
+    tspan.setAttribute('x', '100');
+    tspan.setAttribute('dy', index === 0 ? '0' : '9');
+    tspan.textContent = linea;
+    elemento.appendChild(tspan);
+  });
 }
 
 // ── Actualizar UI de oración ──────────────────────────────────
@@ -283,19 +345,25 @@ function actualizarUI() {
 
   // Fade out → cambiar → fade in
   const textoEl = document.getElementById('texto-oracion');
-  if (!textoEl) return;
-  textoEl.style.opacity = '0';
+  if (textoEl) {
+    textoEl.style.opacity = '0';
 
-  setTimeout(() => {
-    document.getElementById('rubrica-oracion').textContent = paso.o.rubrica + (paso.label ? ` · ${paso.label}` : '');
-    document.getElementById('titulo-oracion').textContent  = paso.o.titulo;
-    textoEl.innerHTML = paso.o.texto.replace(/\n/g, '<br>');
-    textoEl.style.opacity = '1';
-  }, 200);
+    setTimeout(() => {
+      document.getElementById('rubrica-oracion').textContent = paso.o.rubrica + (paso.label ? ` · ${paso.label}` : '');
+      document.getElementById('titulo-oracion').textContent  = paso.o.titulo;
+      textoEl.innerHTML = paso.o.texto.replace(/\n/g, '<br>');
+      textoEl.style.opacity = '1';
+    }, 200);
+  }
 
   // Misterio label
   const mLabel = document.getElementById('label-misterio');
   if (mLabel) mLabel.textContent = paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : '—';
+
+  const centroMisterio = document.getElementById('centro-misterio');
+  if (centroMisterio) {
+    renderCentroMisterio(centroMisterio, paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : 'PREPARACION');
+  }
 
   // Cuenta label
   const cuentaLabel = document.getElementById('cuenta-label');
@@ -304,6 +372,11 @@ function actualizarUI() {
   // Contador Ave Marías
   const numCuenta = document.getElementById('num-cuenta');
   if (numCuenta) numCuenta.textContent = aveCount;
+
+  const tituloContador = document.getElementById('titulo-contador');
+  if (tituloContador) {
+    tituloContador.textContent = paso.o.titulo + (paso.label ? ` · ${paso.label}` : '');
+  }
 
   // Barra de progreso
   const pct = Math.round((pasoActual / (SECUENCIA.length - 1)) * 100);
@@ -334,7 +407,13 @@ function actualizarUI() {
 function avanzar() {
   if (pasoActual >= SECUENCIA.length - 1) return;
   pasoActual++;
-  if (SECUENCIA[pasoActual].ave) aveCount++;
+  aveCount = contarAvesHasta(pasoActual);
+  actualizarUI();
+}
+
+function irAPaso(idx) {
+  pasoActual = Math.max(0, Math.min(idx, SECUENCIA.length - 1));
+  aveCount = contarAvesHasta(pasoActual);
   actualizarUI();
 }
 
@@ -342,7 +421,8 @@ function avanzar() {
 function reiniciar() {
   pasoActual = 0;
   aveCount   = 0;
-  document.getElementById('rosario-completo').classList.remove('visible');
+  const completo = document.getElementById('rosario-completo');
+  if (completo) completo.classList.remove('visible');
   actualizarUI();
 }
 
@@ -352,6 +432,17 @@ SECUENCIA = buildSecuencia();
 if (document.getElementById('cuentas-group')) {
   renderCuentas();
   actualizarUI();
+}
+
+const centroAvanzar = document.getElementById('btn-centro-avanzar');
+if (centroAvanzar) {
+  centroAvanzar.addEventListener('click', avanzar);
+  centroAvanzar.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      avanzar();
+    }
+  });
 }
 
 
