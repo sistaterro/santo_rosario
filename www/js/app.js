@@ -228,6 +228,82 @@ let SECUENCIA = buildSecuencia();
 let pasoActual = 0;
 let aveCount   = 0;
 
+const PROGRESO_KEY = 'santoRosario.progreso.v1';
+
+function fechaLocalISO(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function leerProgresoGuardado() {
+  try {
+    return JSON.parse(localStorage.getItem(PROGRESO_KEY));
+  } catch {
+    return null;
+  }
+}
+
+function guardarProgreso() {
+  try {
+    localStorage.setItem(PROGRESO_KEY, JSON.stringify({
+      fecha: fechaLocalISO(),
+      tipo: misterioActualTipo,
+      pasoActual,
+      aveCount,
+    }));
+  } catch {
+    // Si el almacenamiento no está disponible, la app sigue funcionando sin persistencia.
+  }
+}
+
+function borrarProgresoGuardado() {
+  try {
+    localStorage.removeItem(PROGRESO_KEY);
+  } catch {
+    // No hay acción necesaria si el almacenamiento falla.
+  }
+}
+
+function restaurarProgresoDelDia() {
+  const guardado = leerProgresoGuardado();
+  const hoy = fechaLocalISO();
+
+  if (!guardado) return;
+
+  if (guardado.fecha !== hoy || guardado.tipo !== misterioActualTipo) {
+    borrarProgresoGuardado();
+    pasoActual = 0;
+    aveCount = 0;
+    return;
+  }
+
+  pasoActual = Math.max(0, Math.min(Number(guardado.pasoActual) || 0, SECUENCIA.length - 1));
+  aveCount = contarAvesHasta(pasoActual);
+}
+
+function msHastaMedianoche() {
+  const ahora = new Date();
+  const medianoche = new Date(ahora);
+  medianoche.setHours(24, 0, 0, 0);
+  return medianoche.getTime() - ahora.getTime();
+}
+
+function resetearSiCambioElDia() {
+  const guardado = leerProgresoGuardado();
+  if (!guardado || guardado.fecha === fechaLocalISO()) return;
+
+  resetearRosarioDelDia({ aplicarDia: true, guardar: false });
+}
+
+function programarResetDeMedianoche() {
+  window.setTimeout(() => {
+    resetearSiCambioElDia();
+    programarResetDeMedianoche();
+  }, msHastaMedianoche() + 1000);
+}
+
 // ── Renderizar cuentas SVG ────────────────────────────────────
 function renderCuentas() {
   const g = document.getElementById('cuentas-group');
@@ -409,30 +485,54 @@ function avanzar() {
   pasoActual++;
   aveCount = contarAvesHasta(pasoActual);
   actualizarUI();
+  guardarProgreso();
 }
 
 function irAPaso(idx) {
   pasoActual = Math.max(0, Math.min(idx, SECUENCIA.length - 1));
   aveCount = contarAvesHasta(pasoActual);
   actualizarUI();
+  guardarProgreso();
+}
+
+function resetearRosarioDelDia({ aplicarDia = false, guardar = true } = {}) {
+  if (aplicarDia) {
+    borrarProgresoGuardado();
+    aplicarMisteriosDelDia();
+    SECUENCIA = buildSecuencia();
+  }
+
+  pasoActual = 0;
+  aveCount = 0;
+
+  const completo = document.getElementById('rosario-completo');
+  if (completo) completo.classList.remove('visible');
+
+  actualizarUI();
+
+  if (guardar) {
+    guardarProgreso();
+  }
 }
 
 // ── Reiniciar ─────────────────────────────────────────────────
 function reiniciar() {
-  pasoActual = 0;
-  aveCount   = 0;
-  const completo = document.getElementById('rosario-completo');
-  if (completo) completo.classList.remove('visible');
-  actualizarUI();
+  resetearRosarioDelDia();
 }
 
 // Inicializar al cargar
 aplicarMisteriosDelDia();
 SECUENCIA = buildSecuencia();
+restaurarProgresoDelDia();
 if (document.getElementById('cuentas-group')) {
   renderCuentas();
   actualizarUI();
 }
+programarResetDeMedianoche();
+
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) resetearSiCambioElDia();
+});
 
 const centroAvanzar = document.getElementById('btn-centro-avanzar');
 if (centroAvanzar) {
@@ -443,6 +543,11 @@ if (centroAvanzar) {
       avanzar();
     }
   });
+}
+
+const btnReiniciarRosario = document.getElementById('btn-reiniciar-rosario');
+if (btnReiniciarRosario) {
+  btnReiniciarRosario.addEventListener('click', reiniciar);
 }
 
 

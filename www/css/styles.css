@@ -33,9 +33,9 @@ body{
 }
 
 body.cuentas-screen{
-  height:100svh;
   min-height:100svh;
-  overflow:hidden;
+  overflow-x:hidden;
+  overflow-y:auto;
 }
 
 /* vignette perimetral — oscurece los bordes como un libro antiguo */
@@ -420,10 +420,9 @@ img{display:block;max-width:100%;}
 }
 
 .cuentas-screen #rezar{
-  height:100svh;
-  min-height:0;
+  min-height:100svh;
   padding-top:72px;
-  padding-bottom:12px;
+  padding-bottom:56px;
   display:flex;
   align-items:stretch;
   background:
@@ -506,6 +505,7 @@ img{display:block;max-width:100%;}
 .cuentas-screen #rezar > .shell{
   width:100%;
   display:flex;
+  flex-direction:column;
   align-items:center;
   justify-content:center;
   padding-inline:clamp(14px,4vw,28px);
@@ -521,8 +521,7 @@ img{display:block;max-width:100%;}
 
 .cuentas-screen .cuentas-panel--principal{
   width:100%;
-  height:calc(100svh - 80px);
-  max-height:calc(100svh - 80px);
+  min-height:calc(100svh - 80px);
   justify-content:center;
 }
 
@@ -698,6 +697,33 @@ img{display:block;max-width:100%;}
 
 .cuentas-panel--principal .rosario-completo{
   width:100%;
+}
+
+.cuentas-actions{
+  width:100%;
+  max-width:430px;
+  margin:18px auto 0;
+  padding:22px 0 6px;
+  position:relative;
+  z-index:1;
+  display:flex;
+  justify-content:center;
+}
+
+.cuentas-reset{
+  width:min(100%, 330px);
+  min-height:52px;
+  border-color:rgba(255,248,225,.32);
+  color:#fff8e1;
+  background:rgba(255,248,225,.07);
+  font-size:.82rem;
+  letter-spacing:.08em;
+}
+
+.cuentas-reset:hover{
+  border-color:rgba(255,211,91,.7);
+  color:#fffef7;
+  background:rgba(255,211,91,.12);
 }
 
 
