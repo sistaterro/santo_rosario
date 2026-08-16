@@ -25,6 +25,12 @@
   <div class="shell">
 
     <div class="cuentas-panel cuentas-panel--principal">
+        <div class="guia-oracion" id="guia-oracion" hidden>
+          <span class="guia-oracion__rubrica" id="guia-rubrica">Apertura</span>
+          <div class="guia-oracion__titulo" id="guia-titulo">Señal de la Santa Cruz</div>
+          <div class="guia-oracion__texto" id="guia-texto"></div>
+        </div>
+
         <div class="contador-display">
           <span class="contador-display__num" id="num-cuenta">0</span>
           <span class="contador-display__label">Ave Marías rezadas</span>
@@ -64,6 +70,11 @@
       <button class="btn-reiniciar cuentas-reset" id="btn-reiniciar-rosario" type="button">
         Empezar de nuevo
       </button>
+
+      <label class="cuentas-toggle">
+        <input type="checkbox" id="toggle-guia-oracion">
+        <span>Mostrar guía de oración</span>
+      </label>
     </div>
   </div>
 </section>

@@ -229,6 +229,9 @@ let pasoActual = 0;
 let aveCount   = 0;
 
 const PROGRESO_KEY = 'santoRosario.progreso.v1';
+const GUIA_ORACION_KEY = 'santoRosario.guiaOracion.v1';
+
+let guiaOracionActiva = false;
 
 function fechaLocalISO(date = new Date()) {
   const year = date.getFullYear();
@@ -263,6 +266,22 @@ function borrarProgresoGuardado() {
     localStorage.removeItem(PROGRESO_KEY);
   } catch {
     // No hay acción necesaria si el almacenamiento falla.
+  }
+}
+
+function leerPreferenciaGuiaOracion() {
+  try {
+    return localStorage.getItem(GUIA_ORACION_KEY) === 'true';
+  } catch {
+    return false;
+  }
+}
+
+function guardarPreferenciaGuiaOracion() {
+  try {
+    localStorage.setItem(GUIA_ORACION_KEY, guiaOracionActiva ? 'true' : 'false');
+  } catch {
+    // La guía es opcional; si no se puede guardar, sólo se pierde la preferencia.
   }
 }
 
@@ -414,10 +433,31 @@ function renderCentroMisterio(elemento, texto) {
   });
 }
 
+function actualizarGuiaOracion(paso) {
+  const panel = document.getElementById('guia-oracion');
+  const rubrica = document.getElementById('guia-rubrica');
+  const titulo = document.getElementById('guia-titulo');
+  const texto = document.getElementById('guia-texto');
+  const toggle = document.getElementById('toggle-guia-oracion');
+
+  if (toggle) toggle.checked = guiaOracionActiva;
+  if (!panel) return;
+
+  panel.hidden = !guiaOracionActiva;
+  if (!guiaOracionActiva || !paso) return;
+
+  if (rubrica) rubrica.textContent = paso.o.rubrica + (paso.label ? ` · ${paso.label}` : '');
+  if (titulo) titulo.textContent = paso.o.titulo;
+  if (texto) texto.innerHTML = paso.o.texto.replace(/\n/g, '<br>');
+  panel.scrollTop = 0;
+}
+
 // ── Actualizar UI de oración ──────────────────────────────────
 function actualizarUI() {
   const paso = SECUENCIA[pasoActual];
   if (!paso) return;
+
+  actualizarGuiaOracion(paso);
 
   // Fade out → cambiar → fade in
   const textoEl = document.getElementById('texto-oracion');
@@ -524,6 +564,7 @@ function reiniciar() {
 aplicarMisteriosDelDia();
 SECUENCIA = buildSecuencia();
 restaurarProgresoDelDia();
+guiaOracionActiva = leerPreferenciaGuiaOracion();
 if (document.getElementById('cuentas-group')) {
   renderCuentas();
   actualizarUI();
@@ -548,6 +589,16 @@ if (centroAvanzar) {
 const btnReiniciarRosario = document.getElementById('btn-reiniciar-rosario');
 if (btnReiniciarRosario) {
   btnReiniciarRosario.addEventListener('click', reiniciar);
+}
+
+const toggleGuiaOracion = document.getElementById('toggle-guia-oracion');
+if (toggleGuiaOracion) {
+  toggleGuiaOracion.checked = guiaOracionActiva;
+  toggleGuiaOracion.addEventListener('change', () => {
+    guiaOracionActiva = toggleGuiaOracion.checked;
+    guardarPreferenciaGuiaOracion();
+    actualizarUI();
+  });
 }
 
 
