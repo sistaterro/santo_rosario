@@ -428,6 +428,13 @@ img{display:block;max-width:100%;}
   background:
     radial-gradient(circle at 50% 44%, rgba(32,79,130,.5) 0%, rgba(7,23,48,0) 56%),
     linear-gradient(180deg, #071a36 0%, #061224 100%);
+  transition:background .7s ease;
+}
+
+.cuentas-screen.rosario-finalizado #rezar{
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255,211,91,.34) 0%, rgba(56,94,91,.2) 38%, rgba(8,40,45,0) 68%),
+    linear-gradient(180deg, #12392f 0%, #071f2b 58%, #06131d 100%);
 }
 
 /* estrellas de fondo — cielo nocturno mariano */
@@ -445,6 +452,43 @@ img{display:block;max-width:100%;}
     radial-gradient(1px 1px at 50% 90%,rgba(255,255,255,.2) 0%,transparent 100%),
     radial-gradient(1px 1px at 33% 65%,rgba(255,255,255,.35) 0%,transparent 100%);
   pointer-events:none;
+}
+
+.rosary-burst{
+  position:absolute;
+  left:50%;
+  top:52%;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  pointer-events:none;
+  opacity:0;
+  z-index:2;
+  transform:translate(-50%,-50%) scale(.2);
+}
+
+.rosary-burst.active{
+  animation:rosaryBurst 1150ms ease-out both;
+}
+
+@keyframes rosaryBurst{
+  0%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.2);
+    box-shadow:
+      0 0 0 0 rgba(255,248,225,.95),
+      0 0 0 0 rgba(255,211,91,.8);
+  }
+  18%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+    transform:translate(-50%,-50%) scale(22);
+    box-shadow:
+      0 0 0 2px rgba(255,248,225,0),
+      0 0 0 14px rgba(255,211,91,0);
+  }
 }
 
 .rezar-inner{

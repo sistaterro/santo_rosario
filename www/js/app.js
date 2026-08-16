@@ -227,6 +227,8 @@ let SECUENCIA = buildSecuencia();
 
 let pasoActual = 0;
 let aveCount   = 0;
+let uiInicializada = false;
+let celebracionDisparada = false;
 
 const PROGRESO_KEY = 'santoRosario.progreso.v1';
 const GUIA_ORACION_KEY = 'santoRosario.guiaOracion.v1';
@@ -336,6 +338,7 @@ function renderCuentas() {
   const cuentaActualIndex = cuentasVisibles.reduce((actual, cuenta) => {
     return cuenta.index <= pasoActual ? cuenta.index : actual;
   }, cuentasVisibles[0]?.index ?? 0);
+  const rosarioTerminado = pasoActual >= SECUENCIA.length - 1;
   const cx = 100, cy = 132, rx = 101, ry = 116;
 
   for (let i = 0; i < TOTAL; i++) {
@@ -347,7 +350,7 @@ function renderCuentas() {
     const x = cx + beadRx * Math.cos(angle);
     const y = cy + beadRy * Math.sin(angle);
 
-    const esActual = index === cuentaActualIndex;
+    const esActual = !rosarioTerminado && index === cuentaActualIndex;
     const radio = esActual ? 6.9 : (esPadre ? 5.35 : 3.65);
 
     // Estado: rezada, actual, pendiente
@@ -388,11 +391,21 @@ function renderCuentas() {
   }
 }
 
+function dispararCelebracionFinal() {
+  const burst = document.getElementById('rosary-burst');
+  if (!burst) return;
+
+  burst.classList.remove('active');
+  void burst.offsetWidth;
+  burst.classList.add('active');
+}
+
 function contarAvesHasta(pasoIdx) {
   return SECUENCIA.slice(0, pasoIdx + 1).filter(paso => paso.ave).length;
 }
 
 function lineasCentroMisterio(texto) {
+  if (texto === '') return [];
   if (!texto) return ['PREPARACION'];
 
   const limpio = texto.replace(/^La |^El |^Las |^Los /i, '').toUpperCase();
@@ -478,7 +491,8 @@ function actualizarUI() {
 
   const centroMisterio = document.getElementById('centro-misterio');
   if (centroMisterio) {
-    renderCentroMisterio(centroMisterio, paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : 'PREPARACION');
+    const esUltimo = pasoActual >= SECUENCIA.length - 1;
+    renderCentroMisterio(centroMisterio, esUltimo ? '' : (paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : 'PREPARACION'));
   }
 
   // Cuenta label
@@ -512,11 +526,23 @@ function actualizarUI() {
   const esUltimo = pasoActual >= SECUENCIA.length - 1;
   const completo = document.getElementById('rosario-completo');
   const avanzarBtn = document.getElementById('btn-avanzar');
+  document.body.classList.toggle('rosario-finalizado', esUltimo);
   if (completo) completo.classList.toggle('visible', esUltimo);
   if (avanzarBtn) {
     avanzarBtn.disabled = esUltimo;
     avanzarBtn.style.opacity = esUltimo ? '.4' : '1';
   }
+
+  if (esUltimo && !uiInicializada) {
+    celebracionDisparada = true;
+  } else if (esUltimo && !celebracionDisparada) {
+    dispararCelebracionFinal();
+    celebracionDisparada = true;
+  } else if (!esUltimo) {
+    celebracionDisparada = false;
+  }
+
+  uiInicializada = true;
 }
 
 // ── Avanzar un paso ───────────────────────────────────────────
@@ -544,6 +570,7 @@ function resetearRosarioDelDia({ aplicarDia = false, guardar = true } = {}) {
 
   pasoActual = 0;
   aveCount = 0;
+  celebracionDisparada = false;
 
   const completo = document.getElementById('rosario-completo');
   if (completo) completo.classList.remove('visible');
