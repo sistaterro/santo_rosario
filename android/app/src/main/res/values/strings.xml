@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Santo Rosario</string>
+    <string name="title_activity_main">Santo Rosario</string>
+    <string name="package_name">com.santorosario.app</string>
+    <string name="custom_url_scheme">com.santorosario.app</string>
+</resources>

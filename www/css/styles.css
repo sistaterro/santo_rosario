@@ -1,0 +1,793 @@
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: TOKENS & RESET                                        */
+/* ─────────────────────────────────────────────────────────────── */
+
+:root{
+  --pergamino:   #F5EDD6;   /* fondo — pergamino viejo          */
+  --pergamino-2: #EDE2C0;   /* superficie levantada             */
+  --pergamino-3: #DDD3AA;   /* borde / divisor                  */
+  --tinta:       #1A1610;   /* negro cálido — tinta de pluma    */
+  --tinta-mid:   #3D3628;   /* texto secundario                 */
+  --tinta-dim:   #7A6F58;   /* texto terciario                  */
+  --azul:        #0D1F3C;   /* azul noche mariano               */
+  --azul-mid:    #1A3A6B;   /* azul medio                       */
+  --oro:         #B8901A;   /* oro quemado                      */
+  --oro-claro:   #D4A820;   /* oro brillante para hover         */
+  --rojo:        #8B3A2A;   /* bermellón oscuro                 */
+
+  --fell:   Georgia, 'Times New Roman', serif;
+  --cinzel: Cambria, Georgia, serif;
+  --decor:  Georgia, 'Times New Roman', serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--pergamino);
+  color:var(--tinta);
+  font-family:var(--fell);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* vignette perimetral — oscurece los bordes como un libro antiguo */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background:radial-gradient(ellipse at center,transparent 60%,rgba(15,12,6,.35) 100%);
+  pointer-events:none;z-index:998;
+}
+
+/* noise grain — textura de papel */
+body::after{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)' opacity='0.042'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:999;
+}
+
+a{color:inherit;text-decoration:none;}
+button{cursor:pointer;border:none;background:none;font:inherit;color:inherit;}
+img{display:block;max-width:100%;}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: TYPOGRAPHY                                            */
+/* ─────────────────────────────────────────────────────────────── */
+
+/* Letrina decorativa — primera letra de sección */
+.dropcap::first-letter{
+  font-family:var(--decor);
+  font-size:4.5rem;
+  font-weight:400;
+  float:left;
+  line-height:.78;
+  margin-right:8px;
+  margin-top:6px;
+  color:var(--oro);
+}
+
+.t-display{
+  font-family:var(--decor);
+  font-size:clamp(1.8rem,4vw,3.2rem);
+  font-weight:400;
+  letter-spacing:.04em;
+  line-height:1.15;
+  color:var(--tinta);
+}
+
+.t-heading{
+  font-family:var(--cinzel);
+  font-size:clamp(1.1rem,2vw,1.6rem);
+  font-weight:600;
+  letter-spacing:.08em;
+  line-height:1.25;
+}
+
+.t-sub{
+  font-family:var(--cinzel);
+  font-size:.75rem;
+  font-weight:400;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--tinta-dim);
+}
+
+.t-oracion{
+  font-family:var(--fell);
+  font-size:1.05rem;
+  line-height:1.9;
+  color:var(--tinta-mid);
+}
+
+.t-oracion em{font-style:italic;color:var(--tinta);}
+
+.t-rubrica{
+  /* como una rúbrica litúrgica en rojo */
+  font-family:var(--cinzel);
+  font-size:.68rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--rojo);
+}
+
+.t-verso{
+  font-family:var(--fell);
+  font-style:italic;
+  font-size:.9rem;
+  color:var(--tinta-dim);
+  line-height:1.7;
+}
+
+/* ornamento tipográfico — flor de lis / cruz simple */
+.ornamento{
+  display:block;
+  text-align:center;
+  font-size:1.1rem;
+  color:var(--oro);
+  letter-spacing:.4em;
+  padding:.5rem 0;
+  opacity:.7;
+}
+
+.oro{ color:var(--oro); }
+.rojo{ color:var(--rojo); }
+.azul{ color:var(--azul); }
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: LAYOUT                                                */
+/* ─────────────────────────────────────────────────────────────── */
+
+.shell{max-width:960px;margin:0 auto;padding:0 clamp(20px,5vw,60px);}
+.shell--narrow{max-width:680px;margin:0 auto;padding:0 clamp(20px,5vw,40px);}
+
+/* borde ornamental de página */
+.page-border{
+  border:1px solid var(--pergamino-3);
+  padding:2px;
+  position:relative;
+}
+.page-border::before,.page-border::after{
+  content:'';position:absolute;
+  width:10px;height:10px;
+  border:1.5px solid var(--oro);
+}
+.page-border::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+.page-border::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+
+.divider-oro{
+  display:flex;align-items:center;gap:12px;
+  margin:28px 0;
+}
+.divider-oro::before,.divider-oro::after{
+  content:'';flex:1;
+  height:1px;background:var(--pergamino-3);
+}
+.divider-oro__symbol{
+  font-size:.9rem;color:var(--oro);opacity:.7;flex-shrink:0;
+}
+
+/* imagen placeholder */
+.img-box{
+  background:var(--pergamino-2);
+  border:1px solid var(--pergamino-3);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:8px;position:relative;overflow:hidden;
+}
+.img-box img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;opacity:.85;
+  filter:sepia(15%) contrast(1.05);
+}
+.img-box__label{
+  font-family:var(--cinzel);font-size:.58rem;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--pergamino-3);
+}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: NAV                                                   */
+/* ─────────────────────────────────────────────────────────────── */
+
+#nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:800;
+  transition:background .3s, box-shadow .3s;
+}
+#nav.scrolled{
+  background:rgba(245,237,214,.97);
+  backdrop-filter:blur(10px);
+  box-shadow:0 1px 0 var(--pergamino-3),
+             0 2px 0 var(--oro) ;
+}
+
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:58px;
+}
+
+.nav-logo{
+  font-family:var(--decor);
+  font-size:.9rem;
+  letter-spacing:.06em;
+  color:var(--tinta);
+}
+
+.nav-links{display:flex;gap:24px;}
+.nav-links a{
+  font-family:var(--cinzel);font-size:.65rem;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--tinta-dim);transition:color .2s;
+}
+.nav-links a:hover{color:var(--oro);}
+
+.nav-rezar{
+  font-family:var(--cinzel);font-size:.65rem;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--azul);
+  border-bottom:1px solid var(--azul);
+  padding-bottom:1px;transition:color .2s,border-color .2s;
+}
+.nav-rezar:hover{color:var(--oro);border-color:var(--oro);}
+
+@media(max-width:640px){.nav-links{display:none;}}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: HERO                                                  */
+/* ─────────────────────────────────────────────────────────────── */
+
+#hero{
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:80px clamp(20px,5vw,60px) 60px;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid var(--pergamino-3);
+}
+
+/* fondo imagen ligerísimamente visible */
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+}
+.hero-bg img{
+  width:100%;height:100%;object-fit:cover;
+  opacity:.06;
+  filter:sepia(80%) grayscale(30%);
+}
+
+/* doble borde decorativo interior */
+.hero-frame{
+  position:absolute;
+  top:20px;left:20px;right:20px;bottom:20px;
+  border:1px solid var(--pergamino-3);
+  pointer-events:none;
+}
+.hero-frame::before,.hero-frame::after{
+  content:'';position:absolute;
+  width:16px;height:16px;
+  border:1.5px solid var(--oro);
+}
+.hero-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+.hero-frame::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+
+.hero-content{position:relative;z-index:1;max-width:640px;}
+
+.hero-cruz{
+  font-size:2rem;color:var(--oro);opacity:.8;
+  display:block;margin-bottom:20px;
+  animation:pulso 3s ease-in-out infinite;
+}
+@keyframes pulso{
+  0%,100%{opacity:.8;transform:scale(1);}
+  50%{opacity:.5;transform:scale(.95);}
+}
+
+.hero-title{margin-bottom:10px;}
+.hero-subtitulo{margin-bottom:8px;}
+
+.hero-versiculo{
+  margin:24px auto;
+  max-width:480px;
+  padding:16px 24px;
+  border-top:1px solid var(--pergamino-3);
+  border-bottom:1px solid var(--pergamino-3);
+}
+
+.hero-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:13px 32px;
+  background:var(--azul);
+  color:var(--pergamino);
+  font-family:var(--cinzel);
+  font-size:.72rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;
+  transition:background .2s;
+  margin-top:8px;
+}
+.hero-btn:hover{background:var(--azul-mid);}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: MISTERIOS (listado)                                   */
+/* ─────────────────────────────────────────────────────────────── */
+
+#misterios{padding:72px 0;border-bottom:1px solid var(--pergamino-3);}
+
+.misterios-header{text-align:center;margin-bottom:48px;}
+.misterios-header .t-sub{margin-bottom:14px;display:block;}
+
+/* cuatro columnas de misterios */
+.misterios-tabs{
+  display:flex;justify-content:center;gap:0;
+  border:1px solid var(--pergamino-3);
+  margin-bottom:36px;
+  flex-wrap:wrap;
+}
+.m-tab{
+  flex:1;min-width:120px;
+  padding:12px 8px;text-align:center;
+  font-family:var(--cinzel);font-size:.62rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--tinta-dim);
+  border-right:1px solid var(--pergamino-3);
+  transition:all .2s;cursor:pointer;
+  background:transparent;
+}
+.m-tab:last-child{border-right:none;}
+.m-tab:hover{background:var(--pergamino-2);color:var(--tinta);}
+.m-tab.active{
+  background:var(--azul);
+  color:var(--pergamino);
+}
+.m-tab__dia{display:block;font-size:.55rem;opacity:.6;margin-top:2px;}
+
+.misterio-panel{display:none;}
+.misterio-panel.active{display:block;}
+
+.misterios-grid{
+  display:grid;grid-template-columns:repeat(5,1fr);
+  gap:0;border:1px solid var(--pergamino-3);
+}
+.misterio-card{
+  padding:20px 16px;
+  border-right:1px solid var(--pergamino-3);
+  text-align:center;cursor:pointer;
+  transition:background .2s;
+  position:relative;
+}
+.misterio-card:last-child{border-right:none;}
+.misterio-card:hover{background:var(--pergamino-2);}
+
+.misterio-card__num{
+  font-family:var(--decor);
+  font-size:1.6rem;
+  color:var(--oro);
+  display:block;margin-bottom:8px;
+  line-height:1;
+}
+.misterio-card__title{
+  font-family:var(--fell);
+  font-size:.8125rem;
+  font-style:italic;
+  color:var(--tinta-mid);
+  line-height:1.45;
+}
+
+@media(max-width:640px){
+  .misterios-grid{grid-template-columns:1fr 1fr;}
+  .misterio-card{border-bottom:1px solid var(--pergamino-3);}
+}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: ROSARIO INTERACTIVO                                    */
+/* ─────────────────────────────────────────────────────────────── */
+
+#rezar{
+  padding:72px 0;
+  background:var(--azul);
+  position:relative;overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+/* estrellas de fondo — cielo nocturno mariano */
+#rezar::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%,rgba(255,255,255,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 25% 40%,rgba(255,255,255,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 40% 8%, rgba(255,255,255,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 60% 25%,rgba(255,255,255,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 75% 55%,rgba(255,255,255,.4) 0%,transparent 100%),
+    radial-gradient(1px 1px at 85% 12%,rgba(255,255,255,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 92% 70%,rgba(255,255,255,.5) 0%,transparent 100%),
+    radial-gradient(1px 1px at 5%  80%,rgba(255,255,255,.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 50% 90%,rgba(255,255,255,.2) 0%,transparent 100%),
+    radial-gradient(1px 1px at 33% 65%,rgba(255,255,255,.35) 0%,transparent 100%);
+  pointer-events:none;
+}
+
+.rezar-inner{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:60px;align-items:start;
+  position:relative;z-index:1;
+}
+
+/* panel izquierdo — oración actual */
+.oracion-panel{
+  padding:28px 32px;
+  background:rgba(245,237,214,.05);
+  border:1px solid rgba(245,237,214,.12);
+}
+
+.oracion-panel__rubrica{
+  margin-bottom:16px;
+}
+.oracion-panel__titulo{
+  font-family:var(--cinzel);font-size:1rem;font-weight:600;
+  letter-spacing:.08em;color:var(--pergamino);
+  margin-bottom:16px;padding-bottom:14px;
+  border-bottom:1px solid rgba(245,237,214,.15);
+}
+.oracion-panel__texto{
+  font-family:var(--fell);font-size:1rem;
+  line-height:1.95;color:rgba(245,237,214,.82);
+  min-height:160px;
+  transition:opacity .3s;
+}
+.oracion-panel__texto em{
+  font-style:italic;color:rgba(245,237,214,.55);
+}
+
+.oracion-panel__footer{
+  margin-top:20px;padding-top:16px;
+  border-top:1px solid rgba(245,237,214,.1);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.oracion-panel__misterio{
+  font-family:var(--cinzel);font-size:.6rem;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(245,237,214,.4);
+  line-height:1.5;
+}
+.oracion-panel__misterio strong{display:block;color:rgba(245,237,214,.7);}
+
+/* panel derecho — cuentas del rosario */
+.cuentas-panel{
+  display:flex;flex-direction:column;
+  align-items:center;gap:24px;
+}
+
+/* SVG del rosario */
+.rosario-svg-wrap{
+  width:100%;max-width:360px;
+  position:relative;
+}
+#rosario-svg{width:100%;height:auto;overflow:visible;}
+
+/* cuenta individual */
+.cuenta{
+  cursor:pointer;
+  transition:r .15s, opacity .15s;
+}
+.cuenta circle{
+  transition:fill .2s, stroke .2s, r .15s;
+}
+.cuenta:hover circle{filter:brightness(1.2);}
+.cuenta--rezada circle{
+  fill:var(--oro) !important;
+  stroke:var(--oro-claro) !important;
+}
+.cuenta--actual circle{
+  fill:rgba(245,237,214,.9) !important;
+  stroke:rgba(245,237,214,1) !important;
+  filter:drop-shadow(0 0 5px rgba(245,237,214,.6));
+}
+
+/* barra de progreso misterio */
+.progreso-misterio{
+  width:100%;
+}
+.progreso-misterio__label{
+  display:flex;justify-content:space-between;
+  font-family:var(--cinzel);font-size:.58rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(245,237,214,.4);
+  margin-bottom:6px;
+}
+.progreso-misterio__bar{
+  height:3px;background:rgba(245,237,214,.1);
+  border-radius:2px;overflow:hidden;
+}
+.progreso-misterio__fill{
+  height:100%;background:var(--oro);
+  border-radius:2px;
+  transition:width .4s ease;
+}
+
+/* contador visual */
+.contador-display{
+  text-align:center;
+}
+.contador-display__num{
+  font-family:var(--decor);
+  font-size:3.5rem;color:var(--oro);
+  line-height:1;display:block;
+}
+.contador-display__label{
+  font-family:var(--cinzel);font-size:.6rem;
+  letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(245,237,214,.35);
+  margin-top:4px;
+}
+
+/* botones del rosario */
+.rosario-btns{
+  display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+}
+.btn-avanzar{
+  padding:11px 28px;
+  background:var(--oro);
+  color:var(--tinta);
+  font-family:var(--cinzel);
+  font-size:.68rem;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;
+  transition:background .2s;
+}
+.btn-avanzar:hover{background:var(--oro-claro);}
+
+.btn-reiniciar{
+  padding:11px 20px;
+  border:1px solid rgba(245,237,214,.2);
+  color:rgba(245,237,214,.5);
+  font-family:var(--cinzel);
+  font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+  transition:all .2s;
+}
+.btn-reiniciar:hover{border-color:rgba(245,237,214,.4);color:rgba(245,237,214,.8);}
+
+/* estado completado */
+.rosario-completo{
+  display:none;
+  text-align:center;
+  padding:24px;
+  border:1px solid rgba(184,144,26,.3);
+  background:rgba(184,144,26,.08);
+}
+.rosario-completo.visible{display:block;}
+.rosario-completo__cruz{font-size:2rem;display:block;margin-bottom:12px;}
+.rosario-completo__titulo{
+  font-family:var(--decor);
+  font-size:1.2rem;color:var(--oro);
+  margin-bottom:8px;
+}
+
+@media(max-width:760px){
+  .rezar-inner{grid-template-columns:1fr;gap:40px;}
+}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: ORACIONES COMPLETAS                                   */
+/* ─────────────────────────────────────────────────────────────── */
+
+#oraciones{padding:72px 0;border-bottom:1px solid var(--pergamino-3);}
+
+.oraciones-header{text-align:center;margin-bottom:48px;}
+
+.oracion-tabs{
+  display:flex;gap:0;border-bottom:1px solid var(--pergamino-3);
+  overflow-x:auto;
+}
+.o-tab{
+  padding:10px 20px;flex-shrink:0;
+  font-family:var(--cinzel);font-size:.62rem;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--tinta-dim);
+  border-bottom:2px solid transparent;margin-bottom:-1px;
+  transition:all .2s;cursor:pointer;
+}
+.o-tab:hover{color:var(--tinta);}
+.o-tab.active{color:var(--azul);border-bottom-color:var(--oro);}
+
+.o-panel{display:none;padding-top:32px;}
+.o-panel.active{display:block;}
+
+.oracion-bloque{
+  max-width:600px;margin:0 auto;
+}
+.oracion-bloque + .oracion-bloque{
+  margin-top:36px;
+  padding-top:36px;
+  border-top:1px solid var(--pergamino-3);
+}
+.oracion-bloque__titulo{margin-bottom:16px;}
+.oracion-bloque__rubrica{margin-bottom:8px;}
+.oracion-bloque__texto{
+  font-family:var(--fell);font-size:1.0125rem;
+  line-height:1.95;color:var(--tinta-mid);
+}
+.oracion-bloque__texto strong{
+  color:var(--tinta);font-weight:400;
+  font-style:italic;
+}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: FOOTER                                                */
+/* ─────────────────────────────────────────────────────────────── */
+
+#footer{
+  background:var(--tinta);
+  padding:40px 0 24px;
+  text-align:center;
+}
+.footer-cruz{
+  font-size:1.4rem;
+  display:block;margin-bottom:14px;
+  color:var(--oro);opacity:.6;
+}
+.footer-nombre{
+  font-family:var(--decor);font-size:.95rem;
+  color:rgba(245,237,214,.7);
+  margin-bottom:6px;
+}
+.footer-copy{
+  font-family:var(--cinzel);font-size:.58rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(245,237,214,.2);
+}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: MISC UTILITIES                                        */
+/* ─────────────────────────────────────────────────────────────── */
+
+[data-reveal]{
+  opacity:0;transform:translateY(20px);
+  transition:opacity .6s ease,transform .6s ease;
+}
+[data-reveal].vis{opacity:1;transform:none;}
+[data-reveal-delay="1"]{transition-delay:.1s;}
+[data-reveal-delay="2"]{transition-delay:.2s;}
+[data-reveal-delay="3"]{transition-delay:.3s;}
+
+
+/* ─────────────────────────────────────────────────────────────── */
+/* SECTION: HOME / SELECTOR DE MODO                                */
+/* ─────────────────────────────────────────────────────────────── */
+
+.home-screen{
+  min-height:100svh;
+}
+
+.home-main{
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:clamp(22px,5vw,56px);
+  position:relative;
+}
+
+.home-frame{
+  position:absolute;
+  inset:20px;
+  border:1px solid var(--pergamino-3);
+  pointer-events:none;
+}
+
+.home-frame::before,
+.home-frame::after{
+  content:'';
+  position:absolute;
+  width:16px;
+  height:16px;
+  border:1.5px solid var(--oro);
+}
+
+.home-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+.home-frame::after{right:-1px;bottom:-1px;border-left:none;border-top:none;}
+
+.home-content{
+  width:min(100%,620px);
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+
+.home-cross{
+  display:block;
+  margin-bottom:18px;
+  color:var(--oro);
+  font-size:2.4rem;
+}
+
+.home-kicker{
+  margin-bottom:12px;
+}
+
+.home-title{
+  margin-bottom:14px;
+}
+
+.home-today{
+  margin:0 auto 30px;
+  max-width:520px;
+}
+
+.home-actions{
+  display:grid;
+  gap:14px;
+}
+
+.home-choice{
+  display:block;
+  padding:22px 20px;
+  border:1px solid var(--pergamino-3);
+  background:rgba(237,226,192,.55);
+  text-align:left;
+  transition:background .2s,border-color .2s,transform .2s;
+}
+
+.home-choice:active{
+  transform:scale(.99);
+}
+
+.home-choice--primary{
+  background:var(--azul);
+  border-color:var(--azul);
+  color:var(--pergamino);
+}
+
+.home-choice__title{
+  display:block;
+  font-family:var(--cinzel);
+  font-size:1rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  line-height:1.25;
+}
+
+.home-choice__text{
+  display:block;
+  margin-top:8px;
+  font-size:1rem;
+  line-height:1.45;
+  color:var(--tinta-mid);
+}
+
+.home-choice--primary .home-choice__text{
+  color:rgba(245,237,214,.75);
+}
+
+.home-link{
+  display:inline-block;
+  margin-top:24px;
+  font-family:var(--cinzel);
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--azul);
+  border-bottom:1px solid currentColor;
+}
+
+@media(max-width:520px){
+  .home-choice{
+    padding:20px 18px;
+  }
+
+  .home-choice__title{
+    font-size:.92rem;
+  }
+}

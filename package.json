@@ -1,0 +1,22 @@
+{
+  "name": "santo-rosario",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Aplicacion simple para rezar el Santo Rosario con Capacitor.",
+  "scripts": {
+    "sync": "cap sync android",
+    "copy": "cap copy android",
+    "open:android": "cap open android",
+    "run:android": "npm run sync && set \"ANDROID_PREFS_ROOT=\" && set \"JAVA_HOME=C:\\Users\\dazju\\AppData\\Local\\Packages\\Microsoft.4297127D64EC6_8wekyb3d8bbwe\\LocalCache\\Local\\runtime\\java-runtime-delta\\windows-x64\\java-runtime-delta\" && npx cap run android",
+    "build:android": "cd android && set \"ANDROID_PREFS_ROOT=\" && set \"JAVA_HOME=C:\\Users\\dazju\\AppData\\Local\\Packages\\Microsoft.4297127D64EC6_8wekyb3d8bbwe\\LocalCache\\Local\\runtime\\java-runtime-delta\\windows-x64\\java-runtime-delta\" && gradlew.bat assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor-community/keep-awake": "^7.1.0",
+    "@capacitor/android": "^7.4.2",
+    "@capacitor/core": "^7.4.2",
+    "@capacitor/splash-screen": "^7.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.2"
+  }
+}
