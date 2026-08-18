@@ -87,6 +87,9 @@ const ORACIONES = {
   credo:       { rubrica: 'Acto de fe', titulo: 'El Credo Apostólico', texto: 'Creo en Dios, Padre Todopoderoso, Creador del Cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor...\n\nAmén.' },
   padre:       { rubrica: 'Oración dominical', titulo: 'Padre Nuestro', texto: 'Padre nuestro que estás en el Cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el Cielo.\n\nDanos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.' },
   ave:         { rubrica: 'Salutación angélica', titulo: 'Ave María', texto: 'Dios te salve, María, llena eres de gracia; el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
+  aveFe:       { rubrica: 'Hija de Dios Padre', titulo: 'Ave María', texto: 'Dios te salve, María Santísima, Hija de Dios Padre, Virgen purísima antes del parto; en tus manos encomendamos nuestra Fe, para que la alumbres.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
+  aveEsperanza:{ rubrica: 'Madre de Dios Hijo', titulo: 'Ave María', texto: 'Dios te salve, María Santísima, Madre de Dios Hijo, Virgen purísima en el parto; en tus manos encomendamos nuestra Esperanza, para que la alientes.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
+  aveCaridad:  { rubrica: 'Esposa de Dios Espíritu Santo', titulo: 'Ave María', texto: 'Dios te salve, María Santísima, Esposa de Dios Espíritu Santo, Virgen purísima después del parto; en tus manos encomendamos nuestra Caridad, para que la inflames.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
   gloria:      { rubrica: 'Doxología', titulo: 'Gloria al Padre', texto: 'Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, y por los siglos de los siglos. Amén.' },
   fatima:      { rubrica: 'Visión de Fátima · 1917', titulo: 'Oración de Fátima', texto: 'Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno. Lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén.' },
   salve:       { rubrica: 'Oración final', titulo: 'Salve Regina', texto: 'Dios te salve, Reina y Madre de misericordia; vida, dulzura y esperanza nuestra, Dios te salve.\n\nA Ti llamamos los desterrados hijos de Eva; a Ti suspiramos gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima, oh piadosa, oh dulce Virgen María! Amén.' },
@@ -195,9 +198,9 @@ function buildSecuencia() {
   seq.push({ o: ORACIONES.signo,  m: -1, ave: false });
   seq.push({ o: ORACIONES.credo,  m: -1, ave: false });
   seq.push({ o: ORACIONES.padre,  m: -1, ave: false });
-  seq.push({ o: ORACIONES.ave,    m: -1, ave: true,  label: 'Fe' });
-  seq.push({ o: ORACIONES.ave,    m: -1, ave: true,  label: 'Esperanza' });
-  seq.push({ o: ORACIONES.ave,    m: -1, ave: true,  label: 'Caridad' });
+  seq.push({ o: ORACIONES.aveFe,        m: -1, ave: true,  label: 'Fe' });
+  seq.push({ o: ORACIONES.aveEsperanza, m: -1, ave: true,  label: 'Esperanza' });
+  seq.push({ o: ORACIONES.aveCaridad,   m: -1, ave: true,  label: 'Caridad' });
   seq.push({ o: ORACIONES.gloria, m: -1, ave: false });
 
   // 5 decenas
