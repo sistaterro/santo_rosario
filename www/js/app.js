@@ -40,12 +40,8 @@ async function cargarVersiculoDiario() {
   if (!textoEl || !referenciaEl) return;
 
   try {
-    let data = window.SANTO_ROSARIO_VERSICULOS;
-    if (!data) {
-      const response = await fetch('data/versiculos.json', { cache: 'no-cache' });
-      if (!response.ok) throw new Error(`No se pudo leer data/versiculos.json (${response.status}).`);
-      data = await response.json();
-    }
+    const data = window.SANTO_ROSARIO_VERSICULOS;
+    if (!data) throw new Error('No se encontró window.SANTO_ROSARIO_VERSICULOS.');
 
     const hoy = new Date();
     const calendario = esAnioBisiesto(hoy.getFullYear()) ? data.calendario?.bisiesto : data.calendario?.normal;
