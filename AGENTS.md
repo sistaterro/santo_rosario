@@ -28,6 +28,7 @@ Se logró el objetivo mínimo funcional:
 - La app detecta el día de la semana con `new Date().getDay()` y marca automáticamente el grupo de misterios correspondiente.
 - `www/index.html` muestra un versículo bíblico diario en el hero y una frase latina diaria con traducción en el footer.
 - Los datos diarios viven como archivos JS cargables sin `fetch`: `www/data/versiculos.js` y `www/data/latin.js`.
+- `www/cuentas.html` usa un rosario SVG interactivo: las cuentas iniciales cuelgan en tramo vertical conectado a la corona, y la cruz central funciona como botón de avance.
 
 Comandos verificados:
 
@@ -83,6 +84,7 @@ index.original.html     Copia del HTML monolítico original
 - Se eliminó `www/data/versiculos.json` para evitar duplicación. La app consume `www/data/versiculos.js` vía `window.SANTO_ROSARIO_VERSICULOS`.
 - Se agregó calendario diario de frases latinas con traducción en `www/data/latin.js`, consumido vía `window.SANTO_ROSARIO_LATIN`.
 - Los TXT fuente de datos diarios no son necesarios después de procesar la información; evitar versionarlos salvo que el usuario pida conservarlos como fuente editorial.
+- Se retiró el texto “COMENZÁ ACÁ” del rosario por feedback externo; se conserva el pulso inicial sobre la cruz central para sugerir interacción sin cartel explícito.
 
 ## Entorno Local Observado
 
