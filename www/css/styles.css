@@ -644,7 +644,16 @@ img{display:block;max-width:100%;}
   width:100%;max-width:360px;
   position:relative;
 }
-#rosario-svg{width:100%;height:auto;overflow:visible;}
+#rosario-svg{
+  width:100%;height:auto;overflow:visible;
+  -webkit-user-select:none;
+  user-select:none;
+}
+
+#rosario-svg text{
+  -webkit-user-select:none;
+  user-select:none;
+}
 
 .cuentas-panel--principal #rosario-svg{
   margin-top:0;
@@ -662,6 +671,9 @@ img{display:block;max-width:100%;}
 .centro-avanzar{
   cursor:pointer;
   outline:none;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-user-select:none;
+  user-select:none;
 }
 
 .centro-ayuda{
@@ -697,6 +709,10 @@ img{display:block;max-width:100%;}
   transition:fill .18s ease, stroke .18s ease, filter .18s ease, transform .18s ease;
   transform-box:fill-box;
   transform-origin:center;
+}
+
+.centro-avanzar text{
+  pointer-events:none;
 }
 
 .centro-avanzar:hover circle,

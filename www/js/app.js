@@ -414,7 +414,7 @@ function renderCuentas() {
       `M ${brazoIzquierdo.x.toFixed(1)} ${brazoIzquierdo.y.toFixed(1)}`,
       `C ${(cx - 12).toFixed(1)} 16, ${(cx - 7).toFixed(1)} 18, ${unionSuperior.x} ${unionSuperior.y}`,
       `C ${(cx + 7).toFixed(1)} 18, ${(cx + 12).toFixed(1)} 16, ${brazoDerecho.x.toFixed(1)} ${brazoDerecho.y.toFixed(1)}`,
-      `M ${unionSuperior.x} ${unionSuperior.y} L ${cx} 80`,
+      `M ${unionSuperior.x} ${unionSuperior.y} L ${cx} 102`,
     ].join(' '));
     cordon.setAttribute('fill', 'none');
     cordon.setAttribute('stroke', 'rgba(255,211,91,.54)');
