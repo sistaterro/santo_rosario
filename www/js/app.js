@@ -499,10 +499,6 @@ function actualizarUI() {
   const cuentaLabel = document.getElementById('cuenta-label');
   if (cuentaLabel) cuentaLabel.textContent = `Cuenta ${pasoActual} / ${SECUENCIA.length - 1}`;
 
-  // Contador Ave Marías
-  const numCuenta = document.getElementById('num-cuenta');
-  if (numCuenta) numCuenta.textContent = aveCount;
-
   const tituloContador = document.getElementById('titulo-contador');
   if (tituloContador) {
     tituloContador.textContent = paso.o.titulo + (paso.label ? ` · ${paso.label}` : '');
