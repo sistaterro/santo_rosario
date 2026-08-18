@@ -27,6 +27,48 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 
 /* ─────────────────────────────────────────────────────────────── */
+/* SECTION: VERSICULO DIARIO                                      */
+/* ─────────────────────────────────────────────────────────────── */
+
+function esAnioBisiesto(anio) {
+  return (anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0;
+}
+
+async function cargarVersiculoDiario() {
+  const textoEl = document.getElementById('versiculo-diario-texto');
+  const referenciaEl = document.getElementById('versiculo-diario-referencia');
+  if (!textoEl || !referenciaEl) return;
+
+  try {
+    let data = window.SANTO_ROSARIO_VERSICULOS;
+    if (!data) {
+      const response = await fetch('data/versiculos.json', { cache: 'no-cache' });
+      if (!response.ok) throw new Error(`No se pudo leer data/versiculos.json (${response.status}).`);
+      data = await response.json();
+    }
+
+    const hoy = new Date();
+    const calendario = esAnioBisiesto(hoy.getFullYear()) ? data.calendario?.bisiesto : data.calendario?.normal;
+    const fecha = `${String(hoy.getMonth() + 1).padStart(2, '0')}-${String(hoy.getDate()).padStart(2, '0')}`;
+    const asignacion = calendario?.find(dia => dia.fecha === fecha);
+    const versiculo = data.versiculos?.find(item => item.id === asignacion?.versiculoId);
+    if (!versiculo) throw new Error(`No hay versículo asignado para ${fecha}.`);
+
+    textoEl.textContent = `"${versiculo.texto}"`;
+    referenciaEl.textContent = versiculo.traduccion
+      ? `${versiculo.referencia} · ${versiculo.traduccion}`
+      : versiculo.referencia;
+  } catch (error) {
+    textoEl.textContent = 'No se pudo cargar el versículo del día.';
+    referenciaEl.textContent = 'Lectura diaria';
+    console.warn('No se pudo cargar el versículo diario.', error);
+  }
+}
+
+cargarVersiculoDiario();
+
+
+/* ─────────────────────────────────────────────────────────────── */
 /* SECTION: REVEAL OBSERVER                                       */
 /* ─────────────────────────────────────────────────────────────── */
 
@@ -73,10 +115,11 @@ function switchOracion(btn, panelId) {
   3,4,5 — 3 Ave Marías (Fe, Esperanza, Caridad)
   6  — Gloria
   ──── Misterio 1 (decena) ────
-  7  — Anuncio del misterio
+  7  — Anuncio del misterio (sin cuenta)
   8  — Padre Nuestro
   9..18 — 10 Ave Marías
-  19 — Gloria + Oración de Fátima
+  19 — Gloria
+  20 — Oración de Fátima
   ──── Misterio 2..5 (repiten la estructura) ────
   ... (pasos 20–59 — 4 misterios más)
   Final — Salve Regina
@@ -205,10 +248,18 @@ function buildSecuencia() {
 
   // 5 decenas
   for (let i = 0; i < 5; i++) {
-    // Anuncio del misterio (Padre Nuestro)
+    // Anuncio del misterio: se espera/medita, no corresponde a una cuenta.
+    seq.push({
+      o: {
+        rubrica: 'Anuncio del misterio',
+        titulo: MISTERIOS_NOMBRES[i],
+        texto: 'Anunciá el misterio y hacé una breve pausa para contemplarlo antes de rezar el Padre Nuestro.'
+      },
+      m: i, ave: false, espera: true, anuncio: true
+    });
     seq.push({
       o: { rubrica: `${MISTERIOS_NOMBRES[i]}`, titulo: 'Padre Nuestro', texto: ORACIONES.padre.texto },
-      m: i, ave: false, anuncio: true
+      m: i, ave: false
     });
     // 10 Ave Marías
     for (let j = 1; j <= 10; j++) {
@@ -337,9 +388,7 @@ function renderCuentas() {
   const cuentasVisibles = SECUENCIA
     .map((paso, index) => ({ paso, index }))
     .filter(({ paso }) => paso.ave || paso.o.titulo === 'Padre Nuestro');
-  const cuentaActualIndex = cuentasVisibles.reduce((actual, cuenta) => {
-    return cuenta.index <= pasoActual ? cuenta.index : actual;
-  }, cuentasVisibles[0]?.index ?? 0);
+  const cuentaActualIndex = cuentasVisibles.find(cuenta => cuenta.index === pasoActual)?.index ?? null;
   const rosarioTerminado = pasoActual >= SECUENCIA.length - 1;
   const cx = 100, cy = 132, rx = 101, ry = 116;
   const aperturaCorona = 0.12;

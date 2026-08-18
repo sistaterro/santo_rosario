@@ -1,0 +1,6601 @@
+window.SANTO_ROSARIO_VERSICULOS = {
+  "fuente": "VERS?CULOS.txt procesado",
+  "total": 167,
+  "regla": "Los vers?culos se repiten desde el 1 de enero hasta completar el a?o. En a?os bisiestos, el 29 de febrero usa el mismo vers?culo asignado al 31 de diciembre.",
+  "versiculos": [
+    {
+      "id": "v001",
+      "texto": "En el principio creó Dios los cielos y la tierra.",
+      "referencia": "Génesis 1:1",
+      "libro": "Génesis",
+      "capitulo": 1,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v002",
+      "texto": "Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal, para daros el fin que esperáis.",
+      "referencia": "Jeremías 29:11",
+      "libro": "Jeremías",
+      "capitulo": 29,
+      "versiculos": "11",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v003",
+      "texto": "Las misericordias de Jehová cantaré perpetuamente; de generación en generación haré notoria tu fidelidad con mi boca.",
+      "referencia": "Salmos 89:1",
+      "libro": "Salmos",
+      "capitulo": 89,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v004",
+      "texto": "He aquí que yo hago cosa nueva; pronto saldrá a luz; ¿no la conoceréis? Otra vez abriré camino en el desierto, y ríos en la soledad.",
+      "referencia": "Isaías 43:19",
+      "libro": "Isaías",
+      "capitulo": 43,
+      "versiculos": "19",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v005",
+      "texto": "De modo que si alguno está en Cristo, nueva criatura es; las cosas viejas pasaron; he aquí todas son hechas nuevas.",
+      "referencia": "2 Corintios 5:17",
+      "libro": "2 Corintios",
+      "capitulo": 5,
+      "versiculos": "17",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v006",
+      "texto": "Jehová cumplirá su propósito en mí; tu misericordia, oh Jehová, es para siempre; no desampares la obra de tus manos.",
+      "referencia": "Salmos 138:8",
+      "libro": "Salmos",
+      "capitulo": 138,
+      "versiculos": "8",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v007",
+      "texto": "Fíate de Jehová de todo tu corazón, y no te apoyes en tu propia prudencia.",
+      "referencia": "Proverbios 3:5",
+      "libro": "Proverbios",
+      "capitulo": 3,
+      "versiculos": "5",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v008",
+      "texto": "Reconócelo en todos tus caminos, y él enderezará tus veredas.",
+      "referencia": "Proverbios 3:6",
+      "libro": "Proverbios",
+      "capitulo": 3,
+      "versiculos": "6",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v009",
+      "texto": "Porque yo Jehová soy tu Dios, quien te sostiene de tu mano derecha, y te dice: No temas, yo te ayudo.",
+      "referencia": "Isaías 41:13",
+      "libro": "Isaías",
+      "capitulo": 41,
+      "versiculos": "13",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v010",
+      "texto": "Claman los justos, y Jehová oye, y los libra de todas sus angustias.",
+      "referencia": "Salmos 34:17",
+      "libro": "Salmos",
+      "capitulo": 34,
+      "versiculos": "17",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v011",
+      "texto": "Todo lo puedo en Cristo que me fortalece.",
+      "referencia": "Filipenses 4:13",
+      "libro": "Filipenses",
+      "capitulo": 4,
+      "versiculos": "13",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v012",
+      "texto": "Jehová es mi pastor; nada me faltará.",
+      "referencia": "Salmos 23:1",
+      "libro": "Salmos",
+      "capitulo": 23,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v013",
+      "texto": "Esforzaos y cobrad ánimo; no temáis, ni tengáis miedo de ellos, porque Jehová tu Dios es el que va contigo; no te dejará, ni te desamparará.",
+      "referencia": "Deuteronomio 31:6",
+      "libro": "Deuteronomio",
+      "capitulo": 31,
+      "versiculos": "6",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v014",
+      "texto": "El que habita al abrigo del Altísimo morará bajo la sombra del Omnipotente.",
+      "referencia": "Salmos 91:1",
+      "libro": "Salmos",
+      "capitulo": 91,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v015",
+      "texto": "Mas buscad primeramente el reino de Dios y su justicia, y todas estas cosas os serán añadidas.",
+      "referencia": "Mateo 6:33",
+      "libro": "Mateo",
+      "capitulo": 6,
+      "versiculos": "33",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v016",
+      "texto": "Grande es Jehová, y digno de suprema alabanza; y su grandeza es inescrutable.",
+      "referencia": "Salmos 145:3",
+      "libro": "Salmos",
+      "capitulo": 145,
+      "versiculos": "3",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v017",
+      "texto": "Encomienda a Jehová tu camino, y confía en él; y él hará.",
+      "referencia": "Salmos 37:5",
+      "libro": "Salmos",
+      "capitulo": 37,
+      "versiculos": "5",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v018",
+      "texto": "Bueno es Jehová a los que en él esperan, al alma que le busca.",
+      "referencia": "Lamentaciones 3:25",
+      "libro": "Lamentaciones",
+      "capitulo": 3,
+      "versiculos": "25",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v019",
+      "texto": "Jehová es bueno, fortaleza en el día de la angustia; y conoce a los que en él confían.",
+      "referencia": "Nahúm 1:7",
+      "libro": "Nahúm",
+      "capitulo": 1,
+      "versiculos": "7",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v020",
+      "texto": "Porque con Dios no hay nada imposible.",
+      "referencia": "Lucas 1:37",
+      "libro": "Lucas",
+      "capitulo": 1,
+      "versiculos": "37",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v021",
+      "texto": "Echa sobre Jehová tu carga, y él te sustentará; no dejará para siempre caído al justo.",
+      "referencia": "Salmos 55:22",
+      "libro": "Salmos",
+      "capitulo": 55,
+      "versiculos": "22",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v022",
+      "texto": "Bendito el varón que confía en Jehová, y cuya confianza es Jehová.",
+      "referencia": "Jeremías 17:7",
+      "libro": "Jeremías",
+      "capitulo": 17,
+      "versiculos": "7",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v023",
+      "texto": "Porque donde están dos o tres congregados en mi nombre, allí estoy yo en medio de ellos.",
+      "referencia": "Mateo 18:20",
+      "libro": "Mateo",
+      "capitulo": 18,
+      "versiculos": "20",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v024",
+      "texto": "El principio de la sabiduría es el temor de Jehová; buen entendimiento tienen todos los que practican sus mandamientos.",
+      "referencia": "Salmos 111:10",
+      "libro": "Salmos",
+      "capitulo": 111,
+      "versiculos": "10",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v025",
+      "texto": "No te dejaré, ni te desampararé.",
+      "referencia": "Hebreos 13:5",
+      "libro": "Hebreos",
+      "capitulo": 13,
+      "versiculos": "5",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v026",
+      "texto": "Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá.",
+      "referencia": "Mateo 7:7",
+      "libro": "Mateo",
+      "capitulo": 7,
+      "versiculos": "7",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v027",
+      "texto": "Gustad, y ved que es bueno Jehová; dichoso el hombre que confía en él.",
+      "referencia": "Salmos 34:8",
+      "libro": "Salmos",
+      "capitulo": 34,
+      "versiculos": "8",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v028",
+      "texto": "Yo soy el camino, y la verdad, y la vida; nadie viene al Padre, sino por mí.",
+      "referencia": "Juan 14:6",
+      "libro": "Juan",
+      "capitulo": 14,
+      "versiculos": "6",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v029",
+      "texto": "Cercano está Jehová a los quebrantados de corazón; y salva a los contritos de espíritu.",
+      "referencia": "Salmos 34:18",
+      "libro": "Salmos",
+      "capitulo": 34,
+      "versiculos": "18",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v030",
+      "texto": "Sabemos que a los que aman a Dios, todas las cosas les ayudan a bien, esto es, a los que conforme a su propósito son llamados.",
+      "referencia": "Romanos 8:28",
+      "libro": "Romanos",
+      "capitulo": 8,
+      "versiculos": "28",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v031",
+      "texto": "Y la paz de Dios, que sobrepasa todo entendimiento, guardará vuestros corazones y vuestros pensamientos en Cristo Jesús.",
+      "referencia": "Filipenses 4:7",
+      "libro": "Filipenses",
+      "capitulo": 4,
+      "versiculos": "7",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v032",
+      "texto": "El amor es sufrido, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece.",
+      "referencia": "1 Corintios 13:4",
+      "libro": "1 Corintios",
+      "capitulo": 13,
+      "versiculos": "4",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v033",
+      "texto": "No hace nada indebido, no busca lo suyo, no se irrita, no guarda rencor.",
+      "referencia": "1 Corintios 13:5",
+      "libro": "1 Corintios",
+      "capitulo": 13,
+      "versiculos": "5",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v034",
+      "texto": "No se goza de la injusticia, mas se goza de la verdad.",
+      "referencia": "1 Corintios 13:6",
+      "libro": "1 Corintios",
+      "capitulo": 13,
+      "versiculos": "6",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v035",
+      "texto": "Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta.",
+      "referencia": "1 Corintios 13:7",
+      "libro": "1 Corintios",
+      "capitulo": 13,
+      "versiculos": "7",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v036",
+      "texto": "El amor nunca deja de ser.",
+      "referencia": "1 Corintios 13:8",
+      "libro": "1 Corintios",
+      "capitulo": 13,
+      "versiculos": "8",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v037",
+      "texto": "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna.",
+      "referencia": "Juan 3:16",
+      "libro": "Juan",
+      "capitulo": 3,
+      "versiculos": "16",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v038",
+      "texto": "Amados, amémonos unos a otros; porque el amor es de Dios. Todo aquel que ama, es nacido de Dios, y conoce a Dios.",
+      "referencia": "1 Juan 4:7",
+      "libro": "1 Juan",
+      "capitulo": 4,
+      "versiculos": "7",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v039",
+      "texto": "El que no ama, no ha conocido a Dios; porque Dios es amor.",
+      "referencia": "1 Juan 4:8",
+      "libro": "1 Juan",
+      "capitulo": 4,
+      "versiculos": "8",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v040",
+      "texto": "En esto hemos conocido el amor, en que él puso su vida por nosotros; también nosotros debemos poner nuestras vidas por los hermanos.",
+      "referencia": "1 Juan 3:16",
+      "libro": "1 Juan",
+      "capitulo": 3,
+      "versiculos": "16",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v041",
+      "texto": "Un mandamiento nuevo os doy: Que os améis unos a otros; como yo os he amado, que también os améis unos a otros.",
+      "referencia": "Juan 13:34",
+      "libro": "Juan",
+      "capitulo": 13,
+      "versiculos": "34",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v042",
+      "texto": "Nadie tiene mayor amor que este, que uno ponga su vida por sus amigos.",
+      "referencia": "Juan 15:13",
+      "libro": "Juan",
+      "capitulo": 15,
+      "versiculos": "13",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v043",
+      "texto": "Con amor eterno te he amado; por tanto, te prolongué mi misericordia.",
+      "referencia": "Jeremías 31:3",
+      "libro": "Jeremías",
+      "capitulo": 31,
+      "versiculos": "3",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v044",
+      "texto": "Sobre toda cosa guardada, guarda tu corazón; porque de él mana la vida.",
+      "referencia": "Proverbios 4:23",
+      "libro": "Proverbios",
+      "capitulo": 4,
+      "versiculos": "23",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v045",
+      "texto": "Las muchas aguas no podrán apagar el amor, ni lo ahogarán los ríos.",
+      "referencia": "Cantares 8:7",
+      "libro": "Cantares",
+      "capitulo": 8,
+      "versiculos": "7",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v046",
+      "texto": "Mejor es un bocado seco, y en paz, que casa de contiendas llena de provisiones.",
+      "referencia": "Proverbios 17:1",
+      "libro": "Proverbios",
+      "capitulo": 17,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v047",
+      "texto": "Maridos, amad a vuestras mujeres, así como Cristo amó a la iglesia, y se entregó a sí mismo por ella.",
+      "referencia": "Efesios 5:25",
+      "libro": "Efesios",
+      "capitulo": 5,
+      "versiculos": "25",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v048",
+      "texto": "El hierro con hierro se aguza; y así el hombre aguza el rostro de su amigo.",
+      "referencia": "Proverbios 27:17",
+      "libro": "Proverbios",
+      "capitulo": 27,
+      "versiculos": "17",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v049",
+      "texto": "Airaos, pero no pequéis; no se ponga el sol sobre vuestro enojo.",
+      "referencia": "Efesios 4:26",
+      "libro": "Efesios",
+      "capitulo": 4,
+      "versiculos": "26",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v050",
+      "texto": "Soportándoos unos a otros, y perdonándoos unos a otros si alguno tuviere queja contra otro. De la manera que Cristo os perdonó, así también hacedlo vosotros.",
+      "referencia": "Colosenses 3:13",
+      "libro": "Colosenses",
+      "capitulo": 3,
+      "versiculos": "13",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v051",
+      "texto": "Honra a tu padre y a tu madre, para que tus días se alarguen en la tierra que Jehová tu Dios te da.",
+      "referencia": "Éxodo 20:12",
+      "libro": "Éxodo",
+      "capitulo": 20,
+      "versiculos": "12",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v052",
+      "texto": "Mejores son dos que uno; porque tienen mejor paga de su trabajo.",
+      "referencia": "Eclesiastés 4:9",
+      "libro": "Eclesiastés",
+      "capitulo": 4,
+      "versiculos": "9",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v053",
+      "texto": "Porque si cayeren, el uno levantará a su compañero; pero ¡ay del solo! que cuando cayere, no habrá segundo que lo levante.",
+      "referencia": "Eclesiastés 4:10",
+      "libro": "Eclesiastés",
+      "capitulo": 4,
+      "versiculos": "10",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v054",
+      "texto": "En todo tiempo ama el amigo, y es como un hermano en tiempo de angustia.",
+      "referencia": "Proverbios 17:17",
+      "libro": "Proverbios",
+      "capitulo": 17,
+      "versiculos": "17",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v055",
+      "texto": "Y ante todo, tened entre vosotros ferviente amor; porque el amor cubrirá multitud de pecados.",
+      "referencia": "1 Pedro 4:8",
+      "libro": "1 Pedro",
+      "capitulo": 4,
+      "versiculos": "8",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v056",
+      "texto": "Sed benignos unos con otros, misericordiosos, perdonándoos unos a otros, como Dios también os perdonó a vosotros en Cristo.",
+      "referencia": "Efesios 4:32",
+      "libro": "Efesios",
+      "capitulo": 4,
+      "versiculos": "32",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v057",
+      "texto": "El odio despierta rencillas; pero el amor cubrirá todas las faltas.",
+      "referencia": "Proverbios 10:12",
+      "libro": "Proverbios",
+      "capitulo": 10,
+      "versiculos": "12",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v058",
+      "texto": "Y nosotros hemos conocido y creído el amor que Dios tiene para con nosotros. Dios es amor; y el que permanece en amor, permanece en Dios, y Dios en él.",
+      "referencia": "1 Juan 4:16",
+      "libro": "1 Juan",
+      "capitulo": 4,
+      "versiculos": "16",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v059",
+      "texto": "En el amor no hay temor, sino que el perfecto amor echa fuera el temor.",
+      "referencia": "1 Juan 4:18",
+      "libro": "1 Juan",
+      "capitulo": 4,
+      "versiculos": "18",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v060",
+      "texto": "Jehová es mi luz y mi salvación; ¿de quién temeré? Jehová es la fortaleza de mi vida; ¿de quién he de atemorizarme",
+      "referencia": "Salmos 27:1",
+      "libro": "Salmos",
+      "capitulo": 27,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v061",
+      "texto": "Aunque ande en valle de sombra de muerte, no temeré mal alguno, porque tú estarás conmigo; tu vara y tu cayado me infundirán aliento.",
+      "referencia": "Salmos 23:4",
+      "libro": "Salmos",
+      "capitulo": 23,
+      "versiculos": "4",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v062",
+      "texto": "Dios es nuestro amparo y fortaleza, nuestro pronto auxilio en las tribulaciones.",
+      "referencia": "Salmos 46:1",
+      "libro": "Salmos",
+      "capitulo": 46,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v063",
+      "texto": "Mas él herido fue por nuestras rebeliones, molido por nuestros pecados; el castigo de nuestra paz fue sobre él, y por su llaga fuimos nosotros curados.",
+      "referencia": "Isaías 53:5",
+      "libro": "Isaías",
+      "capitulo": 53,
+      "versiculos": "5",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v064",
+      "texto": "Venid a mí todos los que estáis trabajados y cargados, y yo os haré descansar.",
+      "referencia": "Mateo 11:28",
+      "libro": "Mateo",
+      "capitulo": 11,
+      "versiculos": "28",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v065",
+      "texto": "No os ha sobrevenido ninguna tentación que no sea humana; pero fiel es Dios, que no os dejará ser tentados más de lo que podéis resistir.",
+      "referencia": "1 Corintios 10:13",
+      "libro": "1 Corintios",
+      "capitulo": 10,
+      "versiculos": "13",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v066",
+      "texto": "Jehová peleará por vosotros, y vosotros estaréis tranquilos.",
+      "referencia": "Éxodo 14:14",
+      "libro": "Éxodo",
+      "capitulo": 14,
+      "versiculos": "14",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v067",
+      "texto": "Los que sembraron con lágrimas, con regocijo segarán.",
+      "referencia": "Salmos 126:5",
+      "libro": "Salmos",
+      "capitulo": 126,
+      "versiculos": "5",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v068",
+      "texto": "Esforzaos y cobrad ánimo; no temáis, ni tengáis miedo, porque Jehová tu Dios es el que va contigo.",
+      "referencia": "Deuteronomio 31:6",
+      "libro": "Deuteronomio",
+      "capitulo": 31,
+      "versiculos": "6",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v069",
+      "texto": "Cuando pases por las aguas, yo estaré contigo; y si por los ríos, no te anegarán.",
+      "referencia": "Isaías 43:2",
+      "libro": "Isaías",
+      "capitulo": 43,
+      "versiculos": "2",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v070",
+      "texto": "El da esfuerzo al cansado, y multiplica las fuerzas al que no tiene ningunas.",
+      "referencia": "Isaías 40:29",
+      "libro": "Isaías",
+      "capitulo": 40,
+      "versiculos": "29",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v071",
+      "texto": "Pero los que esperan a Jehová tendrán nuevas fuerzas; levantarán alas como las águilas; correrán, y no se cansarán; caminarán, y no se fatigarán.",
+      "referencia": "Isaías 40:31",
+      "libro": "Isaías",
+      "capitulo": 40,
+      "versiculos": "31",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v072",
+      "texto": "No temas, porque yo estoy contigo; no desmayes, porque yo soy tu Dios que te esfuerzo; siempre te ayudaré, siempre te sustentaré con la diestra de mi justicia.",
+      "referencia": "Isaías 41:10",
+      "libro": "Isaías",
+      "capitulo": 41,
+      "versiculos": "10",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v073",
+      "texto": "Hermanos míos, tened por sumo gozo cuando os halléis en diversas pruebas.",
+      "referencia": "Santiago 1:2",
+      "libro": "Santiago",
+      "capitulo": 1,
+      "versiculos": "2",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v074",
+      "texto": "Sabiendo que la prueba de vuestra fe produce paciencia.",
+      "referencia": "Santiago 1:3",
+      "libro": "Santiago",
+      "capitulo": 1,
+      "versiculos": "3",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v075",
+      "texto": "Y no sólo esto, sino que también nos gloriamos en las tribulaciones, sabiendo que la tribulación produce paciencia.",
+      "referencia": "Romanos 5:3",
+      "libro": "Romanos",
+      "capitulo": 5,
+      "versiculos": "3",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v076",
+      "texto": "Y la paciencia, prueba; y la prueba, esperanza.",
+      "referencia": "Romanos 5:4",
+      "libro": "Romanos",
+      "capitulo": 5,
+      "versiculos": "4",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v077",
+      "texto": "Porque esta leve tribulación momentánea produce en nosotros un cada vez más excelente y eterno peso de gloria.",
+      "referencia": "2 Corintios 4:17",
+      "libro": "2 Corintios",
+      "capitulo": 4,
+      "versiculos": "17",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v078",
+      "texto": "Mas él me dijo: Bástate mi gracia; porque mi poder se perfecciona en la debilidad.",
+      "referencia": "2 Corintios 12:9",
+      "libro": "2 Corintios",
+      "capitulo": 12,
+      "versiculos": "9",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v079",
+      "texto": "Echando toda vuestra ansiedad sobre él, porque él tiene cuidado de vosotros.",
+      "referencia": "1 Pedro 5:7",
+      "libro": "1 Pedro",
+      "capitulo": 5,
+      "versiculos": "7",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v080",
+      "texto": "Muchas son las aflicciones del justo, pero de todas ellas le librará Jehová.",
+      "referencia": "Salmos 34:19",
+      "libro": "Salmos",
+      "capitulo": 34,
+      "versiculos": "19",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v081",
+      "texto": "Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas.",
+      "referencia": "Josué 1:9",
+      "libro": "Josué",
+      "capitulo": 1,
+      "versiculos": "9",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v082",
+      "texto": "Torre fuerte es el nombre de Jehová; a él correrá el justo, y será levantado.",
+      "referencia": "Proverbios 18:10",
+      "libro": "Proverbios",
+      "capitulo": 18,
+      "versiculos": "10",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v083",
+      "texto": "Espera en Jehová; esfuérzate, y aliéntese tu corazón; sí, espera en Jehová.",
+      "referencia": "Salmos 27:14",
+      "libro": "Salmos",
+      "capitulo": 27,
+      "versiculos": "14",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v084",
+      "texto": "Por lo demás, hermanos míos, fortaleceos en el Señor, y en el poder de su fuerza.",
+      "referencia": "Efesios 6:10",
+      "libro": "Efesios",
+      "capitulo": 6,
+      "versiculos": "10",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v085",
+      "texto": "El Jehová es mi fuerza y mi cántico, y ha sido mi salvación.",
+      "referencia": "Éxodo 15:2",
+      "libro": "Éxodo",
+      "capitulo": 15,
+      "versiculos": "2",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v086",
+      "texto": "Porque no nos ha dado Dios espíritu de cobardía, sino de poder, de amor y de dominio propio.",
+      "referencia": "2 Timoteo 1:7",
+      "libro": "2 Timoteo",
+      "capitulo": 1,
+      "versiculos": "7",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v087",
+      "texto": "No seas vencido de lo malo, sino vence con el bien el mal.",
+      "referencia": "Romanos 12:21",
+      "libro": "Romanos",
+      "capitulo": 12,
+      "versiculos": "21",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v088",
+      "texto": "Jehová es mi roca y mi castillo, y mi libertador; Dios mío, fortaleza mía, en él confiaré.",
+      "referencia": "Salmos 18:2",
+      "libro": "Salmos",
+      "capitulo": 18,
+      "versiculos": "2",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v089",
+      "texto": "Pacientemente esperé a Jehová, y se inclinó a mí, y oyó mi clamor.",
+      "referencia": "Salmos 40:1",
+      "libro": "Salmos",
+      "capitulo": 40,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v090",
+      "texto": "¿Quién nos separará del amor de Cristo? ¿Tribulación, o angustia, o persecución, o hambre, o desnudez, o peligro, o espada",
+      "referencia": "Romanos 8:35",
+      "libro": "Romanos",
+      "capitulo": 8,
+      "versiculos": "35",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v091",
+      "texto": "Yo soy la resurrección y la vida; el que cree en mí, aunque esté muerto, vivirá.",
+      "referencia": "Juan 11:25",
+      "libro": "Juan",
+      "capitulo": 11,
+      "versiculos": "25",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v092",
+      "texto": "Bendito el Dios y Padre de nuestro Señor Jesucristo, que según su grande misericordia nos hizo renacer para una esperanza viva, por la resurrección de Jesucristo de los muertos.",
+      "referencia": "1 Pedro 1:3",
+      "libro": "1 Pedro",
+      "capitulo": 1,
+      "versiculos": "3",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v093",
+      "texto": "Y si Cristo no resucitó, vana es entonces nuestra predicación, vana es también vuestra fe.",
+      "referencia": "1 Corintios 15:14",
+      "libro": "1 Corintios",
+      "capitulo": 15,
+      "versiculos": "14",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v094",
+      "texto": "Sorbida es la muerte en victoria.",
+      "referencia": "1 Corintios 15:54",
+      "libro": "1 Corintios",
+      "capitulo": 15,
+      "versiculos": "54",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v095",
+      "texto": "¿Dónde está, oh muerte, tu aguijón? ¿Dónde, oh sepulcro, tu victoria",
+      "referencia": "1 Corintios 15:55",
+      "libro": "1 Corintios",
+      "capitulo": 15,
+      "versiculos": "55",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v096",
+      "texto": "Mas gracias sean dadas a Dios, que nos da la victoria por medio de nuestro Señor Jesucristo.",
+      "referencia": "1 Corintios 15:57",
+      "libro": "1 Corintios",
+      "capitulo": 15,
+      "versiculos": "57",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v097",
+      "texto": "Porque si creemos que Jesús murió y resucitó, así también traerá Dios con Jesús a los que durmieron en él.",
+      "referencia": "1 Tesalonicenses 4:14",
+      "libro": "1 Tesalonicenses",
+      "capitulo": 4,
+      "versiculos": "14",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v098",
+      "texto": "Y el Dios de esperanza os llene de todo gozo y paz en el creer, para que abundéis en esperanza por el poder del Espíritu Santo.",
+      "referencia": "Romanos 15:13",
+      "libro": "Romanos",
+      "capitulo": 15,
+      "versiculos": "13",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v099",
+      "texto": "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios.",
+      "referencia": "Efesios 2:8",
+      "libro": "Efesios",
+      "capitulo": 2,
+      "versiculos": "8",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v100",
+      "texto": "Porque la paga del pecado es muerte, mas la dádiva de Dios es vida eterna en Cristo Jesús Señor nuestro.",
+      "referencia": "Romanos 6:23",
+      "libro": "Romanos",
+      "capitulo": 6,
+      "versiculos": "23",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v101",
+      "texto": "He aquí yo estoy a la puerta y llamo; si alguno oye mi voz y abre la puerta, entraré a él, y cenaré con él, y él conmigo.",
+      "referencia": "Apocalipsis 3:20",
+      "libro": "Apocalipsis",
+      "capitulo": 3,
+      "versiculos": "20",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v102",
+      "texto": "Porque Dios no envió a su Hijo al mundo para condenar al mundo, sino para que el mundo sea salvo por él.",
+      "referencia": "Juan 3:17",
+      "libro": "Juan",
+      "capitulo": 3,
+      "versiculos": "17",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v103",
+      "texto": "Mas Dios muestra su amor para con nosotros, en que siendo aún pecadores, Cristo murió por nosotros.",
+      "referencia": "Romanos 5:8",
+      "libro": "Romanos",
+      "capitulo": 5,
+      "versiculos": "8",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v104",
+      "texto": "Porque el Hijo del Hombre vino a buscar y a salvar lo que se había perdido.",
+      "referencia": "Lucas 19:10",
+      "libro": "Lucas",
+      "capitulo": 19,
+      "versiculos": "10",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v105",
+      "texto": "Justificados, pues, por la fe, tenemos paz para con Dios por medio de nuestro Señor Jesucristo.",
+      "referencia": "Romanos 5:1",
+      "libro": "Romanos",
+      "capitulo": 5,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v106",
+      "texto": "Ahora, pues, ninguna condenación hay para los que están en Cristo Jesús.",
+      "referencia": "Romanos 8:1",
+      "libro": "Romanos",
+      "capitulo": 8,
+      "versiculos": "1",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v107",
+      "texto": "Y esta es la vida eterna: que te conozcan a ti, el único Dios verdadero, y a Jesucristo, a quien has enviado.",
+      "referencia": "Juan 17:3",
+      "libro": "Juan",
+      "capitulo": 17,
+      "versiculos": "3",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v108",
+      "texto": "Yo he venido para que tengan vida, y para que la tengan en abundancia.",
+      "referencia": "Juan 10:10",
+      "libro": "Juan",
+      "capitulo": 10,
+      "versiculos": "10",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v109",
+      "texto": "Porque de cierto os digo que si tuviereis fe como un grano de mostaza, diréis a este monte: Pásate de aquí allá, y se pasará; y nada os será imposible.",
+      "referencia": "Mateo 17:20",
+      "libro": "Mateo",
+      "capitulo": 17,
+      "versiculos": "20",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v110",
+      "texto": "Jesús le dijo: Si puedes creer, al que cree todo le es posible.",
+      "referencia": "Marcos 9:23",
+      "libro": "Marcos",
+      "capitulo": 9,
+      "versiculos": "23",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v111",
+      "texto": "Yo soy el pan de vida; el que a mí viene, nunca tendrá hambre; y el que en mí cree, no tendrá sed jamás.",
+      "referencia": "Juan 6:35",
+      "libro": "Juan",
+      "capitulo": 6,
+      "versiculos": "35",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v112",
+      "texto": "Mis ovejas oyen mi voz, y yo las conozco, y me siguen, y yo les doy vida eterna; y no perecerán jamás, ni nadie las arrebatará de mi mano.",
+      "referencia": "Juan 10:27-28",
+      "libro": "Juan",
+      "capitulo": 10,
+      "versiculos": "27-28",
+      "traduccion": "RVR1960"
+    },
+    {
+      "id": "v113",
+      "texto": "En la casa de mi Padre muchas moradas hay; si así no fuera, yo os lo hubiera dicho; voy, pues, a preparar lugar para vosotros.",
+      "referencia": "Juan 14:2",
+      "libro": "Juan",
+      "capitulo": 14,
+      "versiculos": "2"
+    },
+    {
+      "id": "v114",
+      "texto": "No temas, yo estoy contigo.",
+      "referencia": "Isaías 41:10",
+      "libro": "Isaías",
+      "capitulo": 41,
+      "versiculos": "10"
+    },
+    {
+      "id": "v115",
+      "texto": "Vengan a mí los cansados y agobiados, que yo los aliviaré.",
+      "referencia": "Mateo 11:28",
+      "libro": "Mateo",
+      "capitulo": 11,
+      "versiculos": "28"
+    },
+    {
+      "id": "v116",
+      "texto": "Te basta mi gracia.",
+      "referencia": "2 Corintios 12:9",
+      "libro": "2 Corintios",
+      "capitulo": 12,
+      "versiculos": "9"
+    },
+    {
+      "id": "v117",
+      "texto": "Todo es posible para el que cree.",
+      "referencia": "Marcos 9:23",
+      "libro": "Marcos",
+      "capitulo": 9,
+      "versiculos": "23"
+    },
+    {
+      "id": "v118",
+      "texto": "El Señor es mi pastor, nada me faltará.",
+      "referencia": "Salmo 23:1",
+      "libro": "Salmo",
+      "capitulo": 23,
+      "versiculos": "1"
+    },
+    {
+      "id": "v119",
+      "texto": "La paz os dejo, mi paz os doy.",
+      "referencia": "Juan 14:27",
+      "libro": "Juan",
+      "capitulo": 14,
+      "versiculos": "27"
+    },
+    {
+      "id": "v120",
+      "texto": "No se turbe vuestro corazón.",
+      "referencia": "Juan 14:1",
+      "libro": "Juan",
+      "capitulo": 14,
+      "versiculos": "1"
+    },
+    {
+      "id": "v121",
+      "texto": "Yo estaré con ustedes todos los días.",
+      "referencia": "Mateo 28:20",
+      "libro": "Mateo",
+      "capitulo": 28,
+      "versiculos": "20"
+    },
+    {
+      "id": "v122",
+      "texto": "Todo lo puedo en Aquel que me fortalece.",
+      "referencia": "Filipenses 4:13",
+      "libro": "Filipenses",
+      "capitulo": 4,
+      "versiculos": "13"
+    },
+    {
+      "id": "v123",
+      "texto": "Nada podrá separarnos del amor de Dios.",
+      "referencia": "Romanos 8:39",
+      "libro": "Romanos",
+      "capitulo": 8,
+      "versiculos": "39"
+    },
+    {
+      "id": "v124",
+      "texto": "Con amor eterno te he amado.",
+      "referencia": "Jeremías 31:3",
+      "libro": "Jeremías",
+      "capitulo": 31,
+      "versiculos": "3"
+    },
+    {
+      "id": "v125",
+      "texto": "Dios es amor.",
+      "referencia": "1 Juan 4:8",
+      "libro": "1 Juan",
+      "capitulo": 4,
+      "versiculos": "8"
+    },
+    {
+      "id": "v126",
+      "texto": "Nadie tiene amor más grande que el que da la vida por sus amigos.",
+      "referencia": "Juan 15:13",
+      "libro": "Juan",
+      "capitulo": 15,
+      "versiculos": "13"
+    },
+    {
+      "id": "v127",
+      "texto": "Te he grabado en las palmas de mis manos.",
+      "referencia": "Isaías 49:16",
+      "libro": "Isaías",
+      "capitulo": 49,
+      "versiculos": "16"
+    },
+    {
+      "id": "v128",
+      "texto": "Tanto amó Dios al mundo, que entregó a su Hijo único.",
+      "referencia": "Juan 3:16",
+      "libro": "Juan",
+      "capitulo": 3,
+      "versiculos": "16"
+    },
+    {
+      "id": "v129",
+      "texto": "Eres precioso a mis ojos.",
+      "referencia": "Isaías 43:4",
+      "libro": "Isaías",
+      "capitulo": 43,
+      "versiculos": "4"
+    },
+    {
+      "id": "v130",
+      "texto": "Como la niña de sus ojos le guardó.",
+      "referencia": "Deuteronomio 32:10",
+      "libro": "Deuteronomio",
+      "capitulo": 32,
+      "versiculos": "10"
+    },
+    {
+      "id": "v131",
+      "texto": "La fe mueve montañas.",
+      "referencia": "Mateo 17:20",
+      "libro": "Mateo",
+      "capitulo": 17,
+      "versiculos": "20",
+      "nota": "paráfrasis"
+    },
+    {
+      "id": "v132",
+      "texto": "Pidan y se les dará.",
+      "referencia": "Mateo 7:7",
+      "libro": "Mateo",
+      "capitulo": 7,
+      "versiculos": "7"
+    },
+    {
+      "id": "v133",
+      "texto": "Tu fe te ha salvado.",
+      "referencia": "Marcos 10:52",
+      "libro": "Marcos",
+      "capitulo": 10,
+      "versiculos": "52"
+    },
+    {
+      "id": "v134",
+      "texto": "Nada es imposible para Dios.",
+      "referencia": "Lucas 1:37",
+      "libro": "Lucas",
+      "capitulo": 1,
+      "versiculos": "37"
+    },
+    {
+      "id": "v135",
+      "texto": "Si Dios está con nosotros, ¿quién contra nosotros",
+      "referencia": "Romanos 8:31",
+      "libro": "Romanos",
+      "capitulo": 8,
+      "versiculos": "31"
+    },
+    {
+      "id": "v136",
+      "texto": "Confía en el Señor de todo corazón.",
+      "referencia": "Proverbios 3:5",
+      "libro": "Proverbios",
+      "capitulo": 3,
+      "versiculos": "5"
+    },
+    {
+      "id": "v137",
+      "texto": "Yo soy el camino, la verdad y la vida.",
+      "referencia": "Juan 14:6",
+      "libro": "Juan",
+      "capitulo": 14,
+      "versiculos": "6"
+    },
+    {
+      "id": "v138",
+      "texto": "Este es el día que hizo el Señor, alegrémonos en él.",
+      "referencia": "Salmo 118:24",
+      "libro": "Salmo",
+      "capitulo": 118,
+      "versiculos": "24"
+    },
+    {
+      "id": "v139",
+      "texto": "De mañana hazme oír tu misericordia.",
+      "referencia": "Salmo 143:8",
+      "libro": "Salmo",
+      "capitulo": 143,
+      "versiculos": "8"
+    },
+    {
+      "id": "v140",
+      "texto": "Las misericordias del Señor se renuevan cada mañana.",
+      "referencia": "Lamentaciones 3:23",
+      "libro": "Lamentaciones",
+      "capitulo": 3,
+      "versiculos": "23"
+    },
+    {
+      "id": "v141",
+      "texto": "Renueva mi corazón, Señor.",
+      "referencia": "Salmo 51:10",
+      "libro": "Salmo",
+      "capitulo": 51,
+      "versiculos": "10",
+      "nota": "paráfrasis"
+    },
+    {
+      "id": "v142",
+      "texto": "Creé en mí, oh Dios, un corazón limpio.",
+      "referencia": "Salmo 51:10",
+      "libro": "Salmo",
+      "capitulo": 51,
+      "versiculos": "10"
+    },
+    {
+      "id": "v143",
+      "texto": "Oren sin cesar.",
+      "referencia": "1 Tesalonicenses 5:17",
+      "libro": "1 Tesalonicenses",
+      "capitulo": 5,
+      "versiculos": "17"
+    },
+    {
+      "id": "v144",
+      "texto": "Busquen primero el Reino de Dios.",
+      "referencia": "Mateo 6:33",
+      "libro": "Mateo",
+      "capitulo": 6,
+      "versiculos": "33"
+    },
+    {
+      "id": "v145",
+      "texto": "Hablen con el Padre en lo secreto.",
+      "referencia": "Mateo 6:6",
+      "libro": "Mateo",
+      "capitulo": 6,
+      "versiculos": "6"
+    },
+    {
+      "id": "v146",
+      "texto": "Donde estén dos o tres reunidos en mi nombre, allí estoy yo.",
+      "referencia": "Mateo 18:20",
+      "libro": "Mateo",
+      "capitulo": 18,
+      "versiculos": "20"
+    },
+    {
+      "id": "v147",
+      "texto": "Vosotros pues, oraréis así: Padre nuestro que estás en los cielos, santificado sea tu nombre. Venga tu reino. Sea hecha tu voluntad, como en el cielo, así también en la tierra. Danos hoy nuestro pan cotidiano. Y perdónanos nuestras deudas, como también nosotros perdonamos á nuestros deudores. Y no nos metas en tentación, mas líbranos del mal: porque tuyo es el reino, y el poder, y la gloria, por todos los siglos. Amén.",
+      "referencia": "Mateo 6:9-13",
+      "libro": "Mateo",
+      "capitulo": 6,
+      "versiculos": "9-13",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v148",
+      "texto": "Por nada estéis afanosos; sino sean notorias vuestras peticiones delante de Dios en toda oración y ruego, con hacimiento de gracias. Y la paz de Dios, que sobrepuja todo entendimiento, guardará vuestros corazones y vuestros entendimientos en Cristo Jesús.",
+      "referencia": "Filipenses 4:6-7",
+      "libro": "Filipenses",
+      "capitulo": 4,
+      "versiculos": "6-7",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v149",
+      "texto": "Orad sin cesar.",
+      "referencia": "1 Tesalonicenses 5:17",
+      "libro": "1 Tesalonicenses",
+      "capitulo": 5,
+      "versiculos": "17",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v150",
+      "texto": "Confesaos vuestras faltas unos á otros, y rogad los unos por los otros, para que seáis sanos; la oración del justo, obrando eficazmente, puede mucho.",
+      "referencia": "Santiago 5:16",
+      "libro": "Santiago",
+      "capitulo": 5,
+      "versiculos": "16",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v151",
+      "texto": "Y esta es la confianza que tenemos en él, que si demandáremos alguna cosa conforme á su voluntad, él nos oye. Y si sabemos que él nos oye en cualquiera cosa que demandáremos, sabemos que tenemos las peticiones que le hubiéremos demandado.",
+      "referencia": "1 Juan 5:14-15",
+      "libro": "1 Juan",
+      "capitulo": 5,
+      "versiculos": "14-15",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v152",
+      "texto": "Clamaron los justos, y Jehová oyó, Y librólos de todas sus angustias.",
+      "referencia": "Salmos 34:17",
+      "libro": "Salmos",
+      "capitulo": 34,
+      "versiculos": "17",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v153",
+      "texto": "Clama á mí, y te responderé, y te enseñaré cosas grandes y dificultosas que tú no sabes.",
+      "referencia": "Jeremías 33:3",
+      "libro": "Jeremías",
+      "capitulo": 33,
+      "versiculos": "3",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v154",
+      "texto": "Pedid, y se os dará; buscad, y hallaréis; llamad, y se os abrirá.",
+      "referencia": "Mateo 7:7",
+      "libro": "Mateo",
+      "capitulo": 7,
+      "versiculos": "7",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v155",
+      "texto": "Por tanto, os digo que todo lo que orando pidiereis, creed que lo recibiréis, y os vendrá.",
+      "referencia": "Marcos 11:24",
+      "libro": "Marcos",
+      "capitulo": 11,
+      "versiculos": "24",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v156",
+      "texto": "Gozosos en la esperanza; sufridos en la tribulación; constantes en la oración;",
+      "referencia": "Romanos 12:12",
+      "libro": "Romanos",
+      "capitulo": 12,
+      "versiculos": "12",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v157",
+      "texto": "Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, pensamientos de paz, y no de mal, para daros el fin que esperáis.",
+      "referencia": "Jeremías 29:11",
+      "libro": "Jeremías",
+      "capitulo": 29,
+      "versiculos": "11",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v158",
+      "texto": "Y el Dios de esperanza os llene de todo gozo y paz creyendo, para que abundéis en esperanza por la virtud del Espíritu Santo.",
+      "referencia": "Romanos 15:13",
+      "libro": "Romanos",
+      "capitulo": 15,
+      "versiculos": "13",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v159",
+      "texto": "¿Por qué te abates, oh alma mía, Y por qué te conturbas en mí? Espera á Dios; porque aun le tengo de alabar; Es él salvamento delante de mí, y el Dios mío.",
+      "referencia": "Salmos 42:11",
+      "libro": "Salmos",
+      "capitulo": 42,
+      "versiculos": "11",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v160",
+      "texto": "ES pues la fe la sustancia de las cosas que se esperan, la demostración de las cosas que no se ven.",
+      "referencia": "Hebreos 11:1",
+      "libro": "Hebreos",
+      "capitulo": 11,
+      "versiculos": "1",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v161",
+      "texto": "Es por la misericordia de Jehová que no somos consumidos, porque nunca decayeron sus misericordias. Nuevas son cada mañana; grande es tu fidelidad.",
+      "referencia": "Lamentaciones 3:22-23",
+      "libro": "Lamentaciones",
+      "capitulo": 3,
+      "versiculos": "22-23",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v162",
+      "texto": "Bendito el Dios y Padre de nuestro Señor Jesucristo, que según su grande misericordia nos ha regenerado en esperanza viva, por la resurrección de Jesucristo de los muertos,",
+      "referencia": "1 Pedro 1:3",
+      "libro": "1 Pedro",
+      "capitulo": 1,
+      "versiculos": "3",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v163",
+      "texto": "Porque en esperanza somos salvos; mas la esperanza que se ve, no es esperanza; porque lo que alguno ve, ¿á qué esperarlo? Empero si lo que no vemos esperamos, por paciencia esperamos.",
+      "referencia": "Romanos 8:24-25",
+      "libro": "Romanos",
+      "capitulo": 8,
+      "versiculos": "24-25",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v164",
+      "texto": "Alma mía, en Dios solamente reposa; Porque de él es mi esperanza.",
+      "referencia": "Salmos 62:5",
+      "libro": "Salmos",
+      "capitulo": 62,
+      "versiculos": "5",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v165",
+      "texto": "La cual tenemos como segura y firme ancla del alma, y que entra hasta dentro del velo;",
+      "referencia": "Hebreos 6:19",
+      "libro": "Hebreos",
+      "capitulo": 6,
+      "versiculos": "19",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v166",
+      "texto": "Mas los que esperan á Jehová tendrán nuevas fuerzas; levantarán las alas como águilas, correrán, y no se cansarán, caminarán, y no se fatigarán.",
+      "referencia": "Isaías 40:31",
+      "libro": "Isaías",
+      "capitulo": 40,
+      "versiculos": "31",
+      "traduccion": "RVR1909"
+    },
+    {
+      "id": "v167",
+      "texto": "Y Mar?a dijo: He aqu? la sierva del Se?or; h?gase conmigo conforme a tu palabra.",
+      "referencia": "Lucas 1:38",
+      "libro": "Lucas",
+      "capitulo": 1,
+      "versiculos": "38"
+    }
+  ],
+  "calendario": {
+    "normal": [
+      {
+        "fecha": "01-01",
+        "mes": 1,
+        "dia": 1,
+        "ordinal": 1,
+        "versiculoId": "v001"
+      },
+      {
+        "fecha": "01-02",
+        "mes": 1,
+        "dia": 2,
+        "ordinal": 2,
+        "versiculoId": "v002"
+      },
+      {
+        "fecha": "01-03",
+        "mes": 1,
+        "dia": 3,
+        "ordinal": 3,
+        "versiculoId": "v003"
+      },
+      {
+        "fecha": "01-04",
+        "mes": 1,
+        "dia": 4,
+        "ordinal": 4,
+        "versiculoId": "v004"
+      },
+      {
+        "fecha": "01-05",
+        "mes": 1,
+        "dia": 5,
+        "ordinal": 5,
+        "versiculoId": "v005"
+      },
+      {
+        "fecha": "01-06",
+        "mes": 1,
+        "dia": 6,
+        "ordinal": 6,
+        "versiculoId": "v006"
+      },
+      {
+        "fecha": "01-07",
+        "mes": 1,
+        "dia": 7,
+        "ordinal": 7,
+        "versiculoId": "v007"
+      },
+      {
+        "fecha": "01-08",
+        "mes": 1,
+        "dia": 8,
+        "ordinal": 8,
+        "versiculoId": "v008"
+      },
+      {
+        "fecha": "01-09",
+        "mes": 1,
+        "dia": 9,
+        "ordinal": 9,
+        "versiculoId": "v009"
+      },
+      {
+        "fecha": "01-10",
+        "mes": 1,
+        "dia": 10,
+        "ordinal": 10,
+        "versiculoId": "v010"
+      },
+      {
+        "fecha": "01-11",
+        "mes": 1,
+        "dia": 11,
+        "ordinal": 11,
+        "versiculoId": "v011"
+      },
+      {
+        "fecha": "01-12",
+        "mes": 1,
+        "dia": 12,
+        "ordinal": 12,
+        "versiculoId": "v012"
+      },
+      {
+        "fecha": "01-13",
+        "mes": 1,
+        "dia": 13,
+        "ordinal": 13,
+        "versiculoId": "v013"
+      },
+      {
+        "fecha": "01-14",
+        "mes": 1,
+        "dia": 14,
+        "ordinal": 14,
+        "versiculoId": "v014"
+      },
+      {
+        "fecha": "01-15",
+        "mes": 1,
+        "dia": 15,
+        "ordinal": 15,
+        "versiculoId": "v015"
+      },
+      {
+        "fecha": "01-16",
+        "mes": 1,
+        "dia": 16,
+        "ordinal": 16,
+        "versiculoId": "v016"
+      },
+      {
+        "fecha": "01-17",
+        "mes": 1,
+        "dia": 17,
+        "ordinal": 17,
+        "versiculoId": "v017"
+      },
+      {
+        "fecha": "01-18",
+        "mes": 1,
+        "dia": 18,
+        "ordinal": 18,
+        "versiculoId": "v018"
+      },
+      {
+        "fecha": "01-19",
+        "mes": 1,
+        "dia": 19,
+        "ordinal": 19,
+        "versiculoId": "v019"
+      },
+      {
+        "fecha": "01-20",
+        "mes": 1,
+        "dia": 20,
+        "ordinal": 20,
+        "versiculoId": "v020"
+      },
+      {
+        "fecha": "01-21",
+        "mes": 1,
+        "dia": 21,
+        "ordinal": 21,
+        "versiculoId": "v021"
+      },
+      {
+        "fecha": "01-22",
+        "mes": 1,
+        "dia": 22,
+        "ordinal": 22,
+        "versiculoId": "v022"
+      },
+      {
+        "fecha": "01-23",
+        "mes": 1,
+        "dia": 23,
+        "ordinal": 23,
+        "versiculoId": "v023"
+      },
+      {
+        "fecha": "01-24",
+        "mes": 1,
+        "dia": 24,
+        "ordinal": 24,
+        "versiculoId": "v024"
+      },
+      {
+        "fecha": "01-25",
+        "mes": 1,
+        "dia": 25,
+        "ordinal": 25,
+        "versiculoId": "v025"
+      },
+      {
+        "fecha": "01-26",
+        "mes": 1,
+        "dia": 26,
+        "ordinal": 26,
+        "versiculoId": "v026"
+      },
+      {
+        "fecha": "01-27",
+        "mes": 1,
+        "dia": 27,
+        "ordinal": 27,
+        "versiculoId": "v027"
+      },
+      {
+        "fecha": "01-28",
+        "mes": 1,
+        "dia": 28,
+        "ordinal": 28,
+        "versiculoId": "v028"
+      },
+      {
+        "fecha": "01-29",
+        "mes": 1,
+        "dia": 29,
+        "ordinal": 29,
+        "versiculoId": "v029"
+      },
+      {
+        "fecha": "01-30",
+        "mes": 1,
+        "dia": 30,
+        "ordinal": 30,
+        "versiculoId": "v030"
+      },
+      {
+        "fecha": "01-31",
+        "mes": 1,
+        "dia": 31,
+        "ordinal": 31,
+        "versiculoId": "v031"
+      },
+      {
+        "fecha": "02-01",
+        "mes": 2,
+        "dia": 1,
+        "ordinal": 32,
+        "versiculoId": "v032"
+      },
+      {
+        "fecha": "02-02",
+        "mes": 2,
+        "dia": 2,
+        "ordinal": 33,
+        "versiculoId": "v033"
+      },
+      {
+        "fecha": "02-03",
+        "mes": 2,
+        "dia": 3,
+        "ordinal": 34,
+        "versiculoId": "v034"
+      },
+      {
+        "fecha": "02-04",
+        "mes": 2,
+        "dia": 4,
+        "ordinal": 35,
+        "versiculoId": "v035"
+      },
+      {
+        "fecha": "02-05",
+        "mes": 2,
+        "dia": 5,
+        "ordinal": 36,
+        "versiculoId": "v036"
+      },
+      {
+        "fecha": "02-06",
+        "mes": 2,
+        "dia": 6,
+        "ordinal": 37,
+        "versiculoId": "v037"
+      },
+      {
+        "fecha": "02-07",
+        "mes": 2,
+        "dia": 7,
+        "ordinal": 38,
+        "versiculoId": "v038"
+      },
+      {
+        "fecha": "02-08",
+        "mes": 2,
+        "dia": 8,
+        "ordinal": 39,
+        "versiculoId": "v039"
+      },
+      {
+        "fecha": "02-09",
+        "mes": 2,
+        "dia": 9,
+        "ordinal": 40,
+        "versiculoId": "v040"
+      },
+      {
+        "fecha": "02-10",
+        "mes": 2,
+        "dia": 10,
+        "ordinal": 41,
+        "versiculoId": "v041"
+      },
+      {
+        "fecha": "02-11",
+        "mes": 2,
+        "dia": 11,
+        "ordinal": 42,
+        "versiculoId": "v042"
+      },
+      {
+        "fecha": "02-12",
+        "mes": 2,
+        "dia": 12,
+        "ordinal": 43,
+        "versiculoId": "v043"
+      },
+      {
+        "fecha": "02-13",
+        "mes": 2,
+        "dia": 13,
+        "ordinal": 44,
+        "versiculoId": "v044"
+      },
+      {
+        "fecha": "02-14",
+        "mes": 2,
+        "dia": 14,
+        "ordinal": 45,
+        "versiculoId": "v045"
+      },
+      {
+        "fecha": "02-15",
+        "mes": 2,
+        "dia": 15,
+        "ordinal": 46,
+        "versiculoId": "v046"
+      },
+      {
+        "fecha": "02-16",
+        "mes": 2,
+        "dia": 16,
+        "ordinal": 47,
+        "versiculoId": "v047"
+      },
+      {
+        "fecha": "02-17",
+        "mes": 2,
+        "dia": 17,
+        "ordinal": 48,
+        "versiculoId": "v048"
+      },
+      {
+        "fecha": "02-18",
+        "mes": 2,
+        "dia": 18,
+        "ordinal": 49,
+        "versiculoId": "v049"
+      },
+      {
+        "fecha": "02-19",
+        "mes": 2,
+        "dia": 19,
+        "ordinal": 50,
+        "versiculoId": "v050"
+      },
+      {
+        "fecha": "02-20",
+        "mes": 2,
+        "dia": 20,
+        "ordinal": 51,
+        "versiculoId": "v051"
+      },
+      {
+        "fecha": "02-21",
+        "mes": 2,
+        "dia": 21,
+        "ordinal": 52,
+        "versiculoId": "v052"
+      },
+      {
+        "fecha": "02-22",
+        "mes": 2,
+        "dia": 22,
+        "ordinal": 53,
+        "versiculoId": "v053"
+      },
+      {
+        "fecha": "02-23",
+        "mes": 2,
+        "dia": 23,
+        "ordinal": 54,
+        "versiculoId": "v054"
+      },
+      {
+        "fecha": "02-24",
+        "mes": 2,
+        "dia": 24,
+        "ordinal": 55,
+        "versiculoId": "v055"
+      },
+      {
+        "fecha": "02-25",
+        "mes": 2,
+        "dia": 25,
+        "ordinal": 56,
+        "versiculoId": "v056"
+      },
+      {
+        "fecha": "02-26",
+        "mes": 2,
+        "dia": 26,
+        "ordinal": 57,
+        "versiculoId": "v057"
+      },
+      {
+        "fecha": "02-27",
+        "mes": 2,
+        "dia": 27,
+        "ordinal": 58,
+        "versiculoId": "v058"
+      },
+      {
+        "fecha": "02-28",
+        "mes": 2,
+        "dia": 28,
+        "ordinal": 59,
+        "versiculoId": "v059"
+      },
+      {
+        "fecha": "03-01",
+        "mes": 3,
+        "dia": 1,
+        "ordinal": 60,
+        "versiculoId": "v060"
+      },
+      {
+        "fecha": "03-02",
+        "mes": 3,
+        "dia": 2,
+        "ordinal": 61,
+        "versiculoId": "v061"
+      },
+      {
+        "fecha": "03-03",
+        "mes": 3,
+        "dia": 3,
+        "ordinal": 62,
+        "versiculoId": "v062"
+      },
+      {
+        "fecha": "03-04",
+        "mes": 3,
+        "dia": 4,
+        "ordinal": 63,
+        "versiculoId": "v063"
+      },
+      {
+        "fecha": "03-05",
+        "mes": 3,
+        "dia": 5,
+        "ordinal": 64,
+        "versiculoId": "v064"
+      },
+      {
+        "fecha": "03-06",
+        "mes": 3,
+        "dia": 6,
+        "ordinal": 65,
+        "versiculoId": "v065"
+      },
+      {
+        "fecha": "03-07",
+        "mes": 3,
+        "dia": 7,
+        "ordinal": 66,
+        "versiculoId": "v066"
+      },
+      {
+        "fecha": "03-08",
+        "mes": 3,
+        "dia": 8,
+        "ordinal": 67,
+        "versiculoId": "v067"
+      },
+      {
+        "fecha": "03-09",
+        "mes": 3,
+        "dia": 9,
+        "ordinal": 68,
+        "versiculoId": "v068"
+      },
+      {
+        "fecha": "03-10",
+        "mes": 3,
+        "dia": 10,
+        "ordinal": 69,
+        "versiculoId": "v069"
+      },
+      {
+        "fecha": "03-11",
+        "mes": 3,
+        "dia": 11,
+        "ordinal": 70,
+        "versiculoId": "v070"
+      },
+      {
+        "fecha": "03-12",
+        "mes": 3,
+        "dia": 12,
+        "ordinal": 71,
+        "versiculoId": "v071"
+      },
+      {
+        "fecha": "03-13",
+        "mes": 3,
+        "dia": 13,
+        "ordinal": 72,
+        "versiculoId": "v072"
+      },
+      {
+        "fecha": "03-14",
+        "mes": 3,
+        "dia": 14,
+        "ordinal": 73,
+        "versiculoId": "v073"
+      },
+      {
+        "fecha": "03-15",
+        "mes": 3,
+        "dia": 15,
+        "ordinal": 74,
+        "versiculoId": "v074"
+      },
+      {
+        "fecha": "03-16",
+        "mes": 3,
+        "dia": 16,
+        "ordinal": 75,
+        "versiculoId": "v075"
+      },
+      {
+        "fecha": "03-17",
+        "mes": 3,
+        "dia": 17,
+        "ordinal": 76,
+        "versiculoId": "v076"
+      },
+      {
+        "fecha": "03-18",
+        "mes": 3,
+        "dia": 18,
+        "ordinal": 77,
+        "versiculoId": "v077"
+      },
+      {
+        "fecha": "03-19",
+        "mes": 3,
+        "dia": 19,
+        "ordinal": 78,
+        "versiculoId": "v078"
+      },
+      {
+        "fecha": "03-20",
+        "mes": 3,
+        "dia": 20,
+        "ordinal": 79,
+        "versiculoId": "v079"
+      },
+      {
+        "fecha": "03-21",
+        "mes": 3,
+        "dia": 21,
+        "ordinal": 80,
+        "versiculoId": "v080"
+      },
+      {
+        "fecha": "03-22",
+        "mes": 3,
+        "dia": 22,
+        "ordinal": 81,
+        "versiculoId": "v081"
+      },
+      {
+        "fecha": "03-23",
+        "mes": 3,
+        "dia": 23,
+        "ordinal": 82,
+        "versiculoId": "v082"
+      },
+      {
+        "fecha": "03-24",
+        "mes": 3,
+        "dia": 24,
+        "ordinal": 83,
+        "versiculoId": "v083"
+      },
+      {
+        "fecha": "03-25",
+        "mes": 3,
+        "dia": 25,
+        "ordinal": 84,
+        "versiculoId": "v084"
+      },
+      {
+        "fecha": "03-26",
+        "mes": 3,
+        "dia": 26,
+        "ordinal": 85,
+        "versiculoId": "v085"
+      },
+      {
+        "fecha": "03-27",
+        "mes": 3,
+        "dia": 27,
+        "ordinal": 86,
+        "versiculoId": "v086"
+      },
+      {
+        "fecha": "03-28",
+        "mes": 3,
+        "dia": 28,
+        "ordinal": 87,
+        "versiculoId": "v087"
+      },
+      {
+        "fecha": "03-29",
+        "mes": 3,
+        "dia": 29,
+        "ordinal": 88,
+        "versiculoId": "v088"
+      },
+      {
+        "fecha": "03-30",
+        "mes": 3,
+        "dia": 30,
+        "ordinal": 89,
+        "versiculoId": "v089"
+      },
+      {
+        "fecha": "03-31",
+        "mes": 3,
+        "dia": 31,
+        "ordinal": 90,
+        "versiculoId": "v090"
+      },
+      {
+        "fecha": "04-01",
+        "mes": 4,
+        "dia": 1,
+        "ordinal": 91,
+        "versiculoId": "v091"
+      },
+      {
+        "fecha": "04-02",
+        "mes": 4,
+        "dia": 2,
+        "ordinal": 92,
+        "versiculoId": "v092"
+      },
+      {
+        "fecha": "04-03",
+        "mes": 4,
+        "dia": 3,
+        "ordinal": 93,
+        "versiculoId": "v093"
+      },
+      {
+        "fecha": "04-04",
+        "mes": 4,
+        "dia": 4,
+        "ordinal": 94,
+        "versiculoId": "v094"
+      },
+      {
+        "fecha": "04-05",
+        "mes": 4,
+        "dia": 5,
+        "ordinal": 95,
+        "versiculoId": "v095"
+      },
+      {
+        "fecha": "04-06",
+        "mes": 4,
+        "dia": 6,
+        "ordinal": 96,
+        "versiculoId": "v096"
+      },
+      {
+        "fecha": "04-07",
+        "mes": 4,
+        "dia": 7,
+        "ordinal": 97,
+        "versiculoId": "v097"
+      },
+      {
+        "fecha": "04-08",
+        "mes": 4,
+        "dia": 8,
+        "ordinal": 98,
+        "versiculoId": "v098"
+      },
+      {
+        "fecha": "04-09",
+        "mes": 4,
+        "dia": 9,
+        "ordinal": 99,
+        "versiculoId": "v099"
+      },
+      {
+        "fecha": "04-10",
+        "mes": 4,
+        "dia": 10,
+        "ordinal": 100,
+        "versiculoId": "v100"
+      },
+      {
+        "fecha": "04-11",
+        "mes": 4,
+        "dia": 11,
+        "ordinal": 101,
+        "versiculoId": "v101"
+      },
+      {
+        "fecha": "04-12",
+        "mes": 4,
+        "dia": 12,
+        "ordinal": 102,
+        "versiculoId": "v102"
+      },
+      {
+        "fecha": "04-13",
+        "mes": 4,
+        "dia": 13,
+        "ordinal": 103,
+        "versiculoId": "v103"
+      },
+      {
+        "fecha": "04-14",
+        "mes": 4,
+        "dia": 14,
+        "ordinal": 104,
+        "versiculoId": "v104"
+      },
+      {
+        "fecha": "04-15",
+        "mes": 4,
+        "dia": 15,
+        "ordinal": 105,
+        "versiculoId": "v105"
+      },
+      {
+        "fecha": "04-16",
+        "mes": 4,
+        "dia": 16,
+        "ordinal": 106,
+        "versiculoId": "v106"
+      },
+      {
+        "fecha": "04-17",
+        "mes": 4,
+        "dia": 17,
+        "ordinal": 107,
+        "versiculoId": "v107"
+      },
+      {
+        "fecha": "04-18",
+        "mes": 4,
+        "dia": 18,
+        "ordinal": 108,
+        "versiculoId": "v108"
+      },
+      {
+        "fecha": "04-19",
+        "mes": 4,
+        "dia": 19,
+        "ordinal": 109,
+        "versiculoId": "v109"
+      },
+      {
+        "fecha": "04-20",
+        "mes": 4,
+        "dia": 20,
+        "ordinal": 110,
+        "versiculoId": "v110"
+      },
+      {
+        "fecha": "04-21",
+        "mes": 4,
+        "dia": 21,
+        "ordinal": 111,
+        "versiculoId": "v111"
+      },
+      {
+        "fecha": "04-22",
+        "mes": 4,
+        "dia": 22,
+        "ordinal": 112,
+        "versiculoId": "v112"
+      },
+      {
+        "fecha": "04-23",
+        "mes": 4,
+        "dia": 23,
+        "ordinal": 113,
+        "versiculoId": "v113"
+      },
+      {
+        "fecha": "04-24",
+        "mes": 4,
+        "dia": 24,
+        "ordinal": 114,
+        "versiculoId": "v114"
+      },
+      {
+        "fecha": "04-25",
+        "mes": 4,
+        "dia": 25,
+        "ordinal": 115,
+        "versiculoId": "v115"
+      },
+      {
+        "fecha": "04-26",
+        "mes": 4,
+        "dia": 26,
+        "ordinal": 116,
+        "versiculoId": "v116"
+      },
+      {
+        "fecha": "04-27",
+        "mes": 4,
+        "dia": 27,
+        "ordinal": 117,
+        "versiculoId": "v117"
+      },
+      {
+        "fecha": "04-28",
+        "mes": 4,
+        "dia": 28,
+        "ordinal": 118,
+        "versiculoId": "v118"
+      },
+      {
+        "fecha": "04-29",
+        "mes": 4,
+        "dia": 29,
+        "ordinal": 119,
+        "versiculoId": "v119"
+      },
+      {
+        "fecha": "04-30",
+        "mes": 4,
+        "dia": 30,
+        "ordinal": 120,
+        "versiculoId": "v120"
+      },
+      {
+        "fecha": "05-01",
+        "mes": 5,
+        "dia": 1,
+        "ordinal": 121,
+        "versiculoId": "v121"
+      },
+      {
+        "fecha": "05-02",
+        "mes": 5,
+        "dia": 2,
+        "ordinal": 122,
+        "versiculoId": "v122"
+      },
+      {
+        "fecha": "05-03",
+        "mes": 5,
+        "dia": 3,
+        "ordinal": 123,
+        "versiculoId": "v123"
+      },
+      {
+        "fecha": "05-04",
+        "mes": 5,
+        "dia": 4,
+        "ordinal": 124,
+        "versiculoId": "v124"
+      },
+      {
+        "fecha": "05-05",
+        "mes": 5,
+        "dia": 5,
+        "ordinal": 125,
+        "versiculoId": "v125"
+      },
+      {
+        "fecha": "05-06",
+        "mes": 5,
+        "dia": 6,
+        "ordinal": 126,
+        "versiculoId": "v126"
+      },
+      {
+        "fecha": "05-07",
+        "mes": 5,
+        "dia": 7,
+        "ordinal": 127,
+        "versiculoId": "v127"
+      },
+      {
+        "fecha": "05-08",
+        "mes": 5,
+        "dia": 8,
+        "ordinal": 128,
+        "versiculoId": "v128"
+      },
+      {
+        "fecha": "05-09",
+        "mes": 5,
+        "dia": 9,
+        "ordinal": 129,
+        "versiculoId": "v129"
+      },
+      {
+        "fecha": "05-10",
+        "mes": 5,
+        "dia": 10,
+        "ordinal": 130,
+        "versiculoId": "v130"
+      },
+      {
+        "fecha": "05-11",
+        "mes": 5,
+        "dia": 11,
+        "ordinal": 131,
+        "versiculoId": "v131"
+      },
+      {
+        "fecha": "05-12",
+        "mes": 5,
+        "dia": 12,
+        "ordinal": 132,
+        "versiculoId": "v132"
+      },
+      {
+        "fecha": "05-13",
+        "mes": 5,
+        "dia": 13,
+        "ordinal": 133,
+        "versiculoId": "v133"
+      },
+      {
+        "fecha": "05-14",
+        "mes": 5,
+        "dia": 14,
+        "ordinal": 134,
+        "versiculoId": "v134"
+      },
+      {
+        "fecha": "05-15",
+        "mes": 5,
+        "dia": 15,
+        "ordinal": 135,
+        "versiculoId": "v135"
+      },
+      {
+        "fecha": "05-16",
+        "mes": 5,
+        "dia": 16,
+        "ordinal": 136,
+        "versiculoId": "v136"
+      },
+      {
+        "fecha": "05-17",
+        "mes": 5,
+        "dia": 17,
+        "ordinal": 137,
+        "versiculoId": "v137"
+      },
+      {
+        "fecha": "05-18",
+        "mes": 5,
+        "dia": 18,
+        "ordinal": 138,
+        "versiculoId": "v138"
+      },
+      {
+        "fecha": "05-19",
+        "mes": 5,
+        "dia": 19,
+        "ordinal": 139,
+        "versiculoId": "v139"
+      },
+      {
+        "fecha": "05-20",
+        "mes": 5,
+        "dia": 20,
+        "ordinal": 140,
+        "versiculoId": "v140"
+      },
+      {
+        "fecha": "05-21",
+        "mes": 5,
+        "dia": 21,
+        "ordinal": 141,
+        "versiculoId": "v141"
+      },
+      {
+        "fecha": "05-22",
+        "mes": 5,
+        "dia": 22,
+        "ordinal": 142,
+        "versiculoId": "v142"
+      },
+      {
+        "fecha": "05-23",
+        "mes": 5,
+        "dia": 23,
+        "ordinal": 143,
+        "versiculoId": "v143"
+      },
+      {
+        "fecha": "05-24",
+        "mes": 5,
+        "dia": 24,
+        "ordinal": 144,
+        "versiculoId": "v144"
+      },
+      {
+        "fecha": "05-25",
+        "mes": 5,
+        "dia": 25,
+        "ordinal": 145,
+        "versiculoId": "v145"
+      },
+      {
+        "fecha": "05-26",
+        "mes": 5,
+        "dia": 26,
+        "ordinal": 146,
+        "versiculoId": "v146"
+      },
+      {
+        "fecha": "05-27",
+        "mes": 5,
+        "dia": 27,
+        "ordinal": 147,
+        "versiculoId": "v147"
+      },
+      {
+        "fecha": "05-28",
+        "mes": 5,
+        "dia": 28,
+        "ordinal": 148,
+        "versiculoId": "v148"
+      },
+      {
+        "fecha": "05-29",
+        "mes": 5,
+        "dia": 29,
+        "ordinal": 149,
+        "versiculoId": "v149"
+      },
+      {
+        "fecha": "05-30",
+        "mes": 5,
+        "dia": 30,
+        "ordinal": 150,
+        "versiculoId": "v150"
+      },
+      {
+        "fecha": "05-31",
+        "mes": 5,
+        "dia": 31,
+        "ordinal": 151,
+        "versiculoId": "v151"
+      },
+      {
+        "fecha": "06-01",
+        "mes": 6,
+        "dia": 1,
+        "ordinal": 152,
+        "versiculoId": "v152"
+      },
+      {
+        "fecha": "06-02",
+        "mes": 6,
+        "dia": 2,
+        "ordinal": 153,
+        "versiculoId": "v153"
+      },
+      {
+        "fecha": "06-03",
+        "mes": 6,
+        "dia": 3,
+        "ordinal": 154,
+        "versiculoId": "v154"
+      },
+      {
+        "fecha": "06-04",
+        "mes": 6,
+        "dia": 4,
+        "ordinal": 155,
+        "versiculoId": "v155"
+      },
+      {
+        "fecha": "06-05",
+        "mes": 6,
+        "dia": 5,
+        "ordinal": 156,
+        "versiculoId": "v156"
+      },
+      {
+        "fecha": "06-06",
+        "mes": 6,
+        "dia": 6,
+        "ordinal": 157,
+        "versiculoId": "v157"
+      },
+      {
+        "fecha": "06-07",
+        "mes": 6,
+        "dia": 7,
+        "ordinal": 158,
+        "versiculoId": "v158"
+      },
+      {
+        "fecha": "06-08",
+        "mes": 6,
+        "dia": 8,
+        "ordinal": 159,
+        "versiculoId": "v159"
+      },
+      {
+        "fecha": "06-09",
+        "mes": 6,
+        "dia": 9,
+        "ordinal": 160,
+        "versiculoId": "v160"
+      },
+      {
+        "fecha": "06-10",
+        "mes": 6,
+        "dia": 10,
+        "ordinal": 161,
+        "versiculoId": "v161"
+      },
+      {
+        "fecha": "06-11",
+        "mes": 6,
+        "dia": 11,
+        "ordinal": 162,
+        "versiculoId": "v162"
+      },
+      {
+        "fecha": "06-12",
+        "mes": 6,
+        "dia": 12,
+        "ordinal": 163,
+        "versiculoId": "v163"
+      },
+      {
+        "fecha": "06-13",
+        "mes": 6,
+        "dia": 13,
+        "ordinal": 164,
+        "versiculoId": "v164"
+      },
+      {
+        "fecha": "06-14",
+        "mes": 6,
+        "dia": 14,
+        "ordinal": 165,
+        "versiculoId": "v165"
+      },
+      {
+        "fecha": "06-15",
+        "mes": 6,
+        "dia": 15,
+        "ordinal": 166,
+        "versiculoId": "v166"
+      },
+      {
+        "fecha": "06-16",
+        "mes": 6,
+        "dia": 16,
+        "ordinal": 167,
+        "versiculoId": "v167"
+      },
+      {
+        "fecha": "06-17",
+        "mes": 6,
+        "dia": 17,
+        "ordinal": 168,
+        "versiculoId": "v001"
+      },
+      {
+        "fecha": "06-18",
+        "mes": 6,
+        "dia": 18,
+        "ordinal": 169,
+        "versiculoId": "v002"
+      },
+      {
+        "fecha": "06-19",
+        "mes": 6,
+        "dia": 19,
+        "ordinal": 170,
+        "versiculoId": "v003"
+      },
+      {
+        "fecha": "06-20",
+        "mes": 6,
+        "dia": 20,
+        "ordinal": 171,
+        "versiculoId": "v004"
+      },
+      {
+        "fecha": "06-21",
+        "mes": 6,
+        "dia": 21,
+        "ordinal": 172,
+        "versiculoId": "v005"
+      },
+      {
+        "fecha": "06-22",
+        "mes": 6,
+        "dia": 22,
+        "ordinal": 173,
+        "versiculoId": "v006"
+      },
+      {
+        "fecha": "06-23",
+        "mes": 6,
+        "dia": 23,
+        "ordinal": 174,
+        "versiculoId": "v007"
+      },
+      {
+        "fecha": "06-24",
+        "mes": 6,
+        "dia": 24,
+        "ordinal": 175,
+        "versiculoId": "v008"
+      },
+      {
+        "fecha": "06-25",
+        "mes": 6,
+        "dia": 25,
+        "ordinal": 176,
+        "versiculoId": "v009"
+      },
+      {
+        "fecha": "06-26",
+        "mes": 6,
+        "dia": 26,
+        "ordinal": 177,
+        "versiculoId": "v010"
+      },
+      {
+        "fecha": "06-27",
+        "mes": 6,
+        "dia": 27,
+        "ordinal": 178,
+        "versiculoId": "v011"
+      },
+      {
+        "fecha": "06-28",
+        "mes": 6,
+        "dia": 28,
+        "ordinal": 179,
+        "versiculoId": "v012"
+      },
+      {
+        "fecha": "06-29",
+        "mes": 6,
+        "dia": 29,
+        "ordinal": 180,
+        "versiculoId": "v013"
+      },
+      {
+        "fecha": "06-30",
+        "mes": 6,
+        "dia": 30,
+        "ordinal": 181,
+        "versiculoId": "v014"
+      },
+      {
+        "fecha": "07-01",
+        "mes": 7,
+        "dia": 1,
+        "ordinal": 182,
+        "versiculoId": "v015"
+      },
+      {
+        "fecha": "07-02",
+        "mes": 7,
+        "dia": 2,
+        "ordinal": 183,
+        "versiculoId": "v016"
+      },
+      {
+        "fecha": "07-03",
+        "mes": 7,
+        "dia": 3,
+        "ordinal": 184,
+        "versiculoId": "v017"
+      },
+      {
+        "fecha": "07-04",
+        "mes": 7,
+        "dia": 4,
+        "ordinal": 185,
+        "versiculoId": "v018"
+      },
+      {
+        "fecha": "07-05",
+        "mes": 7,
+        "dia": 5,
+        "ordinal": 186,
+        "versiculoId": "v019"
+      },
+      {
+        "fecha": "07-06",
+        "mes": 7,
+        "dia": 6,
+        "ordinal": 187,
+        "versiculoId": "v020"
+      },
+      {
+        "fecha": "07-07",
+        "mes": 7,
+        "dia": 7,
+        "ordinal": 188,
+        "versiculoId": "v021"
+      },
+      {
+        "fecha": "07-08",
+        "mes": 7,
+        "dia": 8,
+        "ordinal": 189,
+        "versiculoId": "v022"
+      },
+      {
+        "fecha": "07-09",
+        "mes": 7,
+        "dia": 9,
+        "ordinal": 190,
+        "versiculoId": "v023"
+      },
+      {
+        "fecha": "07-10",
+        "mes": 7,
+        "dia": 10,
+        "ordinal": 191,
+        "versiculoId": "v024"
+      },
+      {
+        "fecha": "07-11",
+        "mes": 7,
+        "dia": 11,
+        "ordinal": 192,
+        "versiculoId": "v025"
+      },
+      {
+        "fecha": "07-12",
+        "mes": 7,
+        "dia": 12,
+        "ordinal": 193,
+        "versiculoId": "v026"
+      },
+      {
+        "fecha": "07-13",
+        "mes": 7,
+        "dia": 13,
+        "ordinal": 194,
+        "versiculoId": "v027"
+      },
+      {
+        "fecha": "07-14",
+        "mes": 7,
+        "dia": 14,
+        "ordinal": 195,
+        "versiculoId": "v028"
+      },
+      {
+        "fecha": "07-15",
+        "mes": 7,
+        "dia": 15,
+        "ordinal": 196,
+        "versiculoId": "v029"
+      },
+      {
+        "fecha": "07-16",
+        "mes": 7,
+        "dia": 16,
+        "ordinal": 197,
+        "versiculoId": "v030"
+      },
+      {
+        "fecha": "07-17",
+        "mes": 7,
+        "dia": 17,
+        "ordinal": 198,
+        "versiculoId": "v031"
+      },
+      {
+        "fecha": "07-18",
+        "mes": 7,
+        "dia": 18,
+        "ordinal": 199,
+        "versiculoId": "v032"
+      },
+      {
+        "fecha": "07-19",
+        "mes": 7,
+        "dia": 19,
+        "ordinal": 200,
+        "versiculoId": "v033"
+      },
+      {
+        "fecha": "07-20",
+        "mes": 7,
+        "dia": 20,
+        "ordinal": 201,
+        "versiculoId": "v034"
+      },
+      {
+        "fecha": "07-21",
+        "mes": 7,
+        "dia": 21,
+        "ordinal": 202,
+        "versiculoId": "v035"
+      },
+      {
+        "fecha": "07-22",
+        "mes": 7,
+        "dia": 22,
+        "ordinal": 203,
+        "versiculoId": "v036"
+      },
+      {
+        "fecha": "07-23",
+        "mes": 7,
+        "dia": 23,
+        "ordinal": 204,
+        "versiculoId": "v037"
+      },
+      {
+        "fecha": "07-24",
+        "mes": 7,
+        "dia": 24,
+        "ordinal": 205,
+        "versiculoId": "v038"
+      },
+      {
+        "fecha": "07-25",
+        "mes": 7,
+        "dia": 25,
+        "ordinal": 206,
+        "versiculoId": "v039"
+      },
+      {
+        "fecha": "07-26",
+        "mes": 7,
+        "dia": 26,
+        "ordinal": 207,
+        "versiculoId": "v040"
+      },
+      {
+        "fecha": "07-27",
+        "mes": 7,
+        "dia": 27,
+        "ordinal": 208,
+        "versiculoId": "v041"
+      },
+      {
+        "fecha": "07-28",
+        "mes": 7,
+        "dia": 28,
+        "ordinal": 209,
+        "versiculoId": "v042"
+      },
+      {
+        "fecha": "07-29",
+        "mes": 7,
+        "dia": 29,
+        "ordinal": 210,
+        "versiculoId": "v043"
+      },
+      {
+        "fecha": "07-30",
+        "mes": 7,
+        "dia": 30,
+        "ordinal": 211,
+        "versiculoId": "v044"
+      },
+      {
+        "fecha": "07-31",
+        "mes": 7,
+        "dia": 31,
+        "ordinal": 212,
+        "versiculoId": "v045"
+      },
+      {
+        "fecha": "08-01",
+        "mes": 8,
+        "dia": 1,
+        "ordinal": 213,
+        "versiculoId": "v046"
+      },
+      {
+        "fecha": "08-02",
+        "mes": 8,
+        "dia": 2,
+        "ordinal": 214,
+        "versiculoId": "v047"
+      },
+      {
+        "fecha": "08-03",
+        "mes": 8,
+        "dia": 3,
+        "ordinal": 215,
+        "versiculoId": "v048"
+      },
+      {
+        "fecha": "08-04",
+        "mes": 8,
+        "dia": 4,
+        "ordinal": 216,
+        "versiculoId": "v049"
+      },
+      {
+        "fecha": "08-05",
+        "mes": 8,
+        "dia": 5,
+        "ordinal": 217,
+        "versiculoId": "v050"
+      },
+      {
+        "fecha": "08-06",
+        "mes": 8,
+        "dia": 6,
+        "ordinal": 218,
+        "versiculoId": "v051"
+      },
+      {
+        "fecha": "08-07",
+        "mes": 8,
+        "dia": 7,
+        "ordinal": 219,
+        "versiculoId": "v052"
+      },
+      {
+        "fecha": "08-08",
+        "mes": 8,
+        "dia": 8,
+        "ordinal": 220,
+        "versiculoId": "v053"
+      },
+      {
+        "fecha": "08-09",
+        "mes": 8,
+        "dia": 9,
+        "ordinal": 221,
+        "versiculoId": "v054"
+      },
+      {
+        "fecha": "08-10",
+        "mes": 8,
+        "dia": 10,
+        "ordinal": 222,
+        "versiculoId": "v055"
+      },
+      {
+        "fecha": "08-11",
+        "mes": 8,
+        "dia": 11,
+        "ordinal": 223,
+        "versiculoId": "v056"
+      },
+      {
+        "fecha": "08-12",
+        "mes": 8,
+        "dia": 12,
+        "ordinal": 224,
+        "versiculoId": "v057"
+      },
+      {
+        "fecha": "08-13",
+        "mes": 8,
+        "dia": 13,
+        "ordinal": 225,
+        "versiculoId": "v058"
+      },
+      {
+        "fecha": "08-14",
+        "mes": 8,
+        "dia": 14,
+        "ordinal": 226,
+        "versiculoId": "v059"
+      },
+      {
+        "fecha": "08-15",
+        "mes": 8,
+        "dia": 15,
+        "ordinal": 227,
+        "versiculoId": "v060"
+      },
+      {
+        "fecha": "08-16",
+        "mes": 8,
+        "dia": 16,
+        "ordinal": 228,
+        "versiculoId": "v061"
+      },
+      {
+        "fecha": "08-17",
+        "mes": 8,
+        "dia": 17,
+        "ordinal": 229,
+        "versiculoId": "v062"
+      },
+      {
+        "fecha": "08-18",
+        "mes": 8,
+        "dia": 18,
+        "ordinal": 230,
+        "versiculoId": "v063"
+      },
+      {
+        "fecha": "08-19",
+        "mes": 8,
+        "dia": 19,
+        "ordinal": 231,
+        "versiculoId": "v064"
+      },
+      {
+        "fecha": "08-20",
+        "mes": 8,
+        "dia": 20,
+        "ordinal": 232,
+        "versiculoId": "v065"
+      },
+      {
+        "fecha": "08-21",
+        "mes": 8,
+        "dia": 21,
+        "ordinal": 233,
+        "versiculoId": "v066"
+      },
+      {
+        "fecha": "08-22",
+        "mes": 8,
+        "dia": 22,
+        "ordinal": 234,
+        "versiculoId": "v067"
+      },
+      {
+        "fecha": "08-23",
+        "mes": 8,
+        "dia": 23,
+        "ordinal": 235,
+        "versiculoId": "v068"
+      },
+      {
+        "fecha": "08-24",
+        "mes": 8,
+        "dia": 24,
+        "ordinal": 236,
+        "versiculoId": "v069"
+      },
+      {
+        "fecha": "08-25",
+        "mes": 8,
+        "dia": 25,
+        "ordinal": 237,
+        "versiculoId": "v070"
+      },
+      {
+        "fecha": "08-26",
+        "mes": 8,
+        "dia": 26,
+        "ordinal": 238,
+        "versiculoId": "v071"
+      },
+      {
+        "fecha": "08-27",
+        "mes": 8,
+        "dia": 27,
+        "ordinal": 239,
+        "versiculoId": "v072"
+      },
+      {
+        "fecha": "08-28",
+        "mes": 8,
+        "dia": 28,
+        "ordinal": 240,
+        "versiculoId": "v073"
+      },
+      {
+        "fecha": "08-29",
+        "mes": 8,
+        "dia": 29,
+        "ordinal": 241,
+        "versiculoId": "v074"
+      },
+      {
+        "fecha": "08-30",
+        "mes": 8,
+        "dia": 30,
+        "ordinal": 242,
+        "versiculoId": "v075"
+      },
+      {
+        "fecha": "08-31",
+        "mes": 8,
+        "dia": 31,
+        "ordinal": 243,
+        "versiculoId": "v076"
+      },
+      {
+        "fecha": "09-01",
+        "mes": 9,
+        "dia": 1,
+        "ordinal": 244,
+        "versiculoId": "v077"
+      },
+      {
+        "fecha": "09-02",
+        "mes": 9,
+        "dia": 2,
+        "ordinal": 245,
+        "versiculoId": "v078"
+      },
+      {
+        "fecha": "09-03",
+        "mes": 9,
+        "dia": 3,
+        "ordinal": 246,
+        "versiculoId": "v079"
+      },
+      {
+        "fecha": "09-04",
+        "mes": 9,
+        "dia": 4,
+        "ordinal": 247,
+        "versiculoId": "v080"
+      },
+      {
+        "fecha": "09-05",
+        "mes": 9,
+        "dia": 5,
+        "ordinal": 248,
+        "versiculoId": "v081"
+      },
+      {
+        "fecha": "09-06",
+        "mes": 9,
+        "dia": 6,
+        "ordinal": 249,
+        "versiculoId": "v082"
+      },
+      {
+        "fecha": "09-07",
+        "mes": 9,
+        "dia": 7,
+        "ordinal": 250,
+        "versiculoId": "v083"
+      },
+      {
+        "fecha": "09-08",
+        "mes": 9,
+        "dia": 8,
+        "ordinal": 251,
+        "versiculoId": "v084"
+      },
+      {
+        "fecha": "09-09",
+        "mes": 9,
+        "dia": 9,
+        "ordinal": 252,
+        "versiculoId": "v085"
+      },
+      {
+        "fecha": "09-10",
+        "mes": 9,
+        "dia": 10,
+        "ordinal": 253,
+        "versiculoId": "v086"
+      },
+      {
+        "fecha": "09-11",
+        "mes": 9,
+        "dia": 11,
+        "ordinal": 254,
+        "versiculoId": "v087"
+      },
+      {
+        "fecha": "09-12",
+        "mes": 9,
+        "dia": 12,
+        "ordinal": 255,
+        "versiculoId": "v088"
+      },
+      {
+        "fecha": "09-13",
+        "mes": 9,
+        "dia": 13,
+        "ordinal": 256,
+        "versiculoId": "v089"
+      },
+      {
+        "fecha": "09-14",
+        "mes": 9,
+        "dia": 14,
+        "ordinal": 257,
+        "versiculoId": "v090"
+      },
+      {
+        "fecha": "09-15",
+        "mes": 9,
+        "dia": 15,
+        "ordinal": 258,
+        "versiculoId": "v091"
+      },
+      {
+        "fecha": "09-16",
+        "mes": 9,
+        "dia": 16,
+        "ordinal": 259,
+        "versiculoId": "v092"
+      },
+      {
+        "fecha": "09-17",
+        "mes": 9,
+        "dia": 17,
+        "ordinal": 260,
+        "versiculoId": "v093"
+      },
+      {
+        "fecha": "09-18",
+        "mes": 9,
+        "dia": 18,
+        "ordinal": 261,
+        "versiculoId": "v094"
+      },
+      {
+        "fecha": "09-19",
+        "mes": 9,
+        "dia": 19,
+        "ordinal": 262,
+        "versiculoId": "v095"
+      },
+      {
+        "fecha": "09-20",
+        "mes": 9,
+        "dia": 20,
+        "ordinal": 263,
+        "versiculoId": "v096"
+      },
+      {
+        "fecha": "09-21",
+        "mes": 9,
+        "dia": 21,
+        "ordinal": 264,
+        "versiculoId": "v097"
+      },
+      {
+        "fecha": "09-22",
+        "mes": 9,
+        "dia": 22,
+        "ordinal": 265,
+        "versiculoId": "v098"
+      },
+      {
+        "fecha": "09-23",
+        "mes": 9,
+        "dia": 23,
+        "ordinal": 266,
+        "versiculoId": "v099"
+      },
+      {
+        "fecha": "09-24",
+        "mes": 9,
+        "dia": 24,
+        "ordinal": 267,
+        "versiculoId": "v100"
+      },
+      {
+        "fecha": "09-25",
+        "mes": 9,
+        "dia": 25,
+        "ordinal": 268,
+        "versiculoId": "v101"
+      },
+      {
+        "fecha": "09-26",
+        "mes": 9,
+        "dia": 26,
+        "ordinal": 269,
+        "versiculoId": "v102"
+      },
+      {
+        "fecha": "09-27",
+        "mes": 9,
+        "dia": 27,
+        "ordinal": 270,
+        "versiculoId": "v103"
+      },
+      {
+        "fecha": "09-28",
+        "mes": 9,
+        "dia": 28,
+        "ordinal": 271,
+        "versiculoId": "v104"
+      },
+      {
+        "fecha": "09-29",
+        "mes": 9,
+        "dia": 29,
+        "ordinal": 272,
+        "versiculoId": "v105"
+      },
+      {
+        "fecha": "09-30",
+        "mes": 9,
+        "dia": 30,
+        "ordinal": 273,
+        "versiculoId": "v106"
+      },
+      {
+        "fecha": "10-01",
+        "mes": 10,
+        "dia": 1,
+        "ordinal": 274,
+        "versiculoId": "v107"
+      },
+      {
+        "fecha": "10-02",
+        "mes": 10,
+        "dia": 2,
+        "ordinal": 275,
+        "versiculoId": "v108"
+      },
+      {
+        "fecha": "10-03",
+        "mes": 10,
+        "dia": 3,
+        "ordinal": 276,
+        "versiculoId": "v109"
+      },
+      {
+        "fecha": "10-04",
+        "mes": 10,
+        "dia": 4,
+        "ordinal": 277,
+        "versiculoId": "v110"
+      },
+      {
+        "fecha": "10-05",
+        "mes": 10,
+        "dia": 5,
+        "ordinal": 278,
+        "versiculoId": "v111"
+      },
+      {
+        "fecha": "10-06",
+        "mes": 10,
+        "dia": 6,
+        "ordinal": 279,
+        "versiculoId": "v112"
+      },
+      {
+        "fecha": "10-07",
+        "mes": 10,
+        "dia": 7,
+        "ordinal": 280,
+        "versiculoId": "v113"
+      },
+      {
+        "fecha": "10-08",
+        "mes": 10,
+        "dia": 8,
+        "ordinal": 281,
+        "versiculoId": "v114"
+      },
+      {
+        "fecha": "10-09",
+        "mes": 10,
+        "dia": 9,
+        "ordinal": 282,
+        "versiculoId": "v115"
+      },
+      {
+        "fecha": "10-10",
+        "mes": 10,
+        "dia": 10,
+        "ordinal": 283,
+        "versiculoId": "v116"
+      },
+      {
+        "fecha": "10-11",
+        "mes": 10,
+        "dia": 11,
+        "ordinal": 284,
+        "versiculoId": "v117"
+      },
+      {
+        "fecha": "10-12",
+        "mes": 10,
+        "dia": 12,
+        "ordinal": 285,
+        "versiculoId": "v118"
+      },
+      {
+        "fecha": "10-13",
+        "mes": 10,
+        "dia": 13,
+        "ordinal": 286,
+        "versiculoId": "v119"
+      },
+      {
+        "fecha": "10-14",
+        "mes": 10,
+        "dia": 14,
+        "ordinal": 287,
+        "versiculoId": "v120"
+      },
+      {
+        "fecha": "10-15",
+        "mes": 10,
+        "dia": 15,
+        "ordinal": 288,
+        "versiculoId": "v121"
+      },
+      {
+        "fecha": "10-16",
+        "mes": 10,
+        "dia": 16,
+        "ordinal": 289,
+        "versiculoId": "v122"
+      },
+      {
+        "fecha": "10-17",
+        "mes": 10,
+        "dia": 17,
+        "ordinal": 290,
+        "versiculoId": "v123"
+      },
+      {
+        "fecha": "10-18",
+        "mes": 10,
+        "dia": 18,
+        "ordinal": 291,
+        "versiculoId": "v124"
+      },
+      {
+        "fecha": "10-19",
+        "mes": 10,
+        "dia": 19,
+        "ordinal": 292,
+        "versiculoId": "v125"
+      },
+      {
+        "fecha": "10-20",
+        "mes": 10,
+        "dia": 20,
+        "ordinal": 293,
+        "versiculoId": "v126"
+      },
+      {
+        "fecha": "10-21",
+        "mes": 10,
+        "dia": 21,
+        "ordinal": 294,
+        "versiculoId": "v127"
+      },
+      {
+        "fecha": "10-22",
+        "mes": 10,
+        "dia": 22,
+        "ordinal": 295,
+        "versiculoId": "v128"
+      },
+      {
+        "fecha": "10-23",
+        "mes": 10,
+        "dia": 23,
+        "ordinal": 296,
+        "versiculoId": "v129"
+      },
+      {
+        "fecha": "10-24",
+        "mes": 10,
+        "dia": 24,
+        "ordinal": 297,
+        "versiculoId": "v130"
+      },
+      {
+        "fecha": "10-25",
+        "mes": 10,
+        "dia": 25,
+        "ordinal": 298,
+        "versiculoId": "v131"
+      },
+      {
+        "fecha": "10-26",
+        "mes": 10,
+        "dia": 26,
+        "ordinal": 299,
+        "versiculoId": "v132"
+      },
+      {
+        "fecha": "10-27",
+        "mes": 10,
+        "dia": 27,
+        "ordinal": 300,
+        "versiculoId": "v133"
+      },
+      {
+        "fecha": "10-28",
+        "mes": 10,
+        "dia": 28,
+        "ordinal": 301,
+        "versiculoId": "v134"
+      },
+      {
+        "fecha": "10-29",
+        "mes": 10,
+        "dia": 29,
+        "ordinal": 302,
+        "versiculoId": "v135"
+      },
+      {
+        "fecha": "10-30",
+        "mes": 10,
+        "dia": 30,
+        "ordinal": 303,
+        "versiculoId": "v136"
+      },
+      {
+        "fecha": "10-31",
+        "mes": 10,
+        "dia": 31,
+        "ordinal": 304,
+        "versiculoId": "v137"
+      },
+      {
+        "fecha": "11-01",
+        "mes": 11,
+        "dia": 1,
+        "ordinal": 305,
+        "versiculoId": "v138"
+      },
+      {
+        "fecha": "11-02",
+        "mes": 11,
+        "dia": 2,
+        "ordinal": 306,
+        "versiculoId": "v139"
+      },
+      {
+        "fecha": "11-03",
+        "mes": 11,
+        "dia": 3,
+        "ordinal": 307,
+        "versiculoId": "v140"
+      },
+      {
+        "fecha": "11-04",
+        "mes": 11,
+        "dia": 4,
+        "ordinal": 308,
+        "versiculoId": "v141"
+      },
+      {
+        "fecha": "11-05",
+        "mes": 11,
+        "dia": 5,
+        "ordinal": 309,
+        "versiculoId": "v142"
+      },
+      {
+        "fecha": "11-06",
+        "mes": 11,
+        "dia": 6,
+        "ordinal": 310,
+        "versiculoId": "v143"
+      },
+      {
+        "fecha": "11-07",
+        "mes": 11,
+        "dia": 7,
+        "ordinal": 311,
+        "versiculoId": "v144"
+      },
+      {
+        "fecha": "11-08",
+        "mes": 11,
+        "dia": 8,
+        "ordinal": 312,
+        "versiculoId": "v145"
+      },
+      {
+        "fecha": "11-09",
+        "mes": 11,
+        "dia": 9,
+        "ordinal": 313,
+        "versiculoId": "v146"
+      },
+      {
+        "fecha": "11-10",
+        "mes": 11,
+        "dia": 10,
+        "ordinal": 314,
+        "versiculoId": "v147"
+      },
+      {
+        "fecha": "11-11",
+        "mes": 11,
+        "dia": 11,
+        "ordinal": 315,
+        "versiculoId": "v148"
+      },
+      {
+        "fecha": "11-12",
+        "mes": 11,
+        "dia": 12,
+        "ordinal": 316,
+        "versiculoId": "v149"
+      },
+      {
+        "fecha": "11-13",
+        "mes": 11,
+        "dia": 13,
+        "ordinal": 317,
+        "versiculoId": "v150"
+      },
+      {
+        "fecha": "11-14",
+        "mes": 11,
+        "dia": 14,
+        "ordinal": 318,
+        "versiculoId": "v151"
+      },
+      {
+        "fecha": "11-15",
+        "mes": 11,
+        "dia": 15,
+        "ordinal": 319,
+        "versiculoId": "v152"
+      },
+      {
+        "fecha": "11-16",
+        "mes": 11,
+        "dia": 16,
+        "ordinal": 320,
+        "versiculoId": "v153"
+      },
+      {
+        "fecha": "11-17",
+        "mes": 11,
+        "dia": 17,
+        "ordinal": 321,
+        "versiculoId": "v154"
+      },
+      {
+        "fecha": "11-18",
+        "mes": 11,
+        "dia": 18,
+        "ordinal": 322,
+        "versiculoId": "v155"
+      },
+      {
+        "fecha": "11-19",
+        "mes": 11,
+        "dia": 19,
+        "ordinal": 323,
+        "versiculoId": "v156"
+      },
+      {
+        "fecha": "11-20",
+        "mes": 11,
+        "dia": 20,
+        "ordinal": 324,
+        "versiculoId": "v157"
+      },
+      {
+        "fecha": "11-21",
+        "mes": 11,
+        "dia": 21,
+        "ordinal": 325,
+        "versiculoId": "v158"
+      },
+      {
+        "fecha": "11-22",
+        "mes": 11,
+        "dia": 22,
+        "ordinal": 326,
+        "versiculoId": "v159"
+      },
+      {
+        "fecha": "11-23",
+        "mes": 11,
+        "dia": 23,
+        "ordinal": 327,
+        "versiculoId": "v160"
+      },
+      {
+        "fecha": "11-24",
+        "mes": 11,
+        "dia": 24,
+        "ordinal": 328,
+        "versiculoId": "v161"
+      },
+      {
+        "fecha": "11-25",
+        "mes": 11,
+        "dia": 25,
+        "ordinal": 329,
+        "versiculoId": "v162"
+      },
+      {
+        "fecha": "11-26",
+        "mes": 11,
+        "dia": 26,
+        "ordinal": 330,
+        "versiculoId": "v163"
+      },
+      {
+        "fecha": "11-27",
+        "mes": 11,
+        "dia": 27,
+        "ordinal": 331,
+        "versiculoId": "v164"
+      },
+      {
+        "fecha": "11-28",
+        "mes": 11,
+        "dia": 28,
+        "ordinal": 332,
+        "versiculoId": "v165"
+      },
+      {
+        "fecha": "11-29",
+        "mes": 11,
+        "dia": 29,
+        "ordinal": 333,
+        "versiculoId": "v166"
+      },
+      {
+        "fecha": "11-30",
+        "mes": 11,
+        "dia": 30,
+        "ordinal": 334,
+        "versiculoId": "v167"
+      },
+      {
+        "fecha": "12-01",
+        "mes": 12,
+        "dia": 1,
+        "ordinal": 335,
+        "versiculoId": "v001"
+      },
+      {
+        "fecha": "12-02",
+        "mes": 12,
+        "dia": 2,
+        "ordinal": 336,
+        "versiculoId": "v002"
+      },
+      {
+        "fecha": "12-03",
+        "mes": 12,
+        "dia": 3,
+        "ordinal": 337,
+        "versiculoId": "v003"
+      },
+      {
+        "fecha": "12-04",
+        "mes": 12,
+        "dia": 4,
+        "ordinal": 338,
+        "versiculoId": "v004"
+      },
+      {
+        "fecha": "12-05",
+        "mes": 12,
+        "dia": 5,
+        "ordinal": 339,
+        "versiculoId": "v005"
+      },
+      {
+        "fecha": "12-06",
+        "mes": 12,
+        "dia": 6,
+        "ordinal": 340,
+        "versiculoId": "v006"
+      },
+      {
+        "fecha": "12-07",
+        "mes": 12,
+        "dia": 7,
+        "ordinal": 341,
+        "versiculoId": "v007"
+      },
+      {
+        "fecha": "12-08",
+        "mes": 12,
+        "dia": 8,
+        "ordinal": 342,
+        "versiculoId": "v008"
+      },
+      {
+        "fecha": "12-09",
+        "mes": 12,
+        "dia": 9,
+        "ordinal": 343,
+        "versiculoId": "v009"
+      },
+      {
+        "fecha": "12-10",
+        "mes": 12,
+        "dia": 10,
+        "ordinal": 344,
+        "versiculoId": "v010"
+      },
+      {
+        "fecha": "12-11",
+        "mes": 12,
+        "dia": 11,
+        "ordinal": 345,
+        "versiculoId": "v011"
+      },
+      {
+        "fecha": "12-12",
+        "mes": 12,
+        "dia": 12,
+        "ordinal": 346,
+        "versiculoId": "v012"
+      },
+      {
+        "fecha": "12-13",
+        "mes": 12,
+        "dia": 13,
+        "ordinal": 347,
+        "versiculoId": "v013"
+      },
+      {
+        "fecha": "12-14",
+        "mes": 12,
+        "dia": 14,
+        "ordinal": 348,
+        "versiculoId": "v014"
+      },
+      {
+        "fecha": "12-15",
+        "mes": 12,
+        "dia": 15,
+        "ordinal": 349,
+        "versiculoId": "v015"
+      },
+      {
+        "fecha": "12-16",
+        "mes": 12,
+        "dia": 16,
+        "ordinal": 350,
+        "versiculoId": "v016"
+      },
+      {
+        "fecha": "12-17",
+        "mes": 12,
+        "dia": 17,
+        "ordinal": 351,
+        "versiculoId": "v017"
+      },
+      {
+        "fecha": "12-18",
+        "mes": 12,
+        "dia": 18,
+        "ordinal": 352,
+        "versiculoId": "v018"
+      },
+      {
+        "fecha": "12-19",
+        "mes": 12,
+        "dia": 19,
+        "ordinal": 353,
+        "versiculoId": "v019"
+      },
+      {
+        "fecha": "12-20",
+        "mes": 12,
+        "dia": 20,
+        "ordinal": 354,
+        "versiculoId": "v020"
+      },
+      {
+        "fecha": "12-21",
+        "mes": 12,
+        "dia": 21,
+        "ordinal": 355,
+        "versiculoId": "v021"
+      },
+      {
+        "fecha": "12-22",
+        "mes": 12,
+        "dia": 22,
+        "ordinal": 356,
+        "versiculoId": "v022"
+      },
+      {
+        "fecha": "12-23",
+        "mes": 12,
+        "dia": 23,
+        "ordinal": 357,
+        "versiculoId": "v023"
+      },
+      {
+        "fecha": "12-24",
+        "mes": 12,
+        "dia": 24,
+        "ordinal": 358,
+        "versiculoId": "v024"
+      },
+      {
+        "fecha": "12-25",
+        "mes": 12,
+        "dia": 25,
+        "ordinal": 359,
+        "versiculoId": "v025"
+      },
+      {
+        "fecha": "12-26",
+        "mes": 12,
+        "dia": 26,
+        "ordinal": 360,
+        "versiculoId": "v026"
+      },
+      {
+        "fecha": "12-27",
+        "mes": 12,
+        "dia": 27,
+        "ordinal": 361,
+        "versiculoId": "v027"
+      },
+      {
+        "fecha": "12-28",
+        "mes": 12,
+        "dia": 28,
+        "ordinal": 362,
+        "versiculoId": "v028"
+      },
+      {
+        "fecha": "12-29",
+        "mes": 12,
+        "dia": 29,
+        "ordinal": 363,
+        "versiculoId": "v029"
+      },
+      {
+        "fecha": "12-30",
+        "mes": 12,
+        "dia": 30,
+        "ordinal": 364,
+        "versiculoId": "v030"
+      },
+      {
+        "fecha": "12-31",
+        "mes": 12,
+        "dia": 31,
+        "ordinal": 365,
+        "versiculoId": "v031"
+      }
+    ],
+    "bisiesto": [
+      {
+        "fecha": "01-01",
+        "mes": 1,
+        "dia": 1,
+        "ordinal": 1,
+        "versiculoId": "v001"
+      },
+      {
+        "fecha": "01-02",
+        "mes": 1,
+        "dia": 2,
+        "ordinal": 2,
+        "versiculoId": "v002"
+      },
+      {
+        "fecha": "01-03",
+        "mes": 1,
+        "dia": 3,
+        "ordinal": 3,
+        "versiculoId": "v003"
+      },
+      {
+        "fecha": "01-04",
+        "mes": 1,
+        "dia": 4,
+        "ordinal": 4,
+        "versiculoId": "v004"
+      },
+      {
+        "fecha": "01-05",
+        "mes": 1,
+        "dia": 5,
+        "ordinal": 5,
+        "versiculoId": "v005"
+      },
+      {
+        "fecha": "01-06",
+        "mes": 1,
+        "dia": 6,
+        "ordinal": 6,
+        "versiculoId": "v006"
+      },
+      {
+        "fecha": "01-07",
+        "mes": 1,
+        "dia": 7,
+        "ordinal": 7,
+        "versiculoId": "v007"
+      },
+      {
+        "fecha": "01-08",
+        "mes": 1,
+        "dia": 8,
+        "ordinal": 8,
+        "versiculoId": "v008"
+      },
+      {
+        "fecha": "01-09",
+        "mes": 1,
+        "dia": 9,
+        "ordinal": 9,
+        "versiculoId": "v009"
+      },
+      {
+        "fecha": "01-10",
+        "mes": 1,
+        "dia": 10,
+        "ordinal": 10,
+        "versiculoId": "v010"
+      },
+      {
+        "fecha": "01-11",
+        "mes": 1,
+        "dia": 11,
+        "ordinal": 11,
+        "versiculoId": "v011"
+      },
+      {
+        "fecha": "01-12",
+        "mes": 1,
+        "dia": 12,
+        "ordinal": 12,
+        "versiculoId": "v012"
+      },
+      {
+        "fecha": "01-13",
+        "mes": 1,
+        "dia": 13,
+        "ordinal": 13,
+        "versiculoId": "v013"
+      },
+      {
+        "fecha": "01-14",
+        "mes": 1,
+        "dia": 14,
+        "ordinal": 14,
+        "versiculoId": "v014"
+      },
+      {
+        "fecha": "01-15",
+        "mes": 1,
+        "dia": 15,
+        "ordinal": 15,
+        "versiculoId": "v015"
+      },
+      {
+        "fecha": "01-16",
+        "mes": 1,
+        "dia": 16,
+        "ordinal": 16,
+        "versiculoId": "v016"
+      },
+      {
+        "fecha": "01-17",
+        "mes": 1,
+        "dia": 17,
+        "ordinal": 17,
+        "versiculoId": "v017"
+      },
+      {
+        "fecha": "01-18",
+        "mes": 1,
+        "dia": 18,
+        "ordinal": 18,
+        "versiculoId": "v018"
+      },
+      {
+        "fecha": "01-19",
+        "mes": 1,
+        "dia": 19,
+        "ordinal": 19,
+        "versiculoId": "v019"
+      },
+      {
+        "fecha": "01-20",
+        "mes": 1,
+        "dia": 20,
+        "ordinal": 20,
+        "versiculoId": "v020"
+      },
+      {
+        "fecha": "01-21",
+        "mes": 1,
+        "dia": 21,
+        "ordinal": 21,
+        "versiculoId": "v021"
+      },
+      {
+        "fecha": "01-22",
+        "mes": 1,
+        "dia": 22,
+        "ordinal": 22,
+        "versiculoId": "v022"
+      },
+      {
+        "fecha": "01-23",
+        "mes": 1,
+        "dia": 23,
+        "ordinal": 23,
+        "versiculoId": "v023"
+      },
+      {
+        "fecha": "01-24",
+        "mes": 1,
+        "dia": 24,
+        "ordinal": 24,
+        "versiculoId": "v024"
+      },
+      {
+        "fecha": "01-25",
+        "mes": 1,
+        "dia": 25,
+        "ordinal": 25,
+        "versiculoId": "v025"
+      },
+      {
+        "fecha": "01-26",
+        "mes": 1,
+        "dia": 26,
+        "ordinal": 26,
+        "versiculoId": "v026"
+      },
+      {
+        "fecha": "01-27",
+        "mes": 1,
+        "dia": 27,
+        "ordinal": 27,
+        "versiculoId": "v027"
+      },
+      {
+        "fecha": "01-28",
+        "mes": 1,
+        "dia": 28,
+        "ordinal": 28,
+        "versiculoId": "v028"
+      },
+      {
+        "fecha": "01-29",
+        "mes": 1,
+        "dia": 29,
+        "ordinal": 29,
+        "versiculoId": "v029"
+      },
+      {
+        "fecha": "01-30",
+        "mes": 1,
+        "dia": 30,
+        "ordinal": 30,
+        "versiculoId": "v030"
+      },
+      {
+        "fecha": "01-31",
+        "mes": 1,
+        "dia": 31,
+        "ordinal": 31,
+        "versiculoId": "v031"
+      },
+      {
+        "fecha": "02-01",
+        "mes": 2,
+        "dia": 1,
+        "ordinal": 32,
+        "versiculoId": "v032"
+      },
+      {
+        "fecha": "02-02",
+        "mes": 2,
+        "dia": 2,
+        "ordinal": 33,
+        "versiculoId": "v033"
+      },
+      {
+        "fecha": "02-03",
+        "mes": 2,
+        "dia": 3,
+        "ordinal": 34,
+        "versiculoId": "v034"
+      },
+      {
+        "fecha": "02-04",
+        "mes": 2,
+        "dia": 4,
+        "ordinal": 35,
+        "versiculoId": "v035"
+      },
+      {
+        "fecha": "02-05",
+        "mes": 2,
+        "dia": 5,
+        "ordinal": 36,
+        "versiculoId": "v036"
+      },
+      {
+        "fecha": "02-06",
+        "mes": 2,
+        "dia": 6,
+        "ordinal": 37,
+        "versiculoId": "v037"
+      },
+      {
+        "fecha": "02-07",
+        "mes": 2,
+        "dia": 7,
+        "ordinal": 38,
+        "versiculoId": "v038"
+      },
+      {
+        "fecha": "02-08",
+        "mes": 2,
+        "dia": 8,
+        "ordinal": 39,
+        "versiculoId": "v039"
+      },
+      {
+        "fecha": "02-09",
+        "mes": 2,
+        "dia": 9,
+        "ordinal": 40,
+        "versiculoId": "v040"
+      },
+      {
+        "fecha": "02-10",
+        "mes": 2,
+        "dia": 10,
+        "ordinal": 41,
+        "versiculoId": "v041"
+      },
+      {
+        "fecha": "02-11",
+        "mes": 2,
+        "dia": 11,
+        "ordinal": 42,
+        "versiculoId": "v042"
+      },
+      {
+        "fecha": "02-12",
+        "mes": 2,
+        "dia": 12,
+        "ordinal": 43,
+        "versiculoId": "v043"
+      },
+      {
+        "fecha": "02-13",
+        "mes": 2,
+        "dia": 13,
+        "ordinal": 44,
+        "versiculoId": "v044"
+      },
+      {
+        "fecha": "02-14",
+        "mes": 2,
+        "dia": 14,
+        "ordinal": 45,
+        "versiculoId": "v045"
+      },
+      {
+        "fecha": "02-15",
+        "mes": 2,
+        "dia": 15,
+        "ordinal": 46,
+        "versiculoId": "v046"
+      },
+      {
+        "fecha": "02-16",
+        "mes": 2,
+        "dia": 16,
+        "ordinal": 47,
+        "versiculoId": "v047"
+      },
+      {
+        "fecha": "02-17",
+        "mes": 2,
+        "dia": 17,
+        "ordinal": 48,
+        "versiculoId": "v048"
+      },
+      {
+        "fecha": "02-18",
+        "mes": 2,
+        "dia": 18,
+        "ordinal": 49,
+        "versiculoId": "v049"
+      },
+      {
+        "fecha": "02-19",
+        "mes": 2,
+        "dia": 19,
+        "ordinal": 50,
+        "versiculoId": "v050"
+      },
+      {
+        "fecha": "02-20",
+        "mes": 2,
+        "dia": 20,
+        "ordinal": 51,
+        "versiculoId": "v051"
+      },
+      {
+        "fecha": "02-21",
+        "mes": 2,
+        "dia": 21,
+        "ordinal": 52,
+        "versiculoId": "v052"
+      },
+      {
+        "fecha": "02-22",
+        "mes": 2,
+        "dia": 22,
+        "ordinal": 53,
+        "versiculoId": "v053"
+      },
+      {
+        "fecha": "02-23",
+        "mes": 2,
+        "dia": 23,
+        "ordinal": 54,
+        "versiculoId": "v054"
+      },
+      {
+        "fecha": "02-24",
+        "mes": 2,
+        "dia": 24,
+        "ordinal": 55,
+        "versiculoId": "v055"
+      },
+      {
+        "fecha": "02-25",
+        "mes": 2,
+        "dia": 25,
+        "ordinal": 56,
+        "versiculoId": "v056"
+      },
+      {
+        "fecha": "02-26",
+        "mes": 2,
+        "dia": 26,
+        "ordinal": 57,
+        "versiculoId": "v057"
+      },
+      {
+        "fecha": "02-27",
+        "mes": 2,
+        "dia": 27,
+        "ordinal": 58,
+        "versiculoId": "v058"
+      },
+      {
+        "fecha": "02-28",
+        "mes": 2,
+        "dia": 28,
+        "ordinal": 59,
+        "versiculoId": "v059"
+      },
+      {
+        "fecha": "02-29",
+        "mes": 2,
+        "dia": 29,
+        "ordinal": 60,
+        "versiculoId": "v031",
+        "mismaLecturaQue": "12-31"
+      },
+      {
+        "fecha": "03-01",
+        "mes": 3,
+        "dia": 1,
+        "ordinal": 61,
+        "versiculoId": "v060"
+      },
+      {
+        "fecha": "03-02",
+        "mes": 3,
+        "dia": 2,
+        "ordinal": 62,
+        "versiculoId": "v061"
+      },
+      {
+        "fecha": "03-03",
+        "mes": 3,
+        "dia": 3,
+        "ordinal": 63,
+        "versiculoId": "v062"
+      },
+      {
+        "fecha": "03-04",
+        "mes": 3,
+        "dia": 4,
+        "ordinal": 64,
+        "versiculoId": "v063"
+      },
+      {
+        "fecha": "03-05",
+        "mes": 3,
+        "dia": 5,
+        "ordinal": 65,
+        "versiculoId": "v064"
+      },
+      {
+        "fecha": "03-06",
+        "mes": 3,
+        "dia": 6,
+        "ordinal": 66,
+        "versiculoId": "v065"
+      },
+      {
+        "fecha": "03-07",
+        "mes": 3,
+        "dia": 7,
+        "ordinal": 67,
+        "versiculoId": "v066"
+      },
+      {
+        "fecha": "03-08",
+        "mes": 3,
+        "dia": 8,
+        "ordinal": 68,
+        "versiculoId": "v067"
+      },
+      {
+        "fecha": "03-09",
+        "mes": 3,
+        "dia": 9,
+        "ordinal": 69,
+        "versiculoId": "v068"
+      },
+      {
+        "fecha": "03-10",
+        "mes": 3,
+        "dia": 10,
+        "ordinal": 70,
+        "versiculoId": "v069"
+      },
+      {
+        "fecha": "03-11",
+        "mes": 3,
+        "dia": 11,
+        "ordinal": 71,
+        "versiculoId": "v070"
+      },
+      {
+        "fecha": "03-12",
+        "mes": 3,
+        "dia": 12,
+        "ordinal": 72,
+        "versiculoId": "v071"
+      },
+      {
+        "fecha": "03-13",
+        "mes": 3,
+        "dia": 13,
+        "ordinal": 73,
+        "versiculoId": "v072"
+      },
+      {
+        "fecha": "03-14",
+        "mes": 3,
+        "dia": 14,
+        "ordinal": 74,
+        "versiculoId": "v073"
+      },
+      {
+        "fecha": "03-15",
+        "mes": 3,
+        "dia": 15,
+        "ordinal": 75,
+        "versiculoId": "v074"
+      },
+      {
+        "fecha": "03-16",
+        "mes": 3,
+        "dia": 16,
+        "ordinal": 76,
+        "versiculoId": "v075"
+      },
+      {
+        "fecha": "03-17",
+        "mes": 3,
+        "dia": 17,
+        "ordinal": 77,
+        "versiculoId": "v076"
+      },
+      {
+        "fecha": "03-18",
+        "mes": 3,
+        "dia": 18,
+        "ordinal": 78,
+        "versiculoId": "v077"
+      },
+      {
+        "fecha": "03-19",
+        "mes": 3,
+        "dia": 19,
+        "ordinal": 79,
+        "versiculoId": "v078"
+      },
+      {
+        "fecha": "03-20",
+        "mes": 3,
+        "dia": 20,
+        "ordinal": 80,
+        "versiculoId": "v079"
+      },
+      {
+        "fecha": "03-21",
+        "mes": 3,
+        "dia": 21,
+        "ordinal": 81,
+        "versiculoId": "v080"
+      },
+      {
+        "fecha": "03-22",
+        "mes": 3,
+        "dia": 22,
+        "ordinal": 82,
+        "versiculoId": "v081"
+      },
+      {
+        "fecha": "03-23",
+        "mes": 3,
+        "dia": 23,
+        "ordinal": 83,
+        "versiculoId": "v082"
+      },
+      {
+        "fecha": "03-24",
+        "mes": 3,
+        "dia": 24,
+        "ordinal": 84,
+        "versiculoId": "v083"
+      },
+      {
+        "fecha": "03-25",
+        "mes": 3,
+        "dia": 25,
+        "ordinal": 85,
+        "versiculoId": "v084"
+      },
+      {
+        "fecha": "03-26",
+        "mes": 3,
+        "dia": 26,
+        "ordinal": 86,
+        "versiculoId": "v085"
+      },
+      {
+        "fecha": "03-27",
+        "mes": 3,
+        "dia": 27,
+        "ordinal": 87,
+        "versiculoId": "v086"
+      },
+      {
+        "fecha": "03-28",
+        "mes": 3,
+        "dia": 28,
+        "ordinal": 88,
+        "versiculoId": "v087"
+      },
+      {
+        "fecha": "03-29",
+        "mes": 3,
+        "dia": 29,
+        "ordinal": 89,
+        "versiculoId": "v088"
+      },
+      {
+        "fecha": "03-30",
+        "mes": 3,
+        "dia": 30,
+        "ordinal": 90,
+        "versiculoId": "v089"
+      },
+      {
+        "fecha": "03-31",
+        "mes": 3,
+        "dia": 31,
+        "ordinal": 91,
+        "versiculoId": "v090"
+      },
+      {
+        "fecha": "04-01",
+        "mes": 4,
+        "dia": 1,
+        "ordinal": 92,
+        "versiculoId": "v091"
+      },
+      {
+        "fecha": "04-02",
+        "mes": 4,
+        "dia": 2,
+        "ordinal": 93,
+        "versiculoId": "v092"
+      },
+      {
+        "fecha": "04-03",
+        "mes": 4,
+        "dia": 3,
+        "ordinal": 94,
+        "versiculoId": "v093"
+      },
+      {
+        "fecha": "04-04",
+        "mes": 4,
+        "dia": 4,
+        "ordinal": 95,
+        "versiculoId": "v094"
+      },
+      {
+        "fecha": "04-05",
+        "mes": 4,
+        "dia": 5,
+        "ordinal": 96,
+        "versiculoId": "v095"
+      },
+      {
+        "fecha": "04-06",
+        "mes": 4,
+        "dia": 6,
+        "ordinal": 97,
+        "versiculoId": "v096"
+      },
+      {
+        "fecha": "04-07",
+        "mes": 4,
+        "dia": 7,
+        "ordinal": 98,
+        "versiculoId": "v097"
+      },
+      {
+        "fecha": "04-08",
+        "mes": 4,
+        "dia": 8,
+        "ordinal": 99,
+        "versiculoId": "v098"
+      },
+      {
+        "fecha": "04-09",
+        "mes": 4,
+        "dia": 9,
+        "ordinal": 100,
+        "versiculoId": "v099"
+      },
+      {
+        "fecha": "04-10",
+        "mes": 4,
+        "dia": 10,
+        "ordinal": 101,
+        "versiculoId": "v100"
+      },
+      {
+        "fecha": "04-11",
+        "mes": 4,
+        "dia": 11,
+        "ordinal": 102,
+        "versiculoId": "v101"
+      },
+      {
+        "fecha": "04-12",
+        "mes": 4,
+        "dia": 12,
+        "ordinal": 103,
+        "versiculoId": "v102"
+      },
+      {
+        "fecha": "04-13",
+        "mes": 4,
+        "dia": 13,
+        "ordinal": 104,
+        "versiculoId": "v103"
+      },
+      {
+        "fecha": "04-14",
+        "mes": 4,
+        "dia": 14,
+        "ordinal": 105,
+        "versiculoId": "v104"
+      },
+      {
+        "fecha": "04-15",
+        "mes": 4,
+        "dia": 15,
+        "ordinal": 106,
+        "versiculoId": "v105"
+      },
+      {
+        "fecha": "04-16",
+        "mes": 4,
+        "dia": 16,
+        "ordinal": 107,
+        "versiculoId": "v106"
+      },
+      {
+        "fecha": "04-17",
+        "mes": 4,
+        "dia": 17,
+        "ordinal": 108,
+        "versiculoId": "v107"
+      },
+      {
+        "fecha": "04-18",
+        "mes": 4,
+        "dia": 18,
+        "ordinal": 109,
+        "versiculoId": "v108"
+      },
+      {
+        "fecha": "04-19",
+        "mes": 4,
+        "dia": 19,
+        "ordinal": 110,
+        "versiculoId": "v109"
+      },
+      {
+        "fecha": "04-20",
+        "mes": 4,
+        "dia": 20,
+        "ordinal": 111,
+        "versiculoId": "v110"
+      },
+      {
+        "fecha": "04-21",
+        "mes": 4,
+        "dia": 21,
+        "ordinal": 112,
+        "versiculoId": "v111"
+      },
+      {
+        "fecha": "04-22",
+        "mes": 4,
+        "dia": 22,
+        "ordinal": 113,
+        "versiculoId": "v112"
+      },
+      {
+        "fecha": "04-23",
+        "mes": 4,
+        "dia": 23,
+        "ordinal": 114,
+        "versiculoId": "v113"
+      },
+      {
+        "fecha": "04-24",
+        "mes": 4,
+        "dia": 24,
+        "ordinal": 115,
+        "versiculoId": "v114"
+      },
+      {
+        "fecha": "04-25",
+        "mes": 4,
+        "dia": 25,
+        "ordinal": 116,
+        "versiculoId": "v115"
+      },
+      {
+        "fecha": "04-26",
+        "mes": 4,
+        "dia": 26,
+        "ordinal": 117,
+        "versiculoId": "v116"
+      },
+      {
+        "fecha": "04-27",
+        "mes": 4,
+        "dia": 27,
+        "ordinal": 118,
+        "versiculoId": "v117"
+      },
+      {
+        "fecha": "04-28",
+        "mes": 4,
+        "dia": 28,
+        "ordinal": 119,
+        "versiculoId": "v118"
+      },
+      {
+        "fecha": "04-29",
+        "mes": 4,
+        "dia": 29,
+        "ordinal": 120,
+        "versiculoId": "v119"
+      },
+      {
+        "fecha": "04-30",
+        "mes": 4,
+        "dia": 30,
+        "ordinal": 121,
+        "versiculoId": "v120"
+      },
+      {
+        "fecha": "05-01",
+        "mes": 5,
+        "dia": 1,
+        "ordinal": 122,
+        "versiculoId": "v121"
+      },
+      {
+        "fecha": "05-02",
+        "mes": 5,
+        "dia": 2,
+        "ordinal": 123,
+        "versiculoId": "v122"
+      },
+      {
+        "fecha": "05-03",
+        "mes": 5,
+        "dia": 3,
+        "ordinal": 124,
+        "versiculoId": "v123"
+      },
+      {
+        "fecha": "05-04",
+        "mes": 5,
+        "dia": 4,
+        "ordinal": 125,
+        "versiculoId": "v124"
+      },
+      {
+        "fecha": "05-05",
+        "mes": 5,
+        "dia": 5,
+        "ordinal": 126,
+        "versiculoId": "v125"
+      },
+      {
+        "fecha": "05-06",
+        "mes": 5,
+        "dia": 6,
+        "ordinal": 127,
+        "versiculoId": "v126"
+      },
+      {
+        "fecha": "05-07",
+        "mes": 5,
+        "dia": 7,
+        "ordinal": 128,
+        "versiculoId": "v127"
+      },
+      {
+        "fecha": "05-08",
+        "mes": 5,
+        "dia": 8,
+        "ordinal": 129,
+        "versiculoId": "v128"
+      },
+      {
+        "fecha": "05-09",
+        "mes": 5,
+        "dia": 9,
+        "ordinal": 130,
+        "versiculoId": "v129"
+      },
+      {
+        "fecha": "05-10",
+        "mes": 5,
+        "dia": 10,
+        "ordinal": 131,
+        "versiculoId": "v130"
+      },
+      {
+        "fecha": "05-11",
+        "mes": 5,
+        "dia": 11,
+        "ordinal": 132,
+        "versiculoId": "v131"
+      },
+      {
+        "fecha": "05-12",
+        "mes": 5,
+        "dia": 12,
+        "ordinal": 133,
+        "versiculoId": "v132"
+      },
+      {
+        "fecha": "05-13",
+        "mes": 5,
+        "dia": 13,
+        "ordinal": 134,
+        "versiculoId": "v133"
+      },
+      {
+        "fecha": "05-14",
+        "mes": 5,
+        "dia": 14,
+        "ordinal": 135,
+        "versiculoId": "v134"
+      },
+      {
+        "fecha": "05-15",
+        "mes": 5,
+        "dia": 15,
+        "ordinal": 136,
+        "versiculoId": "v135"
+      },
+      {
+        "fecha": "05-16",
+        "mes": 5,
+        "dia": 16,
+        "ordinal": 137,
+        "versiculoId": "v136"
+      },
+      {
+        "fecha": "05-17",
+        "mes": 5,
+        "dia": 17,
+        "ordinal": 138,
+        "versiculoId": "v137"
+      },
+      {
+        "fecha": "05-18",
+        "mes": 5,
+        "dia": 18,
+        "ordinal": 139,
+        "versiculoId": "v138"
+      },
+      {
+        "fecha": "05-19",
+        "mes": 5,
+        "dia": 19,
+        "ordinal": 140,
+        "versiculoId": "v139"
+      },
+      {
+        "fecha": "05-20",
+        "mes": 5,
+        "dia": 20,
+        "ordinal": 141,
+        "versiculoId": "v140"
+      },
+      {
+        "fecha": "05-21",
+        "mes": 5,
+        "dia": 21,
+        "ordinal": 142,
+        "versiculoId": "v141"
+      },
+      {
+        "fecha": "05-22",
+        "mes": 5,
+        "dia": 22,
+        "ordinal": 143,
+        "versiculoId": "v142"
+      },
+      {
+        "fecha": "05-23",
+        "mes": 5,
+        "dia": 23,
+        "ordinal": 144,
+        "versiculoId": "v143"
+      },
+      {
+        "fecha": "05-24",
+        "mes": 5,
+        "dia": 24,
+        "ordinal": 145,
+        "versiculoId": "v144"
+      },
+      {
+        "fecha": "05-25",
+        "mes": 5,
+        "dia": 25,
+        "ordinal": 146,
+        "versiculoId": "v145"
+      },
+      {
+        "fecha": "05-26",
+        "mes": 5,
+        "dia": 26,
+        "ordinal": 147,
+        "versiculoId": "v146"
+      },
+      {
+        "fecha": "05-27",
+        "mes": 5,
+        "dia": 27,
+        "ordinal": 148,
+        "versiculoId": "v147"
+      },
+      {
+        "fecha": "05-28",
+        "mes": 5,
+        "dia": 28,
+        "ordinal": 149,
+        "versiculoId": "v148"
+      },
+      {
+        "fecha": "05-29",
+        "mes": 5,
+        "dia": 29,
+        "ordinal": 150,
+        "versiculoId": "v149"
+      },
+      {
+        "fecha": "05-30",
+        "mes": 5,
+        "dia": 30,
+        "ordinal": 151,
+        "versiculoId": "v150"
+      },
+      {
+        "fecha": "05-31",
+        "mes": 5,
+        "dia": 31,
+        "ordinal": 152,
+        "versiculoId": "v151"
+      },
+      {
+        "fecha": "06-01",
+        "mes": 6,
+        "dia": 1,
+        "ordinal": 153,
+        "versiculoId": "v152"
+      },
+      {
+        "fecha": "06-02",
+        "mes": 6,
+        "dia": 2,
+        "ordinal": 154,
+        "versiculoId": "v153"
+      },
+      {
+        "fecha": "06-03",
+        "mes": 6,
+        "dia": 3,
+        "ordinal": 155,
+        "versiculoId": "v154"
+      },
+      {
+        "fecha": "06-04",
+        "mes": 6,
+        "dia": 4,
+        "ordinal": 156,
+        "versiculoId": "v155"
+      },
+      {
+        "fecha": "06-05",
+        "mes": 6,
+        "dia": 5,
+        "ordinal": 157,
+        "versiculoId": "v156"
+      },
+      {
+        "fecha": "06-06",
+        "mes": 6,
+        "dia": 6,
+        "ordinal": 158,
+        "versiculoId": "v157"
+      },
+      {
+        "fecha": "06-07",
+        "mes": 6,
+        "dia": 7,
+        "ordinal": 159,
+        "versiculoId": "v158"
+      },
+      {
+        "fecha": "06-08",
+        "mes": 6,
+        "dia": 8,
+        "ordinal": 160,
+        "versiculoId": "v159"
+      },
+      {
+        "fecha": "06-09",
+        "mes": 6,
+        "dia": 9,
+        "ordinal": 161,
+        "versiculoId": "v160"
+      },
+      {
+        "fecha": "06-10",
+        "mes": 6,
+        "dia": 10,
+        "ordinal": 162,
+        "versiculoId": "v161"
+      },
+      {
+        "fecha": "06-11",
+        "mes": 6,
+        "dia": 11,
+        "ordinal": 163,
+        "versiculoId": "v162"
+      },
+      {
+        "fecha": "06-12",
+        "mes": 6,
+        "dia": 12,
+        "ordinal": 164,
+        "versiculoId": "v163"
+      },
+      {
+        "fecha": "06-13",
+        "mes": 6,
+        "dia": 13,
+        "ordinal": 165,
+        "versiculoId": "v164"
+      },
+      {
+        "fecha": "06-14",
+        "mes": 6,
+        "dia": 14,
+        "ordinal": 166,
+        "versiculoId": "v165"
+      },
+      {
+        "fecha": "06-15",
+        "mes": 6,
+        "dia": 15,
+        "ordinal": 167,
+        "versiculoId": "v166"
+      },
+      {
+        "fecha": "06-16",
+        "mes": 6,
+        "dia": 16,
+        "ordinal": 168,
+        "versiculoId": "v167"
+      },
+      {
+        "fecha": "06-17",
+        "mes": 6,
+        "dia": 17,
+        "ordinal": 169,
+        "versiculoId": "v001"
+      },
+      {
+        "fecha": "06-18",
+        "mes": 6,
+        "dia": 18,
+        "ordinal": 170,
+        "versiculoId": "v002"
+      },
+      {
+        "fecha": "06-19",
+        "mes": 6,
+        "dia": 19,
+        "ordinal": 171,
+        "versiculoId": "v003"
+      },
+      {
+        "fecha": "06-20",
+        "mes": 6,
+        "dia": 20,
+        "ordinal": 172,
+        "versiculoId": "v004"
+      },
+      {
+        "fecha": "06-21",
+        "mes": 6,
+        "dia": 21,
+        "ordinal": 173,
+        "versiculoId": "v005"
+      },
+      {
+        "fecha": "06-22",
+        "mes": 6,
+        "dia": 22,
+        "ordinal": 174,
+        "versiculoId": "v006"
+      },
+      {
+        "fecha": "06-23",
+        "mes": 6,
+        "dia": 23,
+        "ordinal": 175,
+        "versiculoId": "v007"
+      },
+      {
+        "fecha": "06-24",
+        "mes": 6,
+        "dia": 24,
+        "ordinal": 176,
+        "versiculoId": "v008"
+      },
+      {
+        "fecha": "06-25",
+        "mes": 6,
+        "dia": 25,
+        "ordinal": 177,
+        "versiculoId": "v009"
+      },
+      {
+        "fecha": "06-26",
+        "mes": 6,
+        "dia": 26,
+        "ordinal": 178,
+        "versiculoId": "v010"
+      },
+      {
+        "fecha": "06-27",
+        "mes": 6,
+        "dia": 27,
+        "ordinal": 179,
+        "versiculoId": "v011"
+      },
+      {
+        "fecha": "06-28",
+        "mes": 6,
+        "dia": 28,
+        "ordinal": 180,
+        "versiculoId": "v012"
+      },
+      {
+        "fecha": "06-29",
+        "mes": 6,
+        "dia": 29,
+        "ordinal": 181,
+        "versiculoId": "v013"
+      },
+      {
+        "fecha": "06-30",
+        "mes": 6,
+        "dia": 30,
+        "ordinal": 182,
+        "versiculoId": "v014"
+      },
+      {
+        "fecha": "07-01",
+        "mes": 7,
+        "dia": 1,
+        "ordinal": 183,
+        "versiculoId": "v015"
+      },
+      {
+        "fecha": "07-02",
+        "mes": 7,
+        "dia": 2,
+        "ordinal": 184,
+        "versiculoId": "v016"
+      },
+      {
+        "fecha": "07-03",
+        "mes": 7,
+        "dia": 3,
+        "ordinal": 185,
+        "versiculoId": "v017"
+      },
+      {
+        "fecha": "07-04",
+        "mes": 7,
+        "dia": 4,
+        "ordinal": 186,
+        "versiculoId": "v018"
+      },
+      {
+        "fecha": "07-05",
+        "mes": 7,
+        "dia": 5,
+        "ordinal": 187,
+        "versiculoId": "v019"
+      },
+      {
+        "fecha": "07-06",
+        "mes": 7,
+        "dia": 6,
+        "ordinal": 188,
+        "versiculoId": "v020"
+      },
+      {
+        "fecha": "07-07",
+        "mes": 7,
+        "dia": 7,
+        "ordinal": 189,
+        "versiculoId": "v021"
+      },
+      {
+        "fecha": "07-08",
+        "mes": 7,
+        "dia": 8,
+        "ordinal": 190,
+        "versiculoId": "v022"
+      },
+      {
+        "fecha": "07-09",
+        "mes": 7,
+        "dia": 9,
+        "ordinal": 191,
+        "versiculoId": "v023"
+      },
+      {
+        "fecha": "07-10",
+        "mes": 7,
+        "dia": 10,
+        "ordinal": 192,
+        "versiculoId": "v024"
+      },
+      {
+        "fecha": "07-11",
+        "mes": 7,
+        "dia": 11,
+        "ordinal": 193,
+        "versiculoId": "v025"
+      },
+      {
+        "fecha": "07-12",
+        "mes": 7,
+        "dia": 12,
+        "ordinal": 194,
+        "versiculoId": "v026"
+      },
+      {
+        "fecha": "07-13",
+        "mes": 7,
+        "dia": 13,
+        "ordinal": 195,
+        "versiculoId": "v027"
+      },
+      {
+        "fecha": "07-14",
+        "mes": 7,
+        "dia": 14,
+        "ordinal": 196,
+        "versiculoId": "v028"
+      },
+      {
+        "fecha": "07-15",
+        "mes": 7,
+        "dia": 15,
+        "ordinal": 197,
+        "versiculoId": "v029"
+      },
+      {
+        "fecha": "07-16",
+        "mes": 7,
+        "dia": 16,
+        "ordinal": 198,
+        "versiculoId": "v030"
+      },
+      {
+        "fecha": "07-17",
+        "mes": 7,
+        "dia": 17,
+        "ordinal": 199,
+        "versiculoId": "v031"
+      },
+      {
+        "fecha": "07-18",
+        "mes": 7,
+        "dia": 18,
+        "ordinal": 200,
+        "versiculoId": "v032"
+      },
+      {
+        "fecha": "07-19",
+        "mes": 7,
+        "dia": 19,
+        "ordinal": 201,
+        "versiculoId": "v033"
+      },
+      {
+        "fecha": "07-20",
+        "mes": 7,
+        "dia": 20,
+        "ordinal": 202,
+        "versiculoId": "v034"
+      },
+      {
+        "fecha": "07-21",
+        "mes": 7,
+        "dia": 21,
+        "ordinal": 203,
+        "versiculoId": "v035"
+      },
+      {
+        "fecha": "07-22",
+        "mes": 7,
+        "dia": 22,
+        "ordinal": 204,
+        "versiculoId": "v036"
+      },
+      {
+        "fecha": "07-23",
+        "mes": 7,
+        "dia": 23,
+        "ordinal": 205,
+        "versiculoId": "v037"
+      },
+      {
+        "fecha": "07-24",
+        "mes": 7,
+        "dia": 24,
+        "ordinal": 206,
+        "versiculoId": "v038"
+      },
+      {
+        "fecha": "07-25",
+        "mes": 7,
+        "dia": 25,
+        "ordinal": 207,
+        "versiculoId": "v039"
+      },
+      {
+        "fecha": "07-26",
+        "mes": 7,
+        "dia": 26,
+        "ordinal": 208,
+        "versiculoId": "v040"
+      },
+      {
+        "fecha": "07-27",
+        "mes": 7,
+        "dia": 27,
+        "ordinal": 209,
+        "versiculoId": "v041"
+      },
+      {
+        "fecha": "07-28",
+        "mes": 7,
+        "dia": 28,
+        "ordinal": 210,
+        "versiculoId": "v042"
+      },
+      {
+        "fecha": "07-29",
+        "mes": 7,
+        "dia": 29,
+        "ordinal": 211,
+        "versiculoId": "v043"
+      },
+      {
+        "fecha": "07-30",
+        "mes": 7,
+        "dia": 30,
+        "ordinal": 212,
+        "versiculoId": "v044"
+      },
+      {
+        "fecha": "07-31",
+        "mes": 7,
+        "dia": 31,
+        "ordinal": 213,
+        "versiculoId": "v045"
+      },
+      {
+        "fecha": "08-01",
+        "mes": 8,
+        "dia": 1,
+        "ordinal": 214,
+        "versiculoId": "v046"
+      },
+      {
+        "fecha": "08-02",
+        "mes": 8,
+        "dia": 2,
+        "ordinal": 215,
+        "versiculoId": "v047"
+      },
+      {
+        "fecha": "08-03",
+        "mes": 8,
+        "dia": 3,
+        "ordinal": 216,
+        "versiculoId": "v048"
+      },
+      {
+        "fecha": "08-04",
+        "mes": 8,
+        "dia": 4,
+        "ordinal": 217,
+        "versiculoId": "v049"
+      },
+      {
+        "fecha": "08-05",
+        "mes": 8,
+        "dia": 5,
+        "ordinal": 218,
+        "versiculoId": "v050"
+      },
+      {
+        "fecha": "08-06",
+        "mes": 8,
+        "dia": 6,
+        "ordinal": 219,
+        "versiculoId": "v051"
+      },
+      {
+        "fecha": "08-07",
+        "mes": 8,
+        "dia": 7,
+        "ordinal": 220,
+        "versiculoId": "v052"
+      },
+      {
+        "fecha": "08-08",
+        "mes": 8,
+        "dia": 8,
+        "ordinal": 221,
+        "versiculoId": "v053"
+      },
+      {
+        "fecha": "08-09",
+        "mes": 8,
+        "dia": 9,
+        "ordinal": 222,
+        "versiculoId": "v054"
+      },
+      {
+        "fecha": "08-10",
+        "mes": 8,
+        "dia": 10,
+        "ordinal": 223,
+        "versiculoId": "v055"
+      },
+      {
+        "fecha": "08-11",
+        "mes": 8,
+        "dia": 11,
+        "ordinal": 224,
+        "versiculoId": "v056"
+      },
+      {
+        "fecha": "08-12",
+        "mes": 8,
+        "dia": 12,
+        "ordinal": 225,
+        "versiculoId": "v057"
+      },
+      {
+        "fecha": "08-13",
+        "mes": 8,
+        "dia": 13,
+        "ordinal": 226,
+        "versiculoId": "v058"
+      },
+      {
+        "fecha": "08-14",
+        "mes": 8,
+        "dia": 14,
+        "ordinal": 227,
+        "versiculoId": "v059"
+      },
+      {
+        "fecha": "08-15",
+        "mes": 8,
+        "dia": 15,
+        "ordinal": 228,
+        "versiculoId": "v060"
+      },
+      {
+        "fecha": "08-16",
+        "mes": 8,
+        "dia": 16,
+        "ordinal": 229,
+        "versiculoId": "v061"
+      },
+      {
+        "fecha": "08-17",
+        "mes": 8,
+        "dia": 17,
+        "ordinal": 230,
+        "versiculoId": "v062"
+      },
+      {
+        "fecha": "08-18",
+        "mes": 8,
+        "dia": 18,
+        "ordinal": 231,
+        "versiculoId": "v063"
+      },
+      {
+        "fecha": "08-19",
+        "mes": 8,
+        "dia": 19,
+        "ordinal": 232,
+        "versiculoId": "v064"
+      },
+      {
+        "fecha": "08-20",
+        "mes": 8,
+        "dia": 20,
+        "ordinal": 233,
+        "versiculoId": "v065"
+      },
+      {
+        "fecha": "08-21",
+        "mes": 8,
+        "dia": 21,
+        "ordinal": 234,
+        "versiculoId": "v066"
+      },
+      {
+        "fecha": "08-22",
+        "mes": 8,
+        "dia": 22,
+        "ordinal": 235,
+        "versiculoId": "v067"
+      },
+      {
+        "fecha": "08-23",
+        "mes": 8,
+        "dia": 23,
+        "ordinal": 236,
+        "versiculoId": "v068"
+      },
+      {
+        "fecha": "08-24",
+        "mes": 8,
+        "dia": 24,
+        "ordinal": 237,
+        "versiculoId": "v069"
+      },
+      {
+        "fecha": "08-25",
+        "mes": 8,
+        "dia": 25,
+        "ordinal": 238,
+        "versiculoId": "v070"
+      },
+      {
+        "fecha": "08-26",
+        "mes": 8,
+        "dia": 26,
+        "ordinal": 239,
+        "versiculoId": "v071"
+      },
+      {
+        "fecha": "08-27",
+        "mes": 8,
+        "dia": 27,
+        "ordinal": 240,
+        "versiculoId": "v072"
+      },
+      {
+        "fecha": "08-28",
+        "mes": 8,
+        "dia": 28,
+        "ordinal": 241,
+        "versiculoId": "v073"
+      },
+      {
+        "fecha": "08-29",
+        "mes": 8,
+        "dia": 29,
+        "ordinal": 242,
+        "versiculoId": "v074"
+      },
+      {
+        "fecha": "08-30",
+        "mes": 8,
+        "dia": 30,
+        "ordinal": 243,
+        "versiculoId": "v075"
+      },
+      {
+        "fecha": "08-31",
+        "mes": 8,
+        "dia": 31,
+        "ordinal": 244,
+        "versiculoId": "v076"
+      },
+      {
+        "fecha": "09-01",
+        "mes": 9,
+        "dia": 1,
+        "ordinal": 245,
+        "versiculoId": "v077"
+      },
+      {
+        "fecha": "09-02",
+        "mes": 9,
+        "dia": 2,
+        "ordinal": 246,
+        "versiculoId": "v078"
+      },
+      {
+        "fecha": "09-03",
+        "mes": 9,
+        "dia": 3,
+        "ordinal": 247,
+        "versiculoId": "v079"
+      },
+      {
+        "fecha": "09-04",
+        "mes": 9,
+        "dia": 4,
+        "ordinal": 248,
+        "versiculoId": "v080"
+      },
+      {
+        "fecha": "09-05",
+        "mes": 9,
+        "dia": 5,
+        "ordinal": 249,
+        "versiculoId": "v081"
+      },
+      {
+        "fecha": "09-06",
+        "mes": 9,
+        "dia": 6,
+        "ordinal": 250,
+        "versiculoId": "v082"
+      },
+      {
+        "fecha": "09-07",
+        "mes": 9,
+        "dia": 7,
+        "ordinal": 251,
+        "versiculoId": "v083"
+      },
+      {
+        "fecha": "09-08",
+        "mes": 9,
+        "dia": 8,
+        "ordinal": 252,
+        "versiculoId": "v084"
+      },
+      {
+        "fecha": "09-09",
+        "mes": 9,
+        "dia": 9,
+        "ordinal": 253,
+        "versiculoId": "v085"
+      },
+      {
+        "fecha": "09-10",
+        "mes": 9,
+        "dia": 10,
+        "ordinal": 254,
+        "versiculoId": "v086"
+      },
+      {
+        "fecha": "09-11",
+        "mes": 9,
+        "dia": 11,
+        "ordinal": 255,
+        "versiculoId": "v087"
+      },
+      {
+        "fecha": "09-12",
+        "mes": 9,
+        "dia": 12,
+        "ordinal": 256,
+        "versiculoId": "v088"
+      },
+      {
+        "fecha": "09-13",
+        "mes": 9,
+        "dia": 13,
+        "ordinal": 257,
+        "versiculoId": "v089"
+      },
+      {
+        "fecha": "09-14",
+        "mes": 9,
+        "dia": 14,
+        "ordinal": 258,
+        "versiculoId": "v090"
+      },
+      {
+        "fecha": "09-15",
+        "mes": 9,
+        "dia": 15,
+        "ordinal": 259,
+        "versiculoId": "v091"
+      },
+      {
+        "fecha": "09-16",
+        "mes": 9,
+        "dia": 16,
+        "ordinal": 260,
+        "versiculoId": "v092"
+      },
+      {
+        "fecha": "09-17",
+        "mes": 9,
+        "dia": 17,
+        "ordinal": 261,
+        "versiculoId": "v093"
+      },
+      {
+        "fecha": "09-18",
+        "mes": 9,
+        "dia": 18,
+        "ordinal": 262,
+        "versiculoId": "v094"
+      },
+      {
+        "fecha": "09-19",
+        "mes": 9,
+        "dia": 19,
+        "ordinal": 263,
+        "versiculoId": "v095"
+      },
+      {
+        "fecha": "09-20",
+        "mes": 9,
+        "dia": 20,
+        "ordinal": 264,
+        "versiculoId": "v096"
+      },
+      {
+        "fecha": "09-21",
+        "mes": 9,
+        "dia": 21,
+        "ordinal": 265,
+        "versiculoId": "v097"
+      },
+      {
+        "fecha": "09-22",
+        "mes": 9,
+        "dia": 22,
+        "ordinal": 266,
+        "versiculoId": "v098"
+      },
+      {
+        "fecha": "09-23",
+        "mes": 9,
+        "dia": 23,
+        "ordinal": 267,
+        "versiculoId": "v099"
+      },
+      {
+        "fecha": "09-24",
+        "mes": 9,
+        "dia": 24,
+        "ordinal": 268,
+        "versiculoId": "v100"
+      },
+      {
+        "fecha": "09-25",
+        "mes": 9,
+        "dia": 25,
+        "ordinal": 269,
+        "versiculoId": "v101"
+      },
+      {
+        "fecha": "09-26",
+        "mes": 9,
+        "dia": 26,
+        "ordinal": 270,
+        "versiculoId": "v102"
+      },
+      {
+        "fecha": "09-27",
+        "mes": 9,
+        "dia": 27,
+        "ordinal": 271,
+        "versiculoId": "v103"
+      },
+      {
+        "fecha": "09-28",
+        "mes": 9,
+        "dia": 28,
+        "ordinal": 272,
+        "versiculoId": "v104"
+      },
+      {
+        "fecha": "09-29",
+        "mes": 9,
+        "dia": 29,
+        "ordinal": 273,
+        "versiculoId": "v105"
+      },
+      {
+        "fecha": "09-30",
+        "mes": 9,
+        "dia": 30,
+        "ordinal": 274,
+        "versiculoId": "v106"
+      },
+      {
+        "fecha": "10-01",
+        "mes": 10,
+        "dia": 1,
+        "ordinal": 275,
+        "versiculoId": "v107"
+      },
+      {
+        "fecha": "10-02",
+        "mes": 10,
+        "dia": 2,
+        "ordinal": 276,
+        "versiculoId": "v108"
+      },
+      {
+        "fecha": "10-03",
+        "mes": 10,
+        "dia": 3,
+        "ordinal": 277,
+        "versiculoId": "v109"
+      },
+      {
+        "fecha": "10-04",
+        "mes": 10,
+        "dia": 4,
+        "ordinal": 278,
+        "versiculoId": "v110"
+      },
+      {
+        "fecha": "10-05",
+        "mes": 10,
+        "dia": 5,
+        "ordinal": 279,
+        "versiculoId": "v111"
+      },
+      {
+        "fecha": "10-06",
+        "mes": 10,
+        "dia": 6,
+        "ordinal": 280,
+        "versiculoId": "v112"
+      },
+      {
+        "fecha": "10-07",
+        "mes": 10,
+        "dia": 7,
+        "ordinal": 281,
+        "versiculoId": "v113"
+      },
+      {
+        "fecha": "10-08",
+        "mes": 10,
+        "dia": 8,
+        "ordinal": 282,
+        "versiculoId": "v114"
+      },
+      {
+        "fecha": "10-09",
+        "mes": 10,
+        "dia": 9,
+        "ordinal": 283,
+        "versiculoId": "v115"
+      },
+      {
+        "fecha": "10-10",
+        "mes": 10,
+        "dia": 10,
+        "ordinal": 284,
+        "versiculoId": "v116"
+      },
+      {
+        "fecha": "10-11",
+        "mes": 10,
+        "dia": 11,
+        "ordinal": 285,
+        "versiculoId": "v117"
+      },
+      {
+        "fecha": "10-12",
+        "mes": 10,
+        "dia": 12,
+        "ordinal": 286,
+        "versiculoId": "v118"
+      },
+      {
+        "fecha": "10-13",
+        "mes": 10,
+        "dia": 13,
+        "ordinal": 287,
+        "versiculoId": "v119"
+      },
+      {
+        "fecha": "10-14",
+        "mes": 10,
+        "dia": 14,
+        "ordinal": 288,
+        "versiculoId": "v120"
+      },
+      {
+        "fecha": "10-15",
+        "mes": 10,
+        "dia": 15,
+        "ordinal": 289,
+        "versiculoId": "v121"
+      },
+      {
+        "fecha": "10-16",
+        "mes": 10,
+        "dia": 16,
+        "ordinal": 290,
+        "versiculoId": "v122"
+      },
+      {
+        "fecha": "10-17",
+        "mes": 10,
+        "dia": 17,
+        "ordinal": 291,
+        "versiculoId": "v123"
+      },
+      {
+        "fecha": "10-18",
+        "mes": 10,
+        "dia": 18,
+        "ordinal": 292,
+        "versiculoId": "v124"
+      },
+      {
+        "fecha": "10-19",
+        "mes": 10,
+        "dia": 19,
+        "ordinal": 293,
+        "versiculoId": "v125"
+      },
+      {
+        "fecha": "10-20",
+        "mes": 10,
+        "dia": 20,
+        "ordinal": 294,
+        "versiculoId": "v126"
+      },
+      {
+        "fecha": "10-21",
+        "mes": 10,
+        "dia": 21,
+        "ordinal": 295,
+        "versiculoId": "v127"
+      },
+      {
+        "fecha": "10-22",
+        "mes": 10,
+        "dia": 22,
+        "ordinal": 296,
+        "versiculoId": "v128"
+      },
+      {
+        "fecha": "10-23",
+        "mes": 10,
+        "dia": 23,
+        "ordinal": 297,
+        "versiculoId": "v129"
+      },
+      {
+        "fecha": "10-24",
+        "mes": 10,
+        "dia": 24,
+        "ordinal": 298,
+        "versiculoId": "v130"
+      },
+      {
+        "fecha": "10-25",
+        "mes": 10,
+        "dia": 25,
+        "ordinal": 299,
+        "versiculoId": "v131"
+      },
+      {
+        "fecha": "10-26",
+        "mes": 10,
+        "dia": 26,
+        "ordinal": 300,
+        "versiculoId": "v132"
+      },
+      {
+        "fecha": "10-27",
+        "mes": 10,
+        "dia": 27,
+        "ordinal": 301,
+        "versiculoId": "v133"
+      },
+      {
+        "fecha": "10-28",
+        "mes": 10,
+        "dia": 28,
+        "ordinal": 302,
+        "versiculoId": "v134"
+      },
+      {
+        "fecha": "10-29",
+        "mes": 10,
+        "dia": 29,
+        "ordinal": 303,
+        "versiculoId": "v135"
+      },
+      {
+        "fecha": "10-30",
+        "mes": 10,
+        "dia": 30,
+        "ordinal": 304,
+        "versiculoId": "v136"
+      },
+      {
+        "fecha": "10-31",
+        "mes": 10,
+        "dia": 31,
+        "ordinal": 305,
+        "versiculoId": "v137"
+      },
+      {
+        "fecha": "11-01",
+        "mes": 11,
+        "dia": 1,
+        "ordinal": 306,
+        "versiculoId": "v138"
+      },
+      {
+        "fecha": "11-02",
+        "mes": 11,
+        "dia": 2,
+        "ordinal": 307,
+        "versiculoId": "v139"
+      },
+      {
+        "fecha": "11-03",
+        "mes": 11,
+        "dia": 3,
+        "ordinal": 308,
+        "versiculoId": "v140"
+      },
+      {
+        "fecha": "11-04",
+        "mes": 11,
+        "dia": 4,
+        "ordinal": 309,
+        "versiculoId": "v141"
+      },
+      {
+        "fecha": "11-05",
+        "mes": 11,
+        "dia": 5,
+        "ordinal": 310,
+        "versiculoId": "v142"
+      },
+      {
+        "fecha": "11-06",
+        "mes": 11,
+        "dia": 6,
+        "ordinal": 311,
+        "versiculoId": "v143"
+      },
+      {
+        "fecha": "11-07",
+        "mes": 11,
+        "dia": 7,
+        "ordinal": 312,
+        "versiculoId": "v144"
+      },
+      {
+        "fecha": "11-08",
+        "mes": 11,
+        "dia": 8,
+        "ordinal": 313,
+        "versiculoId": "v145"
+      },
+      {
+        "fecha": "11-09",
+        "mes": 11,
+        "dia": 9,
+        "ordinal": 314,
+        "versiculoId": "v146"
+      },
+      {
+        "fecha": "11-10",
+        "mes": 11,
+        "dia": 10,
+        "ordinal": 315,
+        "versiculoId": "v147"
+      },
+      {
+        "fecha": "11-11",
+        "mes": 11,
+        "dia": 11,
+        "ordinal": 316,
+        "versiculoId": "v148"
+      },
+      {
+        "fecha": "11-12",
+        "mes": 11,
+        "dia": 12,
+        "ordinal": 317,
+        "versiculoId": "v149"
+      },
+      {
+        "fecha": "11-13",
+        "mes": 11,
+        "dia": 13,
+        "ordinal": 318,
+        "versiculoId": "v150"
+      },
+      {
+        "fecha": "11-14",
+        "mes": 11,
+        "dia": 14,
+        "ordinal": 319,
+        "versiculoId": "v151"
+      },
+      {
+        "fecha": "11-15",
+        "mes": 11,
+        "dia": 15,
+        "ordinal": 320,
+        "versiculoId": "v152"
+      },
+      {
+        "fecha": "11-16",
+        "mes": 11,
+        "dia": 16,
+        "ordinal": 321,
+        "versiculoId": "v153"
+      },
+      {
+        "fecha": "11-17",
+        "mes": 11,
+        "dia": 17,
+        "ordinal": 322,
+        "versiculoId": "v154"
+      },
+      {
+        "fecha": "11-18",
+        "mes": 11,
+        "dia": 18,
+        "ordinal": 323,
+        "versiculoId": "v155"
+      },
+      {
+        "fecha": "11-19",
+        "mes": 11,
+        "dia": 19,
+        "ordinal": 324,
+        "versiculoId": "v156"
+      },
+      {
+        "fecha": "11-20",
+        "mes": 11,
+        "dia": 20,
+        "ordinal": 325,
+        "versiculoId": "v157"
+      },
+      {
+        "fecha": "11-21",
+        "mes": 11,
+        "dia": 21,
+        "ordinal": 326,
+        "versiculoId": "v158"
+      },
+      {
+        "fecha": "11-22",
+        "mes": 11,
+        "dia": 22,
+        "ordinal": 327,
+        "versiculoId": "v159"
+      },
+      {
+        "fecha": "11-23",
+        "mes": 11,
+        "dia": 23,
+        "ordinal": 328,
+        "versiculoId": "v160"
+      },
+      {
+        "fecha": "11-24",
+        "mes": 11,
+        "dia": 24,
+        "ordinal": 329,
+        "versiculoId": "v161"
+      },
+      {
+        "fecha": "11-25",
+        "mes": 11,
+        "dia": 25,
+        "ordinal": 330,
+        "versiculoId": "v162"
+      },
+      {
+        "fecha": "11-26",
+        "mes": 11,
+        "dia": 26,
+        "ordinal": 331,
+        "versiculoId": "v163"
+      },
+      {
+        "fecha": "11-27",
+        "mes": 11,
+        "dia": 27,
+        "ordinal": 332,
+        "versiculoId": "v164"
+      },
+      {
+        "fecha": "11-28",
+        "mes": 11,
+        "dia": 28,
+        "ordinal": 333,
+        "versiculoId": "v165"
+      },
+      {
+        "fecha": "11-29",
+        "mes": 11,
+        "dia": 29,
+        "ordinal": 334,
+        "versiculoId": "v166"
+      },
+      {
+        "fecha": "11-30",
+        "mes": 11,
+        "dia": 30,
+        "ordinal": 335,
+        "versiculoId": "v167"
+      },
+      {
+        "fecha": "12-01",
+        "mes": 12,
+        "dia": 1,
+        "ordinal": 336,
+        "versiculoId": "v001"
+      },
+      {
+        "fecha": "12-02",
+        "mes": 12,
+        "dia": 2,
+        "ordinal": 337,
+        "versiculoId": "v002"
+      },
+      {
+        "fecha": "12-03",
+        "mes": 12,
+        "dia": 3,
+        "ordinal": 338,
+        "versiculoId": "v003"
+      },
+      {
+        "fecha": "12-04",
+        "mes": 12,
+        "dia": 4,
+        "ordinal": 339,
+        "versiculoId": "v004"
+      },
+      {
+        "fecha": "12-05",
+        "mes": 12,
+        "dia": 5,
+        "ordinal": 340,
+        "versiculoId": "v005"
+      },
+      {
+        "fecha": "12-06",
+        "mes": 12,
+        "dia": 6,
+        "ordinal": 341,
+        "versiculoId": "v006"
+      },
+      {
+        "fecha": "12-07",
+        "mes": 12,
+        "dia": 7,
+        "ordinal": 342,
+        "versiculoId": "v007"
+      },
+      {
+        "fecha": "12-08",
+        "mes": 12,
+        "dia": 8,
+        "ordinal": 343,
+        "versiculoId": "v008"
+      },
+      {
+        "fecha": "12-09",
+        "mes": 12,
+        "dia": 9,
+        "ordinal": 344,
+        "versiculoId": "v009"
+      },
+      {
+        "fecha": "12-10",
+        "mes": 12,
+        "dia": 10,
+        "ordinal": 345,
+        "versiculoId": "v010"
+      },
+      {
+        "fecha": "12-11",
+        "mes": 12,
+        "dia": 11,
+        "ordinal": 346,
+        "versiculoId": "v011"
+      },
+      {
+        "fecha": "12-12",
+        "mes": 12,
+        "dia": 12,
+        "ordinal": 347,
+        "versiculoId": "v012"
+      },
+      {
+        "fecha": "12-13",
+        "mes": 12,
+        "dia": 13,
+        "ordinal": 348,
+        "versiculoId": "v013"
+      },
+      {
+        "fecha": "12-14",
+        "mes": 12,
+        "dia": 14,
+        "ordinal": 349,
+        "versiculoId": "v014"
+      },
+      {
+        "fecha": "12-15",
+        "mes": 12,
+        "dia": 15,
+        "ordinal": 350,
+        "versiculoId": "v015"
+      },
+      {
+        "fecha": "12-16",
+        "mes": 12,
+        "dia": 16,
+        "ordinal": 351,
+        "versiculoId": "v016"
+      },
+      {
+        "fecha": "12-17",
+        "mes": 12,
+        "dia": 17,
+        "ordinal": 352,
+        "versiculoId": "v017"
+      },
+      {
+        "fecha": "12-18",
+        "mes": 12,
+        "dia": 18,
+        "ordinal": 353,
+        "versiculoId": "v018"
+      },
+      {
+        "fecha": "12-19",
+        "mes": 12,
+        "dia": 19,
+        "ordinal": 354,
+        "versiculoId": "v019"
+      },
+      {
+        "fecha": "12-20",
+        "mes": 12,
+        "dia": 20,
+        "ordinal": 355,
+        "versiculoId": "v020"
+      },
+      {
+        "fecha": "12-21",
+        "mes": 12,
+        "dia": 21,
+        "ordinal": 356,
+        "versiculoId": "v021"
+      },
+      {
+        "fecha": "12-22",
+        "mes": 12,
+        "dia": 22,
+        "ordinal": 357,
+        "versiculoId": "v022"
+      },
+      {
+        "fecha": "12-23",
+        "mes": 12,
+        "dia": 23,
+        "ordinal": 358,
+        "versiculoId": "v023"
+      },
+      {
+        "fecha": "12-24",
+        "mes": 12,
+        "dia": 24,
+        "ordinal": 359,
+        "versiculoId": "v024"
+      },
+      {
+        "fecha": "12-25",
+        "mes": 12,
+        "dia": 25,
+        "ordinal": 360,
+        "versiculoId": "v025"
+      },
+      {
+        "fecha": "12-26",
+        "mes": 12,
+        "dia": 26,
+        "ordinal": 361,
+        "versiculoId": "v026"
+      },
+      {
+        "fecha": "12-27",
+        "mes": 12,
+        "dia": 27,
+        "ordinal": 362,
+        "versiculoId": "v027"
+      },
+      {
+        "fecha": "12-28",
+        "mes": 12,
+        "dia": 28,
+        "ordinal": 363,
+        "versiculoId": "v028"
+      },
+      {
+        "fecha": "12-29",
+        "mes": 12,
+        "dia": 29,
+        "ordinal": 364,
+        "versiculoId": "v029"
+      },
+      {
+        "fecha": "12-30",
+        "mes": 12,
+        "dia": 30,
+        "ordinal": 365,
+        "versiculoId": "v030"
+      },
+      {
+        "fecha": "12-31",
+        "mes": 12,
+        "dia": 31,
+        "ordinal": 366,
+        "versiculoId": "v031"
+      }
+    ]
+  }
+};
