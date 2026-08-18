@@ -34,6 +34,14 @@ function esAnioBisiesto(anio) {
   return (anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0;
 }
 
+function calendarioDelAnio(data, anio) {
+  return esAnioBisiesto(anio) ? data.calendario?.bisiesto : data.calendario?.normal;
+}
+
+function fechaActualClave(fecha) {
+  return `${String(fecha.getMonth() + 1).padStart(2, '0')}-${String(fecha.getDate()).padStart(2, '0')}`;
+}
+
 async function cargarVersiculoDiario() {
   const textoEl = document.getElementById('versiculo-diario-texto');
   const referenciaEl = document.getElementById('versiculo-diario-referencia');
@@ -44,8 +52,8 @@ async function cargarVersiculoDiario() {
     if (!data) throw new Error('No se encontró window.SANTO_ROSARIO_VERSICULOS.');
 
     const hoy = new Date();
-    const calendario = esAnioBisiesto(hoy.getFullYear()) ? data.calendario?.bisiesto : data.calendario?.normal;
-    const fecha = `${String(hoy.getMonth() + 1).padStart(2, '0')}-${String(hoy.getDate()).padStart(2, '0')}`;
+    const calendario = calendarioDelAnio(data, hoy.getFullYear());
+    const fecha = fechaActualClave(hoy);
     const asignacion = calendario?.find(dia => dia.fecha === fecha);
     const versiculo = data.versiculos?.find(item => item.id === asignacion?.versiculoId);
     if (!versiculo) throw new Error(`No hay versículo asignado para ${fecha}.`);
@@ -61,7 +69,33 @@ async function cargarVersiculoDiario() {
   }
 }
 
+function cargarFraseLatinaDiaria() {
+  const latinEl = document.getElementById('latin-diario-texto');
+  const traduccionEl = document.getElementById('latin-diario-traduccion');
+  if (!latinEl || !traduccionEl) return;
+
+  try {
+    const data = window.SANTO_ROSARIO_LATIN;
+    if (!data) throw new Error('No se encontró window.SANTO_ROSARIO_LATIN.');
+
+    const hoy = new Date();
+    const calendario = calendarioDelAnio(data, hoy.getFullYear());
+    const fecha = fechaActualClave(hoy);
+    const asignacion = calendario?.find(dia => dia.fecha === fecha);
+    const frase = data.frases?.find(item => item.id === asignacion?.fraseId);
+    if (!frase) throw new Error(`No hay frase latina asignada para ${fecha}.`);
+
+    latinEl.textContent = frase.latin;
+    traduccionEl.textContent = frase.traduccion;
+  } catch (error) {
+    latinEl.textContent = 'Sub tuum praesidium.';
+    traduccionEl.textContent = 'Bajo tu amparo.';
+    console.warn('No se pudo cargar la frase latina diaria.', error);
+  }
+}
+
 cargarVersiculoDiario();
+cargarFraseLatinaDiaria();
 
 
 /* ─────────────────────────────────────────────────────────────── */

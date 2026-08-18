@@ -26,6 +26,8 @@ Se logró el objetivo mínimo funcional:
 - Plugin `@capacitor/splash-screen` (v7) instalado y configurado en `capacitor.config.json` con color de fondo `#F5EDD6` (pergamino).
 - Plugin `@capacitor-community/keep-awake` (v7.1.0) instalado para evitar que Android bloquee la pantalla mientras la app está visible.
 - La app detecta el día de la semana con `new Date().getDay()` y marca automáticamente el grupo de misterios correspondiente.
+- `www/index.html` muestra un versículo bíblico diario en el hero y una frase latina diaria con traducción en el footer.
+- Los datos diarios viven como archivos JS cargables sin `fetch`: `www/data/versiculos.js` y `www/data/latin.js`.
 
 Comandos verificados:
 
@@ -49,6 +51,8 @@ www/index.html          Inicio informativo: hero, misterios y oraciones
 www/cuentas.html        Funcionalidad del rezo con cuentas sobre fondo azul
 www/css/styles.css      Estilos extraídos del HTML original
 www/js/app.js           JS extraído del HTML original
+www/data/versiculos.js  Versículos diarios y calendario anual
+www/data/latin.js       Frases latinas diarias, traducción y calendario anual
 android/                Proyecto Android generado por Capacitor
 assets/                 Recursos fuente para íconos/splash (fuera de www/)
 capacitor.config.json   Configuración Capacitor
@@ -75,6 +79,10 @@ index.original.html     Copia del HTML monolítico original
 - Si el usuario cambia manualmente el grupo de misterios, se reconstruye la secuencia y se reinicia el rosario para evitar mezclar misterios.
 - Se agregó `capacitor.js` en `www/index.html` y una capa defensiva en `www/js/app.js` para mantener la pantalla activa con `KeepAwake.keepAwake()` cuando la app está visible. Al ir al fondo, llama `KeepAwake.allowSleep()`.
 - Se probó dividir la experiencia en modo con cuentas y modo automático. El usuario decidió sacar el modo automático del MVP porque será una función paga futura. No debe exponerse ni quedar enlazado en la versión actual.
+- Se agregó calendario diario de versículos: el listado se repite desde el 1 de enero hasta completar 365 días; en bisiestos el 29 de febrero usa la misma lectura asignada al 31 de diciembre.
+- Se eliminó `www/data/versiculos.json` para evitar duplicación. La app consume `www/data/versiculos.js` vía `window.SANTO_ROSARIO_VERSICULOS`.
+- Se agregó calendario diario de frases latinas con traducción en `www/data/latin.js`, consumido vía `window.SANTO_ROSARIO_LATIN`.
+- Los TXT fuente de datos diarios no son necesarios después de procesar la información; evitar versionarlos salvo que el usuario pida conservarlos como fuente editorial.
 
 ## Entorno Local Observado
 
@@ -121,6 +129,7 @@ La app funciona, pero todavía arrastra deuda del HTML original:
 
 - Hay mucho contenido estático en `www/cuentas.html`.
 - `www/js/app.js` todavía mezcla datos de oraciones, estado del rosario y actualización de UI.
+- `www/data/versiculos.js` y `www/data/latin.js` duplican estructura de calendario; si crece, conviene extraer un generador/script versionado o una utilidad común.
 - Conviene extraer gradualmente datos a módulos simples, por ejemplo:
   - `www/js/prayers.js`
   - `www/js/mysteries.js`

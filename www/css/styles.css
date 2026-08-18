@@ -985,6 +985,21 @@ img{display:block;max-width:100%;}
   letter-spacing:.1em;text-transform:uppercase;
   color:rgba(245,237,214,.2);
 }
+.footer-copy--latin{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.footer-copy--latin span:first-child{
+  color:rgba(245,237,214,.64);
+}
+.footer-copy--latin span:last-child{
+  font-family:var(--fell);
+  font-size:.86rem;
+  letter-spacing:0;
+  text-transform:none;
+  color:rgba(245,237,214,.38);
+}
 
 
 /* ─────────────────────────────────────────────────────────────── */
