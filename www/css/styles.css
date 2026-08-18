@@ -664,6 +664,34 @@ img{display:block;max-width:100%;}
   outline:none;
 }
 
+.centro-ayuda{
+  font-family:var(--cinzel);
+  font-size:8.5px;
+  font-weight:700;
+  letter-spacing:.1em;
+  fill:#fffef7;
+  text-shadow:0 1px 3px rgba(0,0,0,.65);
+  pointer-events:none;
+  opacity:0;
+  transform-box:fill-box;
+  transform-origin:center;
+}
+
+.centro-pulso{
+  pointer-events:none;
+  opacity:0;
+  transform-box:fill-box;
+  transform-origin:center;
+}
+
+.cuentas-screen.rosario-en-inicio .centro-ayuda{
+  animation:centroAyudaEntrada .55s ease-out forwards;
+}
+
+.cuentas-screen.rosario-en-inicio .centro-pulso{
+  animation:centroPulso 1.55s ease-out infinite;
+}
+
 .centro-avanzar circle,
 .centro-avanzar text{
   transition:fill .18s ease, stroke .18s ease, filter .18s ease, transform .18s ease;
@@ -680,6 +708,17 @@ img{display:block;max-width:100%;}
 .centro-avanzar:active circle,
 .centro-avanzar:active text{
   transform:scale(.96);
+}
+
+@keyframes centroAyudaEntrada{
+  from{opacity:0;transform:translateY(3px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes centroPulso{
+  0%{opacity:.75;transform:scale(1);}
+  70%{opacity:0;transform:scale(1.45);}
+  100%{opacity:0;transform:scale(1.45);}
 }
 
 /* cuenta individual */

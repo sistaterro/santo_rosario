@@ -470,6 +470,8 @@ function actualizarUI() {
   const paso = SECUENCIA[pasoActual];
   if (!paso) return;
 
+  document.body.classList.toggle('rosario-en-inicio', pasoActual === 0);
+
   actualizarGuiaOracion(paso);
 
   // Fade out → cambiar → fade in
