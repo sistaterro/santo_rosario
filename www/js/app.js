@@ -337,21 +337,27 @@ function renderCuentas() {
   const cuentasVisibles = SECUENCIA
     .map((paso, index) => ({ paso, index }))
     .filter(({ paso }) => paso.ave || paso.o.titulo === 'Padre Nuestro');
-  const TOTAL = cuentasVisibles.length;
   const cuentaActualIndex = cuentasVisibles.reduce((actual, cuenta) => {
     return cuenta.index <= pasoActual ? cuenta.index : actual;
   }, cuentasVisibles[0]?.index ?? 0);
   const rosarioTerminado = pasoActual >= SECUENCIA.length - 1;
   const cx = 100, cy = 132, rx = 101, ry = 116;
+  const aperturaCorona = 0.12;
+  const inicioCorona = -Math.PI / 2 + aperturaCorona;
+  const finCorona = (Math.PI * 3) / 2 - aperturaCorona;
+  const tramoCorona = finCorona - inicioCorona;
+  const unionSuperior = { x: cx, y: 18 };
+  const brazoDerecho = {
+    x: cx + rx * Math.cos(inicioCorona),
+    y: cy + ry * Math.sin(inicioCorona),
+  };
+  const brazoIzquierdo = {
+    x: cx + rx * Math.cos(finCorona),
+    y: cy + ry * Math.sin(finCorona),
+  };
 
-  for (let i = 0; i < TOTAL; i++) {
-    const angle = (i / TOTAL) * 2 * Math.PI - Math.PI / 2;
-    const { paso, index } = cuentasVisibles[i];
+  const dibujarCuenta = ({ paso, index }, x, y) => {
     const esPadre = !paso.ave;
-    const beadRx = esPadre ? rx + 5 : rx;
-    const beadRy = esPadre ? ry + 5 : ry;
-    const x = cx + beadRx * Math.cos(angle);
-    const y = cy + beadRy * Math.sin(angle);
 
     const esActual = !rosarioTerminado && index === cuentaActualIndex;
     const radio = esActual ? 6.9 : (esPadre ? 5.35 : 3.65);
@@ -391,7 +397,52 @@ function renderCuentas() {
     });
 
     g.appendChild(circle);
+  };
+
+  const cuentasIniciales = cuentasVisibles.filter(({ paso }) => paso.m < 0);
+  const cuentasDecenas = cuentasVisibles.filter(({ paso }) => paso.m >= 0);
+  const posicionesIniciales = [
+    unionSuperior,
+    { x: cx, y: 38 },
+    { x: cx, y: 56 },
+    { x: cx, y: 74 },
+  ];
+
+  if (cuentasIniciales.length) {
+    const cordon = document.createElementNS('http://www.w3.org/2000/svg','path');
+    cordon.setAttribute('d', [
+      `M ${brazoIzquierdo.x.toFixed(1)} ${brazoIzquierdo.y.toFixed(1)}`,
+      `C ${(cx - 12).toFixed(1)} 16, ${(cx - 7).toFixed(1)} 18, ${unionSuperior.x} ${unionSuperior.y}`,
+      `C ${(cx + 7).toFixed(1)} 18, ${(cx + 12).toFixed(1)} 16, ${brazoDerecho.x.toFixed(1)} ${brazoDerecho.y.toFixed(1)}`,
+      `M ${unionSuperior.x} ${unionSuperior.y} L ${cx} 80`,
+    ].join(' '));
+    cordon.setAttribute('fill', 'none');
+    cordon.setAttribute('stroke', 'rgba(255,211,91,.54)');
+    cordon.setAttribute('stroke-width', '1');
+    cordon.setAttribute('stroke-linecap', 'round');
+    cordon.setAttribute('stroke-linejoin', 'round');
+    g.appendChild(cordon);
   }
+
+  const cuentasCorona = cuentasDecenas.slice(1);
+  const totalCorona = cuentasCorona.length;
+  for (let i = 0; i < totalCorona; i++) {
+    const progreso = totalCorona > 1 ? i / (totalCorona - 1) : 0;
+    const angle = inicioCorona + progreso * tramoCorona;
+    const { paso } = cuentasCorona[i];
+    const esPadre = !paso.ave;
+    const beadRx = esPadre ? rx + 5 : rx;
+    const beadRy = esPadre ? ry + 5 : ry;
+    const x = cx + beadRx * Math.cos(angle);
+    const y = cy + beadRy * Math.sin(angle);
+
+    dibujarCuenta(cuentasCorona[i], x, y);
+  }
+
+  cuentasIniciales.forEach((cuenta, i) => {
+    const posicion = posicionesIniciales[i];
+    if (posicion) dibujarCuenta(cuenta, posicion.x, posicion.y);
+  });
 }
 
 function dispararCelebracionFinal() {
