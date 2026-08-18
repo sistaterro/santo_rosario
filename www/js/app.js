@@ -402,10 +402,10 @@ function renderCuentas() {
   const cuentasIniciales = cuentasVisibles.filter(({ paso }) => paso.m < 0);
   const cuentasDecenas = cuentasVisibles.filter(({ paso }) => paso.m >= 0);
   const posicionesIniciales = [
-    unionSuperior,
-    { x: cx, y: 38 },
-    { x: cx, y: 56 },
     { x: cx, y: 74 },
+    { x: cx, y: 56 },
+    { x: cx, y: 38 },
+    unionSuperior,
   ];
 
   if (cuentasIniciales.length) {
