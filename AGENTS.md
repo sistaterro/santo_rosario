@@ -54,12 +54,12 @@ www/css/styles.css      Estilos extraídos del HTML original
 www/js/app.js           JS extraído del HTML original
 www/data/versiculos.js  Versículos diarios y calendario anual
 www/data/latin.js       Frases latinas diarias, traducción y calendario anual
+www/citas-rvr1909.txt   Selección de 366 citas RVR1909 generada desde fuente local
 android/                Proyecto Android generado por Capacitor
 assets/                 Recursos fuente para íconos/splash (fuera de www/)
 capacitor.config.json   Configuración Capacitor
 package.json            Dependencias y scripts
 README.md               Guía mínima para humano
-index.original.html     Copia del HTML monolítico original
 ```
 
 ## Decisiones Tomadas
@@ -85,6 +85,8 @@ index.original.html     Copia del HTML monolítico original
 - Se agregó calendario diario de frases latinas con traducción en `www/data/latin.js`, consumido vía `window.SANTO_ROSARIO_LATIN`.
 - Los TXT fuente de datos diarios no son necesarios después de procesar la información; evitar versionarlos salvo que el usuario pida conservarlos como fuente editorial.
 - Se retiró el texto “COMENZÁ ACÁ” del rosario por feedback externo; se conserva el pulso inicial sobre la cruz central para sugerir interacción sin cartel explícito.
+- Se generó `www/citas-rvr1909.txt` con 366 citas bíblicas desde una carpeta local `citas/` (RVR1909), priorizando libros/referencias ya presentes en la fuente anterior y luego versos significativos de fe, oración, esperanza, paz, misericordia y vida cristiana. Esa carpeta fuente fue eliminada después de nutrir `www/data/versiculos.js`.
+- `www/data/versiculos.js` fue regenerado desde `www/citas-rvr1909.txt`; ya no conserva referencias a la fuente anterior.
 
 ## Entorno Local Observado
 
@@ -132,6 +134,7 @@ La app funciona, pero todavía arrastra deuda del HTML original:
 - Hay mucho contenido estático en `www/cuentas.html`.
 - `www/js/app.js` todavía mezcla datos de oraciones, estado del rosario y actualización de UI.
 - `www/data/versiculos.js` y `www/data/latin.js` duplican estructura de calendario; si crece, conviene extraer un generador/script versionado o una utilidad común.
+- `www/citas-rvr1909.txt` queda como fuente editorial humana de respaldo; la app consume `www/data/versiculos.js`.
 - Conviene extraer gradualmente datos a módulos simples, por ejemplo:
   - `www/js/prayers.js`
   - `www/js/mysteries.js`
@@ -141,7 +144,6 @@ La app funciona, pero todavía arrastra deuda del HTML original:
 - Revisar UX en teléfono físico: el diseño viene de web y puede requerir ajustes de tamaño/contraste/toques.
 - Falta verificar instalación real por USB en un Android físico.
 - Falta revisar manifest/nombre visual de Android. Capacitor generó valores por defecto.
-- Falta decidir si conservar `index.original.html` a largo plazo. Por ahora sirve como respaldo histórico.
 
 ## Riesgos / Cosas a No Romper
 
