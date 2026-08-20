@@ -974,6 +974,32 @@ img{display:block;max-width:100%;}
   transition:background .2s,color .2s,border-color .2s;
 }
 
+.language-picker{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin-top:26px;
+}
+
+.language-picker label{
+  font-family:var(--cinzel);
+  font-size:.68rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--tinta-dim);
+}
+
+.language-picker select{
+  min-height:42px;
+  padding:8px 32px 8px 12px;
+  border:1px solid var(--pergamino-3);
+  background:rgba(255,248,225,.72);
+  color:var(--tinta);
+  font-family:var(--fell);
+  font-size:1rem;
+}
+
 .about-link:hover{
   background:transparent;
   color:var(--azul);

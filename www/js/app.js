@@ -30,6 +30,21 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 /* SECTION: VERSICULO DIARIO                                      */
 /* ─────────────────────────────────────────────────────────────── */
 
+const I18N_API = window.SantoRosarioI18n;
+const I18N_TEXT = I18N_API?.getMessages?.() || {};
+const UI_TEXT = I18N_TEXT.ui || {};
+
+function i18nSection(key, fallback) {
+  return I18N_TEXT[key] || fallback;
+}
+
+function i18nText(path, fallback) {
+  return I18N_API?.t?.(path, fallback) ?? fallback;
+}
+
+I18N_API?.applyTranslations?.();
+I18N_API?.setupLanguageSelect?.();
+
 function esAnioBisiesto(anio) {
   return (anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0;
 }
@@ -63,8 +78,8 @@ async function cargarVersiculoDiario() {
       ? `${versiculo.referencia} · ${versiculo.traduccion}`
       : versiculo.referencia;
   } catch (error) {
-    textoEl.textContent = 'No se pudo cargar el versículo del día.';
-    referenciaEl.textContent = 'Lectura diaria';
+    textoEl.textContent = i18nText('ui.verseError', 'No se pudo cargar el versículo del día.');
+    referenciaEl.textContent = i18nText('ui.dailyReading', 'Lectura diaria');
     console.warn('No se pudo cargar el versículo diario.', error);
   }
 }
@@ -155,7 +170,7 @@ function switchOracion(btn, panelId) {
   Final — Salve Regina
 */
 
-const ORACIONES = {
+const ORACIONES = i18nSection('prayers', {
   signo:       { rubrica: 'Apertura', titulo: 'Señal de la Santa Cruz', texto: 'Por la señal de la Santa Cruz, de nuestros enemigos, líbranos, Señor, Dios nuestro.\n\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.' },
   credo:       { rubrica: 'Acto de fe', titulo: 'El Credo Apostólico', texto: 'Creo en Dios, Padre Todopoderoso, Creador del Cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor...\n\nAmén.' },
   padre:       { rubrica: 'Oración dominical', titulo: 'Padre Nuestro', texto: 'Padre nuestro que estás en el Cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el Cielo.\n\nDanos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.' },
@@ -166,9 +181,9 @@ const ORACIONES = {
   gloria:      { rubrica: 'Doxología', titulo: 'Gloria al Padre', texto: 'Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, y por los siglos de los siglos. Amén.' },
   fatima:      { rubrica: 'Visión de Fátima · 1917', titulo: 'Oración de Fátima', texto: 'Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno. Lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén.' },
   salve:       { rubrica: 'Oración final', titulo: 'Salve Regina', texto: 'Dios te salve, Reina y Madre de misericordia; vida, dulzura y esperanza nuestra, Dios te salve.\n\nA Ti llamamos los desterrados hijos de Eva; a Ti suspiramos gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima, oh piadosa, oh dulce Virgen María! Amén.' },
-};
+});
 
-const MISTERIOS_POR_TIPO = {
+const MISTERIOS_POR_TIPO = i18nSection('mysteries', {
   gozosos: {
     panelId: 'm-gozosos',
     titulo: 'Misterios Gozosos',
@@ -213,9 +228,9 @@ const MISTERIOS_POR_TIPO = {
       'La Coronación de María Santísima',
     ],
   },
-};
+});
 
-const DIA_SEMANA = [
+const DIA_SEMANA = i18nSection('weekdays', [
   { nombre: 'Domingo', tipo: 'gloriosos' },
   { nombre: 'Lunes', tipo: 'gozosos' },
   { nombre: 'Martes', tipo: 'dolorosos' },
@@ -223,7 +238,7 @@ const DIA_SEMANA = [
   { nombre: 'Jueves', tipo: 'luminosos' },
   { nombre: 'Viernes', tipo: 'dolorosos' },
   { nombre: 'Sábado', tipo: 'gozosos' },
-];
+]);
 
 let misterioActualTipo = DIA_SEMANA[new Date().getDay()].tipo;
 let MISTERIOS_NOMBRES = MISTERIOS_POR_TIPO[misterioActualTipo].nombres;
@@ -259,7 +274,7 @@ function aplicarMisteriosDelDia() {
 
   const resumen = document.getElementById('misterios-hoy');
   if (resumen) {
-    resumen.textContent = `Rosario de hoy: ${hoy.nombre} · ${misterio.titulo}`;
+    resumen.textContent = `${i18nText('ui.mysteriesToday', 'Rosario de hoy')}: ${hoy.nombre} · ${misterio.titulo}`;
   }
 }
 
@@ -271,9 +286,9 @@ function buildSecuencia() {
   seq.push({ o: ORACIONES.signo,  m: -1, ave: false });
   seq.push({ o: ORACIONES.credo,  m: -1, ave: false });
   seq.push({ o: ORACIONES.padre,  m: -1, ave: false });
-  seq.push({ o: ORACIONES.aveFe,        m: -1, ave: true,  label: 'Fe' });
-  seq.push({ o: ORACIONES.aveEsperanza, m: -1, ave: true,  label: 'Esperanza' });
-  seq.push({ o: ORACIONES.aveCaridad,   m: -1, ave: true,  label: 'Caridad' });
+  seq.push({ o: ORACIONES.aveFe,        m: -1, ave: true,  label: i18nText('rosary.faith', 'Fe') });
+  seq.push({ o: ORACIONES.aveEsperanza, m: -1, ave: true,  label: i18nText('rosary.hope', 'Esperanza') });
+  seq.push({ o: ORACIONES.aveCaridad,   m: -1, ave: true,  label: i18nText('rosary.charity', 'Caridad') });
   seq.push({ o: ORACIONES.gloria, m: -1, ave: false });
 
   // 5 decenas
@@ -281,9 +296,9 @@ function buildSecuencia() {
     // Anuncio del misterio: se espera/medita, no corresponde a una cuenta.
     seq.push({
       o: {
-        rubrica: 'Anuncio del misterio',
+        rubrica: i18nText('rosary.mysteryAnnouncement', 'Anuncio del misterio'),
         titulo: MISTERIOS_NOMBRES[i],
-        texto: 'Anunciá el misterio y hacé una breve pausa para contemplarlo antes de rezar el Padre Nuestro.'
+        texto: i18nText('rosary.mysteryAnnouncementText', 'Anunciá el misterio y hacé una breve pausa para contemplarlo antes de rezar el Padre Nuestro.')
       },
       m: i, ave: false, espera: true, anuncio: true
     });
@@ -293,7 +308,7 @@ function buildSecuencia() {
     });
     // 10 Ave Marías
     for (let j = 1; j <= 10; j++) {
-      seq.push({ o: ORACIONES.ave, m: i, ave: true, label: `${j} de 10` });
+      seq.push({ o: ORACIONES.ave, m: i, ave: true, label: `${j} ${i18nText('rosary.ofTen', 'de 10')}` });
     }
     // Gloria + Fátima
     seq.push({ o: ORACIONES.gloria, m: i, ave: false });
@@ -466,7 +481,7 @@ function renderCuentas() {
 
     circle.setAttribute('role', 'button');
     circle.setAttribute('tabindex', '0');
-    circle.setAttribute('aria-label', `Ir a ${paso.o.titulo}`);
+    circle.setAttribute('aria-label', `${i18nText('ui.goTo', 'Ir a')} ${paso.o.titulo}`);
     circle.addEventListener('click', () => irAPaso(index));
     circle.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
@@ -539,7 +554,7 @@ function contarAvesHasta(pasoIdx) {
 
 function lineasCentroMisterio(texto) {
   if (texto === '') return [];
-  if (!texto) return ['PREPARACION'];
+  if (!texto) return [i18nText('ui.preparation', 'Preparaci?n').toUpperCase()];
 
   const limpio = texto.replace(/^La |^El |^Las |^Los /i, '').toUpperCase();
   const palabras = limpio.split(/\s+/).filter(Boolean);
@@ -627,12 +642,12 @@ function actualizarUI() {
   const centroMisterio = document.getElementById('centro-misterio');
   if (centroMisterio) {
     const esUltimo = pasoActual >= SECUENCIA.length - 1;
-    renderCentroMisterio(centroMisterio, esUltimo ? '' : (paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : 'PREPARACION'));
+    renderCentroMisterio(centroMisterio, esUltimo ? '' : (paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : i18nText('ui.preparation', 'Preparaci?n').toUpperCase()));
   }
 
   // Cuenta label
   const cuentaLabel = document.getElementById('cuenta-label');
-  if (cuentaLabel) cuentaLabel.textContent = `Cuenta ${pasoActual} / ${SECUENCIA.length - 1}`;
+  if (cuentaLabel) cuentaLabel.textContent = `${i18nText('ui.count', 'Cuenta')} ${pasoActual} / ${SECUENCIA.length - 1}`;
 
   const tituloContador = document.getElementById('titulo-contador');
   if (tituloContador) {
@@ -647,7 +662,7 @@ function actualizarUI() {
   if (progFill) progFill.style.width = pct + '%';
   if (progPct) progPct.textContent = pct + '%';
   if (progLabel) {
-    progLabel.textContent = paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : (pasoActual === 0 ? 'Preparación' : 'Cierre');
+    progLabel.textContent = paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : (pasoActual === 0 ? i18nText('ui.preparation', 'Preparación') : i18nText('ui.closing', 'Cierre'));
   }
 
   // Cuentas SVG

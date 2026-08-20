@@ -11,12 +11,12 @@
 <header id="nav">
   <div class="shell">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">✞ El Santo Rosario</a>
+      <a href="index.html" class="nav-logo">✞ <span data-i18n="ui.appTitle">El Santo Rosario</span></a>
       <nav class="nav-links">
-        <a href="index.html#misterios">Misterios</a>
-        <a href="index.html#oraciones">Oraciones</a>
+        <a href="index.html#misterios" data-i18n="ui.navMysteries">Misterios</a>
+        <a href="index.html#oraciones" data-i18n="ui.navPrayers">Oraciones</a>
       </nav>
-      <a href="index.html" class="nav-rezar">Inicio</a>
+      <a href="index.html" class="nav-rezar" data-i18n="ui.navHome">Inicio</a>
     </div>
   </div>
 </header>
@@ -62,18 +62,32 @@
 
     <div class="cuentas-actions" aria-label="Opciones del rosario">
       <button class="btn-reiniciar cuentas-reset" id="btn-reiniciar-rosario" type="button">
-        Empezar de nuevo
+        <span data-i18n="ui.restart">Empezar de nuevo</span>
       </button>
 
       <label class="cuentas-toggle">
         <input type="checkbox" id="toggle-guia-oracion">
-        <span>Mostrar guía de oración</span>
+        <span data-i18n="ui.showPrayerGuide">Mostrar guía de oración</span>
       </label>
     </div>
   </div>
 </section>
 
 <script src="capacitor.js"></script>
+<script src="i18n/languages.js"></script>
+<script src="i18n/es.js"></script>
+<script src="i18n/pt.js"></script>
+<script src="i18n/en.js"></script>
+<script src="i18n/pl.js"></script>
+<script src="i18n/it.js"></script>
+<script src="i18n/fr.js"></script>
+<script src="i18n/fil.js"></script>
+<script src="i18n/de.js"></script>
+<script src="i18n/vi.js"></script>
+<script src="i18n/ro.js"></script>
+<script src="i18n/hr.js"></script>
+<script src="i18n/hu.js"></script>
+<script src="i18n/i18n.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

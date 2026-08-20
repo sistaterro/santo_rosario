@@ -29,6 +29,7 @@ Se logró el objetivo mínimo funcional:
 - `www/index.html` muestra un versículo bíblico diario en el hero y una frase latina diaria con traducción en el footer.
 - `www/index.html` incluye una sección “Sobre nosotros” con salida externa a `https://dazjuancarlos.com.ar/`.
 - Los datos diarios viven como archivos JS cargables sin `fetch`: `www/data/versiculos.js` y `www/data/latin.js`.
+- La estructura i18n vive en `www/i18n/`: detecta idioma del dispositivo, permite preferencia persistente y cae a español si un idioma todavía no tiene traducción completa.
 - `www/cuentas.html` usa un rosario SVG interactivo: las cuentas iniciales cuelgan en tramo vertical conectado a la corona, y la cruz central funciona como botón de avance.
 
 Comandos verificados:
@@ -53,6 +54,7 @@ www/index.html          Inicio informativo: hero, misterios y oraciones
 www/cuentas.html        Funcionalidad del rezo con cuentas sobre fondo azul
 www/css/styles.css      Estilos extraídos del HTML original
 www/js/app.js           JS extraído del HTML original
+www/i18n/               Registry de idiomas, textos traducibles y motor i18n
 www/data/versiculos.js  Versículos diarios y calendario anual
 www/data/latin.js       Frases latinas diarias, traducción y calendario anual
 www/citas-rvr1909.txt   Selección de 366 citas RVR1909 generada desde fuente local
@@ -61,6 +63,7 @@ assets/                 Recursos fuente para íconos/splash (fuera de www/)
 capacitor.config.json   Configuración Capacitor
 package.json            Dependencias y scripts
 README.md               Guía mínima para humano
+listado_idiomas.csv     Lista fuente de los 12 idiomas objetivo
 ```
 
 ## Decisiones Tomadas
@@ -89,6 +92,7 @@ README.md               Guía mínima para humano
 - Se generó `www/citas-rvr1909.txt` con 366 citas bíblicas desde una carpeta local `citas/` (RVR1909), priorizando libros/referencias ya presentes en la fuente anterior y luego versos significativos de fe, oración, esperanza, paz, misericordia y vida cristiana. Esa carpeta fuente fue eliminada después de nutrir `www/data/versiculos.js`.
 - `www/data/versiculos.js` fue regenerado desde `www/citas-rvr1909.txt`; ya no conserva referencias a la fuente anterior.
 - Se agregó una sección “Sobre nosotros” en `www/index.html`, enlazada desde la navegación desktop y con botón externo “Conocer al desarrollador” hacia `https://dazjuancarlos.com.ar/`.
+- Se creó una primera capa i18n basada en `listado_idiomas.csv`: `languages.js` declara 12 idiomas objetivo, `es.js` contiene la traducción completa base, `i18n.js` detecta `navigator.language`, respeta `localStorage` y aplica fallback a español.
 
 ## Entorno Local Observado
 
@@ -137,6 +141,7 @@ La app funciona, pero todavía arrastra deuda del HTML original:
 - `www/js/app.js` todavía mezcla datos de oraciones, estado del rosario y actualización de UI.
 - `www/data/versiculos.js` y `www/data/latin.js` duplican estructura de calendario; si crece, conviene extraer un generador/script versionado o una utilidad común.
 - `www/citas-rvr1909.txt` queda como fuente editorial humana de respaldo; la app consume `www/data/versiculos.js`.
+- Faltan traducciones reales para 11 idiomas en `www/i18n/`. Oraciones y textos bíblicos deben revisarse con fuentes litúrgicas/traducciones de dominio público o permiso claro; no usar traducción automática sin revisión.
 - Conviene extraer gradualmente datos a módulos simples, por ejemplo:
   - `www/js/prayers.js`
   - `www/js/mysteries.js`
