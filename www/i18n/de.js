@@ -2,7 +2,7 @@ window.SANTO_ROSARIO_I18N_MESSAGES = window.SANTO_ROSARIO_I18N_MESSAGES || {};
 
 window.SANTO_ROSARIO_I18N_MESSAGES.de = {
   "meta": {
-    "status": "available",
+    "status": "pending",
     "label": "Deutsch",
     "review": "draft-human-review-needed"
   },

@@ -43,7 +43,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "pl",
     "name": "Polaco",
     "nativeName": "Polski",
-    "status": "available",
+    "status": "pending",
     "markets": [
       "Polonia"
     ]
@@ -52,7 +52,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "it",
     "name": "Italiano",
     "nativeName": "Italiano",
-    "status": "available",
+    "status": "pending",
     "markets": [
       "Italia"
     ]
@@ -61,7 +61,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "fr",
     "name": "Francés",
     "nativeName": "Français",
-    "status": "available",
+    "status": "pending",
     "markets": [
       "Francia",
       "RD Congo",
@@ -74,7 +74,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "fil",
     "name": "Filipino / Tagalo",
     "nativeName": "Filipino",
-    "status": "available",
+    "status": "pending",
     "markets": [
       "Filipinas"
     ]
@@ -83,7 +83,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "de",
     "name": "Alemán",
     "nativeName": "Deutsch",
-    "status": "available",
+    "status": "pending",
     "markets": [
       "Alemania",
       "Austria",
@@ -94,7 +94,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "vi",
     "name": "Vietnamita",
     "nativeName": "Tiếng Việt",
-    "status": "available",
+    "status": "pending",
     "markets": [
       "Vietnam",
       "diáspora vietnamita"
@@ -104,7 +104,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "ro",
     "name": "Rumano",
     "nativeName": "Română",
-    "status": "available",
+    "status": "pending",
     "markets": [
       "Rumania",
       "diáspora rumana"
@@ -114,7 +114,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "hr",
     "name": "Croata",
     "nativeName": "Hrvatski",
-    "status": "available",
+    "status": "pending",
     "markets": [
       "Croacia",
       "Bosnia y Herzegovina"
@@ -124,7 +124,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "hu",
     "name": "Húngaro",
     "nativeName": "Magyar",
-    "status": "available",
+    "status": "pending",
     "markets": [
       "Hungría",
       "comunidades húngaras vecinas"

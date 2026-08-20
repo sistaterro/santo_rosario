@@ -28,10 +28,16 @@ El archivo `prompt.md` contiene la intencion completa del usuario. Leerlo si se 
 Catalogos actuales:
 
 ```text
-es, pt, en, pl, it, fr, fil, de, vi, ro, hr, hu
+es, pt, en
 ```
 
-Todos estan marcados como `available` para probar el flujo completo. La etiqueta del selector debe mantenerse siempre como `Language`, incluso cuando la app este traducida.
+Catalogos objetivo preparados pero deshabilitados por ahora:
+
+```text
+pl, it, fr, fil, de, vi, ro, hr, hu
+```
+
+Solo `es`, `pt` y `en` estan marcados como `available`. El resto queda `pending` para no mostrar oraciones en un idioma equivocado. La etiqueta del selector debe mantenerse siempre como `Language`, incluso cuando la app este traducida.
 
 Importante: las traducciones son una primera version funcional. Antes de lanzar mercados no hispanos, revisar con hablantes nativos y fuentes liturgicas adecuadas, sobre todo las oraciones largas. La frase biblica diaria y la frase latina siguen fuera del sistema i18n y tienen su propio tratamiento.
 

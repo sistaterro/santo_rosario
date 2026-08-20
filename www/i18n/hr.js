@@ -2,7 +2,7 @@ window.SANTO_ROSARIO_I18N_MESSAGES = window.SANTO_ROSARIO_I18N_MESSAGES || {};
 
 window.SANTO_ROSARIO_I18N_MESSAGES.hr = {
   "meta": {
-    "status": "available",
+    "status": "pending",
     "label": "Hrvatski",
     "review": "draft-human-review-needed"
   },
