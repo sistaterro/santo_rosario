@@ -114,7 +114,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "hr",
     "name": "Croata",
     "nativeName": "Hrvatski",
-    "status": "pending",
+    "status": "available",
     "markets": [
       "Croacia",
       "Bosnia y Herzegovina"
