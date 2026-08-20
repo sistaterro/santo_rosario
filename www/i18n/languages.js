@@ -43,7 +43,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "pl",
     "name": "Polaco",
     "nativeName": "Polski",
-    "status": "pending",
+    "status": "available",
     "markets": [
       "Polonia"
     ]

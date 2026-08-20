@@ -2,7 +2,7 @@ window.SANTO_ROSARIO_I18N_MESSAGES = window.SANTO_ROSARIO_I18N_MESSAGES || {};
 
 window.SANTO_ROSARIO_I18N_MESSAGES.pl = {
   "meta": {
-    "status": "pending",
+    "status": "available",
     "label": "Polski",
     "review": "draft-human-review-needed"
   },
@@ -154,119 +154,119 @@ window.SANTO_ROSARIO_I18N_MESSAGES.pl = {
   },
   "prayers": {
     "signo": {
-      "rubrica": "Opening",
-      "titulo": "Sign of the Cross",
-      "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+      "rubrica": "Początek",
+      "titulo": "Znak Krzyża",
+      "texto": "Przez znak Krzyża świętego wybaw nas, Panie, Boże nasz, od nieprzyjaciół naszych.\n\nW imię Ojca i Syna, i Ducha Świętego. Amen."
     },
     "credo": {
-      "rubrica": "Act of faith",
-      "titulo": "The Apostles' Creed",
-      "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+      "rubrica": "Akt wiary",
+      "titulo": "Skład Apostolski",
+      "texto": "Wierzę w Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi. I w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego, który się począł z Ducha Świętego; narodził się z Maryi Panny; umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion; zstąpił do piekieł; trzeciego dnia zmartwychwstał; wstąpił na niebiosa, siedzi po prawicy Boga Ojca wszechmogącego; stamtąd przyjdzie sądzić żywych i umarłych. Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie, grzechów odpuszczenie, ciała zmartwychwstanie i żywot wieczny. Amen."
     },
     "padre": {
-      "rubrica": "The Lord's Prayer",
-      "titulo": "Our Father",
-      "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+      "rubrica": "Modlitwa Pańska",
+      "titulo": "Ojcze nasz",
+      "texto": "Ojcze nasz, któryś jest w niebie, święć się imię Twoje; przyjdź królestwo Twoje; bądź wola Twoja jako w niebie, tak i na ziemi.\n\nChleba naszego powszedniego daj nam dzisiaj; i odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom; i nie wódź nas na pokuszenie, ale nas zbaw ode złego. Amen."
     },
     "ave": {
-      "rubrica": "Angelic salutation",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Pozdrowienie anielskie",
+      "titulo": "Zdrowaś Maryjo",
+      "texto": "Zdrowaś Maryjo, łaski pełna, Pan z Tobą; błogosławionaś Ty między niewiastami, i błogosławiony owoc żywota Twojego, Jezus.\n\nŚwięta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
     },
     "aveFe": {
-      "rubrica": "Daughter of God the Father",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Córka Boga Ojca",
+      "titulo": "Zdrowaś Maryjo",
+      "texto": "Zdrowaś Maryjo Najświętsza, Córko Boga Ojca, Dziewico najczystsza przed narodzeniem; w Twoje ręce powierzamy naszą wiarę, abyś ją oświeciła.\n\nŁaski pełna, Pan z Tobą; błogosławionaś Ty między niewiastami, i błogosławiony owoc żywota Twojego, Jezus.\n\nŚwięta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
     },
     "aveEsperanza": {
-      "rubrica": "Mother of God the Son",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Matka Boga Syna",
+      "titulo": "Zdrowaś Maryjo",
+      "texto": "Zdrowaś Maryjo Najświętsza, Matko Boga Syna, Dziewico najczystsza w narodzeniu; w Twoje ręce powierzamy naszą nadzieję, abyś ją umocniła.\n\nŁaski pełna, Pan z Tobą; błogosławionaś Ty między niewiastami, i błogosławiony owoc żywota Twojego, Jezus.\n\nŚwięta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
     },
     "aveCaridad": {
-      "rubrica": "Spouse of God the Holy Spirit",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Oblubienica Boga Ducha Świętego",
+      "titulo": "Zdrowaś Maryjo",
+      "texto": "Zdrowaś Maryjo Najświętsza, Oblubienico Boga Ducha Świętego, Dziewico najczystsza po narodzeniu; w Twoje ręce powierzamy naszą miłość, abyś ją rozpaliła.\n\nŁaski pełna, Pan z Tobą; błogosławionaś Ty między niewiastami, i błogosławiony owoc żywota Twojego, Jezus.\n\nŚwięta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
     },
     "gloria": {
-      "rubrica": "Doxology",
-      "titulo": "Glory Be",
-      "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      "rubrica": "Doksologia",
+      "titulo": "Chwała Ojcu",
+      "texto": "Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen."
     },
     "fatima": {
-      "rubrica": "Vision of Fatima · 1917",
-      "titulo": "Fatima Prayer",
-      "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+      "rubrica": "Objawienie fatimskie · 1917",
+      "titulo": "Modlitwa fatimska",
+      "texto": "O mój Jezu, przebacz nam nasze grzechy, zachowaj nas od ognia piekielnego. Zaprowadź wszystkie dusze do nieba, a szczególnie te, które najbardziej potrzebują Twojego miłosierdzia. Amen."
     },
     "salve": {
-      "rubrica": "Final prayer",
-      "titulo": "Hail Holy Queen",
-      "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+      "rubrica": "Modlitwa końcowa",
+      "titulo": "Witaj Królowo",
+      "texto": "Witaj Królowo, Matko miłosierdzia, życie, słodyczy i nadziejo nasza, witaj.\n\nDo Ciebie wołamy, wygnańcy synowie Ewy; do Ciebie wzdychamy, jęcząc i płacząc na tym łez padole. Przeto, Orędowniczko nasza, one miłosierne oczy Twoje na nas zwróć; a Jezusa, błogosławiony owoc żywota Twojego, po tym wygnaniu nam okaż.\n\nO łaskawa, o litościwa, o słodka Panno Maryjo. Amen."
     }
   },
   "prayerPanels": {
     "credos": [
       {
         "rubrica": "Na początku różańca",
-        "titulo": "Sign of the Cross",
-        "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+        "titulo": "Znak Krzyża",
+        "texto": "Przez znak Krzyża świętego wybaw nas, Panie, Boże nasz, od nieprzyjaciół naszych.\n\nW imię Ojca i Syna, i Ducha Świętego. Amen."
       },
       {
-        "rubrica": "Act of faith",
-        "titulo": "The Apostles' Creed",
-        "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+        "rubrica": "Akt wiary",
+        "titulo": "Skład Apostolski",
+        "texto": "Wierzę w Boga, Ojca wszechmogącego, Stworzyciela nieba i ziemi. I w Jezusa Chrystusa, Syna Jego jedynego, Pana naszego, który się począł z Ducha Świętego; narodził się z Maryi Panny; umęczon pod Ponckim Piłatem, ukrzyżowan, umarł i pogrzebion; zstąpił do piekieł; trzeciego dnia zmartwychwstał; wstąpił na niebiosa, siedzi po prawicy Boga Ojca wszechmogącego; stamtąd przyjdzie sądzić żywych i umarłych. Wierzę w Ducha Świętego, święty Kościół powszechny, świętych obcowanie, grzechów odpuszczenie, ciała zmartwychwstanie i żywot wieczny. Amen."
       }
     ],
     "padrenuestro": [
       {
         "rubrica": "Na początku każdej dziesiątki",
-        "titulo": "Our Father",
-        "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+        "titulo": "Ojcze nasz",
+        "texto": "Ojcze nasz, któryś jest w niebie, święć się imię Twoje; przyjdź królestwo Twoje; bądź wola Twoja jako w niebie, tak i na ziemi.\n\nChleba naszego powszedniego daj nam dzisiaj; i odpuść nam nasze winy, jako i my odpuszczamy naszym winowajcom; i nie wódź nas na pokuszenie, ale nas zbaw ode złego. Amen."
       }
     ],
     "tresavemarias": [
       {
         "rubrica": "Na początku różańca",
         "titulo": "Trzy Zdrowaś Maryjo",
-        "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Zdrowaś Maryjo Najświętsza, Córko Boga Ojca, Dziewico najczystsza przed narodzeniem; w Twoje ręce powierzamy naszą wiarę, abyś ją oświeciła.\n\nŁaski pełna, Pan z Tobą; błogosławionaś Ty między niewiastami, i błogosławiony owoc żywota Twojego, Jezus.\n\nŚwięta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
       },
       {
         "rubrica": "Za nadzieję",
         "titulo": "",
-        "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Zdrowaś Maryjo Najświętsza, Matko Boga Syna, Dziewico najczystsza w narodzeniu; w Twoje ręce powierzamy naszą nadzieję, abyś ją umocniła.\n\nŁaski pełna, Pan z Tobą; błogosławionaś Ty między niewiastami, i błogosławiony owoc żywota Twojego, Jezus.\n\nŚwięta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
       },
       {
         "rubrica": "Za miłość",
         "titulo": "",
-        "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Zdrowaś Maryjo Najświętsza, Oblubienico Boga Ducha Świętego, Dziewico najczystsza po narodzeniu; w Twoje ręce powierzamy naszą miłość, abyś ją rozpaliła.\n\nŁaski pełna, Pan z Tobą; błogosławionaś Ty między niewiastami, i błogosławiony owoc żywota Twojego, Jezus.\n\nŚwięta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
       }
     ],
     "avemaria": [
       {
         "rubrica": "Dziesięć razy w każdej dziesiątce",
-        "titulo": "Hail Mary",
-        "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "titulo": "Zdrowaś Maryjo",
+        "texto": "Zdrowaś Maryjo, łaski pełna, Pan z Tobą; błogosławionaś Ty między niewiastami, i błogosławiony owoc żywota Twojego, Jezus.\n\nŚwięta Maryjo, Matko Boża, módl się za nami grzesznymi, teraz i w godzinę śmierci naszej. Amen."
       }
     ],
     "gloriapatri": [
       {
         "rubrica": "Na końcu każdej dziesiątki",
-        "titulo": "Glory Be",
-        "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        "titulo": "Chwała Ojcu",
+        "texto": "Chwała Ojcu i Synowi, i Duchowi Świętemu. Jak była na początku, teraz i zawsze, i na wieki wieków. Amen."
       }
     ],
     "fatima": [
       {
         "rubrica": "Przekazana w Fatimie · 1917",
-        "titulo": "Fatima Prayer",
-        "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+        "titulo": "Modlitwa fatimska",
+        "texto": "O mój Jezu, przebacz nam nasze grzechy, zachowaj nas od ognia piekielnego. Zaprowadź wszystkie dusze do nieba, a szczególnie te, które najbardziej potrzebują Twojego miłosierdzia. Amen."
       }
     ],
     "salve": [
       {
         "rubrica": "Modlitwa końcowa",
-        "titulo": "Hail Holy Queen",
-        "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+        "titulo": "Witaj Królowo",
+        "texto": "Witaj Królowo, Matko miłosierdzia, życie, słodyczy i nadziejo nasza, witaj.\n\nDo Ciebie wołamy, wygnańcy synowie Ewy; do Ciebie wzdychamy, jęcząc i płacząc na tym łez padole. Przeto, Orędowniczko nasza, one miłosierne oczy Twoje na nas zwróć; a Jezusa, błogosławiony owoc żywota Twojego, po tym wygnaniu nam okaż.\n\nO łaskawa, o litościwa, o słodka Panno Maryjo. Amen."
       }
     ]
   },
