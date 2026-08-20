@@ -2,7 +2,7 @@ window.SANTO_ROSARIO_I18N_MESSAGES = window.SANTO_ROSARIO_I18N_MESSAGES || {};
 
 window.SANTO_ROSARIO_I18N_MESSAGES.hu = {
   "meta": {
-    "status": "pending",
+    "status": "available",
     "label": "Magyar",
     "review": "draft-human-review-needed"
   },
@@ -154,119 +154,119 @@ window.SANTO_ROSARIO_I18N_MESSAGES.hu = {
   },
   "prayers": {
     "signo": {
-      "rubrica": "Opening",
-      "titulo": "Sign of the Cross",
-      "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+      "rubrica": "Kezdés",
+      "titulo": "Keresztvetés",
+      "texto": "A Szent Kereszt jelével szabadíts meg minket, Urunk, Istenünk, ellenségeinktől.\n\nAz Atya, a Fiú és a Szentlélek nevében. Ámen."
     },
     "credo": {
-      "rubrica": "Act of faith",
-      "titulo": "The Apostles' Creed",
-      "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+      "rubrica": "Hitvallás",
+      "titulo": "Apostoli hitvallás",
+      "texto": "Hiszek egy Istenben, mindenható Atyában, mennynek és földnek Teremtőjében. És Jézus Krisztusban, az ő egyszülött Fiában, a mi Urunkban, aki fogantatott Szentlélektől, született Szűz Máriától, szenvedett Poncius Pilátus alatt; megfeszítették, meghalt és eltemették; alászállt a poklokra; harmadnapon feltámadt a halottak közül; fölment a mennybe, ott ül a mindenható Atyaisten jobbján; onnan jön el ítélni élőket és holtakat. Hiszek Szentlélekben, a katolikus Anyaszentegyházban, a szentek közösségében, a bűnök bocsánatában, a test feltámadásában és az örök életben. Ámen."
     },
     "padre": {
-      "rubrica": "The Lord's Prayer",
-      "titulo": "Our Father",
-      "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+      "rubrica": "Az Úr imája",
+      "titulo": "Miatyánk",
+      "texto": "Miatyánk, aki a mennyekben vagy, szenteltessék meg a te neved; jöjjön el a te országod; legyen meg a te akaratod, amint a mennyben, úgy a földön is.\n\nMindennapi kenyerünket add meg nekünk ma; és bocsásd meg vétkeinket, miképpen mi is megbocsátunk az ellenünk vétkezőknek; és ne vígy minket kísértésbe, de szabadíts meg a gonosztól. Ámen."
     },
     "ave": {
-      "rubrica": "Angelic salutation",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Angyali üdvözlet",
+      "titulo": "Üdvözlégy Mária",
+      "texto": "Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled; áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.\n\nAsszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen."
     },
     "aveFe": {
-      "rubrica": "Daughter of God the Father",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Az Atyaisten leánya",
+      "titulo": "Üdvözlégy Mária",
+      "texto": "Üdvözlégy, legszentebb Mária, az Atyaisten leánya, legtisztább Szűz a szülés előtt; kezedbe ajánljuk hitünket, hogy megvilágosítsd.\n\nKegyelemmel teljes, az Úr van teveled; áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.\n\nAsszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen."
     },
     "aveEsperanza": {
-      "rubrica": "Mother of God the Son",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "A Fiúisten anyja",
+      "titulo": "Üdvözlégy Mária",
+      "texto": "Üdvözlégy, legszentebb Mária, a Fiúisten anyja, legtisztább Szűz a szülésben; kezedbe ajánljuk reményünket, hogy megerősítsd.\n\nKegyelemmel teljes, az Úr van teveled; áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.\n\nAsszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen."
     },
     "aveCaridad": {
-      "rubrica": "Spouse of God the Holy Spirit",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "A Szentlélek jegyese",
+      "titulo": "Üdvözlégy Mária",
+      "texto": "Üdvözlégy, legszentebb Mária, a Szentlélek jegyese, legtisztább Szűz a szülés után; kezedbe ajánljuk szeretetünket, hogy lángra lobbantsd.\n\nKegyelemmel teljes, az Úr van teveled; áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.\n\nAsszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen."
     },
     "gloria": {
-      "rubrica": "Doxology",
-      "titulo": "Glory Be",
-      "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      "rubrica": "Doxológia",
+      "titulo": "Dicsőség",
+      "texto": "Dicsőség az Atyának, a Fiúnak és a Szentléleknek. Miképpen kezdetben, most és mindörökké. Ámen."
     },
     "fatima": {
-      "rubrica": "Vision of Fatima · 1917",
-      "titulo": "Fatima Prayer",
-      "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+      "rubrica": "Fatimai jelenés · 1917",
+      "titulo": "Fatimai ima",
+      "texto": "Ó Jézusom, bocsásd meg bűneinket, ments meg minket a pokol tüzétől. Vidd a mennybe a lelkeket, különösen azokat, akik legjobban rászorulnak irgalmadra. Ámen."
     },
     "salve": {
-      "rubrica": "Final prayer",
-      "titulo": "Hail Holy Queen",
-      "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+      "rubrica": "Záró ima",
+      "titulo": "Üdvözlégy Királynő",
+      "texto": "Üdvözlégy Királynő, irgalmasság Anyja, életünk, édességünk és reményünk, üdvözlégy.\n\nHozzád kiáltunk, Éva száműzött gyermekei; hozzád sóhajtunk, sírva és zokogva e siralom völgyében. Fordítsd hát, szószólónk, irgalmas szemeidet ránk; és e számkivetés után mutasd meg nekünk Jézust, méhednek áldott gyümölcsét.\n\nÓ kegyes, ó irgalmas, ó édes Szűz Mária. Ámen."
     }
   },
   "prayerPanels": {
     "credos": [
       {
         "rubrica": "A rózsafüzér kezdetén",
-        "titulo": "Sign of the Cross",
-        "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+        "titulo": "Keresztvetés",
+        "texto": "A Szent Kereszt jelével szabadíts meg minket, Urunk, Istenünk, ellenségeinktől.\n\nAz Atya, a Fiú és a Szentlélek nevében. Ámen."
       },
       {
-        "rubrica": "Act of faith",
-        "titulo": "The Apostles' Creed",
-        "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+        "rubrica": "Hitvallás",
+        "titulo": "Apostoli hitvallás",
+        "texto": "Hiszek egy Istenben, mindenható Atyában, mennynek és földnek Teremtőjében. És Jézus Krisztusban, az ő egyszülött Fiában, a mi Urunkban, aki fogantatott Szentlélektől, született Szűz Máriától, szenvedett Poncius Pilátus alatt; megfeszítették, meghalt és eltemették; alászállt a poklokra; harmadnapon feltámadt a halottak közül; fölment a mennybe, ott ül a mindenható Atyaisten jobbján; onnan jön el ítélni élőket és holtakat. Hiszek Szentlélekben, a katolikus Anyaszentegyházban, a szentek közösségében, a bűnök bocsánatában, a test feltámadásában és az örök életben. Ámen."
       }
     ],
     "padrenuestro": [
       {
         "rubrica": "Minden tized elején",
-        "titulo": "Our Father",
-        "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+        "titulo": "Miatyánk",
+        "texto": "Miatyánk, aki a mennyekben vagy, szenteltessék meg a te neved; jöjjön el a te országod; legyen meg a te akaratod, amint a mennyben, úgy a földön is.\n\nMindennapi kenyerünket add meg nekünk ma; és bocsásd meg vétkeinket, miképpen mi is megbocsátunk az ellenünk vétkezőknek; és ne vígy minket kísértésbe, de szabadíts meg a gonosztól. Ámen."
       }
     ],
     "tresavemarias": [
       {
         "rubrica": "A rózsafüzér kezdetén",
         "titulo": "Három Üdvözlégy",
-        "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Üdvözlégy, legszentebb Mária, az Atyaisten leánya, legtisztább Szűz a szülés előtt; kezedbe ajánljuk hitünket, hogy megvilágosítsd.\n\nKegyelemmel teljes, az Úr van teveled; áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.\n\nAsszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen."
       },
       {
         "rubrica": "A reményért",
         "titulo": "",
-        "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Üdvözlégy, legszentebb Mária, a Fiúisten anyja, legtisztább Szűz a szülésben; kezedbe ajánljuk reményünket, hogy megerősítsd.\n\nKegyelemmel teljes, az Úr van teveled; áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.\n\nAsszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen."
       },
       {
         "rubrica": "A szeretetért",
         "titulo": "",
-        "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Üdvözlégy, legszentebb Mária, a Szentlélek jegyese, legtisztább Szűz a szülés után; kezedbe ajánljuk szeretetünket, hogy lángra lobbantsd.\n\nKegyelemmel teljes, az Úr van teveled; áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.\n\nAsszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen."
       }
     ],
     "avemaria": [
       {
         "rubrica": "Tízszer minden tizedben",
-        "titulo": "Hail Mary",
-        "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "titulo": "Üdvözlégy Mária",
+        "texto": "Üdvözlégy Mária, kegyelemmel teljes, az Úr van teveled; áldott vagy te az asszonyok között, és áldott a te méhednek gyümölcse, Jézus.\n\nAsszonyunk, Szűz Mária, Istennek szent Anyja, imádkozzál érettünk, bűnösökért, most és halálunk óráján. Ámen."
       }
     ],
     "gloriapatri": [
       {
         "rubrica": "Minden tized végén",
-        "titulo": "Glory Be",
-        "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        "titulo": "Dicsőség",
+        "texto": "Dicsőség az Atyának, a Fiúnak és a Szentléleknek. Miképpen kezdetben, most és mindörökké. Ámen."
       }
     ],
     "fatima": [
       {
         "rubrica": "Fatimában tanított ima · 1917",
-        "titulo": "Fatima Prayer",
-        "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+        "titulo": "Fatimai ima",
+        "texto": "Ó Jézusom, bocsásd meg bűneinket, ments meg minket a pokol tüzétől. Vidd a mennybe a lelkeket, különösen azokat, akik legjobban rászorulnak irgalmadra. Ámen."
       }
     ],
     "salve": [
       {
         "rubrica": "Záró ima",
-        "titulo": "Hail Holy Queen",
-        "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+        "titulo": "Üdvözlégy Királynő",
+        "texto": "Üdvözlégy Királynő, irgalmasság Anyja, életünk, édességünk és reményünk, üdvözlégy.\n\nHozzád kiáltunk, Éva száműzött gyermekei; hozzád sóhajtunk, sírva és zokogva e siralom völgyében. Fordítsd hát, szószólónk, irgalmas szemeidet ránk; és e számkivetés után mutasd meg nekünk Jézust, méhednek áldott gyümölcsét.\n\nÓ kegyes, ó irgalmas, ó édes Szűz Mária. Ámen."
       }
     ]
   },

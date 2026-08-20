@@ -124,7 +124,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "hu",
     "name": "Húngaro",
     "nativeName": "Magyar",
-    "status": "pending",
+    "status": "available",
     "markets": [
       "Hungría",
       "comunidades húngaras vecinas"
