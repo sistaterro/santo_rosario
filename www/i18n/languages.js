@@ -52,7 +52,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "it",
     "name": "Italiano",
     "nativeName": "Italiano",
-    "status": "pending",
+    "status": "available",
     "markets": [
       "Italia"
     ]

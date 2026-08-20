@@ -2,7 +2,7 @@ window.SANTO_ROSARIO_I18N_MESSAGES = window.SANTO_ROSARIO_I18N_MESSAGES || {};
 
 window.SANTO_ROSARIO_I18N_MESSAGES.it = {
   "meta": {
-    "status": "pending",
+    "status": "available",
     "label": "Italiano",
     "review": "draft-human-review-needed"
   },
@@ -154,119 +154,119 @@ window.SANTO_ROSARIO_I18N_MESSAGES.it = {
   },
   "prayers": {
     "signo": {
-      "rubrica": "Opening",
-      "titulo": "Sign of the Cross",
-      "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+      "rubrica": "Apertura",
+      "titulo": "Segno della Croce",
+      "texto": "Per il segno della Santa Croce, liberaci, Signore Dio nostro, dai nostri nemici.\n\nNel nome del Padre, del Figlio e dello Spirito Santo. Amen."
     },
     "credo": {
-      "rubrica": "Act of faith",
-      "titulo": "The Apostles' Creed",
-      "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+      "rubrica": "Atto di fede",
+      "titulo": "Credo Apostolico",
+      "texto": "Io credo in Dio, Padre onnipotente, creatore del cielo e della terra. E in Gesù Cristo, suo unico Figlio, nostro Signore, il quale fu concepito di Spirito Santo, nacque da Maria Vergine, patì sotto Ponzio Pilato, fu crocifisso, morì e fu sepolto; discese agli inferi; il terzo giorno risuscitò da morte; salì al cielo, siede alla destra di Dio Padre onnipotente; di là verrà a giudicare i vivi e i morti. Credo nello Spirito Santo, la santa Chiesa cattolica, la comunione dei santi, la remissione dei peccati, la risurrezione della carne, la vita eterna. Amen."
     },
     "padre": {
-      "rubrica": "The Lord's Prayer",
-      "titulo": "Our Father",
-      "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+      "rubrica": "Preghiera del Signore",
+      "titulo": "Padre Nostro",
+      "texto": "Padre nostro, che sei nei cieli, sia santificato il tuo nome; venga il tuo regno; sia fatta la tua volontà, come in cielo così in terra.\n\nDacci oggi il nostro pane quotidiano; rimetti a noi i nostri debiti, come anche noi li rimettiamo ai nostri debitori; e non abbandonarci alla tentazione, ma liberaci dal male. Amen."
     },
     "ave": {
-      "rubrica": "Angelic salutation",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Saluto angelico",
+      "titulo": "Ave Maria",
+      "texto": "Ave Maria, piena di grazia, il Signore è con te; tu sei benedetta fra le donne, e benedetto è il frutto del tuo seno, Gesù.\n\nSanta Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen."
     },
     "aveFe": {
-      "rubrica": "Daughter of God the Father",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Figlia di Dio Padre",
+      "titulo": "Ave Maria",
+      "texto": "Ave Maria Santissima, Figlia di Dio Padre, Vergine purissima prima del parto; nelle tue mani affidiamo la nostra fede, perché tu la illumini.\n\nPiena di grazia, il Signore è con te; tu sei benedetta fra le donne, e benedetto è il frutto del tuo seno, Gesù.\n\nSanta Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen."
     },
     "aveEsperanza": {
-      "rubrica": "Mother of God the Son",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Madre di Dio Figlio",
+      "titulo": "Ave Maria",
+      "texto": "Ave Maria Santissima, Madre di Dio Figlio, Vergine purissima nel parto; nelle tue mani affidiamo la nostra speranza, perché tu la sostenga.\n\nPiena di grazia, il Signore è con te; tu sei benedetta fra le donne, e benedetto è il frutto del tuo seno, Gesù.\n\nSanta Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen."
     },
     "aveCaridad": {
-      "rubrica": "Spouse of God the Holy Spirit",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Sposa di Dio Spirito Santo",
+      "titulo": "Ave Maria",
+      "texto": "Ave Maria Santissima, Sposa di Dio Spirito Santo, Vergine purissima dopo il parto; nelle tue mani affidiamo la nostra carità, perché tu la infiammi.\n\nPiena di grazia, il Signore è con te; tu sei benedetta fra le donne, e benedetto è il frutto del tuo seno, Gesù.\n\nSanta Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen."
     },
     "gloria": {
-      "rubrica": "Doxology",
-      "titulo": "Glory Be",
-      "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      "rubrica": "Dossologia",
+      "titulo": "Gloria al Padre",
+      "texto": "Gloria al Padre, al Figlio e allo Spirito Santo. Come era nel principio, ora e sempre, nei secoli dei secoli. Amen."
     },
     "fatima": {
-      "rubrica": "Vision of Fatima · 1917",
-      "titulo": "Fatima Prayer",
-      "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+      "rubrica": "Visione di Fatima · 1917",
+      "titulo": "Preghiera di Fatima",
+      "texto": "Gesù mio, perdona le nostre colpe, preservaci dal fuoco dell'inferno. Porta in cielo tutte le anime, specialmente le più bisognose della tua misericordia. Amen."
     },
     "salve": {
-      "rubrica": "Final prayer",
-      "titulo": "Hail Holy Queen",
-      "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+      "rubrica": "Preghiera finale",
+      "titulo": "Salve Regina",
+      "texto": "Salve, Regina, madre di misericordia, vita, dolcezza e speranza nostra, salve.\n\nA te ricorriamo, esuli figli di Eva; a te sospiriamo, gementi e piangenti in questa valle di lacrime. Orsù dunque, avvocata nostra, rivolgi a noi gli occhi tuoi misericordiosi; e mostraci, dopo questo esilio, Gesù, il frutto benedetto del tuo seno.\n\nO clemente, o pia, o dolce Vergine Maria. Amen."
     }
   },
   "prayerPanels": {
     "credos": [
       {
         "rubrica": "All'inizio del Rosario",
-        "titulo": "Sign of the Cross",
-        "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+        "titulo": "Segno della Croce",
+        "texto": "Per il segno della Santa Croce, liberaci, Signore Dio nostro, dai nostri nemici.\n\nNel nome del Padre, del Figlio e dello Spirito Santo. Amen."
       },
       {
-        "rubrica": "Act of faith",
-        "titulo": "The Apostles' Creed",
-        "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+        "rubrica": "Atto di fede",
+        "titulo": "Credo Apostolico",
+        "texto": "Io credo in Dio, Padre onnipotente, creatore del cielo e della terra. E in Gesù Cristo, suo unico Figlio, nostro Signore, il quale fu concepito di Spirito Santo, nacque da Maria Vergine, patì sotto Ponzio Pilato, fu crocifisso, morì e fu sepolto; discese agli inferi; il terzo giorno risuscitò da morte; salì al cielo, siede alla destra di Dio Padre onnipotente; di là verrà a giudicare i vivi e i morti. Credo nello Spirito Santo, la santa Chiesa cattolica, la comunione dei santi, la remissione dei peccati, la risurrezione della carne, la vita eterna. Amen."
       }
     ],
     "padrenuestro": [
       {
         "rubrica": "All'inizio di ogni decina",
-        "titulo": "Our Father",
-        "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+        "titulo": "Padre Nostro",
+        "texto": "Padre nostro, che sei nei cieli, sia santificato il tuo nome; venga il tuo regno; sia fatta la tua volontà, come in cielo così in terra.\n\nDacci oggi il nostro pane quotidiano; rimetti a noi i nostri debiti, come anche noi li rimettiamo ai nostri debitori; e non abbandonarci alla tentazione, ma liberaci dal male. Amen."
       }
     ],
     "tresavemarias": [
       {
         "rubrica": "All'inizio del Rosario",
         "titulo": "Tre Ave Maria",
-        "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Ave Maria Santissima, Figlia di Dio Padre, Vergine purissima prima del parto; nelle tue mani affidiamo la nostra fede, perché tu la illumini.\n\nPiena di grazia, il Signore è con te; tu sei benedetta fra le donne, e benedetto è il frutto del tuo seno, Gesù.\n\nSanta Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen."
       },
       {
         "rubrica": "Per la speranza",
         "titulo": "",
-        "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Ave Maria Santissima, Madre di Dio Figlio, Vergine purissima nel parto; nelle tue mani affidiamo la nostra speranza, perché tu la sostenga.\n\nPiena di grazia, il Signore è con te; tu sei benedetta fra le donne, e benedetto è il frutto del tuo seno, Gesù.\n\nSanta Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen."
       },
       {
         "rubrica": "Per la carità",
         "titulo": "",
-        "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Ave Maria Santissima, Sposa di Dio Spirito Santo, Vergine purissima dopo il parto; nelle tue mani affidiamo la nostra carità, perché tu la infiammi.\n\nPiena di grazia, il Signore è con te; tu sei benedetta fra le donne, e benedetto è il frutto del tuo seno, Gesù.\n\nSanta Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen."
       }
     ],
     "avemaria": [
       {
         "rubrica": "Dieci volte in ogni decina",
-        "titulo": "Hail Mary",
-        "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "titulo": "Ave Maria",
+        "texto": "Ave Maria, piena di grazia, il Signore è con te; tu sei benedetta fra le donne, e benedetto è il frutto del tuo seno, Gesù.\n\nSanta Maria, Madre di Dio, prega per noi peccatori, adesso e nell'ora della nostra morte. Amen."
       }
     ],
     "gloriapatri": [
       {
         "rubrica": "Alla fine di ogni decina",
-        "titulo": "Glory Be",
-        "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        "titulo": "Gloria al Padre",
+        "texto": "Gloria al Padre, al Figlio e allo Spirito Santo. Come era nel principio, ora e sempre, nei secoli dei secoli. Amen."
       }
     ],
     "fatima": [
       {
         "rubrica": "Insegnata dall'Angelo a Fatima · 1917",
-        "titulo": "Fatima Prayer",
-        "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+        "titulo": "Preghiera di Fatima",
+        "texto": "Gesù mio, perdona le nostre colpe, preservaci dal fuoco dell'inferno. Porta in cielo tutte le anime, specialmente le più bisognose della tua misericordia. Amen."
       }
     ],
     "salve": [
       {
         "rubrica": "Preghiera finale",
-        "titulo": "Hail Holy Queen",
-        "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+        "titulo": "Salve Regina",
+        "texto": "Salve, Regina, madre di misericordia, vita, dolcezza e speranza nostra, salve.\n\nA te ricorriamo, esuli figli di Eva; a te sospiriamo, gementi e piangenti in questa valle di lacrime. Orsù dunque, avvocata nostra, rivolgi a noi gli occhi tuoi misericordiosi; e mostraci, dopo questo esilio, Gesù, il frutto benedetto del tuo seno.\n\nO clemente, o pia, o dolce Vergine Maria. Amen."
       }
     ]
   },
