@@ -6,67 +6,67 @@
 <title>Rezar el Santo Rosario</title>
 <link rel="stylesheet" href="css/styles.css"/>
 </head>
-<body class="cuentas-screen">
+<body class="rosary-screen">
 
 <header id="nav">
   <div class="shell">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">✞ <span data-i18n="ui.appTitle">El Santo Rosario</span></a>
       <nav class="nav-links">
-        <a href="index.html#misterios" data-i18n="ui.navMysteries">Misterios</a>
-        <a href="index.html#oraciones" data-i18n="ui.navPrayers">Oraciones</a>
+        <a href="index.html#mysteries" data-i18n="ui.navMysteries">Misterios</a>
+        <a href="index.html#prayers" data-i18n="ui.navPrayers">Oraciones</a>
       </nav>
-      <a href="index.html" class="nav-rezar" data-i18n="ui.navHome">Inicio</a>
+      <a href="index.html" class="nav-pray" data-i18n="ui.navHome">Inicio</a>
     </div>
   </div>
 </header>
 
-<section id="rezar">
+<section id="pray">
   <div class="rosary-burst" id="rosary-burst" aria-hidden="true"></div>
   <div class="shell">
 
-    <div class="cuentas-panel cuentas-panel--principal">
-        <div class="guia-oracion" id="guia-oracion" hidden>
-          <span class="guia-oracion__rubrica" id="guia-rubrica">Apertura</span>
-          <div class="guia-oracion__titulo" id="guia-titulo">Señal de la Santa Cruz</div>
-          <div class="guia-oracion__texto" id="guia-texto"></div>
+    <div class="rosary-panel rosary-panel--principal">
+        <div class="prayer-guide" id="prayer-guide" hidden>
+          <span class="prayer-guide__rubrica" id="guide-rubric">Apertura</span>
+          <div class="prayer-guide__titulo" id="guide-title">Señal de la Santa Cruz</div>
+          <div class="prayer-guide__texto" id="guide-text"></div>
         </div>
 
-        <div class="contador-display">
-          <span class="contador-display__oracion" id="titulo-contador">Señal de la Cruz</span>
+        <div class="counter-display">
+          <span class="counter-display__oracion" id="counter-title">Señal de la Cruz</span>
         </div>
 
-        <div class="progreso-misterio" style="max-width:360px;width:100%;">
-          <div class="progreso-misterio__label">
+        <div class="mystery-progress" style="max-width:360px;width:100%;">
+          <div class="mystery-progress__label">
             <span id="prog-label">Preparación</span>
             <span id="prog-pct">0%</span>
           </div>
-          <div class="progreso-misterio__bar">
-            <div class="progreso-misterio__fill" id="prog-fill" style="width:0%"></div>
+          <div class="mystery-progress__bar">
+            <div class="mystery-progress__fill" id="prog-fill" style="width:0%"></div>
           </div>
         </div>
 
-        <svg id="rosario-svg" viewBox="-12 -12 224 280" xmlns="http://www.w3.org/2000/svg"
+        <svg id="rosary-svg" viewBox="-12 -12 224 280" xmlns="http://www.w3.org/2000/svg"
              aria-label="Cuentas del rosario" role="img">
           <path d="M 112.1 16.8 A 101 116 0 1 1 87.9 16.8" fill="none" stroke="rgba(255,211,91,.38)" stroke-width="1.2" stroke-dasharray="3 5"/>
-          <g id="btn-centro-avanzar" class="centro-avanzar" role="button" aria-label="Siguiente oración" tabindex="0">
-            <circle class="centro-pulso" cx="100" cy="132" r="30" fill="none" stroke="rgba(255,224,116,.68)" stroke-width="1.2"/>
+          <g id="center-advance-button" class="center-advance" role="button" aria-label="Siguiente oración" tabindex="0">
+            <circle class="center-pulse" cx="100" cy="132" r="30" fill="none" stroke="rgba(255,224,116,.68)" stroke-width="1.2"/>
             <circle cx="100" cy="132" r="30" fill="rgba(6,18,38,.95)" stroke="rgba(255,211,91,.74)" stroke-width="1.45"/>
             <text x="100" y="132" text-anchor="middle" dominant-baseline="central" font-size="43" fill="rgba(255,211,91,.98)">♱</text>
           </g>
-          <text id="centro-misterio" x="100" y="181" text-anchor="middle" font-family="Cinzel" font-size="7" fill="rgba(255,248,225,.92)" letter-spacing=".15">PREPARACION</text>
+          <text id="center-mystery" x="100" y="181" text-anchor="middle" font-family="Cinzel" font-size="7" fill="rgba(255,248,225,.92)" letter-spacing=".15">PREPARACION</text>
 
-          <g id="cuentas-group"></g>
+          <g id="beads-group"></g>
         </svg>
     </div>
 
-    <div class="cuentas-actions" aria-label="Opciones del rosario">
-      <button class="btn-reiniciar cuentas-reset" id="btn-reiniciar-rosario" type="button">
+    <div class="rosary-actions" aria-label="Opciones del rosario">
+      <button class="restart-button rosary-reset" id="restart-rosary-button" type="button">
         <span data-i18n="ui.restart">Empezar de nuevo</span>
       </button>
 
-      <label class="cuentas-toggle">
-        <input type="checkbox" id="toggle-guia-oracion">
+      <label class="rosary-toggle">
+        <input type="checkbox" id="toggle-prayer-guide">
         <span data-i18n="ui.showPrayerGuide">Mostrar guía de oración</span>
       </label>
     </div>

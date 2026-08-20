@@ -3,17 +3,17 @@
 /* ─────────────────────────────────────────────────────────────── */
 
 :root{
-  --pergamino:   #F5EDD6;   /* fondo — pergamino viejo          */
-  --pergamino-2: #EDE2C0;   /* superficie levantada             */
-  --pergamino-3: #DDD3AA;   /* borde / divisor                  */
-  --tinta:       #1A1610;   /* negro cálido — tinta de pluma    */
-  --tinta-mid:   #3D3628;   /* texto secundario                 */
-  --tinta-dim:   #7A6F58;   /* texto terciario                  */
-  --azul:        #0D1F3C;   /* azul noche mariano               */
-  --azul-mid:    #1A3A6B;   /* azul medio                       */
-  --oro:         #B8901A;   /* oro quemado                      */
-  --oro-claro:   #D4A820;   /* oro brillante para hover         */
-  --rojo:        #8B3A2A;   /* bermellón oscuro                 */
+  --parchment:   #F5EDD6;   /* fondo — pergamino viejo          */
+  --parchment-2: #EDE2C0;   /* superficie levantada             */
+  --parchment-3: #DDD3AA;   /* borde / divisor                  */
+  --ink:       #1A1610;   /* negro cálido — tinta de pluma    */
+  --ink-mid:   #3D3628;   /* texto secundario                 */
+  --ink-dim:   #7A6F58;   /* texto terciario                  */
+  --blue:        #0D1F3C;   /* azul noche mariano               */
+  --blue-mid:    #1A3A6B;   /* azul medio                       */
+  --gold:         #B8901A;   /* oro quemado                      */
+  --gold-claro:   #D4A820;   /* oro brillante para hover         */
+  --red:        #8B3A2A;   /* bermellón oscuro                 */
 
   --fell:   Georgia, 'Times New Roman', serif;
   --cinzel: Cambria, Georgia, serif;
@@ -23,8 +23,8 @@
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{
-  background:var(--pergamino);
-  color:var(--tinta);
+  background:var(--parchment);
+  color:var(--ink);
   font-family:var(--fell);
   font-size:16px;
   line-height:1.65;
@@ -32,7 +32,7 @@ body{
   overflow-x:hidden;
 }
 
-body.cuentas-screen{
+body.rosary-screen{
   min-height:100svh;
   overflow-x:hidden;
   overflow-y:auto;
@@ -71,7 +71,7 @@ img{display:block;max-width:100%;}
   line-height:.78;
   margin-right:8px;
   margin-top:6px;
-  color:var(--oro);
+  color:var(--gold);
 }
 
 .t-display{
@@ -80,7 +80,7 @@ img{display:block;max-width:100%;}
   font-weight:400;
   letter-spacing:.04em;
   line-height:1.15;
-  color:var(--tinta);
+  color:var(--ink);
 }
 
 .t-heading{
@@ -97,49 +97,49 @@ img{display:block;max-width:100%;}
   font-weight:400;
   letter-spacing:.18em;
   text-transform:uppercase;
-  color:var(--tinta-dim);
+  color:var(--ink-dim);
 }
 
-.t-oracion{
+.t-prayer{
   font-family:var(--fell);
   font-size:1.05rem;
   line-height:1.9;
-  color:var(--tinta-mid);
+  color:var(--ink-mid);
 }
 
-.t-oracion em{font-style:italic;color:var(--tinta);}
+.t-prayer em{font-style:italic;color:var(--ink);}
 
-.t-rubrica{
+.t-rubric{
   /* como una rúbrica litúrgica en rojo */
   font-family:var(--cinzel);
   font-size:.68rem;
   letter-spacing:.14em;
   text-transform:uppercase;
-  color:var(--rojo);
+  color:var(--red);
 }
 
-.t-verso{
+.t-verse{
   font-family:var(--fell);
   font-style:italic;
   font-size:.9rem;
-  color:var(--tinta-dim);
+  color:var(--ink-dim);
   line-height:1.7;
 }
 
-/* ornamento tipográfico — flor de lis / cruz simple */
-.ornamento{
+/* ornament tipográfico — flor de lis / cruz simple */
+.ornament{
   display:block;
   text-align:center;
   font-size:1.1rem;
-  color:var(--oro);
+  color:var(--gold);
   letter-spacing:.4em;
   padding:.5rem 0;
   opacity:.7;
 }
 
-.oro{ color:var(--oro); }
-.rojo{ color:var(--rojo); }
-.azul{ color:var(--azul); }
+.gold{ color:var(--gold); }
+.red{ color:var(--red); }
+.blue{ color:var(--blue); }
 
 
 /* ─────────────────────────────────────────────────────────────── */
@@ -151,34 +151,34 @@ img{display:block;max-width:100%;}
 
 /* borde ornamental de página */
 .page-border{
-  border:1px solid var(--pergamino-3);
+  border:1px solid var(--parchment-3);
   padding:2px;
   position:relative;
 }
 .page-border::before,.page-border::after{
   content:'';position:absolute;
   width:10px;height:10px;
-  border:1.5px solid var(--oro);
+  border:1.5px solid var(--gold);
 }
 .page-border::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
 .page-border::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
 
-.divider-oro{
+.divider-gold{
   display:flex;align-items:center;gap:12px;
   margin:28px 0;
 }
-.divider-oro::before,.divider-oro::after{
+.divider-gold::before,.divider-gold::after{
   content:'';flex:1;
-  height:1px;background:var(--pergamino-3);
+  height:1px;background:var(--parchment-3);
 }
-.divider-oro__symbol{
-  font-size:.9rem;color:var(--oro);opacity:.7;flex-shrink:0;
+.divider-gold__symbol{
+  font-size:.9rem;color:var(--gold);opacity:.7;flex-shrink:0;
 }
 
 /* imagen placeholder */
 .img-box{
-  background:var(--pergamino-2);
-  border:1px solid var(--pergamino-3);
+  background:var(--parchment-2);
+  border:1px solid var(--parchment-3);
   display:flex;flex-direction:column;
   align-items:center;justify-content:center;
   gap:8px;position:relative;overflow:hidden;
@@ -191,7 +191,7 @@ img{display:block;max-width:100%;}
 .img-box__label{
   font-family:var(--cinzel);font-size:.58rem;
   letter-spacing:.12em;text-transform:uppercase;
-  color:var(--pergamino-3);
+  color:var(--parchment-3);
 }
 
 
@@ -208,20 +208,20 @@ img{display:block;max-width:100%;}
 #nav.scrolled{
   background:rgba(245,237,214,.97);
   backdrop-filter:blur(10px);
-  box-shadow:0 1px 0 var(--pergamino-3),
-             0 2px 0 var(--oro) ;
+  box-shadow:0 1px 0 var(--parchment-3),
+             0 2px 0 var(--gold) ;
 }
 
-.cuentas-screen #nav{
+.rosary-screen #nav{
   background:#fff6dd;
   box-shadow:0 1px 0 rgba(92,71,24,.25),0 3px 0 #f5b62a,0 8px 22px rgba(0,0,0,.18);
 }
 
-.cuentas-screen .nav-logo{
+.rosary-screen .nav-logo{
   font-size:1.05rem;
 }
 
-.cuentas-screen .nav-rezar{
+.rosary-screen .nav-pray{
   font-size:.78rem;
 }
 
@@ -234,25 +234,25 @@ img{display:block;max-width:100%;}
   font-family:var(--decor);
   font-size:.9rem;
   letter-spacing:.06em;
-  color:var(--tinta);
+  color:var(--ink);
 }
 
 .nav-links{display:flex;gap:24px;}
 .nav-links a{
   font-family:var(--cinzel);font-size:.65rem;
   letter-spacing:.15em;text-transform:uppercase;
-  color:var(--tinta-dim);transition:color .2s;
+  color:var(--ink-dim);transition:color .2s;
 }
-.nav-links a:hover{color:var(--oro);}
+.nav-links a:hover{color:var(--gold);}
 
-.nav-rezar{
+.nav-pray{
   font-family:var(--cinzel);font-size:.65rem;
   letter-spacing:.15em;text-transform:uppercase;
-  color:var(--azul);
-  border-bottom:1px solid var(--azul);
+  color:var(--blue);
+  border-bottom:1px solid var(--blue);
   padding-bottom:1px;transition:color .2s,border-color .2s;
 }
-.nav-rezar:hover{color:var(--oro);border-color:var(--oro);}
+.nav-pray:hover{color:var(--gold);border-color:var(--gold);}
 
 @media(max-width:640px){.nav-links{display:none;}}
 
@@ -271,7 +271,7 @@ img{display:block;max-width:100%;}
   padding:80px clamp(20px,5vw,60px) 60px;
   position:relative;
   overflow:hidden;
-  border-bottom:1px solid var(--pergamino-3);
+  border-bottom:1px solid var(--parchment-3);
 }
 
 /* fondo imagen ligerísimamente visible */
@@ -288,21 +288,21 @@ img{display:block;max-width:100%;}
 .hero-frame{
   position:absolute;
   top:20px;left:20px;right:20px;bottom:20px;
-  border:1px solid var(--pergamino-3);
+  border:1px solid var(--parchment-3);
   pointer-events:none;
 }
 .hero-frame::before,.hero-frame::after{
   content:'';position:absolute;
   width:16px;height:16px;
-  border:1.5px solid var(--oro);
+  border:1.5px solid var(--gold);
 }
 .hero-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
 .hero-frame::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
 
 .hero-content{position:relative;z-index:1;max-width:640px;}
 
-.hero-cruz{
-  font-size:2rem;color:var(--oro);opacity:.8;
+.hero-cross{
+  font-size:2rem;color:var(--gold);opacity:.8;
   display:block;margin-bottom:20px;
   animation:pulso 3s ease-in-out infinite;
 }
@@ -312,44 +312,44 @@ img{display:block;max-width:100%;}
 }
 
 .hero-title{margin-bottom:10px;}
-.hero-subtitulo{margin-bottom:8px;}
+.hero-subtitle{margin-bottom:8px;}
 
-.hero-versiculo{
+.hero-verse{
   margin:24px auto;
   max-width:480px;
   padding:16px 24px;
-  border-top:1px solid var(--pergamino-3);
-  border-bottom:1px solid var(--pergamino-3);
+  border-top:1px solid var(--parchment-3);
+  border-bottom:1px solid var(--parchment-3);
 }
 
 .hero-btn{
   display:inline-flex;align-items:center;gap:10px;
   padding:13px 32px;
-  background:var(--azul);
-  color:var(--pergamino);
+  background:var(--blue);
+  color:var(--parchment);
   font-family:var(--cinzel);
   font-size:.72rem;font-weight:600;
   letter-spacing:.18em;text-transform:uppercase;
   transition:background .2s;
   margin-top:8px;
 }
-.hero-btn:hover{background:var(--azul-mid);}
+.hero-btn:hover{background:var(--blue-mid);}
 
 
 /* ─────────────────────────────────────────────────────────────── */
 /* SECTION: MISTERIOS (listado)                                   */
 /* ─────────────────────────────────────────────────────────────── */
 
-#misterios{padding:72px 0;border-bottom:1px solid var(--pergamino-3);}
+#mysteries{padding:72px 0;border-bottom:1px solid var(--parchment-3);}
 
-.misterios-header{text-align:center;margin-bottom:48px;}
-.misterios-header .t-sub{margin-bottom:14px;display:block;}
+.mysteries-header{text-align:center;margin-bottom:48px;}
+.mysteries-header .t-sub{margin-bottom:14px;display:block;}
 
-.misterios-tabs{
+.mysteries-tabs{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:0;
-  border:1px solid var(--pergamino-3);
+  border:1px solid var(--parchment-3);
   margin-bottom:36px;
 }
 .m-tab{
@@ -357,59 +357,59 @@ img{display:block;max-width:100%;}
   padding:12px 8px;text-align:center;
   font-family:var(--cinzel);font-size:.62rem;
   letter-spacing:.1em;text-transform:uppercase;
-  color:var(--tinta-dim);
-  border-right:1px solid var(--pergamino-3);
+  color:var(--ink-dim);
+  border-right:1px solid var(--parchment-3);
   transition:all .2s;cursor:pointer;
   background:transparent;
 }
 .m-tab:last-child{border-right:none;}
-.m-tab:hover{background:var(--pergamino-2);color:var(--tinta);}
+.m-tab:hover{background:var(--parchment-2);color:var(--ink);}
 .m-tab.active{
-  background:var(--azul);
-  color:var(--pergamino);
+  background:var(--blue);
+  color:var(--parchment);
 }
-.m-tab__dia{display:block;font-size:.55rem;opacity:.6;margin-top:2px;}
+.m-tab__day{display:block;font-size:.55rem;opacity:.6;margin-top:2px;}
 
-.misterio-panel{display:none;}
-.misterio-panel.active{display:block;}
+.mystery-panel{display:none;}
+.mystery-panel.active{display:block;}
 
-.misterios-grid{
+.mysteries-grid{
   display:grid;grid-template-columns:repeat(5,1fr);
-  gap:0;border:1px solid var(--pergamino-3);
+  gap:0;border:1px solid var(--parchment-3);
 }
-.misterio-card{
+.mystery-card{
   padding:20px 16px;
-  border-right:1px solid var(--pergamino-3);
+  border-right:1px solid var(--parchment-3);
   text-align:center;cursor:pointer;
   transition:background .2s;
   position:relative;
 }
-.misterio-card:last-child{border-right:none;}
-.misterio-card:hover{background:var(--pergamino-2);}
+.mystery-card:last-child{border-right:none;}
+.mystery-card:hover{background:var(--parchment-2);}
 
-.misterio-card__num{
+.mystery-card__num{
   font-family:var(--decor);
   font-size:1.6rem;
-  color:var(--oro);
+  color:var(--gold);
   display:block;margin-bottom:8px;
   line-height:1;
 }
-.misterio-card__title{
+.mystery-card__title{
   font-family:var(--fell);
   font-size:.8125rem;
   font-style:italic;
-  color:var(--tinta-mid);
+  color:var(--ink-mid);
   line-height:1.45;
 }
 
 @media(max-width:640px){
-  .misterios-tabs{
+  .mysteries-tabs{
     grid-template-columns:1fr 1fr;
   }
   .m-tab{
     min-height:58px;
-    border-right:1px solid var(--pergamino-3);
-    border-bottom:1px solid var(--pergamino-3);
+    border-right:1px solid var(--parchment-3);
+    border-bottom:1px solid var(--parchment-3);
   }
   .m-tab:nth-child(2n){
     border-right:none;
@@ -418,21 +418,21 @@ img{display:block;max-width:100%;}
     border-bottom:none;
   }
 
-  .misterios-grid{
+  .mysteries-grid{
     grid-template-columns:1fr 1fr;
   }
-  .misterio-card{
+  .mystery-card{
     min-height:128px;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    border-right:1px solid var(--pergamino-3);
-    border-bottom:1px solid var(--pergamino-3);
+    border-right:1px solid var(--parchment-3);
+    border-bottom:1px solid var(--parchment-3);
   }
-  .misterio-card:nth-child(2n){
+  .mystery-card:nth-child(2n){
     border-right:none;
   }
-  .misterio-card:nth-child(5){
+  .mystery-card:nth-child(5){
     grid-column:1 / -1;
     border-right:none;
     border-bottom:none;
@@ -444,14 +444,14 @@ img{display:block;max-width:100%;}
 /* SECTION: ROSARIO INTERACTIVO                                    */
 /* ─────────────────────────────────────────────────────────────── */
 
-#rezar{
+#pray{
   padding:72px 0;
-  background:var(--azul);
+  background:var(--blue);
   position:relative;overflow:hidden;
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-.cuentas-screen #rezar{
+.rosary-screen #pray{
   min-height:100svh;
   padding-top:72px;
   padding-bottom:56px;
@@ -463,14 +463,14 @@ img{display:block;max-width:100%;}
   transition:background .7s ease;
 }
 
-.cuentas-screen.rosario-finalizado #rezar{
+.rosary-screen.rosary-complete #pray{
   background:
     radial-gradient(circle at 50% 42%, rgba(255,211,91,.34) 0%, rgba(56,94,91,.2) 38%, rgba(8,40,45,0) 68%),
     linear-gradient(180deg, #12392f 0%, #071f2b 58%, #06131d 100%);
 }
 
 /* estrellas de fondo — cielo nocturno mariano */
-#rezar::before{
+#pray::before{
   content:'';position:absolute;inset:0;
   background-image:
     radial-gradient(1px 1px at 10% 15%,rgba(255,255,255,.4) 0%,transparent 100%),
@@ -523,62 +523,62 @@ img{display:block;max-width:100%;}
   }
 }
 
-.rezar-inner{
+.prayer-flow{
   display:grid;grid-template-columns:1fr 1fr;
   gap:60px;align-items:start;
   position:relative;z-index:1;
 }
 
 /* panel izquierdo — oración actual */
-.oracion-panel{
+.current-prayer-panel{
   padding:28px 32px;
   background:rgba(245,237,214,.05);
   border:1px solid rgba(245,237,214,.12);
 }
 
-.oracion-panel__rubrica{
+.current-prayer-panel__rubrica{
   margin-bottom:16px;
 }
-.oracion-panel__titulo{
+.current-prayer-panel__titulo{
   font-family:var(--cinzel);font-size:1rem;font-weight:600;
-  letter-spacing:.08em;color:var(--pergamino);
+  letter-spacing:.08em;color:var(--parchment);
   margin-bottom:16px;padding-bottom:14px;
   border-bottom:1px solid rgba(245,237,214,.15);
 }
-.oracion-panel__texto{
+.current-prayer-panel__texto{
   font-family:var(--fell);font-size:1rem;
   line-height:1.95;color:rgba(245,237,214,.82);
   min-height:160px;
   transition:opacity .3s;
 }
-.oracion-panel__texto em{
+.current-prayer-panel__texto em{
   font-style:italic;color:rgba(245,237,214,.55);
 }
 
-.oracion-panel__footer{
+.current-prayer-panel__footer{
   margin-top:20px;padding-top:16px;
   border-top:1px solid rgba(245,237,214,.1);
   display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
 }
-.oracion-panel__misterio{
+.current-prayer-panel__misterio{
   font-family:var(--cinzel);font-size:.6rem;
   letter-spacing:.14em;text-transform:uppercase;
   color:rgba(245,237,214,.4);
   line-height:1.5;
 }
-.oracion-panel__misterio strong{display:block;color:rgba(245,237,214,.7);}
+.current-prayer-panel__misterio strong{display:block;color:rgba(245,237,214,.7);}
 
-/* panel derecho — cuentas del rosario */
-.cuentas-panel{
+/* Rosary panel */
+.rosary-panel{
   display:flex;flex-direction:column;
   align-items:center;gap:24px;
 }
 
-.cuentas-screen .rezar-inner{
+.rosary-screen .prayer-flow{
   display:block;
 }
 
-.cuentas-screen #rezar > .shell{
+.rosary-screen #pray > .shell{
   width:100%;
   display:flex;
   flex-direction:column;
@@ -587,7 +587,7 @@ img{display:block;max-width:100%;}
   padding-inline:clamp(14px,4vw,28px);
 }
 
-.cuentas-panel--principal{
+.rosary-panel--principal{
   max-width:430px;
   margin:0 auto;
   position:relative;
@@ -595,13 +595,13 @@ img{display:block;max-width:100%;}
   gap:clamp(8px,1.45svh,16px);
 }
 
-.cuentas-screen .cuentas-panel--principal{
+.rosary-screen .rosary-panel--principal{
   width:100%;
   min-height:calc(100svh - 80px);
   justify-content:center;
 }
 
-.guia-oracion{
+.prayer-guide{
   width:100%;
   height:clamp(150px, 28svh, 230px);
   overflow-y:auto;
@@ -612,7 +612,7 @@ img{display:block;max-width:100%;}
   color:#fff8e1;
 }
 
-.guia-oracion__rubrica{
+.prayer-guide__rubrica{
   display:block;
   margin-bottom:5px;
   font-family:var(--cinzel);
@@ -622,7 +622,7 @@ img{display:block;max-width:100%;}
   color:rgba(255,211,91,.9);
 }
 
-.guia-oracion__titulo{
+.prayer-guide__titulo{
   margin-bottom:8px;
   font-family:var(--cinzel);
   font-size:1rem;
@@ -632,7 +632,7 @@ img{display:block;max-width:100%;}
   color:#fffef7;
 }
 
-.guia-oracion__texto{
+.prayer-guide__texto{
   font-family:var(--fell);
   font-size:1.06rem;
   line-height:1.65;
@@ -640,26 +640,26 @@ img{display:block;max-width:100%;}
 }
 
 /* SVG del rosario */
-.rosario-svg-wrap{
+.rosary-svg-wrap{
   width:100%;max-width:360px;
   position:relative;
 }
-#rosario-svg{
+#rosary-svg{
   width:100%;height:auto;overflow:visible;
   -webkit-user-select:none;
   user-select:none;
 }
 
-#rosario-svg text{
+#rosary-svg text{
   -webkit-user-select:none;
   user-select:none;
 }
 
-.cuentas-panel--principal #rosario-svg{
+.rosary-panel--principal #rosary-svg{
   margin-top:0;
 }
 
-.cuentas-screen .cuentas-panel--principal #rosario-svg{
+.rosary-screen .rosary-panel--principal #rosary-svg{
   width:min(100%, 430px);
   height:auto;
   max-width:100%;
@@ -668,7 +668,7 @@ img{display:block;max-width:100%;}
   flex:0 1 auto;
 }
 
-.centro-avanzar{
+.center-advance{
   cursor:pointer;
   outline:none;
   -webkit-tap-highlight-color:transparent;
@@ -676,36 +676,36 @@ img{display:block;max-width:100%;}
   user-select:none;
 }
 
-.centro-pulso{
+.center-pulse{
   pointer-events:none;
   opacity:0;
   transform-box:fill-box;
   transform-origin:center;
 }
 
-.cuentas-screen.rosario-en-inicio .centro-pulso{
+.rosary-screen.rosary-at-start .center-pulse{
   animation:centroPulso 1.55s ease-out infinite;
 }
 
-.centro-avanzar circle,
-.centro-avanzar text{
+.center-advance circle,
+.center-advance text{
   transition:fill .18s ease, stroke .18s ease, filter .18s ease, transform .18s ease;
   transform-box:fill-box;
   transform-origin:center;
 }
 
-.centro-avanzar text{
+.center-advance text{
   pointer-events:none;
 }
 
-.centro-avanzar:hover circle,
-.centro-avanzar:focus-visible circle{
+.center-advance:hover circle,
+.center-advance:focus-visible circle{
   stroke:rgba(255,224,116,1);
   filter:drop-shadow(0 0 8px rgba(255,218,96,.55));
 }
 
-.centro-avanzar:active circle,
-.centro-avanzar:active text{
+.center-advance:active circle,
+.center-advance:active text{
   transform:scale(.96);
 }
 
@@ -716,29 +716,29 @@ img{display:block;max-width:100%;}
 }
 
 /* cuenta individual */
-.cuenta{
+.bead{
   cursor:pointer;
   transition:r .15s, opacity .15s;
 }
-.cuenta circle{
+.bead circle{
   transition:fill .2s, stroke .2s, r .15s;
 }
-.cuenta:hover circle{filter:brightness(1.2);}
-.cuenta--rezada circle{
+.bead:hover circle{filter:brightness(1.2);}
+.bead--completed circle{
   fill:#f5b62a !important;
   stroke:#ffda60 !important;
 }
-.cuenta--actual circle{
+.bead--current circle{
   fill:#fff8e1 !important;
   stroke:#fff !important;
   filter:drop-shadow(0 0 7px rgba(255,248,225,.8));
 }
 
 /* barra de progreso misterio */
-.progreso-misterio{
+.mystery-progress{
   width:100%;
 }
-.progreso-misterio__label{
+.mystery-progress__label{
   display:flex;justify-content:space-between;align-items:flex-start;
   gap:12px;
   font-family:var(--cinzel);font-size:.9rem;
@@ -749,32 +749,32 @@ img{display:block;max-width:100%;}
   margin-bottom:8px;
   text-shadow:0 1px 2px rgba(0,0,0,.45);
 }
-.progreso-misterio__label span:first-child{
+.mystery-progress__label span:first-child{
   flex:1 1 auto;
   text-align:left;
   white-space:normal;
   overflow-wrap:anywhere;
 }
-.progreso-misterio__label span:last-child{
+.mystery-progress__label span:last-child{
   flex:0 0 auto;
 }
-.progreso-misterio__bar{
+.mystery-progress__bar{
   height:6px;background:rgba(255,248,225,.22);
   border-radius:2px;overflow:hidden;
 }
-.progreso-misterio__fill{
+.mystery-progress__fill{
   height:100%;background:#f5b62a;
   border-radius:2px;
   transition:width .4s ease;
 }
 
 /* contador visual */
-.contador-display{
+.counter-display{
   text-align:center;
   width:100%;
   padding-top:0;
 }
-.contador-display__oracion{
+.counter-display__oracion{
   display:block;
   max-width:360px;
   margin:0 auto;
@@ -789,21 +789,21 @@ img{display:block;max-width:100%;}
 }
 
 /* botones del rosario */
-.rosario-btns{
+.rosary-buttons{
   display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
 }
-.btn-avanzar{
+.advance-button{
   padding:11px 28px;
-  background:var(--oro);
-  color:var(--tinta);
+  background:var(--gold);
+  color:var(--ink);
   font-family:var(--cinzel);
   font-size:.68rem;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;
   transition:background .2s;
 }
-.btn-avanzar:hover{background:var(--oro-claro);}
+.advance-button:hover{background:var(--gold-claro);}
 
-.btn-reiniciar{
+.restart-button{
   padding:11px 20px;
   border:1px solid rgba(245,237,214,.2);
   color:rgba(245,237,214,.5);
@@ -811,29 +811,29 @@ img{display:block;max-width:100%;}
   font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
   transition:all .2s;
 }
-.btn-reiniciar:hover{border-color:rgba(245,237,214,.4);color:rgba(245,237,214,.8);}
+.restart-button:hover{border-color:rgba(245,237,214,.4);color:rgba(245,237,214,.8);}
 
 /* estado completado */
-.rosario-completo{
+.rosary-completion{
   display:none;
   text-align:center;
   padding:24px;
   border:1px solid rgba(184,144,26,.3);
   background:rgba(184,144,26,.08);
 }
-.rosario-completo.visible{display:block;}
-.rosario-completo__cruz{font-size:2rem;display:block;margin-bottom:12px;}
-.rosario-completo__titulo{
+.rosary-completion.visible{display:block;}
+.rosary-completion__cruz{font-size:2rem;display:block;margin-bottom:12px;}
+.rosary-completion__titulo{
   font-family:var(--decor);
-  font-size:1.2rem;color:var(--oro);
+  font-size:1.2rem;color:var(--gold);
   margin-bottom:8px;
 }
 
-.cuentas-panel--principal .rosario-completo{
+.rosary-panel--principal .rosary-completion{
   width:100%;
 }
 
-.cuentas-actions{
+.rosary-actions{
   width:100%;
   max-width:430px;
   margin:18px auto 0;
@@ -847,7 +847,7 @@ img{display:block;max-width:100%;}
   justify-content:center;
 }
 
-.cuentas-reset{
+.rosary-reset{
   width:min(100%, 330px);
   min-height:52px;
   border-color:rgba(255,248,225,.32);
@@ -857,13 +857,13 @@ img{display:block;max-width:100%;}
   letter-spacing:.08em;
 }
 
-.cuentas-reset:hover{
+.rosary-reset:hover{
   border-color:rgba(255,211,91,.7);
   color:#fffef7;
   background:rgba(255,211,91,.12);
 }
 
-.cuentas-toggle{
+.rosary-toggle{
   width:min(100%, 330px);
   min-height:52px;
   display:flex;
@@ -880,7 +880,7 @@ img{display:block;max-width:100%;}
   color:#fff8e1;
 }
 
-.cuentas-toggle input{
+.rosary-toggle input{
   width:22px;
   height:22px;
   flex:0 0 auto;
@@ -889,7 +889,7 @@ img{display:block;max-width:100%;}
 
 
 @media(max-width:760px){
-  .rezar-inner{grid-template-columns:1fr;gap:40px;}
+  .prayer-flow{grid-template-columns:1fr;gap:40px;}
 }
 
 
@@ -897,44 +897,44 @@ img{display:block;max-width:100%;}
 /* SECTION: ORACIONES COMPLETAS                                   */
 /* ─────────────────────────────────────────────────────────────── */
 
-#oraciones{padding:72px 0;border-bottom:1px solid var(--pergamino-3);}
+#prayers{padding:72px 0;border-bottom:1px solid var(--parchment-3);}
 
-.oraciones-header{text-align:center;margin-bottom:48px;}
+.prayers-header{text-align:center;margin-bottom:48px;}
 
-.oracion-tabs{
-  display:flex;gap:0;border-bottom:1px solid var(--pergamino-3);
+.prayer-tabs{
+  display:flex;gap:0;border-bottom:1px solid var(--parchment-3);
   overflow-x:auto;
 }
 .o-tab{
   padding:10px 20px;flex-shrink:0;
   font-family:var(--cinzel);font-size:.62rem;
   letter-spacing:.12em;text-transform:uppercase;
-  color:var(--tinta-dim);
+  color:var(--ink-dim);
   border-bottom:2px solid transparent;margin-bottom:-1px;
   transition:all .2s;cursor:pointer;
 }
-.o-tab:hover{color:var(--tinta);}
-.o-tab.active{color:var(--azul);border-bottom-color:var(--oro);}
+.o-tab:hover{color:var(--ink);}
+.o-tab.active{color:var(--blue);border-bottom-color:var(--gold);}
 
 .o-panel{display:none;padding-top:32px;}
 .o-panel.active{display:block;}
 
-.oracion-bloque{
+.prayer-block{
   max-width:600px;margin:0 auto;
 }
-.oracion-bloque + .oracion-bloque{
+.prayer-block + .prayer-block{
   margin-top:36px;
   padding-top:36px;
-  border-top:1px solid var(--pergamino-3);
+  border-top:1px solid var(--parchment-3);
 }
-.oracion-bloque__titulo{margin-bottom:16px;}
-.oracion-bloque__rubrica{margin-bottom:8px;}
-.oracion-bloque__texto{
+.prayer-block__title{margin-bottom:16px;}
+.prayer-block__rubric{margin-bottom:8px;}
+.prayer-block__text{
   font-family:var(--fell);font-size:1.0125rem;
-  line-height:1.95;color:var(--tinta-mid);
+  line-height:1.95;color:var(--ink-mid);
 }
-.oracion-bloque__texto strong{
-  color:var(--tinta);font-weight:400;
+.prayer-block__text strong{
+  color:var(--ink);font-weight:400;
   font-style:italic;
 }
 
@@ -945,14 +945,14 @@ img{display:block;max-width:100%;}
 
 /* SECTION: SOBRE NOSOTROS */
 
-#sobre-nosotros{
+#about-us{
   padding:72px 0;
   border-bottom:1px solid rgba(26,22,16,.18);
   text-align:center;
   background:linear-gradient(180deg, rgba(245,237,214,.92) 0%, rgba(237,226,192,.78) 100%);
 }
 
-#sobre-nosotros .t-oracion{
+#about-us .t-prayer{
   max-width:560px;
   margin:0 auto;
 }
@@ -964,9 +964,9 @@ img{display:block;max-width:100%;}
   min-height:48px;
   margin-top:28px;
   padding:12px 28px;
-  border:1px solid var(--azul);
-  background:var(--azul);
-  color:var(--pergamino);
+  border:1px solid var(--blue);
+  background:var(--blue);
+  color:var(--parchment);
   font-family:var(--cinzel);
   font-size:.72rem;
   letter-spacing:.14em;
@@ -987,36 +987,36 @@ img{display:block;max-width:100%;}
   font-size:.68rem;
   letter-spacing:.14em;
   text-transform:uppercase;
-  color:var(--tinta-dim);
+  color:var(--ink-dim);
 }
 
 .language-picker select{
   min-height:42px;
   padding:8px 32px 8px 12px;
-  border:1px solid var(--pergamino-3);
+  border:1px solid var(--parchment-3);
   background:rgba(255,248,225,.72);
-  color:var(--tinta);
+  color:var(--ink);
   font-family:var(--fell);
   font-size:1rem;
 }
 
 .about-link:hover{
   background:transparent;
-  color:var(--azul);
-  border-color:var(--oro);
+  color:var(--blue);
+  border-color:var(--gold);
 }
 
 #footer{
-  background:var(--tinta);
+  background:var(--ink);
   padding:40px 0 24px;
   text-align:center;
 }
-.footer-cruz{
+.footer-cross{
   font-size:1.75rem;
   display:block;margin-bottom:14px;
-  color:var(--oro);opacity:.82;
+  color:var(--gold);opacity:.82;
 }
-.footer-nombre{
+.footer-name{
   font-family:var(--decor);font-size:1.2rem;
   color:rgba(245,237,214,.84);
   margin-bottom:6px;

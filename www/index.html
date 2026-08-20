@@ -13,11 +13,11 @@
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">✞ <span data-i18n="ui.appTitle">El Santo Rosario</span></a>
       <nav class="nav-links">
-        <a href="#misterios" data-i18n="ui.navMysteries">Misterios</a>
-        <a href="#oraciones" data-i18n="ui.navPrayers">Oraciones</a>
-        <a href="#sobre-nosotros" data-i18n="ui.navAbout">Sobre nosotros</a>
+        <a href="#mysteries" data-i18n="ui.navMysteries">Misterios</a>
+        <a href="#prayers" data-i18n="ui.navPrayers">Oraciones</a>
+        <a href="#about-us" data-i18n="ui.navAbout">Sobre nosotros</a>
       </nav>
-      <a href="cuentas.html" class="nav-rezar" data-i18n="ui.navStart">Comenzar el Rosario</a>
+      <a href="rosary.html" class="nav-pray" data-i18n="ui.navStart">Comenzar el Rosario</a>
     </div>
   </div>
 </header>
@@ -29,69 +29,69 @@
   <div class="hero-frame" aria-hidden="true"></div>
 
   <div class="hero-content" data-reveal>
-    <span class="hero-cruz" aria-hidden="true">✞</span>
-    <span class="t-sub" data-i18n="ui.heroEyebrow" style="display:block;margin-bottom:14px;color:var(--tinta-dim);">María, Madre de Dios</span>
+    <span class="hero-cross" aria-hidden="true">✞</span>
+    <span class="t-sub" data-i18n="ui.heroEyebrow" style="display:block;margin-bottom:14px;color:var(--ink-dim);">María, Madre de Dios</span>
     <h1 class="t-display hero-title" data-i18n="ui.appTitle">El Santo Rosario</h1>
-    <p class="t-sub hero-subtitulo" data-i18n="ui.heroSubtitle" style="color:var(--tinta-dim);margin-top:6px;">
+    <p class="t-sub hero-subtitle" data-i18n="ui.heroSubtitle" style="color:var(--ink-dim);margin-top:6px;">
       La oración de la Iglesia
     </p>
 
-    <div class="hero-versiculo">
-      <p class="t-verso" id="versiculo-diario-texto">
+    <div class="hero-verse">
+      <p class="t-verse" id="daily-verse-text">
         Cargando versículo del día...
       </p>
-      <p class="t-rubrica" id="versiculo-diario-referencia" data-i18n="ui.dailyReading" style="margin-top:8px;">Lectura diaria</p>
+      <p class="t-rubric" id="daily-verse-reference" data-i18n="ui.dailyReading" style="margin-top:8px;">Lectura diaria</p>
     </div>
 
-    <a href="cuentas.html" class="hero-btn">
+    <a href="rosary.html" class="hero-btn">
       ✞ &nbsp; <span data-i18n="ui.navStart">Comenzar el Rosario</span>
     </a>
-    <p class="t-sub" data-i18n="ui.heroGuide" style="margin-top:14px;font-size:.75rem;color:var(--tinta-dim);">
+    <p class="t-sub" data-i18n="ui.heroGuide" style="margin-top:14px;font-size:.75rem;color:var(--ink-dim);">
       Guía interactiva · misterio por misterio
     </p>
   </div>
 </section>
 
-<section id="misterios">
+<section id="mysteries">
   <div class="shell">
-    <div class="misterios-header" data-reveal>
+    <div class="mysteries-header" data-reveal>
       <span class="t-sub" data-i18n="ui.mysteriesEyebrow" style="display:block;margin-bottom:10px;">Los cuatro grupos</span>
       <h2 class="t-heading" data-i18n="ui.mysteriesTitle">Los Misterios del Rosario</h2>
-      <p id="misterios-hoy" class="t-rubrica" aria-live="polite" style="margin-top:12px;">Rosario de hoy</p>
-      <div class="divider-oro"><span class="divider-oro__symbol">✦</span></div>
-      <p class="t-oracion" data-i18n="ui.mysteriesIntro" style="max-width:520px;margin:0 auto;text-align:center;">
+      <p id="today-mysteries" class="t-rubric" aria-live="polite" style="margin-top:12px;">Rosario de hoy</p>
+      <div class="divider-gold"><span class="divider-gold__symbol">✦</span></div>
+      <p class="t-prayer" data-i18n="ui.mysteriesIntro" style="max-width:520px;margin:0 auto;text-align:center;">
         En cada decena se contempla un misterio de la vida de Nuestro Señor Jesucristo y de la Santísima Virgen María.
       </p>
     </div>
 
-    <div class="misterios-tabs" id="misterios-tabs" role="tablist"></div>
-    <div id="misterios-panels"></div>
+    <div class="mysteries-tabs" id="mysteries-tabs" role="tablist"></div>
+    <div id="mysteries-panels"></div>
   </div>
 </section>
 
-<section id="oraciones">
+<section id="prayers">
   <div class="shell">
-    <div class="oraciones-header" data-reveal>
+    <div class="prayers-header" data-reveal>
       <span class="t-sub" data-i18n="ui.prayersEyebrow" style="display:block;margin-bottom:10px;">Texto completo</span>
       <h2 class="t-heading" data-i18n="ui.prayersTitle">Las Oraciones</h2>
     </div>
 
-    <div class="oracion-tabs" id="oracion-tabs" role="tablist"></div>
-    <div id="oracion-panels"></div>
+    <div class="prayer-tabs" id="prayer-tabs" role="tablist"></div>
+    <div id="prayer-panels"></div>
   </div>
 </section>
 
-<section id="sobre-nosotros" class="about-section">
+<section id="about-us" class="about-section">
   <div class="shell shell--narrow" data-reveal>
     <span class="t-sub" data-i18n="ui.aboutEyebrow" style="display:block;margin-bottom:10px;">Sobre nosotros</span>
     <h2 class="t-heading" data-i18n="ui.aboutTitle">Una guía sencilla para rezar</h2>
-    <div class="divider-oro"><span class="divider-oro__symbol">✦</span></div>
-    <p class="t-oracion" data-i18n="ui.aboutText">
+    <div class="divider-gold"><span class="divider-gold__symbol">✦</span></div>
+    <p class="t-prayer" data-i18n="ui.aboutText">
       Santo Rosario nace como una aplicación pequeña, offline y serena para acompañar el rezo diario, especialmente pensando en quienes necesitan una guía clara para seguir los misterios, las cuentas y las oraciones sin distracciones.
     </p>
     <div class="language-picker">
-      <label for="idioma-app">Language</label>
-      <select id="idioma-app" aria-label="Language"></select>
+      <label for="app-language">Language</label>
+      <select id="app-language" aria-label="Language"></select>
     </div>
     <a class="about-link" href="https://dazjuancarlos.com.ar/" target="_blank" rel="noopener noreferrer" data-i18n="ui.aboutLink">
       Conocer al desarrollador
@@ -101,19 +101,19 @@
 
 <footer id="footer">
   <div class="shell">
-    <span class="footer-cruz" aria-hidden="true">✞</span>
-    <div class="footer-nombre" data-i18n="ui.appTitle">El Santo Rosario</div>
-    <div class="divider-oro" style="max-width:200px;margin:14px auto;">
-      <span class="divider-oro__symbol">✦</span>
+    <span class="footer-cross" aria-hidden="true">✞</span>
+    <div class="footer-name" data-i18n="ui.appTitle">El Santo Rosario</div>
+    <div class="divider-gold" style="max-width:200px;margin:14px auto;">
+      <span class="divider-gold__symbol">✦</span>
     </div>
     <p class="footer-copy footer-copy--latin">
-      <span id="latin-diario-texto">Cargando frase latina...</span>
-      <span id="latin-diario-traduccion">Lectura diaria</span>
+      <span id="daily-latin-text">Cargando frase latina...</span>
+      <span id="daily-latin-translation">Lectura diaria</span>
     </p>
   </div>
 </footer>
 
-<script src="data/versiculos.js"></script>
+<script src="data/verses.js"></script>
 <script src="data/latin.js"></script>
 <script src="i18n/languages.js"></script>
 <script src="i18n/es.js"></script>

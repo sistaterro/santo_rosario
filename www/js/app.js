@@ -27,7 +27,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 
 /* ─────────────────────────────────────────────────────────────── */
-/* SECTION: VERSICULO DIARIO                                      */
+/* SECTION: DAILY CONTENT                                      */
 /* ─────────────────────────────────────────────────────────────── */
 
 const I18N_API = window.SantoRosarioI18n;
@@ -42,95 +42,107 @@ function i18nText(path, fallback) {
   return I18N_API?.t?.(path, fallback) ?? fallback;
 }
 
+function prayerTitle(prayer) {
+  return prayer?.title ?? prayer?.titulo ?? '';
+}
+
+function prayerRubric(prayer) {
+  return prayer?.rubric ?? prayer?.rubrica ?? '';
+}
+
+function prayerBody(prayer) {
+  return prayer?.body ?? prayer?.text ?? prayer?.texto ?? '';
+}
+
 I18N_API?.applyTranslations?.();
 I18N_API?.setupLanguageSelect?.();
 
-function aplicarTextosGlobales() {
-  document.title = document.body.classList.contains('cuentas-screen')
+function applyGlobalTexts() {
+  document.title = document.body.classList.contains('rosary-screen')
     ? i18nText('ui.rosaryPageTitle', 'Rezar el Santo Rosario')
     : i18nText('ui.appTitle', 'El Santo Rosario');
 
-  const selectorIdioma = document.getElementById('idioma-app');
-  if (selectorIdioma) selectorIdioma.setAttribute('aria-label', i18nText('ui.languageSelectLabel', 'Language'));
+  const languageSelect = document.getElementById('app-language');
+  if (languageSelect) languageSelect.setAttribute('aria-label', i18nText('ui.languageSelectLabel', 'Language'));
 
-  const opcionesRosario = document.querySelector('.cuentas-actions');
-  if (opcionesRosario) opcionesRosario.setAttribute('aria-label', i18nText('ui.rosaryOptionsLabel', 'Opciones del rosario'));
+  const rosaryOptions = document.querySelector('.rosary-actions');
+  if (rosaryOptions) rosaryOptions.setAttribute('aria-label', i18nText('ui.rosaryOptionsLabel', 'Opciones del rosario'));
 
-  const rosarioSvg = document.getElementById('rosario-svg');
-  if (rosarioSvg) rosarioSvg.setAttribute('aria-label', i18nText('ui.rosaryImageLabel', 'Cuentas del rosario'));
+  const rosarySvg = document.getElementById('rosary-svg');
+  if (rosarySvg) rosarySvg.setAttribute('aria-label', i18nText('ui.rosaryImageLabel', 'Cuentas del rosario'));
 
-  const centroAvanzar = document.getElementById('btn-centro-avanzar');
-  if (centroAvanzar) centroAvanzar.setAttribute('aria-label', i18nText('ui.nextPrayer', 'Siguiente oración'));
+  const centerAdvance = document.getElementById('center-advance-button');
+  if (centerAdvance) centerAdvance.setAttribute('aria-label', i18nText('ui.nextPrayer', 'Siguiente oración'));
 }
 
-aplicarTextosGlobales();
+applyGlobalTexts();
 
-function esAnioBisiesto(anio) {
-  return (anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0;
+function isLeapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 }
 
-function calendarioDelAnio(data, anio) {
-  return esAnioBisiesto(anio) ? data.calendario?.bisiesto : data.calendario?.normal;
+function calendarForYear(data, year) {
+  return isLeapYear(year) ? data.calendario?.bisiesto : data.calendario?.normal;
 }
 
-function fechaActualClave(fecha) {
-  return `${String(fecha.getMonth() + 1).padStart(2, '0')}-${String(fecha.getDate()).padStart(2, '0')}`;
+function currentDateKey(date) {
+  return `${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 }
 
-async function cargarVersiculoDiario() {
-  const textoEl = document.getElementById('versiculo-diario-texto');
-  const referenciaEl = document.getElementById('versiculo-diario-referencia');
-  if (!textoEl || !referenciaEl) return;
+async function loadDailyVerse() {
+  const textElement = document.getElementById('daily-verse-text');
+  const referenceElement = document.getElementById('daily-verse-reference');
+  if (!textElement || !referenceElement) return;
 
   try {
-    const data = window.SANTO_ROSARIO_VERSICULOS;
-    if (!data) throw new Error('No se encontró window.SANTO_ROSARIO_VERSICULOS.');
+    const data = window.SANTO_ROSARIO_VERSES;
+    if (!data) throw new Error('No se encontró window.SANTO_ROSARIO_VERSES.');
 
-    const hoy = new Date();
-    const calendario = calendarioDelAnio(data, hoy.getFullYear());
-    const fecha = fechaActualClave(hoy);
-    const asignacion = calendario?.find(dia => dia.fecha === fecha);
-    const versiculo = data.versiculos?.find(item => item.id === asignacion?.versiculoId);
-    if (!versiculo) throw new Error(`No hay versículo asignado para ${fecha}.`);
+    const today = new Date();
+    const calendar = calendarForYear(data, today.getFullYear());
+    const dateKey = currentDateKey(today);
+    const assignment = calendar?.find(day => day.fecha === dateKey);
+    const verse = data.versiculos?.find(item => item.id === assignment?.versiculoId);
+    if (!verse) throw new Error(`No hay versículo asignado para ${dateKey}.`);
 
-    textoEl.textContent = `"${versiculo.texto}"`;
-    referenciaEl.textContent = versiculo.traduccion
-      ? `${versiculo.referencia} · ${versiculo.traduccion}`
-      : versiculo.referencia;
+    textElement.textContent = `"${verse.texto}"`;
+    referenceElement.textContent = verse.traduccion
+      ? `${verse.referencia} · ${verse.traduccion}`
+      : verse.referencia;
   } catch (error) {
-    textoEl.textContent = i18nText('ui.verseError', 'No se pudo cargar el versículo del día.');
-    referenciaEl.textContent = i18nText('ui.dailyReading', 'Lectura diaria');
+    textElement.textContent = i18nText('ui.verseError', 'No se pudo cargar el versículo del día.');
+    referenceElement.textContent = i18nText('ui.dailyReading', 'Lectura diaria');
     console.warn('No se pudo cargar el versículo diario.', error);
   }
 }
 
-function cargarFraseLatinaDiaria() {
-  const latinEl = document.getElementById('latin-diario-texto');
-  const traduccionEl = document.getElementById('latin-diario-traduccion');
-  if (!latinEl || !traduccionEl) return;
+function loadDailyLatinPhrase() {
+  const latinEl = document.getElementById('daily-latin-text');
+  const translationElement = document.getElementById('daily-latin-translation');
+  if (!latinEl || !translationElement) return;
 
   try {
     const data = window.SANTO_ROSARIO_LATIN;
     if (!data) throw new Error('No se encontró window.SANTO_ROSARIO_LATIN.');
 
-    const hoy = new Date();
-    const calendario = calendarioDelAnio(data, hoy.getFullYear());
-    const fecha = fechaActualClave(hoy);
-    const asignacion = calendario?.find(dia => dia.fecha === fecha);
-    const frase = data.frases?.find(item => item.id === asignacion?.fraseId);
-    if (!frase) throw new Error(`No hay frase latina asignada para ${fecha}.`);
+    const today = new Date();
+    const calendar = calendarForYear(data, today.getFullYear());
+    const dateKey = currentDateKey(today);
+    const assignment = calendar?.find(day => day.fecha === dateKey);
+    const phrase = data.frases?.find(item => item.id === assignment?.fraseId);
+    if (!phrase) throw new Error(`No hay frase latina asignada para ${dateKey}.`);
 
-    latinEl.textContent = frase.latin;
-    traduccionEl.textContent = frase.traduccion;
+    latinEl.textContent = phrase.latin;
+    translationElement.textContent = phrase.traduccion;
   } catch (error) {
     latinEl.textContent = 'Sub tuum praesidium.';
-    traduccionEl.textContent = 'Bajo tu amparo.';
+    translationElement.textContent = 'Bajo tu amparo.';
     console.warn('No se pudo cargar la frase latina diaria.', error);
   }
 }
 
-cargarVersiculoDiario();
-cargarFraseLatinaDiaria();
+loadDailyVerse();
+loadDailyLatinPhrase();
 
 
 /* ─────────────────────────────────────────────────────────────── */
@@ -146,21 +158,21 @@ cargarFraseLatinaDiaria();
 
 
 /* ─────────────────────────────────────────────────────────────── */
-/* SECTION: TABS — misterios y oraciones                          */
+/* SECTION: TABS AND INDEX CONTENT                          */
 /* ─────────────────────────────────────────────────────────────── */
 
-function switchMisterio(btn, panelId) {
+function switchMystery(btn, panelId) {
   document.querySelectorAll('.m-tab').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.m-tab').forEach(b => b.setAttribute('aria-selected', 'false'));
-  document.querySelectorAll('.misterio-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.mystery-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
   btn.setAttribute('aria-selected', 'true');
   const panel = document.getElementById(panelId);
   if (panel) panel.classList.add('active');
-  seleccionarMisteriosPorPanel(panelId, true);
+  selectMysteriesByPanel(panelId, true);
 }
 
-function switchOracion(btn, panelId) {
+function switchPrayer(btn, panelId) {
   document.querySelectorAll('.o-tab').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.o-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
@@ -175,48 +187,48 @@ function appendTextWithBreaks(element, text) {
   });
 }
 
-function renderMisteriosIndex() {
-  const tabs = document.getElementById('misterios-tabs');
-  const panels = document.getElementById('misterios-panels');
+function renderMysteriesIndex() {
+  const tabs = document.getElementById('mysteries-tabs');
+  const panels = document.getElementById('mysteries-panels');
   if (!tabs || !panels) return;
 
   tabs.innerHTML = '';
   panels.innerHTML = '';
 
-  Object.values(MISTERIOS_POR_TIPO).forEach((misterio) => {
+  Object.values(MYSTERIES_BY_TYPE).forEach((mystery) => {
     const tab = document.createElement('button');
     tab.className = 'm-tab';
     tab.type = 'button';
     tab.role = 'tab';
-    tab.dataset.panel = misterio.panelId;
-    tab.appendChild(document.createTextNode(misterio.titulo.replace(/^Misterios\s+/i, '')));
+    tab.dataset.panel = mystery.panelId;
+    tab.appendChild(document.createTextNode(mystery.titulo.replace(/^Misterios\s+/i, '')));
 
-    const dia = document.createElement('span');
-    dia.className = 'm-tab__dia';
-    dia.textContent = misterio.dia || '';
-    tab.appendChild(dia);
-    tab.addEventListener('click', () => switchMisterio(tab, misterio.panelId));
+    const day = document.createElement('span');
+    day.className = 'm-tab__day';
+    day.textContent = mystery.dia || '';
+    tab.appendChild(day);
+    tab.addEventListener('click', () => switchMystery(tab, mystery.panelId));
     tabs.appendChild(tab);
 
     const panel = document.createElement('div');
-    panel.id = misterio.panelId;
-    panel.className = 'misterio-panel';
+    panel.id = mystery.panelId;
+    panel.className = 'mystery-panel';
 
     const grid = document.createElement('div');
-    grid.className = 'misterios-grid';
-    misterio.nombres.forEach((nombre, index) => {
+    grid.className = 'mysteries-grid';
+    mystery.nombres.forEach((name, index) => {
       const card = document.createElement('div');
-      card.className = 'misterio-card';
+      card.className = 'mystery-card';
 
-      const numero = document.createElement('span');
-      numero.className = 'misterio-card__num';
-      numero.textContent = ['I', 'II', 'III', 'IV', 'V'][index] || String(index + 1);
+      const number = document.createElement('span');
+      number.className = 'mystery-card__num';
+      number.textContent = ['I', 'II', 'III', 'IV', 'V'][index] || String(index + 1);
 
-      const titulo = document.createElement('span');
-      titulo.className = 'misterio-card__title';
-      titulo.textContent = nombre;
+      const title = document.createElement('span');
+      title.className = 'mystery-card__title';
+      title.textContent = name;
 
-      card.append(numero, titulo);
+      card.append(number, title);
       grid.appendChild(card);
     });
 
@@ -225,9 +237,9 @@ function renderMisteriosIndex() {
   });
 }
 
-function renderOracionesIndex() {
-  const tabs = document.getElementById('oracion-tabs');
-  const panels = document.getElementById('oracion-panels');
+function renderPrayersIndex() {
+  const tabs = document.getElementById('prayer-tabs');
+  const panels = document.getElementById('prayer-panels');
   if (!tabs || !panels) return;
 
   tabs.innerHTML = '';
@@ -242,7 +254,7 @@ function renderOracionesIndex() {
     tab.type = 'button';
     tab.role = 'tab';
     tab.textContent = item.label;
-    tab.addEventListener('click', () => switchOracion(tab, item.id));
+    tab.addEventListener('click', () => switchPrayer(tab, item.id));
     tabs.appendChild(tab);
 
     const panel = document.createElement('div');
@@ -250,27 +262,27 @@ function renderOracionesIndex() {
     panel.className = `o-panel${index === 0 ? ' active' : ''}`;
 
     const key = item.id.replace(/^o-/, '');
-    (prayerPanels[key] || []).forEach((bloque, blockIndex) => {
+    (prayerPanels[key] || []).forEach((block, blockIndex) => {
       const article = document.createElement('div');
-      article.className = 'oracion-bloque shell--narrow';
+      article.className = 'prayer-block shell--narrow';
 
-      const rubrica = document.createElement('span');
-      rubrica.className = 't-rubrica oracion-bloque__rubrica';
-      rubrica.textContent = bloque.rubrica;
-      article.appendChild(rubrica);
+      const rubric = document.createElement('span');
+      rubric.className = 't-rubric prayer-block__rubric';
+      rubric.textContent = block.rubrica;
+      article.appendChild(rubric);
 
-      if (bloque.titulo) {
-        const titulo = document.createElement('h3');
-        titulo.className = 't-heading oracion-bloque__titulo';
-        titulo.style.fontSize = '1.05rem';
-        titulo.textContent = bloque.titulo;
-        article.appendChild(titulo);
+      if (block.titulo) {
+        const title = document.createElement('h3');
+        title.className = 't-heading prayer-block__title';
+        title.style.fontSize = '1.05rem';
+        title.textContent = block.titulo;
+        article.appendChild(title);
       }
 
-      const texto = document.createElement('p');
-      texto.className = `oracion-bloque__texto${blockIndex === 0 ? ' dropcap' : ''}`;
-      appendTextWithBreaks(texto, bloque.texto);
-      article.appendChild(texto);
+      const text = document.createElement('p');
+      text.className = `prayer-block__text${blockIndex === 0 ? ' dropcap' : ''}`;
+      appendTextWithBreaks(text, block.texto);
+      article.appendChild(text);
       panel.appendChild(article);
     });
 
@@ -280,28 +292,28 @@ function renderOracionesIndex() {
 
 
 /* ─────────────────────────────────────────────────────────────── */
-/* SECTION: ROSARIO INTERACTIVO — lógica principal                */
+/* SECTION: INTERACTIVE ROSARY CORE                */
 /* ─────────────────────────────────────────────────────────────── */
 
 /*
-  Estructura de una vuelta completa del Rosario:
+  Full rosary sequence:
   0  — Señal de la Cruz
   1  — Credo
   2  — Padre Nuestro (inicial)
   3,4,5 — 3 Ave Marías (Fe, Esperanza, Caridad)
   6  — Gloria
   ──── Misterio 1 (decena) ────
-  7  — Anuncio del misterio (sin cuenta)
+  7  — Mystery announcement (no bead)
   8  — Padre Nuestro
   9..18 — 10 Ave Marías
   19 — Gloria
   20 — Oración de Fátima
-  ──── Misterio 2..5 (repiten la estructura) ────
-  ... (pasos 20–59 — 4 misterios más)
+  ──── Mysteries 2..5 repeat the same structure ────
+  ... (steps 20-59, four more mysteries)
   Final — Salve Regina
 */
 
-const ORACIONES = i18nSection('prayers', {
+const PRAYERS = i18nSection('prayers', {
   signo:       { rubrica: 'Apertura', titulo: 'Señal de la Santa Cruz', texto: 'Por la señal de la Santa Cruz, de nuestros enemigos, líbranos, Señor, Dios nuestro.\n\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.' },
   credo:       { rubrica: 'Acto de fe', titulo: 'El Credo Apostólico', texto: 'Creo en Dios, Padre Todopoderoso, Creador del Cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor...\n\nAmén.' },
   padre:       { rubrica: 'Oración dominical', titulo: 'Padre Nuestro', texto: 'Padre nuestro que estás en el Cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el Cielo.\n\nDanos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.' },
@@ -314,7 +326,7 @@ const ORACIONES = i18nSection('prayers', {
   salve:       { rubrica: 'Oración final', titulo: 'Salve Regina', texto: 'Dios te salve, Reina y Madre de misericordia; vida, dulzura y esperanza nuestra, Dios te salve.\n\nA Ti llamamos los desterrados hijos de Eva; a Ti suspiramos gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima, oh piadosa, oh dulce Virgen María! Amén.' },
 });
 
-const MISTERIOS_POR_TIPO = i18nSection('mysteries', {
+const MYSTERIES_BY_TYPE = i18nSection('mysteries', {
   gozosos: {
     panelId: 'm-gozosos',
     titulo: 'Misterios Gozosos',
@@ -361,237 +373,260 @@ const MISTERIOS_POR_TIPO = i18nSection('mysteries', {
   },
 });
 
-const DIA_SEMANA = i18nSection('weekdays', [
-  { nombre: 'Domingo', tipo: 'gloriosos' },
-  { nombre: 'Lunes', tipo: 'gozosos' },
-  { nombre: 'Martes', tipo: 'dolorosos' },
-  { nombre: 'Miércoles', tipo: 'gloriosos' },
-  { nombre: 'Jueves', tipo: 'luminosos' },
-  { nombre: 'Viernes', tipo: 'dolorosos' },
-  { nombre: 'Sábado', tipo: 'gozosos' },
+const WEEKDAYS = i18nSection('weekdays', [
+  { name: 'Domingo', tipo: 'gloriosos' },
+  { name: 'Lunes', tipo: 'gozosos' },
+  { name: 'Martes', tipo: 'dolorosos' },
+  { name: 'Miércoles', tipo: 'gloriosos' },
+  { name: 'Jueves', tipo: 'luminosos' },
+  { name: 'Viernes', tipo: 'dolorosos' },
+  { name: 'Sábado', tipo: 'gozosos' },
 ]);
 
-let misterioActualTipo = DIA_SEMANA[new Date().getDay()].tipo;
-let MISTERIOS_NOMBRES = MISTERIOS_POR_TIPO[misterioActualTipo].nombres;
+let currentMysteryType = WEEKDAYS[new Date().getDay()].tipo;
+let MYSTERY_NAMES = MYSTERIES_BY_TYPE[currentMysteryType].nombres;
 
-function getTipoPorPanel(panelId) {
-  return Object.keys(MISTERIOS_POR_TIPO).find(tipo => MISTERIOS_POR_TIPO[tipo].panelId === panelId);
+function getTypeByPanel(panelId) {
+  return Object.keys(MYSTERIES_BY_TYPE).find(type => MYSTERIES_BY_TYPE[type].panelId === panelId);
 }
 
-function seleccionarMisteriosPorPanel(panelId, reiniciarRosario) {
-  const tipo = getTipoPorPanel(panelId);
-  if (!tipo || tipo === misterioActualTipo) return;
-  misterioActualTipo = tipo;
-  MISTERIOS_NOMBRES = MISTERIOS_POR_TIPO[tipo].nombres;
-  SECUENCIA = buildSecuencia();
-  if (reiniciarRosario) reiniciar();
+function selectMysteriesByPanel(panelId, shouldRestart) {
+  const type = getTypeByPanel(panelId);
+  if (!type || type === currentMysteryType) return;
+  currentMysteryType = type;
+  MYSTERY_NAMES = MYSTERIES_BY_TYPE[type].nombres;
+  SEQUENCE = buildSequence();
+  if (shouldRestart) restart();
 }
 
-function aplicarMisteriosDelDia() {
-  const hoy = DIA_SEMANA[new Date().getDay()];
-  const misterio = MISTERIOS_POR_TIPO[hoy.tipo];
-  misterioActualTipo = hoy.tipo;
-  MISTERIOS_NOMBRES = misterio.nombres;
+function applyDailyMysteries() {
+  const todayEntry = WEEKDAYS[new Date().getDay()];
+  const mystery = MYSTERIES_BY_TYPE[todayEntry.tipo];
+  currentMysteryType = todayEntry.tipo;
+  MYSTERY_NAMES = mystery.nombres;
 
   document.querySelectorAll('.m-tab').forEach(btn => {
-    const activo = btn.dataset.panel === misterio.panelId;
-    btn.classList.toggle('active', activo);
-    btn.setAttribute('aria-selected', activo ? 'true' : 'false');
+    const isActive = btn.dataset.panel === mystery.panelId;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
   });
 
-  document.querySelectorAll('.misterio-panel').forEach(panel => {
-    panel.classList.toggle('active', panel.id === misterio.panelId);
+  document.querySelectorAll('.mystery-panel').forEach(panel => {
+    panel.classList.toggle('active', panel.id === mystery.panelId);
   });
 
-  const resumen = document.getElementById('misterios-hoy');
-  if (resumen) {
-    resumen.textContent = `${i18nText('ui.mysteriesToday', 'Rosario de hoy')}: ${hoy.nombre} · ${misterio.titulo}`;
+  const summary = document.getElementById('today-mysteries');
+  if (summary) {
+    summary.textContent = `${i18nText('ui.mysteriesToday', 'Rosario de hoy')}: ${todayEntry.nombre || todayEntry.name} · ${mystery.titulo}`;
   }
 }
 
-// Secuencia de pasos:
-// Cada entrada: { tipo, misterioIdx (-1 = ninguno), esAve, textoPersonalizado }
-function buildSecuencia() {
+// Step sequence:
+// Each entry stores the prayer, mystery index, bead status, and optional label.
+function buildSequence() {
   const seq = [];
-  // Apertura
-  seq.push({ o: ORACIONES.signo,  m: -1, ave: false });
-  seq.push({ o: ORACIONES.credo,  m: -1, ave: false });
-  seq.push({ o: ORACIONES.padre,  m: -1, ave: false });
-  seq.push({ o: ORACIONES.aveFe,        m: -1, ave: true,  label: i18nText('rosary.faith', 'Fe') });
-  seq.push({ o: ORACIONES.aveEsperanza, m: -1, ave: true,  label: i18nText('rosary.hope', 'Esperanza') });
-  seq.push({ o: ORACIONES.aveCaridad,   m: -1, ave: true,  label: i18nText('rosary.charity', 'Caridad') });
-  seq.push({ o: ORACIONES.gloria, m: -1, ave: false });
+  // Opening
+  seq.push({ o: PRAYERS.signo,  m: -1, ave: false });
+  seq.push({ o: PRAYERS.credo,  m: -1, ave: false });
+  seq.push({ o: PRAYERS.padre,  m: -1, ave: false, bead: 'ourFather' });
+  seq.push({ o: PRAYERS.aveFe,        m: -1, ave: true, bead: 'hailMary', label: i18nText('rosary.faith', 'Fe') });
+  seq.push({ o: PRAYERS.aveEsperanza, m: -1, ave: true, bead: 'hailMary', label: i18nText('rosary.hope', 'Esperanza') });
+  seq.push({ o: PRAYERS.aveCaridad,   m: -1, ave: true, bead: 'hailMary', label: i18nText('rosary.charity', 'Caridad') });
+  seq.push({ o: PRAYERS.gloria, m: -1, ave: false });
 
-  // 5 decenas
+  // Five decades
   for (let i = 0; i < 5; i++) {
-    // Anuncio del misterio: se espera/medita, no corresponde a una cuenta.
+    // Mystery announcement: pause for contemplation; it does not map to a bead.
     seq.push({
       o: {
         rubrica: i18nText('rosary.mysteryAnnouncement', 'Anuncio del misterio'),
-        titulo: MISTERIOS_NOMBRES[i],
+        titulo: MYSTERY_NAMES[i],
         texto: i18nText('rosary.mysteryAnnouncementText', 'Anunciá el misterio y hacé una breve pausa para contemplarlo antes de rezar el Padre Nuestro.')
       },
       m: i, ave: false, espera: true, anuncio: true
     });
     seq.push({
-      o: { rubrica: `${MISTERIOS_NOMBRES[i]}`, titulo: ORACIONES.padre.titulo, texto: ORACIONES.padre.texto },
-      m: i, ave: false
+      o: { rubrica: `${MYSTERY_NAMES[i]}`, titulo: prayerTitle(PRAYERS.padre), texto: prayerBody(PRAYERS.padre) },
+      m: i, ave: false, bead: 'ourFather'
     });
-    // 10 Ave Marías
+    // Ten Hail Marys
     for (let j = 1; j <= 10; j++) {
-      seq.push({ o: ORACIONES.ave, m: i, ave: true, label: `${j} ${i18nText('rosary.ofTen', 'de 10')}` });
+      seq.push({ o: PRAYERS.ave, m: i, ave: true, bead: 'hailMary', label: `${j} ${i18nText('rosary.ofTen', 'de 10')}` });
     }
-    // Gloria + Fátima
-    seq.push({ o: ORACIONES.gloria, m: i, ave: false });
-    seq.push({ o: ORACIONES.fatima, m: i, ave: false });
+    // Glory Be + Fatima prayer
+    seq.push({ o: PRAYERS.gloria, m: i, ave: false });
+    seq.push({ o: PRAYERS.fatima, m: i, ave: false });
   }
 
-  // Salve final
-  seq.push({ o: ORACIONES.salve, m: -1, ave: false });
+  // Final Hail Holy Queen
+  seq.push({ o: PRAYERS.salve, m: -1, ave: false });
   return seq;
 }
 
-let SECUENCIA = buildSecuencia();
-// Contar sólo las Ave Marías para el contador visible
-// (3 iniciales + 5×10 = 53 total, pero mostramos cuenta corrida)
+let SEQUENCE = buildSequence();
+// Count only Hail Mary prayers for the visible counter.
+// The sequence has 3 intro Hail Marys plus five decades.
 
-let pasoActual = 0;
+let currentStep = 0;
 let aveCount   = 0;
-let uiInicializada = false;
-let celebracionDisparada = false;
+let uiInitialized = false;
+let celebrationTriggered = false;
 
-const PROGRESO_KEY = 'santoRosario.progreso.v1';
-const GUIA_ORACION_KEY = 'santoRosario.guiaOracion.v1';
+const LEGACY_PROGRESS_KEY = 'santoRosario.progreso.v1';
+const PROGRESS_KEY = 'santoRosario.progress.v1';
+const LEGACY_PRAYER_GUIDE_KEY = 'santoRosario.guiaOracion.v1';
+const PRAYER_GUIDE_KEY = 'santoRosario.prayerGuide.v1';
 
-let guiaOracionActiva = false;
+let prayerGuideEnabled = false;
 
-function fechaLocalISO(date = new Date()) {
+function localISODate(date = new Date()) {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
 }
 
-function leerProgresoGuardado() {
+function readStoredProgress() {
   try {
-    return JSON.parse(localStorage.getItem(PROGRESO_KEY));
+    const progress = localStorage.getItem(PROGRESS_KEY);
+    if (progress) return JSON.parse(progress);
+
+    const legacyProgress = localStorage.getItem(LEGACY_PROGRESS_KEY);
+    if (!legacyProgress) return null;
+
+    const parsedProgress = JSON.parse(legacyProgress);
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify(parsedProgress));
+    localStorage.removeItem(LEGACY_PROGRESS_KEY);
+    return parsedProgress;
   } catch {
     return null;
   }
 }
 
-function guardarProgreso() {
+function saveProgress() {
   try {
-    localStorage.setItem(PROGRESO_KEY, JSON.stringify({
-      fecha: fechaLocalISO(),
-      tipo: misterioActualTipo,
-      pasoActual,
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify({
+      date: localISODate(),
+      mysteryType: currentMysteryType,
+      currentStep,
       aveCount,
     }));
   } catch {
-    // Si el almacenamiento no está disponible, la app sigue funcionando sin persistencia.
+    // If storage is unavailable, the app still works without persistence.
   }
 }
 
-function borrarProgresoGuardado() {
+function clearStoredProgress() {
   try {
-    localStorage.removeItem(PROGRESO_KEY);
+    localStorage.removeItem(PROGRESS_KEY);
   } catch {
-    // No hay acción necesaria si el almacenamiento falla.
+    // No action is needed if storage fails.
   }
 }
 
-function leerPreferenciaGuiaOracion() {
+function readPrayerGuidePreference() {
   try {
-    return localStorage.getItem(GUIA_ORACION_KEY) === 'true';
+    const preference = localStorage.getItem(PRAYER_GUIDE_KEY);
+    if (preference !== null) return preference === 'true';
+
+    const legacyPreference = localStorage.getItem(LEGACY_PRAYER_GUIDE_KEY);
+    if (legacyPreference === null) return false;
+
+    localStorage.setItem(PRAYER_GUIDE_KEY, legacyPreference);
+    localStorage.removeItem(LEGACY_PRAYER_GUIDE_KEY);
+    return legacyPreference === 'true';
   } catch {
     return false;
   }
 }
 
-function guardarPreferenciaGuiaOracion() {
+function savePrayerGuidePreference() {
   try {
-    localStorage.setItem(GUIA_ORACION_KEY, guiaOracionActiva ? 'true' : 'false');
+    localStorage.setItem(PRAYER_GUIDE_KEY, prayerGuideEnabled ? 'true' : 'false');
   } catch {
-    // La guía es opcional; si no se puede guardar, sólo se pierde la preferencia.
+    // The guide is optional; if saving fails, only the preference is lost.
   }
 }
 
-function restaurarProgresoDelDia() {
-  const guardado = leerProgresoGuardado();
-  const hoy = fechaLocalISO();
+function restoreDailyProgress() {
+  const storedProgress = readStoredProgress();
+  const today = localISODate();
 
-  if (!guardado) return;
+  if (!storedProgress) return;
 
-  if (guardado.fecha !== hoy || guardado.tipo !== misterioActualTipo) {
-    borrarProgresoGuardado();
-    pasoActual = 0;
+  const storedDate = storedProgress.date || storedProgress.fecha;
+  const storedMysteryType = storedProgress.mysteryType || storedProgress.tipo;
+
+  if (storedDate !== today || storedMysteryType !== currentMysteryType) {
+    clearStoredProgress();
+    currentStep = 0;
     aveCount = 0;
     return;
   }
 
-  pasoActual = Math.max(0, Math.min(Number(guardado.pasoActual) || 0, SECUENCIA.length - 1));
-  aveCount = contarAvesHasta(pasoActual);
+  currentStep = Math.max(0, Math.min(Number(storedProgress.currentStep) || 0, SEQUENCE.length - 1));
+  aveCount = countHailMarysThrough(currentStep);
 }
 
-function msHastaMedianoche() {
-  const ahora = new Date();
-  const medianoche = new Date(ahora);
-  medianoche.setHours(24, 0, 0, 0);
-  return medianoche.getTime() - ahora.getTime();
+function msUntilMidnight() {
+  const now = new Date();
+  const midnight = new Date(now);
+  midnight.setHours(24, 0, 0, 0);
+  return midnight.getTime() - now.getTime();
 }
 
-function resetearSiCambioElDia() {
-  const guardado = leerProgresoGuardado();
-  if (!guardado || guardado.fecha === fechaLocalISO()) return;
+function resetIfDateChanged() {
+  const storedProgress = readStoredProgress();
+  const storedDate = storedProgress?.date || storedProgress?.fecha;
+  if (!storedProgress || storedDate === localISODate()) return;
 
-  resetearRosarioDelDia({ aplicarDia: true, guardar: false });
+  resetDailyRosary({ applyToday: true, shouldSave: false });
 }
 
-function programarResetDeMedianoche() {
+function scheduleMidnightReset() {
   window.setTimeout(() => {
-    resetearSiCambioElDia();
-    programarResetDeMedianoche();
-  }, msHastaMedianoche() + 1000);
+    resetIfDateChanged();
+    scheduleMidnightReset();
+  }, msUntilMidnight() + 1000);
 }
 
-// ── Renderizar cuentas SVG ────────────────────────────────────
-function renderCuentas() {
-  const g = document.getElementById('cuentas-group');
+// Render SVG beads ────────────────────────────────────
+function renderBeads() {
+  const g = document.getElementById('beads-group');
   if (!g) return;
   g.innerHTML = '';
 
-  const cuentasVisibles = SECUENCIA
-    .map((paso, index) => ({ paso, index }))
-    .filter(({ paso }) => paso.ave || paso.o.titulo === 'Padre Nuestro');
-  const cuentaActualIndex = cuentasVisibles.find(cuenta => cuenta.index === pasoActual)?.index ?? null;
-  const rosarioTerminado = pasoActual >= SECUENCIA.length - 1;
+  const visibleBeads = SEQUENCE
+    .map((step, index) => ({ step, index }))
+    .filter(({ step }) => step.bead);
+  const currentBeadIndex = visibleBeads.find(bead => bead.index === currentStep)?.index ?? null;
+  const rosaryComplete = currentStep >= SEQUENCE.length - 1;
   const cx = 100, cy = 132, rx = 101, ry = 116;
-  const aperturaCorona = 0.12;
-  const inicioCorona = -Math.PI / 2 + aperturaCorona;
-  const finCorona = (Math.PI * 3) / 2 - aperturaCorona;
-  const tramoCorona = finCorona - inicioCorona;
-  const unionSuperior = { x: cx, y: 18 };
-  const brazoDerecho = {
-    x: cx + rx * Math.cos(inicioCorona),
-    y: cy + ry * Math.sin(inicioCorona),
+  const crownGap = 0.12;
+  const crownStart = -Math.PI / 2 + crownGap;
+  const crownEnd = (Math.PI * 3) / 2 - crownGap;
+  const crownArc = crownEnd - crownStart;
+  const topJunction = { x: cx, y: 18 };
+  const rightArm = {
+    x: cx + rx * Math.cos(crownStart),
+    y: cy + ry * Math.sin(crownStart),
   };
-  const brazoIzquierdo = {
-    x: cx + rx * Math.cos(finCorona),
-    y: cy + ry * Math.sin(finCorona),
+  const leftArm = {
+    x: cx + rx * Math.cos(crownEnd),
+    y: cy + ry * Math.sin(crownEnd),
   };
 
-  const dibujarCuenta = ({ paso, index }, x, y) => {
-    const esPadre = !paso.ave;
+  const drawBead = ({ step, index }, x, y) => {
+    const isOurFather = step.bead === 'ourFather';
 
-    const esActual = !rosarioTerminado && index === cuentaActualIndex;
-    const radio = esActual ? 6.9 : (esPadre ? 5.35 : 3.65);
+    const isCurrent = !rosaryComplete && index === currentBeadIndex;
+    const radius = isCurrent ? 6.9 : (isOurFather ? 5.35 : 3.65);
 
-    // Estado: rezada, actual, pendiente
+    // State: completed, current, pending
     let fill, stroke;
-    if (index < pasoActual && pasoActual > 0) {
+    if (index < currentStep && currentStep > 0) {
       fill = 'rgba(245,182,42,.82)'; stroke = 'rgba(255,218,96,.92)';
-    } else if (esActual) {
+    } else if (isCurrent) {
       fill = 'rgba(255,248,225,.98)'; stroke = 'rgba(255,255,255,1)';
     } else {
       fill = 'rgba(255,248,225,.18)'; stroke = 'rgba(255,248,225,.48)';
@@ -600,77 +635,77 @@ function renderCuentas() {
     const circle = document.createElementNS('http://www.w3.org/2000/svg','circle');
     circle.setAttribute('cx', x.toFixed(1));
     circle.setAttribute('cy', y.toFixed(1));
-    circle.setAttribute('r',  radio);
+    circle.setAttribute('r',  radius);
     circle.setAttribute('fill', fill);
     circle.setAttribute('stroke', stroke);
-    circle.setAttribute('stroke-width', esActual ? '1.75' : (esPadre ? '1.25' : '.9'));
-    if (esActual && esPadre) {
+    circle.setAttribute('stroke-width', isCurrent ? '1.75' : (isOurFather ? '1.25' : '.9'));
+    if (isCurrent && isOurFather) {
       circle.style.filter = 'drop-shadow(0 0 6px rgba(255,248,225,.85))';
-    } else if (esActual) {
+    } else if (isCurrent) {
       circle.style.filter = 'drop-shadow(0 0 5px rgba(255,248,225,.7))';
     }
 
     circle.setAttribute('role', 'button');
     circle.setAttribute('tabindex', '0');
-    circle.setAttribute('aria-label', `${i18nText('ui.goTo', 'Ir a')} ${paso.o.titulo}`);
-    circle.addEventListener('click', () => irAPaso(index));
+    circle.setAttribute('aria-label', `${i18nText('ui.goTo', 'Ir a')} ${prayerTitle(step.o)}`);
+    circle.addEventListener('click', () => goToStep(index));
     circle.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        irAPaso(index);
+        goToStep(index);
       }
     });
 
     g.appendChild(circle);
   };
 
-  const cuentasIniciales = cuentasVisibles.filter(({ paso }) => paso.m < 0);
-  const cuentasDecenas = cuentasVisibles.filter(({ paso }) => paso.m >= 0);
-  const posicionesIniciales = [
+  const introBeads = visibleBeads.filter(({ step }) => step.m < 0);
+  const decadeBeads = visibleBeads.filter(({ step }) => step.m >= 0);
+  const introPositions = [
     { x: cx, y: 74 },
     { x: cx, y: 56 },
     { x: cx, y: 38 },
-    unionSuperior,
+    topJunction,
   ];
 
-  if (cuentasIniciales.length) {
-    const cordon = document.createElementNS('http://www.w3.org/2000/svg','path');
-    cordon.setAttribute('d', [
-      `M ${brazoIzquierdo.x.toFixed(1)} ${brazoIzquierdo.y.toFixed(1)}`,
-      `C ${(cx - 12).toFixed(1)} 16, ${(cx - 7).toFixed(1)} 18, ${unionSuperior.x} ${unionSuperior.y}`,
-      `C ${(cx + 7).toFixed(1)} 18, ${(cx + 12).toFixed(1)} 16, ${brazoDerecho.x.toFixed(1)} ${brazoDerecho.y.toFixed(1)}`,
-      `M ${unionSuperior.x} ${unionSuperior.y} L ${cx} 102`,
+  if (introBeads.length) {
+    const cord = document.createElementNS('http://www.w3.org/2000/svg','path');
+    cord.setAttribute('d', [
+      `M ${leftArm.x.toFixed(1)} ${leftArm.y.toFixed(1)}`,
+      `C ${(cx - 12).toFixed(1)} 16, ${(cx - 7).toFixed(1)} 18, ${topJunction.x} ${topJunction.y}`,
+      `C ${(cx + 7).toFixed(1)} 18, ${(cx + 12).toFixed(1)} 16, ${rightArm.x.toFixed(1)} ${rightArm.y.toFixed(1)}`,
+      `M ${topJunction.x} ${topJunction.y} L ${cx} 102`,
     ].join(' '));
-    cordon.setAttribute('fill', 'none');
-    cordon.setAttribute('stroke', 'rgba(255,211,91,.54)');
-    cordon.setAttribute('stroke-width', '1');
-    cordon.setAttribute('stroke-linecap', 'round');
-    cordon.setAttribute('stroke-linejoin', 'round');
-    g.appendChild(cordon);
+    cord.setAttribute('fill', 'none');
+    cord.setAttribute('stroke', 'rgba(255,211,91,.54)');
+    cord.setAttribute('stroke-width', '1');
+    cord.setAttribute('stroke-linecap', 'round');
+    cord.setAttribute('stroke-linejoin', 'round');
+    g.appendChild(cord);
   }
 
-  const cuentasCorona = cuentasDecenas.slice(1);
-  const totalCorona = cuentasCorona.length;
+  const crownBeads = decadeBeads.slice(1);
+  const totalCorona = crownBeads.length;
   for (let i = 0; i < totalCorona; i++) {
-    const progreso = totalCorona > 1 ? i / (totalCorona - 1) : 0;
-    const angle = inicioCorona + progreso * tramoCorona;
-    const { paso } = cuentasCorona[i];
-    const esPadre = !paso.ave;
-    const beadRx = esPadre ? rx + 5 : rx;
-    const beadRy = esPadre ? ry + 5 : ry;
+    const progress = totalCorona > 1 ? i / (totalCorona - 1) : 0;
+    const angle = crownStart + progress * crownArc;
+    const { step } = crownBeads[i];
+    const isOurFather = !step.ave;
+    const beadRx = isOurFather ? rx + 5 : rx;
+    const beadRy = isOurFather ? ry + 5 : ry;
     const x = cx + beadRx * Math.cos(angle);
     const y = cy + beadRy * Math.sin(angle);
 
-    dibujarCuenta(cuentasCorona[i], x, y);
+    drawBead(crownBeads[i], x, y);
   }
 
-  cuentasIniciales.forEach((cuenta, i) => {
-    const posicion = posicionesIniciales[i];
-    if (posicion) dibujarCuenta(cuenta, posicion.x, posicion.y);
+  introBeads.forEach((bead, i) => {
+    const position = introPositions[i];
+    if (position) drawBead(bead, position.x, position.y);
   });
 }
 
-function dispararCelebracionFinal() {
+function triggerFinalCelebration() {
   const burst = document.getElementById('rosary-burst');
   if (!burst) return;
 
@@ -679,280 +714,280 @@ function dispararCelebracionFinal() {
   burst.classList.add('active');
 }
 
-function contarAvesHasta(pasoIdx) {
-  return SECUENCIA.slice(0, pasoIdx + 1).filter(paso => paso.ave).length;
+function countHailMarysThrough(stepIndex) {
+  return SEQUENCE.slice(0, stepIndex + 1).filter(step => step.ave).length;
 }
 
-function lineasCentroMisterio(texto) {
-  if (texto === '') return [];
-  if (!texto) return [i18nText('ui.preparation', 'Preparaci?n').toUpperCase()];
+function centerMysteryLines(text) {
+  if (text === '') return [];
+  if (!text) return [i18nText('ui.preparation', 'Preparaci?n').toUpperCase()];
 
-  const limpio = texto.replace(/^La |^El |^Las |^Los /i, '').toUpperCase();
-  const palabras = limpio.split(/\s+/).filter(Boolean);
-  const lineas = [];
-  const maxCaracteres = 15;
+  const cleanText = text.replace(/^La |^El |^Las |^Los /i, '').toUpperCase();
+  const words = cleanText.split(/\s+/).filter(Boolean);
+  const lines = [];
+  const maxCharacters = 15;
 
-  palabras.forEach((palabra) => {
-    if (lineas.length === 0) {
-      lineas.push(palabra);
+  words.forEach((word) => {
+    if (lines.length === 0) {
+      lines.push(word);
       return;
     }
 
-    const actual = lineas[lineas.length - 1] || '';
-    const candidata = actual ? `${actual} ${palabra}` : palabra;
+    const currentLine = lines[lines.length - 1] || '';
+    const candidate = currentLine ? `${currentLine} ${word}` : word;
 
-    if (candidata.length <= maxCaracteres) {
-      lineas[lineas.length - 1] = candidata;
+    if (candidate.length <= maxCharacters) {
+      lines[lines.length - 1] = candidate;
     } else {
-      lineas.push(palabra);
+      lines.push(word);
     }
   });
 
-  return lineas.length ? lineas : ['PREPARACION'];
+  return lines.length ? lines : ['PREPARACION'];
 }
 
-function renderCentroMisterio(elemento, texto) {
+function renderCenterMystery(element, text) {
   const svgNS = 'http://www.w3.org/2000/svg';
-  const lineas = lineasCentroMisterio(texto);
+  const lines = centerMysteryLines(text);
 
-  elemento.textContent = '';
-  lineas.forEach((linea, index) => {
+  element.textContent = '';
+  lines.forEach((line, index) => {
     const tspan = document.createElementNS(svgNS, 'tspan');
     tspan.setAttribute('x', '100');
     tspan.setAttribute('dy', index === 0 ? '0' : '9');
-    tspan.textContent = linea;
-    elemento.appendChild(tspan);
+    tspan.textContent = line;
+    element.appendChild(tspan);
   });
 }
 
-function actualizarGuiaOracion(paso) {
-  const panel = document.getElementById('guia-oracion');
-  const rubrica = document.getElementById('guia-rubrica');
-  const titulo = document.getElementById('guia-titulo');
-  const texto = document.getElementById('guia-texto');
-  const toggle = document.getElementById('toggle-guia-oracion');
+function updatePrayerGuide(step) {
+  const panel = document.getElementById('prayer-guide');
+  const rubric = document.getElementById('guide-rubric');
+  const title = document.getElementById('guide-title');
+  const text = document.getElementById('guide-text');
+  const toggle = document.getElementById('toggle-prayer-guide');
 
-  if (toggle) toggle.checked = guiaOracionActiva;
+  if (toggle) toggle.checked = prayerGuideEnabled;
   if (!panel) return;
 
-  panel.hidden = !guiaOracionActiva;
-  if (!guiaOracionActiva || !paso) return;
+  panel.hidden = !prayerGuideEnabled;
+  if (!prayerGuideEnabled || !step) return;
 
-  if (rubrica) rubrica.textContent = paso.o.rubrica + (paso.label ? ` · ${paso.label}` : '');
-  if (titulo) titulo.textContent = paso.o.titulo;
-  if (texto) texto.innerHTML = paso.o.texto.replace(/\n/g, '<br>');
+  if (rubric) rubric.textContent = prayerRubric(step.o) + (step.label ? ` · ${step.label}` : '');
+  if (title) title.textContent = prayerTitle(step.o);
+  if (text) text.innerHTML = prayerBody(step.o).replace(/\n/g, '<br>');
   panel.scrollTop = 0;
 }
 
-// ── Actualizar UI de oración ──────────────────────────────────
-function actualizarUI() {
-  const paso = SECUENCIA[pasoActual];
-  if (!paso) return;
+// Update prayer UI ──────────────────────────────────
+function updateUI() {
+  const step = SEQUENCE[currentStep];
+  if (!step) return;
 
-  document.body.classList.toggle('rosario-en-inicio', pasoActual === 0);
+  document.body.classList.toggle('rosary-at-start', currentStep === 0);
 
-  actualizarGuiaOracion(paso);
+  updatePrayerGuide(step);
 
-  // Fade out → cambiar → fade in
-  const textoEl = document.getElementById('texto-oracion');
-  if (textoEl) {
-    textoEl.style.opacity = '0';
+  // Fade out, update, fade in
+  const textElement = document.getElementById('texto-oracion');
+  if (textElement) {
+    textElement.style.opacity = '0';
 
     setTimeout(() => {
-      document.getElementById('rubrica-oracion').textContent = paso.o.rubrica + (paso.label ? ` · ${paso.label}` : '');
-      document.getElementById('titulo-oracion').textContent  = paso.o.titulo;
-      textoEl.innerHTML = paso.o.texto.replace(/\n/g, '<br>');
-      textoEl.style.opacity = '1';
+      document.getElementById('rubrica-oracion').textContent = prayerRubric(step.o) + (step.label ? ` · ${step.label}` : '');
+      document.getElementById('titulo-oracion').textContent  = prayerTitle(step.o);
+      textElement.innerHTML = prayerBody(step.o).replace(/\n/g, '<br>');
+      textElement.style.opacity = '1';
     }, 200);
   }
 
-  // Misterio label
-  const mLabel = document.getElementById('label-misterio');
-  if (mLabel) mLabel.textContent = paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : '—';
+  // Mystery label
+  const mLabel = document.getElementById('mystery-label');
+  if (mLabel) mLabel.textContent = step.m >= 0 ? MYSTERY_NAMES[step.m] : '—';
 
-  const centroMisterio = document.getElementById('centro-misterio');
-  if (centroMisterio) {
-    const esUltimo = pasoActual >= SECUENCIA.length - 1;
-    renderCentroMisterio(centroMisterio, esUltimo ? '' : (paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : i18nText('ui.preparation', 'Preparaci?n').toUpperCase()));
+  const centerMystery = document.getElementById('center-mystery');
+  if (centerMystery) {
+    const isLast = currentStep >= SEQUENCE.length - 1;
+    renderCenterMystery(centerMystery, isLast ? '' : (step.m >= 0 ? MYSTERY_NAMES[step.m] : i18nText('ui.preparation', 'Preparaci?n').toUpperCase()));
   }
 
-  // Cuenta label
-  const cuentaLabel = document.getElementById('cuenta-label');
-  if (cuentaLabel) cuentaLabel.textContent = `${i18nText('ui.count', 'Cuenta')} ${pasoActual} / ${SECUENCIA.length - 1}`;
+  // Bead label
+  const beadLabel = document.getElementById('bead-label');
+  if (beadLabel) beadLabel.textContent = `${i18nText('ui.count', 'Cuenta')} ${currentStep} / ${SEQUENCE.length - 1}`;
 
-  const tituloContador = document.getElementById('titulo-contador');
-  if (tituloContador) {
-    tituloContador.textContent = paso.o.titulo + (paso.label ? ` · ${paso.label}` : '');
+  const counterTitle = document.getElementById('counter-title');
+  if (counterTitle) {
+    counterTitle.textContent = prayerTitle(step.o) + (step.label ? ` · ${step.label}` : '');
   }
 
-  // Barra de progreso
-  const pct = Math.round((pasoActual / (SECUENCIA.length - 1)) * 100);
+  // Progress bar
+  const pct = Math.round((currentStep / (SEQUENCE.length - 1)) * 100);
   const progFill = document.getElementById('prog-fill');
   const progPct = document.getElementById('prog-pct');
   const progLabel = document.getElementById('prog-label');
   if (progFill) progFill.style.width = pct + '%';
   if (progPct) progPct.textContent = pct + '%';
   if (progLabel) {
-    progLabel.textContent = paso.m >= 0 ? MISTERIOS_NOMBRES[paso.m] : (pasoActual === 0 ? i18nText('ui.preparation', 'Preparación') : i18nText('ui.closing', 'Cierre'));
+    progLabel.textContent = step.m >= 0 ? MYSTERY_NAMES[step.m] : (currentStep === 0 ? i18nText('ui.preparation', 'Preparación') : i18nText('ui.closing', 'Cierre'));
   }
 
-  // Cuentas SVG
-  renderCuentas();
+  // SVG beads
+  renderBeads();
 
-  // Completado
-  const esUltimo = pasoActual >= SECUENCIA.length - 1;
-  const completo = document.getElementById('rosario-completo');
-  const avanzarBtn = document.getElementById('btn-avanzar');
-  document.body.classList.toggle('rosario-finalizado', esUltimo);
-  if (completo) completo.classList.toggle('visible', esUltimo);
-  if (avanzarBtn) {
-    avanzarBtn.disabled = esUltimo;
-    avanzarBtn.style.opacity = esUltimo ? '.4' : '1';
+  // Completion state
+  const isLast = currentStep >= SEQUENCE.length - 1;
+  const completion = document.getElementById('rosary-completion');
+  const advanceBtn = document.getElementById('advance-button');
+  document.body.classList.toggle('rosary-complete', isLast);
+  if (completion) completion.classList.toggle('visible', isLast);
+  if (advanceBtn) {
+    advanceBtn.disabled = isLast;
+    advanceBtn.style.opacity = isLast ? '.4' : '1';
   }
 
-  if (esUltimo && !uiInicializada) {
-    celebracionDisparada = true;
-  } else if (esUltimo && !celebracionDisparada) {
-    dispararCelebracionFinal();
-    celebracionDisparada = true;
-  } else if (!esUltimo) {
-    celebracionDisparada = false;
+  if (isLast && !uiInitialized) {
+    celebrationTriggered = true;
+  } else if (isLast && !celebrationTriggered) {
+    triggerFinalCelebration();
+    celebrationTriggered = true;
+  } else if (!isLast) {
+    celebrationTriggered = false;
   }
 
-  uiInicializada = true;
+  uiInitialized = true;
 }
 
-// ── Avanzar un paso ───────────────────────────────────────────
-function avanzar() {
-  if (pasoActual >= SECUENCIA.length - 1) return;
-  pasoActual++;
-  aveCount = contarAvesHasta(pasoActual);
-  actualizarUI();
-  guardarProgreso();
+// Advance one step ───────────────────────────────────────────
+function advance() {
+  if (currentStep >= SEQUENCE.length - 1) return;
+  currentStep++;
+  aveCount = countHailMarysThrough(currentStep);
+  updateUI();
+  saveProgress();
 }
 
-function irAPaso(idx) {
-  pasoActual = Math.max(0, Math.min(idx, SECUENCIA.length - 1));
-  aveCount = contarAvesHasta(pasoActual);
-  actualizarUI();
-  guardarProgreso();
+function goToStep(idx) {
+  currentStep = Math.max(0, Math.min(idx, SEQUENCE.length - 1));
+  aveCount = countHailMarysThrough(currentStep);
+  updateUI();
+  saveProgress();
 }
 
-function resetearRosarioDelDia({ aplicarDia = false, guardar = true } = {}) {
-  if (aplicarDia) {
-    borrarProgresoGuardado();
-    aplicarMisteriosDelDia();
-    SECUENCIA = buildSecuencia();
+function resetDailyRosary({ applyToday = false, shouldSave = true } = {}) {
+  if (applyToday) {
+    clearStoredProgress();
+    applyDailyMysteries();
+    SEQUENCE = buildSequence();
   }
 
-  pasoActual = 0;
+  currentStep = 0;
   aveCount = 0;
-  celebracionDisparada = false;
+  celebrationTriggered = false;
 
-  const completo = document.getElementById('rosario-completo');
-  if (completo) completo.classList.remove('visible');
+  const completion = document.getElementById('rosary-completion');
+  if (completion) completion.classList.remove('visible');
 
-  actualizarUI();
+  updateUI();
 
-  if (guardar) {
-    guardarProgreso();
+  if (shouldSave) {
+    saveProgress();
   }
 }
 
-// ── Reiniciar ─────────────────────────────────────────────────
-function reiniciar() {
-  resetearRosarioDelDia();
+// Restart ─────────────────────────────────────────────────
+function restart() {
+  resetDailyRosary();
 }
 
-// Inicializar al cargar
-renderMisteriosIndex();
-renderOracionesIndex();
-aplicarMisteriosDelDia();
-SECUENCIA = buildSecuencia();
-restaurarProgresoDelDia();
-guiaOracionActiva = leerPreferenciaGuiaOracion();
-if (document.getElementById('cuentas-group')) {
-  renderCuentas();
-  actualizarUI();
+// Initialize on load
+renderMysteriesIndex();
+renderPrayersIndex();
+applyDailyMysteries();
+SEQUENCE = buildSequence();
+restoreDailyProgress();
+prayerGuideEnabled = readPrayerGuidePreference();
+if (document.getElementById('beads-group')) {
+  renderBeads();
+  updateUI();
 }
-programarResetDeMedianoche();
+scheduleMidnightReset();
 
 document.addEventListener('visibilitychange', () => {
-  if (!document.hidden) resetearSiCambioElDia();
+  if (!document.hidden) resetIfDateChanged();
 });
 
-const centroAvanzar = document.getElementById('btn-centro-avanzar');
-if (centroAvanzar) {
-  centroAvanzar.addEventListener('click', avanzar);
-  centroAvanzar.addEventListener('keydown', (event) => {
+const centerAdvance = document.getElementById('center-advance-button');
+if (centerAdvance) {
+  centerAdvance.addEventListener('click', advance);
+  centerAdvance.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      avanzar();
+      advance();
     }
   });
 }
 
-const btnReiniciarRosario = document.getElementById('btn-reiniciar-rosario');
-if (btnReiniciarRosario) {
-  btnReiniciarRosario.addEventListener('click', reiniciar);
+const restartRosaryButton = document.getElementById('restart-rosary-button');
+if (restartRosaryButton) {
+  restartRosaryButton.addEventListener('click', restart);
 }
 
-const toggleGuiaOracion = document.getElementById('toggle-guia-oracion');
-if (toggleGuiaOracion) {
-  toggleGuiaOracion.checked = guiaOracionActiva;
-  toggleGuiaOracion.addEventListener('change', () => {
-    guiaOracionActiva = toggleGuiaOracion.checked;
-    guardarPreferenciaGuiaOracion();
-    actualizarUI();
+const togglePrayerGuide = document.getElementById('toggle-prayer-guide');
+if (togglePrayerGuide) {
+  togglePrayerGuide.checked = prayerGuideEnabled;
+  togglePrayerGuide.addEventListener('change', () => {
+    prayerGuideEnabled = togglePrayerGuide.checked;
+    savePrayerGuidePreference();
+    updateUI();
   });
 }
 
 
 /* ─────────────────────────────────────────────────────────────── */
-/* SECTION: MANTENER PANTALLA ACTIVA                               */
+/* SECTION: KEEP SCREEN AWAKE                               */
 /* ─────────────────────────────────────────────────────────────── */
 
 function getKeepAwakePlugin() {
   return window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.KeepAwake;
 }
 
-async function mantenerPantallaActiva() {
+async function keepScreenAwake() {
   const KeepAwake = getKeepAwakePlugin();
   if (!KeepAwake) return;
 
   try {
-    const soporte = await KeepAwake.isSupported();
-    if (soporte.isSupported) {
+    const support = await KeepAwake.isSupported();
+    if (support.isSupported) {
       await KeepAwake.keepAwake();
     }
   } catch (err) {
-    console.warn('No se pudo mantener la pantalla activa.', err);
+    console.warn('Could not keep the screen awake.', err);
   }
 }
 
-async function permitirBloqueoPantalla() {
+async function allowScreenLock() {
   const KeepAwake = getKeepAwakePlugin();
   if (!KeepAwake) return;
 
   try {
     await KeepAwake.allowSleep();
   } catch (err) {
-    console.warn('No se pudo restaurar el bloqueo de pantalla.', err);
+    console.warn('Could not restore screen sleep.', err);
   }
 }
 
-if (document.getElementById('cuentas-group')) {
-  mantenerPantallaActiva();
+if (document.getElementById('beads-group')) {
+  keepScreenAwake();
 }
 
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'visible') {
-    mantenerPantallaActiva();
+    keepScreenAwake();
   } else {
-    permitirBloqueoPantalla();
+    allowScreenLock();
   }
 });
 
 window.addEventListener('pagehide', () => {
-  permitirBloqueoPantalla();
+  allowScreenLock();
 });

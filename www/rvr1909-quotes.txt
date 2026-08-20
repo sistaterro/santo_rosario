@@ -1,6 +1,6 @@
-Citas biblicas significativas - Reina-Valera 1909
-Fuente local: carpeta citas/ (dominio publico).
-Criterio: se priorizaron libros/referencias ya usados en versiculos.js y luego versos de fe, oracion, esperanza, paz, misericordia y vida cristiana.
+Meaningful Bible quotes - Reina-Valera 1909
+Local source: former citas/ folder (public domain).
+Selection criteria: books and references already used in verses.js first, then verses about faith, prayer, hope, peace, mercy, and Christian life.
 
 1. "Masquil de Ethán Ezrahita. LAS misericordias de Jehová cantaré perpetuamente: en generación y generación haré notoria tu verdad con mi boca." - Salmos 89:1, RVR1909
 2. "De modo que si alguno está en Cristo, nueva criatura es: las cosas viejas pasaron; he aquí todas son hechas nuevas." - 2 Corintios 5:17, RVR1909

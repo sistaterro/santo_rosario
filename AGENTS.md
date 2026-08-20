@@ -6,7 +6,7 @@ Este archivo es un cuaderno de traspaso tecnico, no documentacion para el usuari
 
 ## Proyecto
 
-Aplicacion simple para rezar el Santo Rosario, pensada principalmente para personas mayores. La prioridad del usuario es claridad, botones grandes, flujo simple, funcionamiento offline y APK Android instalable mediante Capacitor, sin migrar a frameworks pesados.
+Simple Santo Rosario app, primarily intended for older users. The user's priority is clarity, large controls, a simple flow, offline behavior, and an Android APK through Capacitor without migrating to a heavy framework.
 
 El archivo `prompt.md` contiene la intencion completa del usuario. Leerlo si se necesita contexto de producto.
 
@@ -19,8 +19,8 @@ El archivo `prompt.md` contiene la intencion completa del usuario. Leerlo si se 
 - Iconos y splash configurados.
 - `@capacitor-community/keep-awake` mantiene la pantalla activa mientras la app esta visible.
 - `www/index.html` muestra inicio informativo, misterios del dia, versiculo diario, frase latina diaria y seccion "Sobre nosotros".
-- `www/cuentas.html` contiene la funcionalidad principal del rezo: rosario SVG interactivo, cruz central como avance, estado persistente diario y reset al cambiar de fecha.
-- `www/data/versiculos.js` y `www/data/latin.js` cargan contenido diario sin `fetch`, apto para offline/Capacitor.
+- `www/rosary.html` contiene la funcionalidad principal del rezo: rosario SVG interactivo, cruz central como avance, estado persistente diario y reset al cambiar de fecha.
+- `www/data/verses.js` y `www/data/latin.js` cargan contenido diario sin `fetch`, apto para offline/Capacitor.
 - `www/i18n/` contiene estructura de 12 idiomas. En primer arranque detecta `navigator.language`, guarda esa eleccion inicial en `localStorage` y luego respeta siempre la preferencia persistida del usuario. Usa ingles como fallback si no puede detectar un idioma compatible.
 
 ## Idiomas
@@ -33,7 +33,7 @@ es, pt, en, it, fr, pl, de, fil, vi, ro, hr, hu
 
 Todos estan marcados como `available`. La etiqueta del selector debe mantenerse siempre como `Language`, incluso cuando la app este traducida.
 
-La preferencia de idioma se guarda en `localStorage` con la clave `santoRosario.idioma.v1`. No volver a detectar el idioma del dispositivo en cada carga si esa clave ya existe.
+La preferencia de idioma se guarda en `localStorage` con la clave `santoRosario.language.v1`; hay migracion desde `santoRosario.idioma.v1`. No volver a detectar el idioma del dispositivo en cada carga si esa clave ya existe.
 
 Importante: las traducciones son una primera version funcional. Antes de lanzar mercados no hispanos, revisar con hablantes nativos y fuentes liturgicas adecuadas, sobre todo las oraciones largas. La frase biblica diaria y la frase latina siguen fuera del sistema i18n y tienen su propio tratamiento.
 
@@ -43,13 +43,13 @@ Importante: las traducciones son una primera version funcional. Antes de lanzar 
 
 ```text
 www/index.html          Inicio informativo
-www/cuentas.html        Funcionalidad del rezo con cuentas
+www/rosary.html        Funcionalidad del rezo con cuentas
 www/css/styles.css      Estilos
 www/js/app.js           Logica de UI, rosario, estado diario e i18n
 www/i18n/               Registry, catalogos y motor i18n
-www/data/versiculos.js  Versiculos diarios y calendario anual
+www/data/verses.js  Versiculos diarios y calendario anual
 www/data/latin.js       Frases latinas diarias y calendario anual
-www/citas-rvr1909.txt   Seleccion editorial de 366 citas RVR1909
+www/rvr1909-quotes.txt   Seleccion editorial de 366 citas RVR1909
 tools/generate_i18n.py  Generador de catalogos i18n
 android/                Proyecto Android Capacitor
 assets/                 Recursos fuente para iconos/splash
@@ -58,7 +58,7 @@ assets/                 Recursos fuente para iconos/splash
 ## Decisiones Tomadas
 
 - Se mantuvo vanilla HTML/CSS/JS. No React, no Kotlin, no Flutter.
-- Se separo `index.html` como informacion/introduccion y `cuentas.html` como rezo funcional.
+- Se separo `index.html` como informacion/introduccion y `rosary.html` como rezo funcional.
 - Se elimino la dependencia a Google Fonts para favorecer funcionamiento offline.
 - Se usa `capacitor.config.json` en vez de `capacitor.config.ts`.
 - Los misterios diarios se asignan asi:
@@ -67,10 +67,12 @@ assets/                 Recursos fuente para iconos/splash
   - Martes/Viernes: Dolorosos
   - Jueves: Luminosos
 - El modo automatico fue retirado del MVP porque el usuario lo reserva para una version paga futura.
-- `www/data/versiculos.json` fue eliminado para evitar duplicacion; la app consume `www/data/versiculos.js`.
+- `www/data/versiculos.json` was removed to avoid duplication; the app consumes `www/data/verses.js`.
 - `www/data/latin.js` contiene frase latina diaria y traduccion.
 - Se retiro el texto "COMENZA ACA" del rosario; queda el pulso inicial sobre la cruz central para sugerir interaccion.
 - La seccion "Sobre nosotros" enlaza a `https://dazjuancarlos.com.ar/` con el texto "Conocer al desarrollador".
+- Technical names were partially cleaned up in English so the repo is easier for reviewers/recruiters to read: the functional page became `rosary.html`, Bible data became `verses.js`, main selectors/IDs moved to English, and README is now English. User-facing content and catalog keys such as `titulo/texto/rubrica` were kept for compatibility with `www/i18n/*.js`.
+- After that cleanup, rosary runtime code was fixed to read both English-style prayer fields (`title/rubric/body/text`) and the existing Spanish catalog fields (`titulo/rubrica/texto`). Bead rendering now uses explicit `bead: 'ourFather' | 'hailMary'` metadata instead of matching the visible title "Padre Nuestro", so translations do not break rosary functionality.
 
 ## Entorno Local Observado
 
@@ -99,7 +101,7 @@ npm.cmd run build:android
 ## Deudas Tecnicas
 
 - `www/js/app.js` todavia mezcla datos, estado del rosario y actualizacion de UI.
-- `www/data/versiculos.js`, `www/data/latin.js` y `www/i18n/*.js` tienen estructuras grandes; conviene mantener generadores o extraer utilidades si crecen.
+- `www/data/verses.js`, `www/data/latin.js` y `www/i18n/*.js` tienen estructuras grandes; conviene mantener generadores o extraer utilidades si crecen.
 - Revisar UX en telefono fisico: tamano de letra, contraste, zonas tactiles, barra de estado y barra de navegacion Android.
 - Falta revision liturgica/nativa de traducciones no espanolas.
 - Falta revisar manifest/nombre visual de Android.

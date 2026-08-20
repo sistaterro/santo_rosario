@@ -1,5 +1,6 @@
 (function(){
-  const STORAGE_KEY = 'santoRosario.idioma.v1';
+  const LEGACY_STORAGE_KEY = 'santoRosario.idioma.v1';
+  const STORAGE_KEY = 'santoRosario.language.v1';
   const defaultLanguage = window.SANTO_ROSARIO_DEFAULT_LANGUAGE || 'es';
 
   function languages() {
@@ -31,7 +32,15 @@
   function storedLanguage() {
     try {
       const value = localStorage.getItem(STORAGE_KEY);
-      return isKnown(value) ? baseCode(value) : null;
+      if (isKnown(value)) return baseCode(value);
+
+      const legacyValue = localStorage.getItem(LEGACY_STORAGE_KEY);
+      if (!isKnown(legacyValue)) return null;
+
+      const migratedValue = baseCode(legacyValue);
+      localStorage.setItem(STORAGE_KEY, migratedValue);
+      localStorage.removeItem(LEGACY_STORAGE_KEY);
+      return migratedValue;
     } catch {
       return null;
     }
@@ -47,7 +56,7 @@
     try {
       localStorage.setItem(STORAGE_KEY, baseCode(code));
     } catch {
-      // La app puede seguir con el idioma detectado si localStorage no esta disponible.
+      // The app can continue with the detected language if localStorage is unavailable.
     }
   }
 
@@ -105,7 +114,7 @@
   }
 
   function setupLanguageSelect() {
-    const select = document.getElementById('idioma-app');
+    const select = document.getElementById('app-language');
     if (!select) return;
 
     select.innerHTML = '';
