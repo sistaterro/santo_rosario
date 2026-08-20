@@ -27,6 +27,7 @@ Se logró el objetivo mínimo funcional:
 - Plugin `@capacitor-community/keep-awake` (v7.1.0) instalado para evitar que Android bloquee la pantalla mientras la app está visible.
 - La app detecta el día de la semana con `new Date().getDay()` y marca automáticamente el grupo de misterios correspondiente.
 - `www/index.html` muestra un versículo bíblico diario en el hero y una frase latina diaria con traducción en el footer.
+- `www/index.html` incluye una sección “Sobre nosotros” con salida externa a `https://dazjuancarlos.com.ar/`.
 - Los datos diarios viven como archivos JS cargables sin `fetch`: `www/data/versiculos.js` y `www/data/latin.js`.
 - `www/cuentas.html` usa un rosario SVG interactivo: las cuentas iniciales cuelgan en tramo vertical conectado a la corona, y la cruz central funciona como botón de avance.
 
@@ -87,6 +88,7 @@ README.md               Guía mínima para humano
 - Se retiró el texto “COMENZÁ ACÁ” del rosario por feedback externo; se conserva el pulso inicial sobre la cruz central para sugerir interacción sin cartel explícito.
 - Se generó `www/citas-rvr1909.txt` con 366 citas bíblicas desde una carpeta local `citas/` (RVR1909), priorizando libros/referencias ya presentes en la fuente anterior y luego versos significativos de fe, oración, esperanza, paz, misericordia y vida cristiana. Esa carpeta fuente fue eliminada después de nutrir `www/data/versiculos.js`.
 - `www/data/versiculos.js` fue regenerado desde `www/citas-rvr1909.txt`; ya no conserva referencias a la fuente anterior.
+- Se agregó una sección “Sobre nosotros” en `www/index.html`, enlazada desde la navegación desktop y con botón externo “Conocer al desarrollador” hacia `https://dazjuancarlos.com.ar/`.
 
 ## Entorno Local Observado
 

@@ -943,6 +943,43 @@ img{display:block;max-width:100%;}
 /* SECTION: FOOTER                                                */
 /* ─────────────────────────────────────────────────────────────── */
 
+/* SECTION: SOBRE NOSOTROS */
+
+#sobre-nosotros{
+  padding:72px 0;
+  border-bottom:1px solid rgba(26,22,16,.18);
+  text-align:center;
+  background:linear-gradient(180deg, rgba(245,237,214,.92) 0%, rgba(237,226,192,.78) 100%);
+}
+
+#sobre-nosotros .t-oracion{
+  max-width:560px;
+  margin:0 auto;
+}
+
+.about-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  margin-top:28px;
+  padding:12px 28px;
+  border:1px solid var(--azul);
+  background:var(--azul);
+  color:var(--pergamino);
+  font-family:var(--cinzel);
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  transition:background .2s,color .2s,border-color .2s;
+}
+
+.about-link:hover{
+  background:transparent;
+  color:var(--azul);
+  border-color:var(--oro);
+}
+
 #footer{
   background:var(--tinta);
   padding:40px 0 24px;
