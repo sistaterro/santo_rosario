@@ -104,7 +104,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "ro",
     "name": "Rumano",
     "nativeName": "Română",
-    "status": "pending",
+    "status": "available",
     "markets": [
       "Rumania",
       "diáspora rumana"

@@ -2,7 +2,7 @@ window.SANTO_ROSARIO_I18N_MESSAGES = window.SANTO_ROSARIO_I18N_MESSAGES || {};
 
 window.SANTO_ROSARIO_I18N_MESSAGES.ro = {
   "meta": {
-    "status": "pending",
+    "status": "available",
     "label": "Română",
     "review": "draft-human-review-needed"
   },
@@ -154,119 +154,119 @@ window.SANTO_ROSARIO_I18N_MESSAGES.ro = {
   },
   "prayers": {
     "signo": {
-      "rubrica": "Opening",
-      "titulo": "Sign of the Cross",
-      "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+      "rubrica": "Deschidere",
+      "titulo": "Semnul Sfintei Cruci",
+      "texto": "Prin semnul Sfintei Cruci, izbăvește-ne, Doamne Dumnezeul nostru, de vrăjmașii noștri.\n\nÎn numele Tatălui, și al Fiului, și al Sfântului Duh. Amin."
     },
     "credo": {
-      "rubrica": "Act of faith",
-      "titulo": "The Apostles' Creed",
-      "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+      "rubrica": "Act de credință",
+      "titulo": "Crezul Apostolic",
+      "texto": "Cred în Dumnezeu, Tatăl atotputernicul, Creatorul cerului și al pământului. Și în Isus Cristos, Fiul său unic, Domnul nostru, care s-a zămislit de la Duhul Sfânt, s-a născut din Maria Fecioara, a pătimit sub Ponțiu Pilat, s-a răstignit, a murit și s-a îngropat; s-a coborât în iad; a treia zi a înviat din morți; s-a suit la ceruri, șade de-a dreapta lui Dumnezeu, Tatăl atotputernicul; de unde are să vină să judece pe cei vii și pe cei morți. Cred în Duhul Sfânt, sfânta Biserică Catolică, împărtășirea sfinților, iertarea păcatelor, învierea morților și viața veșnică. Amin."
     },
     "padre": {
-      "rubrica": "The Lord's Prayer",
-      "titulo": "Our Father",
-      "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+      "rubrica": "Rugăciunea Domnului",
+      "titulo": "Tatăl nostru",
+      "texto": "Tatăl nostru, care ești în ceruri, sfințească-se numele tău; vie împărăția ta; facă-se voia ta, precum în cer așa și pe pământ.\n\nPâinea noastră cea de toate zilele dă-ne-o nouă astăzi; și ne iartă nouă greșelile noastre, precum și noi iertăm greșiților noștri; și nu ne duce pe noi în ispită, ci ne mântuiește de cel rău. Amin."
     },
     "ave": {
-      "rubrica": "Angelic salutation",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Salutarea îngerească",
+      "titulo": "Bucură-te, Marie",
+      "texto": "Bucură-te, Marie, cea plină de har, Domnul este cu tine; binecuvântată ești tu între femei, și binecuvântat este rodul trupului tău, Isus.\n\nSfântă Marie, Maica lui Dumnezeu, roagă-te pentru noi păcătoșii, acum și în ceasul morții noastre. Amin."
     },
     "aveFe": {
-      "rubrica": "Daughter of God the Father",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Fiica lui Dumnezeu Tatăl",
+      "titulo": "Bucură-te, Marie",
+      "texto": "Bucură-te, Marie Preasfântă, Fiica lui Dumnezeu Tatăl, Fecioară preacurată înainte de naștere; în mâinile tale încredințăm credința noastră, ca s-o luminezi.\n\nCea plină de har, Domnul este cu tine; binecuvântată ești tu între femei, și binecuvântat este rodul trupului tău, Isus.\n\nSfântă Marie, Maica lui Dumnezeu, roagă-te pentru noi păcătoșii, acum și în ceasul morții noastre. Amin."
     },
     "aveEsperanza": {
-      "rubrica": "Mother of God the Son",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Maica lui Dumnezeu Fiul",
+      "titulo": "Bucură-te, Marie",
+      "texto": "Bucură-te, Marie Preasfântă, Maica lui Dumnezeu Fiul, Fecioară preacurată la naștere; în mâinile tale încredințăm speranța noastră, ca s-o întărești.\n\nCea plină de har, Domnul este cu tine; binecuvântată ești tu între femei, și binecuvântat este rodul trupului tău, Isus.\n\nSfântă Marie, Maica lui Dumnezeu, roagă-te pentru noi păcătoșii, acum și în ceasul morții noastre. Amin."
     },
     "aveCaridad": {
-      "rubrica": "Spouse of God the Holy Spirit",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Mireasa lui Dumnezeu Duhul Sfânt",
+      "titulo": "Bucură-te, Marie",
+      "texto": "Bucură-te, Marie Preasfântă, Mireasa lui Dumnezeu Duhul Sfânt, Fecioară preacurată după naștere; în mâinile tale încredințăm iubirea noastră, ca s-o aprinzi.\n\nCea plină de har, Domnul este cu tine; binecuvântată ești tu între femei, și binecuvântat este rodul trupului tău, Isus.\n\nSfântă Marie, Maica lui Dumnezeu, roagă-te pentru noi păcătoșii, acum și în ceasul morții noastre. Amin."
     },
     "gloria": {
-      "rubrica": "Doxology",
-      "titulo": "Glory Be",
-      "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      "rubrica": "Doxologie",
+      "titulo": "Slavă Tatălui",
+      "texto": "Slavă Tatălui, și Fiului, și Sfântului Duh. Precum era la început, acum și pururea și în vecii vecilor. Amin."
     },
     "fatima": {
-      "rubrica": "Vision of Fatima · 1917",
-      "titulo": "Fatima Prayer",
-      "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+      "rubrica": "Viziunea de la Fatima · 1917",
+      "titulo": "Rugăciunea de la Fatima",
+      "texto": "O, Isuse al meu, iartă-ne păcatele, ferește-ne de focul iadului. Du în cer toate sufletele, mai ales pe acelea care au mai mare nevoie de milostivirea ta. Amin."
     },
     "salve": {
-      "rubrica": "Final prayer",
-      "titulo": "Hail Holy Queen",
-      "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+      "rubrica": "Rugăciune finală",
+      "titulo": "Bucură-te, Regină",
+      "texto": "Bucură-te, Regină, Maica milostivirii, viața, dulceața și speranța noastră, bucură-te.\n\nCătre tine strigăm, surghiuniții fii ai Evei; către tine suspinăm, gemând și plângând în această vale de lacrimi. Așadar, mijlocitoarea noastră, întoarce spre noi ochii tăi milostivi; și după acest surghiun arată-ni-l pe Isus, rodul binecuvântat al trupului tău.\n\nO milostivă, o blândă, o dulce Fecioară Maria. Amin."
     }
   },
   "prayerPanels": {
     "credos": [
       {
         "rubrica": "La începutul Rozariului",
-        "titulo": "Sign of the Cross",
-        "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+        "titulo": "Semnul Sfintei Cruci",
+        "texto": "Prin semnul Sfintei Cruci, izbăvește-ne, Doamne Dumnezeul nostru, de vrăjmașii noștri.\n\nÎn numele Tatălui, și al Fiului, și al Sfântului Duh. Amin."
       },
       {
-        "rubrica": "Act of faith",
-        "titulo": "The Apostles' Creed",
-        "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+        "rubrica": "Act de credință",
+        "titulo": "Crezul Apostolic",
+        "texto": "Cred în Dumnezeu, Tatăl atotputernicul, Creatorul cerului și al pământului. Și în Isus Cristos, Fiul său unic, Domnul nostru, care s-a zămislit de la Duhul Sfânt, s-a născut din Maria Fecioara, a pătimit sub Ponțiu Pilat, s-a răstignit, a murit și s-a îngropat; s-a coborât în iad; a treia zi a înviat din morți; s-a suit la ceruri, șade de-a dreapta lui Dumnezeu, Tatăl atotputernicul; de unde are să vină să judece pe cei vii și pe cei morți. Cred în Duhul Sfânt, sfânta Biserică Catolică, împărtășirea sfinților, iertarea păcatelor, învierea morților și viața veșnică. Amin."
       }
     ],
     "padrenuestro": [
       {
         "rubrica": "La începutul fiecărei decade",
-        "titulo": "Our Father",
-        "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+        "titulo": "Tatăl nostru",
+        "texto": "Tatăl nostru, care ești în ceruri, sfințească-se numele tău; vie împărăția ta; facă-se voia ta, precum în cer așa și pe pământ.\n\nPâinea noastră cea de toate zilele dă-ne-o nouă astăzi; și ne iartă nouă greșelile noastre, precum și noi iertăm greșiților noștri; și nu ne duce pe noi în ispită, ci ne mântuiește de cel rău. Amin."
       }
     ],
     "tresavemarias": [
       {
         "rubrica": "La începutul Rozariului",
         "titulo": "Trei Bucură-te, Marie",
-        "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Bucură-te, Marie Preasfântă, Fiica lui Dumnezeu Tatăl, Fecioară preacurată înainte de naștere; în mâinile tale încredințăm credința noastră, ca s-o luminezi.\n\nCea plină de har, Domnul este cu tine; binecuvântată ești tu între femei, și binecuvântat este rodul trupului tău, Isus.\n\nSfântă Marie, Maica lui Dumnezeu, roagă-te pentru noi păcătoșii, acum și în ceasul morții noastre. Amin."
       },
       {
         "rubrica": "Pentru speranță",
         "titulo": "",
-        "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Bucură-te, Marie Preasfântă, Maica lui Dumnezeu Fiul, Fecioară preacurată la naștere; în mâinile tale încredințăm speranța noastră, ca s-o întărești.\n\nCea plină de har, Domnul este cu tine; binecuvântată ești tu între femei, și binecuvântat este rodul trupului tău, Isus.\n\nSfântă Marie, Maica lui Dumnezeu, roagă-te pentru noi păcătoșii, acum și în ceasul morții noastre. Amin."
       },
       {
         "rubrica": "Pentru caritate",
         "titulo": "",
-        "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Bucură-te, Marie Preasfântă, Mireasa lui Dumnezeu Duhul Sfânt, Fecioară preacurată după naștere; în mâinile tale încredințăm iubirea noastră, ca s-o aprinzi.\n\nCea plină de har, Domnul este cu tine; binecuvântată ești tu între femei, și binecuvântat este rodul trupului tău, Isus.\n\nSfântă Marie, Maica lui Dumnezeu, roagă-te pentru noi păcătoșii, acum și în ceasul morții noastre. Amin."
       }
     ],
     "avemaria": [
       {
         "rubrica": "De zece ori în fiecare decadă",
-        "titulo": "Hail Mary",
-        "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "titulo": "Bucură-te, Marie",
+        "texto": "Bucură-te, Marie, cea plină de har, Domnul este cu tine; binecuvântată ești tu între femei, și binecuvântat este rodul trupului tău, Isus.\n\nSfântă Marie, Maica lui Dumnezeu, roagă-te pentru noi păcătoșii, acum și în ceasul morții noastre. Amin."
       }
     ],
     "gloriapatri": [
       {
         "rubrica": "La sfârșitul fiecărei decade",
-        "titulo": "Glory Be",
-        "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        "titulo": "Slavă Tatălui",
+        "texto": "Slavă Tatălui, și Fiului, și Sfântului Duh. Precum era la început, acum și pururea și în vecii vecilor. Amin."
       }
     ],
     "fatima": [
       {
         "rubrica": "Învățată la Fatima · 1917",
-        "titulo": "Fatima Prayer",
-        "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+        "titulo": "Rugăciunea de la Fatima",
+        "texto": "O, Isuse al meu, iartă-ne păcatele, ferește-ne de focul iadului. Du în cer toate sufletele, mai ales pe acelea care au mai mare nevoie de milostivirea ta. Amin."
       }
     ],
     "salve": [
       {
         "rubrica": "Rugăciune finală",
-        "titulo": "Hail Holy Queen",
-        "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+        "titulo": "Bucură-te, Regină",
+        "texto": "Bucură-te, Regină, Maica milostivirii, viața, dulceața și speranța noastră, bucură-te.\n\nCătre tine strigăm, surghiuniții fii ai Evei; către tine suspinăm, gemând și plângând în această vale de lacrimi. Așadar, mijlocitoarea noastră, întoarce spre noi ochii tăi milostivi; și după acest surghiun arată-ni-l pe Isus, rodul binecuvântat al trupului tău.\n\nO milostivă, o blândă, o dulce Fecioară Maria. Amin."
       }
     ]
   },
