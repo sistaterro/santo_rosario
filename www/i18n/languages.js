@@ -83,7 +83,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "de",
     "name": "Alemán",
     "nativeName": "Deutsch",
-    "status": "pending",
+    "status": "available",
     "markets": [
       "Alemania",
       "Austria",
