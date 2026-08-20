@@ -61,7 +61,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "fr",
     "name": "Francés",
     "nativeName": "Français",
-    "status": "pending",
+    "status": "available",
     "markets": [
       "Francia",
       "RD Congo",
