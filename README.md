@@ -30,13 +30,13 @@ La app esta pensada como una guia practica para acompanar el modo habitual de re
 Los textos generales de la aplicacion viven en `www/i18n/`. Hay catalogos disponibles para:
 
 ```text
-es, pt, en, it, fr, pl, de
+es, pt, en, it, fr, pl, de, fil
 ```
 
 Los demas catalogos objetivo existen como estructura preparada, pero quedan deshabilitados hasta revisar sus oraciones completas:
 
 ```text
-fil, vi, ro, hr, hu
+vi, ro, hr, hu
 ```
 
 La etiqueta del selector queda siempre como `Language` para que sea reconocible aunque la app este en otro idioma. La frase diaria de la Biblia y la frase latina tienen tratamiento separado en `www/data/versiculos.js` y `www/data/latin.js`.

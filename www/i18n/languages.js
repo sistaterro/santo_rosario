@@ -74,7 +74,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "fil",
     "name": "Filipino / Tagalo",
     "nativeName": "Filipino",
-    "status": "pending",
+    "status": "available",
     "markets": [
       "Filipinas"
     ]

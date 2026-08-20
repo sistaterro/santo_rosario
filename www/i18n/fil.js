@@ -2,7 +2,7 @@ window.SANTO_ROSARIO_I18N_MESSAGES = window.SANTO_ROSARIO_I18N_MESSAGES || {};
 
 window.SANTO_ROSARIO_I18N_MESSAGES.fil = {
   "meta": {
-    "status": "pending",
+    "status": "available",
     "label": "Filipino",
     "review": "draft-human-review-needed"
   },
@@ -154,119 +154,119 @@ window.SANTO_ROSARIO_I18N_MESSAGES.fil = {
   },
   "prayers": {
     "signo": {
-      "rubrica": "Opening",
-      "titulo": "Sign of the Cross",
-      "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+      "rubrica": "Pambungad",
+      "titulo": "Tanda ng Krus",
+      "texto": "Sa pamamagitan ng tanda ng Santa Krus, iligtas mo kami, Panginoon naming Diyos, sa aming mga kaaway.\n\nSa ngalan ng Ama, at ng Anak, at ng Espiritu Santo. Amen."
     },
     "credo": {
-      "rubrica": "Act of faith",
-      "titulo": "The Apostles' Creed",
-      "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+      "rubrica": "Pagpapahayag ng pananampalataya",
+      "titulo": "Kredo ng mga Apostol",
+      "texto": "Sumasampalataya ako sa Diyos Amang makapangyarihan sa lahat, na may gawa ng langit at lupa. Sumasampalataya ako kay Jesucristo, iisang Anak niya, Panginoon natin, ipinaglihi sa kapangyarihan ng Espiritu Santo, ipinanganak ni Santa Mariang Birhen, pinakasakit ni Poncio Pilato, ipinako sa krus, namatay at inilibing; nanaog sa kinaroroonan ng mga yumao; nang may ikatlong araw nabuhay na mag-uli; umakyat sa langit at naluluklok sa kanan ng Diyos Amang makapangyarihan sa lahat. Doon magmumula at paririto upang hukuman ang nangabubuhay at nangamatay na tao. Sumasampalataya ako sa Espiritu Santo, sa banal na Simbahang Katolika, sa kasamahan ng mga banal, sa kapatawaran ng mga kasalanan, sa pagkabuhay na muli ng katawan at sa buhay na walang hanggan. Amen."
     },
     "padre": {
-      "rubrica": "The Lord's Prayer",
-      "titulo": "Our Father",
-      "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+      "rubrica": "Panalangin ng Panginoon",
+      "titulo": "Ama Namin",
+      "texto": "Ama namin, sumasalangit ka, sambahin ang ngalan mo; mapasaamin ang kaharian mo; sundin ang loob mo dito sa lupa para nang sa langit.\n\nBigyan mo kami ngayon ng aming kakanin sa araw-araw; at patawarin mo kami sa aming mga sala, para nang pagpapatawad namin sa nagkakasala sa amin; at huwag mo kaming ipahintulot sa tukso, at iadya mo kami sa lahat ng masama. Amen."
     },
     "ave": {
-      "rubrica": "Angelic salutation",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Pagbati ng anghel",
+      "titulo": "Aba Ginoong Maria",
+      "texto": "Aba Ginoong Maria, napupuno ka ng grasya; ang Panginoong Diyos ay sumasaiyo; bukod kang pinagpala sa babaeng lahat, at pinagpala naman ang iyong anak na si Jesus.\n\nSanta Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan ngayon at kung kami'y mamamatay. Amen."
     },
     "aveFe": {
-      "rubrica": "Daughter of God the Father",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Anak ng Diyos Ama",
+      "titulo": "Aba Ginoong Maria",
+      "texto": "Aba Ginoong Maria na kabanal-banalan, Anak ng Diyos Ama, Birheng kalinis-linisan bago manganak; sa iyong mga kamay ipinagkakatiwala namin ang aming pananampalataya upang iyong liwanagan.\n\nNapupuno ka ng grasya; ang Panginoong Diyos ay sumasaiyo; bukod kang pinagpala sa babaeng lahat, at pinagpala naman ang iyong anak na si Jesus.\n\nSanta Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan ngayon at kung kami'y mamamatay. Amen."
     },
     "aveEsperanza": {
-      "rubrica": "Mother of God the Son",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Ina ng Diyos Anak",
+      "titulo": "Aba Ginoong Maria",
+      "texto": "Aba Ginoong Maria na kabanal-banalan, Ina ng Diyos Anak, Birheng kalinis-linisan sa panganganak; sa iyong mga kamay ipinagkakatiwala namin ang aming pag-asa upang iyong palakasin.\n\nNapupuno ka ng grasya; ang Panginoong Diyos ay sumasaiyo; bukod kang pinagpala sa babaeng lahat, at pinagpala naman ang iyong anak na si Jesus.\n\nSanta Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan ngayon at kung kami'y mamamatay. Amen."
     },
     "aveCaridad": {
-      "rubrica": "Spouse of God the Holy Spirit",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Kabiyak ng Diyos Espiritu Santo",
+      "titulo": "Aba Ginoong Maria",
+      "texto": "Aba Ginoong Maria na kabanal-banalan, Kabiyak ng Diyos Espiritu Santo, Birheng kalinis-linisan pagkatapos manganak; sa iyong mga kamay ipinagkakatiwala namin ang aming pag-ibig upang iyong pagningasin.\n\nNapupuno ka ng grasya; ang Panginoong Diyos ay sumasaiyo; bukod kang pinagpala sa babaeng lahat, at pinagpala naman ang iyong anak na si Jesus.\n\nSanta Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan ngayon at kung kami'y mamamatay. Amen."
     },
     "gloria": {
-      "rubrica": "Doxology",
-      "titulo": "Glory Be",
-      "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      "rubrica": "Doxolohiya",
+      "titulo": "Luwalhati sa Ama",
+      "texto": "Luwalhati sa Ama, at sa Anak, at sa Espiritu Santo. Kapara noong unang-una, ngayon at magpakailanman, magpasawalang hanggan. Amen."
     },
     "fatima": {
-      "rubrica": "Vision of Fatima · 1917",
-      "titulo": "Fatima Prayer",
-      "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+      "rubrica": "Pangitain sa Fatima · 1917",
+      "titulo": "Panalangin sa Fatima",
+      "texto": "O Hesus ko, patawarin mo ang aming mga kasalanan, iligtas mo kami sa apoy ng impiyerno. Dalhin mo sa langit ang lahat ng kaluluwa, lalo na ang higit na nangangailangan ng iyong awa. Amen."
     },
     "salve": {
-      "rubrica": "Final prayer",
-      "titulo": "Hail Holy Queen",
-      "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+      "rubrica": "Pangwakas na panalangin",
+      "titulo": "Aba po Santa Mariang Reyna",
+      "texto": "Aba po, Santa Mariang Reyna, Ina ng awa, ikaw ang kabuhayan, katamisan at pag-asa namin.\n\nIkaw ang tinatawag namin, kaming napapariwarang anak ni Eva; ikaw rin ang pinagbubuntunghininga namin sa aming pagtangis dito sa lupang bayang kahapis-hapis. Ay aba, pintakasi namin, lingapin mo kami ng mga mata mong maawain; at saka kung matapos yaring pagpanaw sa amin, ipakita mo sa amin si Jesus, ang bunga ng iyong sinapupunan.\n\nO maawain, o mapagkalinga, o matamis na Birheng Maria. Amen."
     }
   },
   "prayerPanels": {
     "credos": [
       {
         "rubrica": "Sa simula ng rosaryo",
-        "titulo": "Sign of the Cross",
-        "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+        "titulo": "Tanda ng Krus",
+        "texto": "Sa pamamagitan ng tanda ng Santa Krus, iligtas mo kami, Panginoon naming Diyos, sa aming mga kaaway.\n\nSa ngalan ng Ama, at ng Anak, at ng Espiritu Santo. Amen."
       },
       {
-        "rubrica": "Act of faith",
-        "titulo": "The Apostles' Creed",
-        "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+        "rubrica": "Pagpapahayag ng pananampalataya",
+        "titulo": "Kredo ng mga Apostol",
+        "texto": "Sumasampalataya ako sa Diyos Amang makapangyarihan sa lahat, na may gawa ng langit at lupa. Sumasampalataya ako kay Jesucristo, iisang Anak niya, Panginoon natin, ipinaglihi sa kapangyarihan ng Espiritu Santo, ipinanganak ni Santa Mariang Birhen, pinakasakit ni Poncio Pilato, ipinako sa krus, namatay at inilibing; nanaog sa kinaroroonan ng mga yumao; nang may ikatlong araw nabuhay na mag-uli; umakyat sa langit at naluluklok sa kanan ng Diyos Amang makapangyarihan sa lahat. Doon magmumula at paririto upang hukuman ang nangabubuhay at nangamatay na tao. Sumasampalataya ako sa Espiritu Santo, sa banal na Simbahang Katolika, sa kasamahan ng mga banal, sa kapatawaran ng mga kasalanan, sa pagkabuhay na muli ng katawan at sa buhay na walang hanggan. Amen."
       }
     ],
     "padrenuestro": [
       {
         "rubrica": "Sa simula ng bawat dekada",
-        "titulo": "Our Father",
-        "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+        "titulo": "Ama Namin",
+        "texto": "Ama namin, sumasalangit ka, sambahin ang ngalan mo; mapasaamin ang kaharian mo; sundin ang loob mo dito sa lupa para nang sa langit.\n\nBigyan mo kami ngayon ng aming kakanin sa araw-araw; at patawarin mo kami sa aming mga sala, para nang pagpapatawad namin sa nagkakasala sa amin; at huwag mo kaming ipahintulot sa tukso, at iadya mo kami sa lahat ng masama. Amen."
       }
     ],
     "tresavemarias": [
       {
         "rubrica": "Sa simula ng rosaryo",
         "titulo": "Tatlong Aba Ginoong Maria",
-        "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Aba Ginoong Maria na kabanal-banalan, Anak ng Diyos Ama, Birheng kalinis-linisan bago manganak; sa iyong mga kamay ipinagkakatiwala namin ang aming pananampalataya upang iyong liwanagan.\n\nNapupuno ka ng grasya; ang Panginoong Diyos ay sumasaiyo; bukod kang pinagpala sa babaeng lahat, at pinagpala naman ang iyong anak na si Jesus.\n\nSanta Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan ngayon at kung kami'y mamamatay. Amen."
       },
       {
         "rubrica": "Para sa pag-asa",
         "titulo": "",
-        "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Aba Ginoong Maria na kabanal-banalan, Ina ng Diyos Anak, Birheng kalinis-linisan sa panganganak; sa iyong mga kamay ipinagkakatiwala namin ang aming pag-asa upang iyong palakasin.\n\nNapupuno ka ng grasya; ang Panginoong Diyos ay sumasaiyo; bukod kang pinagpala sa babaeng lahat, at pinagpala naman ang iyong anak na si Jesus.\n\nSanta Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan ngayon at kung kami'y mamamatay. Amen."
       },
       {
         "rubrica": "Para sa pag-ibig",
         "titulo": "",
-        "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Aba Ginoong Maria na kabanal-banalan, Kabiyak ng Diyos Espiritu Santo, Birheng kalinis-linisan pagkatapos manganak; sa iyong mga kamay ipinagkakatiwala namin ang aming pag-ibig upang iyong pagningasin.\n\nNapupuno ka ng grasya; ang Panginoong Diyos ay sumasaiyo; bukod kang pinagpala sa babaeng lahat, at pinagpala naman ang iyong anak na si Jesus.\n\nSanta Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan ngayon at kung kami'y mamamatay. Amen."
       }
     ],
     "avemaria": [
       {
         "rubrica": "Sampung beses sa bawat dekada",
-        "titulo": "Hail Mary",
-        "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "titulo": "Aba Ginoong Maria",
+        "texto": "Aba Ginoong Maria, napupuno ka ng grasya; ang Panginoong Diyos ay sumasaiyo; bukod kang pinagpala sa babaeng lahat, at pinagpala naman ang iyong anak na si Jesus.\n\nSanta Maria, Ina ng Diyos, ipanalangin mo kaming makasalanan ngayon at kung kami'y mamamatay. Amen."
       }
     ],
     "gloriapatri": [
       {
         "rubrica": "Sa dulo ng bawat dekada",
-        "titulo": "Glory Be",
-        "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        "titulo": "Luwalhati sa Ama",
+        "texto": "Luwalhati sa Ama, at sa Anak, at sa Espiritu Santo. Kapara noong unang-una, ngayon at magpakailanman, magpasawalang hanggan. Amen."
       }
     ],
     "fatima": [
       {
         "rubrica": "Itinuro sa Fatima · 1917",
-        "titulo": "Fatima Prayer",
-        "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+        "titulo": "Panalangin sa Fatima",
+        "texto": "O Hesus ko, patawarin mo ang aming mga kasalanan, iligtas mo kami sa apoy ng impiyerno. Dalhin mo sa langit ang lahat ng kaluluwa, lalo na ang higit na nangangailangan ng iyong awa. Amen."
       }
     ],
     "salve": [
       {
         "rubrica": "Pangwakas na panalangin",
-        "titulo": "Hail Holy Queen",
-        "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+        "titulo": "Aba po Santa Mariang Reyna",
+        "texto": "Aba po, Santa Mariang Reyna, Ina ng awa, ikaw ang kabuhayan, katamisan at pag-asa namin.\n\nIkaw ang tinatawag namin, kaming napapariwarang anak ni Eva; ikaw rin ang pinagbubuntunghininga namin sa aming pagtangis dito sa lupang bayang kahapis-hapis. Ay aba, pintakasi namin, lingapin mo kami ng mga mata mong maawain; at saka kung matapos yaring pagpanaw sa amin, ipakita mo sa amin si Jesus, ang bunga ng iyong sinapupunan.\n\nO maawain, o mapagkalinga, o matamis na Birheng Maria. Amen."
       }
     ]
   },
