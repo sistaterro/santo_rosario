@@ -1,158 +1,281 @@
 window.SANTO_ROSARIO_I18N_MESSAGES = window.SANTO_ROSARIO_I18N_MESSAGES || {};
 
 window.SANTO_ROSARIO_I18N_MESSAGES.es = {
-  meta: {
-    status: 'available',
-    label: 'Español',
+  "meta": {
+    "status": "available",
+    "label": "Español",
+    "review": "draft-human-review-needed"
   },
-  ui: {
-    appTitle: 'El Santo Rosario',
-    rosaryPageTitle: 'Rezar el Santo Rosario',
-    navMysteries: 'Misterios',
-    navPrayers: 'Oraciones',
-    navAbout: 'Sobre nosotros',
-    navStart: 'Comenzar el Rosario',
-    navHome: 'Inicio',
-    heroEyebrow: 'María, Madre de Dios',
-    heroSubtitle: 'La oración de la Iglesia',
-    dailyReading: 'Lectura diaria',
-    verseLoading: 'Cargando versículo del día...',
-    verseError: 'No se pudo cargar el versículo del día.',
-    heroGuide: 'Guía interactiva · misterio por misterio',
-    mysteriesEyebrow: 'Los cuatro grupos',
-    mysteriesTitle: 'Los Misterios del Rosario',
-    mysteriesToday: 'Rosario de hoy',
-    mysteriesIntro: 'En cada decena se contempla un misterio de la vida de Nuestro Señor Jesucristo y de la Santísima Virgen María.',
-    prayersEyebrow: 'Texto completo',
-    prayersTitle: 'Las Oraciones',
-    aboutEyebrow: 'Sobre nosotros',
-    aboutTitle: 'Una guía sencilla para rezar',
-    aboutText: 'Santo Rosario nace como una aplicación pequeña, offline y serena para acompañar el rezo diario, especialmente pensando en quienes necesitan una guía clara para seguir los misterios, las cuentas y las oraciones sin distracciones.',
-    aboutLink: 'Conocer al desarrollador',
-    languageLabel: 'Language',
-    languageSelectLabel: 'Language',
-    rosaryOptionsLabel: 'Opciones del rosario',
-    rosaryImageLabel: 'Cuentas del rosario',
-    nextPrayer: 'Siguiente oración',
-    restart: 'Empezar de nuevo',
-    showPrayerGuide: 'Mostrar guía de oración',
-    preparation: 'Preparación',
-    closing: 'Cierre',
-    goTo: 'Ir a',
-    count: 'Cuenta',
+  "ui": {
+    "appTitle": "El Santo Rosario",
+    "rosaryPageTitle": "Rezar el Santo Rosario",
+    "navMysteries": "Misterios",
+    "navPrayers": "Oraciones",
+    "navAbout": "Sobre nosotros",
+    "navStart": "Comenzar el Rosario",
+    "navHome": "Inicio",
+    "heroEyebrow": "María, Madre de Dios",
+    "heroSubtitle": "La oración de la Iglesia",
+    "dailyReading": "Lectura diaria",
+    "verseLoading": "Cargando versículo del día...",
+    "verseError": "No se pudo cargar el versículo del día.",
+    "heroGuide": "Guía interactiva · misterio por misterio",
+    "mysteriesEyebrow": "Los cuatro grupos",
+    "mysteriesTitle": "Los Misterios del Rosario",
+    "mysteriesToday": "Rosario de hoy",
+    "mysteriesIntro": "En cada decena se contempla un misterio de la vida de Nuestro Señor Jesucristo y de la Santísima Virgen María.",
+    "prayersEyebrow": "Texto completo",
+    "prayersTitle": "Las Oraciones",
+    "aboutEyebrow": "Sobre nosotros",
+    "aboutTitle": "Una guía sencilla para rezar",
+    "aboutText": "Santo Rosario nace como una aplicación pequeña, offline y serena para acompañar el rezo diario, especialmente pensando en quienes necesitan una guía clara para seguir los misterios, las cuentas y las oraciones sin distracciones.",
+    "aboutLink": "Conocer al desarrollador",
+    "languageLabel": "Language",
+    "languageSelectLabel": "Language",
+    "rosaryOptionsLabel": "Opciones del rosario",
+    "rosaryImageLabel": "Cuentas del rosario",
+    "nextPrayer": "Siguiente oración",
+    "restart": "Empezar de nuevo",
+    "showPrayerGuide": "Mostrar guía de oración",
+    "preparation": "Preparación",
+    "closing": "Cierre",
+    "goTo": "Ir a",
+    "count": "Cuenta"
   },
-  prayerTabs: [
-    { id: 'o-credos', label: 'Apertura' },
-    { id: 'o-padrenuestro', label: 'Padre Nuestro' },
-    { id: 'o-tresavemarias', label: 'Tres Ave Marías' },
-    { id: 'o-avemaria', label: 'Ave María' },
-    { id: 'o-gloriapatri', label: 'Gloria' },
-    { id: 'o-fatima', label: 'Oración de Fátima' },
-    { id: 'o-salve', label: 'Salve' },
+  "prayerTabs": [
+    {
+      "id": "o-credos",
+      "label": "Apertura"
+    },
+    {
+      "id": "o-padrenuestro",
+      "label": "Padre Nuestro"
+    },
+    {
+      "id": "o-tresavemarias",
+      "label": "Tres Ave Marías"
+    },
+    {
+      "id": "o-avemaria",
+      "label": "Ave María"
+    },
+    {
+      "id": "o-gloriapatri",
+      "label": "Gloria"
+    },
+    {
+      "id": "o-fatima",
+      "label": "Oración de Fátima"
+    },
+    {
+      "id": "o-salve",
+      "label": "Salve"
+    }
   ],
-  weekdays: [
-    { nombre: 'Domingo', tipo: 'gloriosos' },
-    { nombre: 'Lunes', tipo: 'gozosos' },
-    { nombre: 'Martes', tipo: 'dolorosos' },
-    { nombre: 'Miércoles', tipo: 'gloriosos' },
-    { nombre: 'Jueves', tipo: 'luminosos' },
-    { nombre: 'Viernes', tipo: 'dolorosos' },
-    { nombre: 'Sábado', tipo: 'gozosos' },
+  "weekdays": [
+    {
+      "nombre": "Domingo",
+      "tipo": "gloriosos"
+    },
+    {
+      "nombre": "Lunes",
+      "tipo": "gozosos"
+    },
+    {
+      "nombre": "Martes",
+      "tipo": "dolorosos"
+    },
+    {
+      "nombre": "Miércoles",
+      "tipo": "gloriosos"
+    },
+    {
+      "nombre": "Jueves",
+      "tipo": "luminosos"
+    },
+    {
+      "nombre": "Viernes",
+      "tipo": "dolorosos"
+    },
+    {
+      "nombre": "Sábado",
+      "tipo": "gozosos"
+    }
   ],
-  mysteries: {
-    gozosos: {
-      panelId: 'm-gozosos',
-      titulo: 'Misterios Gozosos',
-      dia: 'Lun · Sáb',
-      nombres: [
-        'La Anunciación del Ángel a María',
-        'La Visitación de María a su prima Isabel',
-        'El Nacimiento de Nuestro Señor Jesucristo',
-        'La Presentación del Niño Jesús en el templo',
-        'El Niño Jesús perdido y hallado en el templo',
-      ],
+  "mysteries": {
+    "gozosos": {
+      "panelId": "m-gozosos",
+      "titulo": "Misterios Gozosos",
+      "dia": "Lun · Sáb",
+      "nombres": [
+        "La Anunciación del Ángel a María",
+        "La Visitación de María a su prima Isabel",
+        "El Nacimiento de Nuestro Señor Jesucristo",
+        "La Presentación del Niño Jesús en el templo",
+        "El Niño Jesús perdido y hallado en el templo"
+      ]
     },
-    luminosos: {
-      panelId: 'm-luminosos',
-      titulo: 'Misterios Luminosos',
-      dia: 'Jueves',
-      nombres: [
-        'El Bautismo de Jesús en el Jordán',
-        'Las Bodas de Caná',
-        'El anuncio del Reino de Dios',
-        'La Transfiguración del Señor',
-        'La institución de la Eucaristía',
-      ],
+    "luminosos": {
+      "panelId": "m-luminosos",
+      "titulo": "Misterios Luminosos",
+      "dia": "Jueves",
+      "nombres": [
+        "El Bautismo de Jesús en el Jordán",
+        "Las Bodas de Caná",
+        "El anuncio del Reino de Dios",
+        "La Transfiguración del Señor",
+        "La institución de la Eucaristía"
+      ]
     },
-    dolorosos: {
-      panelId: 'm-dolorosos',
-      titulo: 'Misterios Dolorosos',
-      dia: 'Mar · Vie',
-      nombres: [
-        'La Oración de Jesús en el huerto',
-        'La Flagelación del Señor',
-        'La Coronación de espinas',
-        'Jesús con la cruz a cuestas',
-        'La Crucifixión y muerte de Jesús',
-      ],
+    "dolorosos": {
+      "panelId": "m-dolorosos",
+      "titulo": "Misterios Dolorosos",
+      "dia": "Mar · Vie",
+      "nombres": [
+        "La Oración de Jesús en el huerto",
+        "La Flagelación del Señor",
+        "La Coronación de espinas",
+        "Jesús con la cruz a cuestas",
+        "La Crucifixión y muerte de Jesús"
+      ]
     },
-    gloriosos: {
-      panelId: 'm-gloriosos',
-      titulo: 'Misterios Gloriosos',
-      dia: 'Mié · Dom',
-      nombres: [
-        'La Resurrección de Nuestro Señor',
-        'La Ascensión del Señor a los cielos',
-        'La venida del Espíritu Santo',
-        'La Asunción de María a los cielos',
-        'La Coronación de María Santísima',
-      ],
+    "gloriosos": {
+      "panelId": "m-gloriosos",
+      "titulo": "Misterios Gloriosos",
+      "dia": "Mié · Dom",
+      "nombres": [
+        "La Resurrección de Nuestro Señor",
+        "La Ascensión del Señor a los cielos",
+        "La venida del Espíritu Santo",
+        "La Asunción de María a los cielos",
+        "La Coronación de María Santísima"
+      ]
+    }
+  },
+  "prayers": {
+    "signo": {
+      "rubrica": "Apertura",
+      "titulo": "Señal de la Santa Cruz",
+      "texto": "Por la señal de la Santa Cruz, de nuestros enemigos, líbranos, Señor, Dios nuestro.\n\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
     },
+    "credo": {
+      "rubrica": "Acto de fe",
+      "titulo": "El Credo Apostólico",
+      "texto": "Creo en Dios, Padre Todopoderoso, Creador del Cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre Todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la Santa Iglesia Católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén."
+    },
+    "padre": {
+      "rubrica": "Oración dominical",
+      "titulo": "Padre Nuestro",
+      "texto": "Padre nuestro que estás en el Cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el Cielo.\n\nDanos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén."
+    },
+    "ave": {
+      "rubrica": "Salutación angélica",
+      "titulo": "Ave María",
+      "texto": "Dios te salve, María, llena eres de gracia; el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+    },
+    "aveFe": {
+      "rubrica": "Hija de Dios Padre",
+      "titulo": "Ave María",
+      "texto": "Dios te salve, María Santísima, Hija de Dios Padre, Virgen purísima antes del parto; en tus manos encomendamos nuestra Fe, para que la alumbres.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+    },
+    "aveEsperanza": {
+      "rubrica": "Madre de Dios Hijo",
+      "titulo": "Ave María",
+      "texto": "Dios te salve, María Santísima, Madre de Dios Hijo, Virgen purísima en el parto; en tus manos encomendamos nuestra Esperanza, para que la alientes.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+    },
+    "aveCaridad": {
+      "rubrica": "Esposa de Dios Espíritu Santo",
+      "titulo": "Ave María",
+      "texto": "Dios te salve, María Santísima, Esposa de Dios Espíritu Santo, Virgen purísima después del parto; en tus manos encomendamos nuestra Caridad, para que la inflames.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+    },
+    "gloria": {
+      "rubrica": "Doxología",
+      "titulo": "Gloria al Padre",
+      "texto": "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, y por los siglos de los siglos. Amén."
+    },
+    "fatima": {
+      "rubrica": "Visión de Fátima · 1917",
+      "titulo": "Oración de Fátima",
+      "texto": "Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno. Lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén."
+    },
+    "salve": {
+      "rubrica": "Oración final",
+      "titulo": "Salve Regina",
+      "texto": "Dios te salve, Reina y Madre de misericordia; vida, dulzura y esperanza nuestra, Dios te salve.\n\nA Ti llamamos los desterrados hijos de Eva; a Ti suspiramos gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima, oh piadosa, oh dulce Virgen María! Amén."
+    }
   },
-  prayers: {
-    signo: { rubrica: 'Apertura', titulo: 'Señal de la Santa Cruz', texto: 'Por la señal de la Santa Cruz, de nuestros enemigos, líbranos, Señor, Dios nuestro.\n\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.' },
-    credo: { rubrica: 'Acto de fe', titulo: 'El Credo Apostólico', texto: 'Creo en Dios, Padre Todopoderoso, Creador del Cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre Todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la Santa Iglesia Católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.' },
-    padre: { rubrica: 'Oración dominical', titulo: 'Padre Nuestro', texto: 'Padre nuestro que estás en el Cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el Cielo.\n\nDanos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.' },
-    ave: { rubrica: 'Salutación angélica', titulo: 'Ave María', texto: 'Dios te salve, María, llena eres de gracia; el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
-    aveFe: { rubrica: 'Hija de Dios Padre', titulo: 'Ave María', texto: 'Dios te salve, María Santísima, Hija de Dios Padre, Virgen purísima antes del parto; en tus manos encomendamos nuestra Fe, para que la alumbres.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
-    aveEsperanza: { rubrica: 'Madre de Dios Hijo', titulo: 'Ave María', texto: 'Dios te salve, María Santísima, Madre de Dios Hijo, Virgen purísima en el parto; en tus manos encomendamos nuestra Esperanza, para que la alientes.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
-    aveCaridad: { rubrica: 'Esposa de Dios Espíritu Santo', titulo: 'Ave María', texto: 'Dios te salve, María Santísima, Esposa de Dios Espíritu Santo, Virgen purísima después del parto; en tus manos encomendamos nuestra Caridad, para que la inflames.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
-    gloria: { rubrica: 'Doxología', titulo: 'Gloria al Padre', texto: 'Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, y por los siglos de los siglos. Amén.' },
-    fatima: { rubrica: 'Visión de Fátima · 1917', titulo: 'Oración de Fátima', texto: 'Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno. Lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén.' },
-    salve: { rubrica: 'Oración final', titulo: 'Salve Regina', texto: 'Dios te salve, Reina y Madre de misericordia; vida, dulzura y esperanza nuestra, Dios te salve.\n\nA Ti llamamos los desterrados hijos de Eva; a Ti suspiramos gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima, oh piadosa, oh dulce Virgen María! Amén.' },
+  "prayerPanels": {
+    "credos": [
+      {
+        "rubrica": "Al comenzar el Rosario",
+        "titulo": "Señal de la Santa Cruz",
+        "texto": "Por la señal de la Santa Cruz, de nuestros enemigos, líbranos, Señor, Dios nuestro.\n\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén."
+      },
+      {
+        "rubrica": "Acto de fe",
+        "titulo": "El Credo Apostólico",
+        "texto": "Creo en Dios, Padre Todopoderoso, Creador del Cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre Todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la Santa Iglesia Católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén."
+      }
+    ],
+    "padrenuestro": [
+      {
+        "rubrica": "Al comienzo de cada decena",
+        "titulo": "Padre Nuestro",
+        "texto": "Padre nuestro que estás en el Cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el Cielo.\n\nDanos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén."
+      }
+    ],
+    "tresavemarias": [
+      {
+        "rubrica": "Al iniciar el Rosario",
+        "titulo": "Tres Ave Marías",
+        "texto": "Dios te salve, María Santísima, Hija de Dios Padre, Virgen purísima antes del parto; en tus manos encomendamos nuestra Fe, para que la alumbres.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+      },
+      {
+        "rubrica": "Por la esperanza",
+        "titulo": "",
+        "texto": "Dios te salve, María Santísima, Madre de Dios Hijo, Virgen purísima en el parto; en tus manos encomendamos nuestra Esperanza, para que la alientes.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+      },
+      {
+        "rubrica": "Por la caridad",
+        "titulo": "",
+        "texto": "Dios te salve, María Santísima, Esposa de Dios Espíritu Santo, Virgen purísima después del parto; en tus manos encomendamos nuestra Caridad, para que la inflames.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+      }
+    ],
+    "avemaria": [
+      {
+        "rubrica": "Diez veces en cada decena",
+        "titulo": "Ave María",
+        "texto": "Dios te salve, María, llena eres de gracia; el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+      }
+    ],
+    "gloriapatri": [
+      {
+        "rubrica": "Al final de cada decena",
+        "titulo": "Gloria al Padre",
+        "texto": "Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, y por los siglos de los siglos. Amén."
+      }
+    ],
+    "fatima": [
+      {
+        "rubrica": "Enseñada por el Ángel en Fátima · 1917",
+        "titulo": "Oración de Fátima",
+        "texto": "Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno. Lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén."
+      }
+    ],
+    "salve": [
+      {
+        "rubrica": "Oración final",
+        "titulo": "Salve Regina",
+        "texto": "Dios te salve, Reina y Madre de misericordia; vida, dulzura y esperanza nuestra, Dios te salve.\n\nA Ti llamamos los desterrados hijos de Eva; a Ti suspiramos gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima, oh piadosa, oh dulce Virgen María! Amén."
+      }
+    ]
   },
-  prayerPanels: {
-    credos: [
-      { rubrica: 'Al comenzar el Rosario', titulo: 'Señal de la Santa Cruz', texto: 'Por la señal de la Santa Cruz, de nuestros enemigos, líbranos, Señor, Dios nuestro.\n\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.' },
-      { rubrica: 'Acto de fe', titulo: 'El Credo Apostólico', texto: 'Creo en Dios, Padre Todopoderoso, Creador del Cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre Todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la Santa Iglesia Católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.' },
-    ],
-    padrenuestro: [
-      { rubrica: 'Al comienzo de cada decena', titulo: 'Padre Nuestro', texto: 'Padre nuestro que estás en el Cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el Cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.' },
-    ],
-    tresavemarias: [
-      { rubrica: 'Al iniciar el Rosario', titulo: 'Tres Ave Marías', texto: 'Dios te salve, María Santísima, Hija de Dios Padre, Virgen purísima antes del parto; en tus manos encomendamos nuestra Fe, para que la alumbres.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
-      { rubrica: 'Por la esperanza', titulo: '', texto: 'Dios te salve, María Santísima, Madre de Dios Hijo, Virgen purísima en el parto; en tus manos encomendamos nuestra Esperanza, para que la alientes.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
-      { rubrica: 'Por la caridad', titulo: '', texto: 'Dios te salve, María Santísima, Esposa de Dios Espíritu Santo, Virgen purísima después del parto; en tus manos encomendamos nuestra Caridad, para que la inflames.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
-    ],
-    avemaria: [
-      { rubrica: 'Diez veces en cada decena', titulo: 'Ave María', texto: 'Dios te salve, María, llena eres de gracia; el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
-    ],
-    gloriapatri: [
-      { rubrica: 'Al final de cada decena', titulo: 'Gloria al Padre', texto: 'Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, y por los siglos de los siglos. Amén.' },
-    ],
-    fatima: [
-      { rubrica: 'Enseñada por el Ángel en Fátima · 1917', titulo: 'Oración de Fátima', texto: 'Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno. Lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén.' },
-    ],
-    salve: [
-      { rubrica: 'Oración final', titulo: 'Salve Regina', texto: 'Dios te salve, Reina y Madre de misericordia; vida, dulzura y esperanza nuestra, Dios te salve. A Ti llamamos los desterrados hijos de Eva; a Ti suspiramos gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh clementísima, oh piadosa, oh dulce Virgen María! Amén.' },
-    ],
-  },
-  rosary: {
-    mysteryAnnouncement: 'Anuncio del misterio',
-    mysteryAnnouncementText: 'Anunciá el misterio y hacé una breve pausa para contemplarlo antes de rezar el Padre Nuestro.',
-    faith: 'Fe',
-    hope: 'Esperanza',
-    charity: 'Caridad',
-    ofTen: 'de 10',
-  },
+  "rosary": {
+    "mysteryAnnouncement": "Anuncio del misterio",
+    "mysteryAnnouncementText": "Anunciá el misterio y hacé una breve pausa para contemplarlo antes de rezar el Padre Nuestro.",
+    "faith": "Fe",
+    "hope": "Esperanza",
+    "charity": "Caridad",
+    "ofTen": "de 10"
+  }
 };
