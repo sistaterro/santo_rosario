@@ -43,9 +43,22 @@
     return found || defaultLanguage;
   }
 
+  function persistLanguage(code) {
+    try {
+      localStorage.setItem(STORAGE_KEY, baseCode(code));
+    } catch {
+      // La app puede seguir con el idioma detectado si localStorage no esta disponible.
+    }
+  }
+
   function resolveLanguage() {
-    const chosen = storedLanguage() || deviceLanguage();
-    return hasAvailableCatalog(chosen) ? chosen : defaultLanguage;
+    const stored = storedLanguage();
+    if (stored) return hasAvailableCatalog(stored) ? stored : defaultLanguage;
+
+    const detected = deviceLanguage();
+    const initial = hasAvailableCatalog(detected) ? detected : defaultLanguage;
+    persistLanguage(initial);
+    return initial;
   }
 
   function deepMerge(base, override) {
@@ -78,11 +91,7 @@
   function setLanguage(code) {
     const normalized = baseCode(code);
     if (!isKnown(normalized)) return;
-    try {
-      localStorage.setItem(STORAGE_KEY, normalized);
-    } catch {
-      // La app puede seguir con el idioma detectado si localStorage no está disponible.
-    }
+    persistLanguage(normalized);
     window.location.reload();
   }
 

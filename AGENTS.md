@@ -21,7 +21,7 @@ El archivo `prompt.md` contiene la intencion completa del usuario. Leerlo si se 
 - `www/index.html` muestra inicio informativo, misterios del dia, versiculo diario, frase latina diaria y seccion "Sobre nosotros".
 - `www/cuentas.html` contiene la funcionalidad principal del rezo: rosario SVG interactivo, cruz central como avance, estado persistente diario y reset al cambiar de fecha.
 - `www/data/versiculos.js` y `www/data/latin.js` cargan contenido diario sin `fetch`, apto para offline/Capacitor.
-- `www/i18n/` contiene estructura de 12 idiomas; la app detecta `navigator.language`, guarda preferencia en `localStorage` y usa fallback a espanol si hace falta.
+- `www/i18n/` contiene estructura de 12 idiomas. En primer arranque detecta `navigator.language`, guarda esa eleccion inicial en `localStorage` y luego respeta siempre la preferencia persistida del usuario. Usa ingles como fallback si no puede detectar un idioma compatible.
 
 ## Idiomas
 
@@ -32,6 +32,8 @@ es, pt, en, it, fr, pl, de, fil, vi, ro, hr, hu
 ```
 
 Todos estan marcados como `available`. La etiqueta del selector debe mantenerse siempre como `Language`, incluso cuando la app este traducida.
+
+La preferencia de idioma se guarda en `localStorage` con la clave `santoRosario.idioma.v1`. No volver a detectar el idioma del dispositivo en cada carga si esa clave ya existe.
 
 Importante: las traducciones son una primera version funcional. Antes de lanzar mercados no hispanos, revisar con hablantes nativos y fuentes liturgicas adecuadas, sobre todo las oraciones largas. La frase biblica diaria y la frase latina siguen fuera del sistema i18n y tienen su propio tratamiento.
 

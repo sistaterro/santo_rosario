@@ -357,7 +357,7 @@ def write_js(code, data):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
-    registry = "window.SANTO_ROSARIO_DEFAULT_LANGUAGE = 'es';\n\nwindow.SANTO_ROSARIO_LANGUAGES = "
+    registry = "window.SANTO_ROSARIO_DEFAULT_LANGUAGE = 'en';\n\nwindow.SANTO_ROSARIO_LANGUAGES = "
     registry += json.dumps(
         [{"code": c, "name": n, "nativeName": nn, "status": "available" if c in AVAILABLE_LANGUAGES else "pending", "markets": m} for c, n, nn, m in LANGUAGES],
         ensure_ascii=False,
