@@ -7,6 +7,7 @@ window.SANTO_ROSARIO_I18N_MESSAGES.es = {
   },
   ui: {
     appTitle: 'El Santo Rosario',
+    rosaryPageTitle: 'Rezar el Santo Rosario',
     navMysteries: 'Misterios',
     navPrayers: 'Oraciones',
     navAbout: 'Sobre nosotros',
@@ -28,7 +29,11 @@ window.SANTO_ROSARIO_I18N_MESSAGES.es = {
     aboutTitle: 'Una guía sencilla para rezar',
     aboutText: 'Santo Rosario nace como una aplicación pequeña, offline y serena para acompañar el rezo diario, especialmente pensando en quienes necesitan una guía clara para seguir los misterios, las cuentas y las oraciones sin distracciones.',
     aboutLink: 'Conocer al desarrollador',
-    languageLabel: 'Idioma',
+    languageLabel: 'Language',
+    languageSelectLabel: 'Language',
+    rosaryOptionsLabel: 'Opciones del rosario',
+    rosaryImageLabel: 'Cuentas del rosario',
+    nextPrayer: 'Siguiente oración',
     restart: 'Empezar de nuevo',
     showPrayerGuide: 'Mostrar guía de oración',
     preparation: 'Preparación',
@@ -36,6 +41,15 @@ window.SANTO_ROSARIO_I18N_MESSAGES.es = {
     goTo: 'Ir a',
     count: 'Cuenta',
   },
+  prayerTabs: [
+    { id: 'o-credos', label: 'Apertura' },
+    { id: 'o-padrenuestro', label: 'Padre Nuestro' },
+    { id: 'o-tresavemarias', label: 'Tres Ave Marías' },
+    { id: 'o-avemaria', label: 'Ave María' },
+    { id: 'o-gloriapatri', label: 'Gloria' },
+    { id: 'o-fatima', label: 'Oración de Fátima' },
+    { id: 'o-salve', label: 'Salve' },
+  ],
   weekdays: [
     { nombre: 'Domingo', tipo: 'gloriosos' },
     { nombre: 'Lunes', tipo: 'gozosos' },
@@ -106,6 +120,32 @@ window.SANTO_ROSARIO_I18N_MESSAGES.es = {
     gloria: { rubrica: 'Doxología', titulo: 'Gloria al Padre', texto: 'Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, y por los siglos de los siglos. Amén.' },
     fatima: { rubrica: 'Visión de Fátima · 1917', titulo: 'Oración de Fátima', texto: 'Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno. Lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén.' },
     salve: { rubrica: 'Oración final', titulo: 'Salve Regina', texto: 'Dios te salve, Reina y Madre de misericordia; vida, dulzura y esperanza nuestra, Dios te salve.\n\nA Ti llamamos los desterrados hijos de Eva; a Ti suspiramos gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre.\n\n¡Oh clementísima, oh piadosa, oh dulce Virgen María! Amén.' },
+  },
+  prayerPanels: {
+    credos: [
+      { rubrica: 'Al comenzar el Rosario', titulo: 'Señal de la Santa Cruz', texto: 'Por la señal de la Santa Cruz, de nuestros enemigos, líbranos, Señor, Dios nuestro.\n\nEn el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.' },
+      { rubrica: 'Acto de fe', titulo: 'El Credo Apostólico', texto: 'Creo en Dios, Padre Todopoderoso, Creador del Cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre Todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la Santa Iglesia Católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.' },
+    ],
+    padrenuestro: [
+      { rubrica: 'Al comienzo de cada decena', titulo: 'Padre Nuestro', texto: 'Padre nuestro que estás en el Cielo, santificado sea tu Nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el Cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.' },
+    ],
+    tresavemarias: [
+      { rubrica: 'Al iniciar el Rosario', titulo: 'Tres Ave Marías', texto: 'Dios te salve, María Santísima, Hija de Dios Padre, Virgen purísima antes del parto; en tus manos encomendamos nuestra Fe, para que la alumbres.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
+      { rubrica: 'Por la esperanza', titulo: '', texto: 'Dios te salve, María Santísima, Madre de Dios Hijo, Virgen purísima en el parto; en tus manos encomendamos nuestra Esperanza, para que la alientes.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
+      { rubrica: 'Por la caridad', titulo: '', texto: 'Dios te salve, María Santísima, Esposa de Dios Espíritu Santo, Virgen purísima después del parto; en tus manos encomendamos nuestra Caridad, para que la inflames.\n\nLlena eres de gracia, el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
+    ],
+    avemaria: [
+      { rubrica: 'Diez veces en cada decena', titulo: 'Ave María', texto: 'Dios te salve, María, llena eres de gracia; el Señor es contigo; bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús.\n\nSanta María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.' },
+    ],
+    gloriapatri: [
+      { rubrica: 'Al final de cada decena', titulo: 'Gloria al Padre', texto: 'Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, y por los siglos de los siglos. Amén.' },
+    ],
+    fatima: [
+      { rubrica: 'Enseñada por el Ángel en Fátima · 1917', titulo: 'Oración de Fátima', texto: 'Oh Jesús mío, perdona nuestros pecados, líbranos del fuego del infierno. Lleva al cielo a todas las almas, especialmente a las más necesitadas de tu misericordia. Amén.' },
+    ],
+    salve: [
+      { rubrica: 'Oración final', titulo: 'Salve Regina', texto: 'Dios te salve, Reina y Madre de misericordia; vida, dulzura y esperanza nuestra, Dios te salve. A Ti llamamos los desterrados hijos de Eva; a Ti suspiramos gimiendo y llorando en este valle de lágrimas. Ea, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos; y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh clementísima, oh piadosa, oh dulce Virgen María! Amén.' },
+    ],
   },
   rosary: {
     mysteryAnnouncement: 'Anuncio del misterio',

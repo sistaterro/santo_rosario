@@ -45,6 +45,26 @@ function i18nText(path, fallback) {
 I18N_API?.applyTranslations?.();
 I18N_API?.setupLanguageSelect?.();
 
+function aplicarTextosGlobales() {
+  document.title = document.body.classList.contains('cuentas-screen')
+    ? i18nText('ui.rosaryPageTitle', 'Rezar el Santo Rosario')
+    : i18nText('ui.appTitle', 'El Santo Rosario');
+
+  const selectorIdioma = document.getElementById('idioma-app');
+  if (selectorIdioma) selectorIdioma.setAttribute('aria-label', i18nText('ui.languageSelectLabel', 'Language'));
+
+  const opcionesRosario = document.querySelector('.cuentas-actions');
+  if (opcionesRosario) opcionesRosario.setAttribute('aria-label', i18nText('ui.rosaryOptionsLabel', 'Opciones del rosario'));
+
+  const rosarioSvg = document.getElementById('rosario-svg');
+  if (rosarioSvg) rosarioSvg.setAttribute('aria-label', i18nText('ui.rosaryImageLabel', 'Cuentas del rosario'));
+
+  const centroAvanzar = document.getElementById('btn-centro-avanzar');
+  if (centroAvanzar) centroAvanzar.setAttribute('aria-label', i18nText('ui.nextPrayer', 'Siguiente oración'));
+}
+
+aplicarTextosGlobales();
+
 function esAnioBisiesto(anio) {
   return (anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0;
 }
@@ -144,7 +164,118 @@ function switchOracion(btn, panelId) {
   document.querySelectorAll('.o-tab').forEach(b => b.classList.remove('active'));
   document.querySelectorAll('.o-panel').forEach(p => p.classList.remove('active'));
   btn.classList.add('active');
-  document.getElementById(panelId).classList.add('active');
+  const panel = document.getElementById(panelId);
+  if (panel) panel.classList.add('active');
+}
+
+function appendTextWithBreaks(element, text) {
+  String(text || '').split('\n').forEach((line, index) => {
+    if (index > 0) element.appendChild(document.createElement('br'));
+    element.appendChild(document.createTextNode(line));
+  });
+}
+
+function renderMisteriosIndex() {
+  const tabs = document.getElementById('misterios-tabs');
+  const panels = document.getElementById('misterios-panels');
+  if (!tabs || !panels) return;
+
+  tabs.innerHTML = '';
+  panels.innerHTML = '';
+
+  Object.values(MISTERIOS_POR_TIPO).forEach((misterio) => {
+    const tab = document.createElement('button');
+    tab.className = 'm-tab';
+    tab.type = 'button';
+    tab.role = 'tab';
+    tab.dataset.panel = misterio.panelId;
+    tab.appendChild(document.createTextNode(misterio.titulo.replace(/^Misterios\s+/i, '')));
+
+    const dia = document.createElement('span');
+    dia.className = 'm-tab__dia';
+    dia.textContent = misterio.dia || '';
+    tab.appendChild(dia);
+    tab.addEventListener('click', () => switchMisterio(tab, misterio.panelId));
+    tabs.appendChild(tab);
+
+    const panel = document.createElement('div');
+    panel.id = misterio.panelId;
+    panel.className = 'misterio-panel';
+
+    const grid = document.createElement('div');
+    grid.className = 'misterios-grid';
+    misterio.nombres.forEach((nombre, index) => {
+      const card = document.createElement('div');
+      card.className = 'misterio-card';
+
+      const numero = document.createElement('span');
+      numero.className = 'misterio-card__num';
+      numero.textContent = ['I', 'II', 'III', 'IV', 'V'][index] || String(index + 1);
+
+      const titulo = document.createElement('span');
+      titulo.className = 'misterio-card__title';
+      titulo.textContent = nombre;
+
+      card.append(numero, titulo);
+      grid.appendChild(card);
+    });
+
+    panel.appendChild(grid);
+    panels.appendChild(panel);
+  });
+}
+
+function renderOracionesIndex() {
+  const tabs = document.getElementById('oracion-tabs');
+  const panels = document.getElementById('oracion-panels');
+  if (!tabs || !panels) return;
+
+  tabs.innerHTML = '';
+  panels.innerHTML = '';
+
+  const prayerTabs = i18nSection('prayerTabs', []);
+  const prayerPanels = i18nSection('prayerPanels', {});
+
+  prayerTabs.forEach((item, index) => {
+    const tab = document.createElement('button');
+    tab.className = `o-tab${index === 0 ? ' active' : ''}`;
+    tab.type = 'button';
+    tab.role = 'tab';
+    tab.textContent = item.label;
+    tab.addEventListener('click', () => switchOracion(tab, item.id));
+    tabs.appendChild(tab);
+
+    const panel = document.createElement('div');
+    panel.id = item.id;
+    panel.className = `o-panel${index === 0 ? ' active' : ''}`;
+
+    const key = item.id.replace(/^o-/, '');
+    (prayerPanels[key] || []).forEach((bloque, blockIndex) => {
+      const article = document.createElement('div');
+      article.className = 'oracion-bloque shell--narrow';
+
+      const rubrica = document.createElement('span');
+      rubrica.className = 't-rubrica oracion-bloque__rubrica';
+      rubrica.textContent = bloque.rubrica;
+      article.appendChild(rubrica);
+
+      if (bloque.titulo) {
+        const titulo = document.createElement('h3');
+        titulo.className = 't-heading oracion-bloque__titulo';
+        titulo.style.fontSize = '1.05rem';
+        titulo.textContent = bloque.titulo;
+        article.appendChild(titulo);
+      }
+
+      const texto = document.createElement('p');
+      texto.className = `oracion-bloque__texto${blockIndex === 0 ? ' dropcap' : ''}`;
+      appendTextWithBreaks(texto, bloque.texto);
+      article.appendChild(texto);
+      panel.appendChild(article);
+    });
+
+    panels.appendChild(panel);
+  });
 }
 
 
@@ -303,7 +434,7 @@ function buildSecuencia() {
       m: i, ave: false, espera: true, anuncio: true
     });
     seq.push({
-      o: { rubrica: `${MISTERIOS_NOMBRES[i]}`, titulo: 'Padre Nuestro', texto: ORACIONES.padre.texto },
+      o: { rubrica: `${MISTERIOS_NOMBRES[i]}`, titulo: ORACIONES.padre.titulo, texto: ORACIONES.padre.texto },
       m: i, ave: false
     });
     // 10 Ave Marías
@@ -734,6 +865,8 @@ function reiniciar() {
 }
 
 // Inicializar al cargar
+renderMisteriosIndex();
+renderOracionesIndex();
 aplicarMisteriosDelDia();
 SECUENCIA = buildSecuencia();
 restaurarProgresoDelDia();

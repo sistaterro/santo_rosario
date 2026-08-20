@@ -27,7 +27,7 @@ La app está pensada como una guía práctica para acompañar el modo habitual d
 - La pantalla de cuentas funciona como guía de rezo: la cruz central permite avanzar y el rosario visual se va actualizando cuenta por cuenta.
 - El estado del rezo se conserva durante el día y se reinicia automáticamente al cambiar de fecha.
 - Al completar el Rosario, la app marca el cierre visualmente y permite comenzar de nuevo.
-- La estructura de idiomas ya está preparada para 12 idiomas. La app intenta usar el idioma del dispositivo y cae a español cuando todavía no hay traducción cargada.
+- La estructura de idiomas ya está preparada para 12 idiomas. La app intenta usar el idioma del dispositivo, pero sólo activa catálogos marcados como disponibles; por ahora cae a español.
 
 ## Estructura principal
 
@@ -71,7 +71,8 @@ android/app/build/outputs/apk/debug/app-debug.apk
 - Las imágenes para documentar el proyecto en este README van en `docs/readme-images/`.
 - Se quitaron fuentes remotas para que la experiencia funcione offline con fuentes del sistema.
 - Los datos diarios se cargan desde archivos JS en `www/data/`, no desde JSON, para funcionar bien offline, en Capacitor y en pruebas locales.
-- Los textos traducibles se cargan desde archivos JS en `www/i18n/`. Por ahora español es el idioma completo; los otros idiomas están declarados como pendientes y usan fallback a español.
+- Los textos traducibles se cargan desde archivos JS en `www/i18n/`. Por ahora español es el idioma completo; los otros idiomas están declarados como pendientes, deshabilitados en el selector y usan fallback a español.
+- El label del selector queda siempre como `Language`, incluso cuando se agreguen más idiomas.
 - Los versículos diarios usan una selección Reina-Valera 1909 guardada en `www/citas-rvr1909.txt` y procesada en `www/data/versiculos.js`.
 - `cuentas.html` usa un rosario SVG interactivo: la cruz central es el botón de avance, con pulso inicial.
 - En esta máquina el build usa el JBR incluido con Android Studio porque Capacitor 7 requiere Java compatible con source 21.

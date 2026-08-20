@@ -23,6 +23,11 @@
     return Boolean(catalogs()[baseCode(code)]);
   }
 
+  function hasAvailableCatalog(code) {
+    const catalog = catalogs()[baseCode(code)];
+    return Boolean(catalog && catalog.meta && catalog.meta.status === 'available');
+  }
+
   function storedLanguage() {
     try {
       const value = localStorage.getItem(STORAGE_KEY);
@@ -40,7 +45,7 @@
 
   function resolveLanguage() {
     const chosen = storedLanguage() || deviceLanguage();
-    return hasLoadedCatalog(chosen) ? chosen : defaultLanguage;
+    return hasAvailableCatalog(chosen) ? chosen : defaultLanguage;
   }
 
   function deepMerge(base, override) {
@@ -101,6 +106,7 @@
       option.textContent = language.status === 'available'
         ? (language.nativeName || language.name)
         : `${language.nativeName || language.name} · pendiente`;
+      option.disabled = language.status !== 'available' || !hasAvailableCatalog(language.code);
       select.appendChild(option);
     });
     select.value = activeLanguage;
