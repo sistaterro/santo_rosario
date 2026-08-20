@@ -94,7 +94,7 @@ window.SANTO_ROSARIO_LANGUAGES = [
     "code": "vi",
     "name": "Vietnamita",
     "nativeName": "Tiếng Việt",
-    "status": "pending",
+    "status": "available",
     "markets": [
       "Vietnam",
       "diáspora vietnamita"

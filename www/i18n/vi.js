@@ -2,7 +2,7 @@ window.SANTO_ROSARIO_I18N_MESSAGES = window.SANTO_ROSARIO_I18N_MESSAGES || {};
 
 window.SANTO_ROSARIO_I18N_MESSAGES.vi = {
   "meta": {
-    "status": "pending",
+    "status": "available",
     "label": "Tiếng Việt",
     "review": "draft-human-review-needed"
   },
@@ -154,119 +154,119 @@ window.SANTO_ROSARIO_I18N_MESSAGES.vi = {
   },
   "prayers": {
     "signo": {
-      "rubrica": "Opening",
-      "titulo": "Sign of the Cross",
-      "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+      "rubrica": "Mở đầu",
+      "titulo": "Dấu Thánh Giá",
+      "texto": "Nhờ dấu Thánh Giá, xin Chúa là Thiên Chúa chúng con cứu chúng con khỏi kẻ thù.\n\nNhân danh Cha, và Con, và Thánh Thần. Amen."
     },
     "credo": {
-      "rubrica": "Act of faith",
-      "titulo": "The Apostles' Creed",
-      "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+      "rubrica": "Tuyên xưng đức tin",
+      "titulo": "Kinh Tin Kính các Tông Đồ",
+      "texto": "Tôi tin kính Đức Chúa Trời là Cha phép tắc vô cùng dựng nên trời đất. Tôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha, cùng là Chúa chúng tôi; bởi phép Đức Chúa Thánh Thần mà Người xuống thai, sinh bởi Bà Maria đồng trinh; chịu nạn đời quan Phongxiô Philatô, chịu đóng đinh trên cây Thánh Giá, chết và táng xác; xuống ngục tổ tông; ngày thứ ba bởi trong kẻ chết mà sống lại; lên trời, ngự bên hữu Đức Chúa Cha phép tắc vô cùng; ngày sau bởi trời lại xuống phán xét kẻ sống và kẻ chết. Tôi tin kính Đức Chúa Thánh Thần, tôi tin có Hội Thánh hằng có ở khắp thế này, các thánh thông công, tôi tin phép tha tội, tôi tin xác loài người ngày sau sống lại, tôi tin hằng sống vậy. Amen."
     },
     "padre": {
-      "rubrica": "The Lord's Prayer",
-      "titulo": "Our Father",
-      "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+      "rubrica": "Kinh của Chúa",
+      "titulo": "Kinh Lạy Cha",
+      "texto": "Lạy Cha chúng con ở trên trời, chúng con nguyện danh Cha cả sáng; nước Cha trị đến; ý Cha thể hiện dưới đất cũng như trên trời.\n\nXin Cha cho chúng con hôm nay lương thực hằng ngày; và tha nợ chúng con, như chúng con cũng tha kẻ có nợ chúng con; xin chớ để chúng con sa chước cám dỗ, nhưng cứu chúng con cho khỏi sự dữ. Amen."
     },
     "ave": {
-      "rubrica": "Angelic salutation",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Lời chào của thiên thần",
+      "titulo": "Kinh Kính Mừng",
+      "texto": "Kính mừng Maria đầy ơn phúc, Đức Chúa Trời ở cùng Bà; Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ.\n\nThánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen."
     },
     "aveFe": {
-      "rubrica": "Daughter of God the Father",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Con gái Thiên Chúa Cha",
+      "titulo": "Kinh Kính Mừng",
+      "texto": "Kính mừng Maria rất thánh, Con gái Thiên Chúa Cha, Trinh Nữ rất tinh tuyền trước khi sinh con; trong tay Mẹ chúng con phó thác đức tin của chúng con, xin Mẹ soi sáng.\n\nĐầy ơn phúc, Đức Chúa Trời ở cùng Bà; Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ.\n\nThánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen."
     },
     "aveEsperanza": {
-      "rubrica": "Mother of God the Son",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Mẹ Thiên Chúa Con",
+      "titulo": "Kinh Kính Mừng",
+      "texto": "Kính mừng Maria rất thánh, Mẹ Thiên Chúa Con, Trinh Nữ rất tinh tuyền khi sinh con; trong tay Mẹ chúng con phó thác niềm hy vọng của chúng con, xin Mẹ nâng đỡ.\n\nĐầy ơn phúc, Đức Chúa Trời ở cùng Bà; Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ.\n\nThánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen."
     },
     "aveCaridad": {
-      "rubrica": "Spouse of God the Holy Spirit",
-      "titulo": "Hail Mary",
-      "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+      "rubrica": "Bạn trăm năm của Chúa Thánh Thần",
+      "titulo": "Kinh Kính Mừng",
+      "texto": "Kính mừng Maria rất thánh, Bạn trăm năm của Chúa Thánh Thần, Trinh Nữ rất tinh tuyền sau khi sinh con; trong tay Mẹ chúng con phó thác đức mến của chúng con, xin Mẹ làm bừng cháy.\n\nĐầy ơn phúc, Đức Chúa Trời ở cùng Bà; Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ.\n\nThánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen."
     },
     "gloria": {
-      "rubrica": "Doxology",
-      "titulo": "Glory Be",
-      "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+      "rubrica": "Vinh tụng ca",
+      "titulo": "Kinh Sáng Danh",
+      "texto": "Sáng danh Đức Chúa Cha, và Đức Chúa Con, và Đức Chúa Thánh Thần. Như đã có trước vô cùng, và bây giờ, và hằng có, và đời đời chẳng cùng. Amen."
     },
     "fatima": {
-      "rubrica": "Vision of Fatima · 1917",
-      "titulo": "Fatima Prayer",
-      "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+      "rubrica": "Thị kiến Fatima · 1917",
+      "titulo": "Kinh Fatima",
+      "texto": "Lạy Chúa Giêsu, xin tha tội cho chúng con, xin cứu chúng con khỏi lửa hỏa ngục. Xin đưa các linh hồn lên thiên đàng, nhất là những linh hồn cần đến lòng thương xót Chúa hơn. Amen."
     },
     "salve": {
-      "rubrica": "Final prayer",
-      "titulo": "Hail Holy Queen",
-      "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+      "rubrica": "Kinh kết thúc",
+      "titulo": "Kính chào Nữ Vương",
+      "texto": "Kính chào Nữ Vương, Mẹ nhân lành, làm cho chúng con được sống, được vui, được cậy.\n\nThân lạy Mẹ, chúng con con cháu Evà ở chốn khách đày kêu đến cùng Bà; chúng con ở nơi khóc lóc than thở kêu khẩn Bà thương. Hỡi ôi, Bà là Chủ bầu chúng con, xin ghé mắt thương xem chúng con; đến sau khỏi đày, xin cho chúng con được thấy Đức Chúa Giêsu, con lòng Bà gồm phúc lạ.\n\nÔi khoan thay, nhân thay, dịu thay, Thánh Maria trọn đời đồng trinh. Amen."
     }
   },
   "prayerPanels": {
     "credos": [
       {
         "rubrica": "Khi bắt đầu Mân Côi",
-        "titulo": "Sign of the Cross",
-        "texto": "By the sign of the Holy Cross, from our enemies, deliver us, O Lord, our God.\n\nIn the name of the Father, and of the Son, and of the Holy Spirit. Amen."
+        "titulo": "Dấu Thánh Giá",
+        "texto": "Nhờ dấu Thánh Giá, xin Chúa là Thiên Chúa chúng con cứu chúng con khỏi kẻ thù.\n\nNhân danh Cha, và Con, và Thánh Thần. Amen."
       },
       {
-        "rubrica": "Act of faith",
-        "titulo": "The Apostles' Creed",
-        "texto": "I believe in God, the Father almighty, Creator of heaven and earth. I believe in Jesus Christ, his only Son, our Lord, who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried; he descended to the dead; on the third day he rose again; he ascended into heaven and is seated at the right hand of God the Father almighty. From there he will come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen."
+        "rubrica": "Tuyên xưng đức tin",
+        "titulo": "Kinh Tin Kính các Tông Đồ",
+        "texto": "Tôi tin kính Đức Chúa Trời là Cha phép tắc vô cùng dựng nên trời đất. Tôi tin kính Đức Chúa Giêsu Kitô là Con Một Đức Chúa Cha, cùng là Chúa chúng tôi; bởi phép Đức Chúa Thánh Thần mà Người xuống thai, sinh bởi Bà Maria đồng trinh; chịu nạn đời quan Phongxiô Philatô, chịu đóng đinh trên cây Thánh Giá, chết và táng xác; xuống ngục tổ tông; ngày thứ ba bởi trong kẻ chết mà sống lại; lên trời, ngự bên hữu Đức Chúa Cha phép tắc vô cùng; ngày sau bởi trời lại xuống phán xét kẻ sống và kẻ chết. Tôi tin kính Đức Chúa Thánh Thần, tôi tin có Hội Thánh hằng có ở khắp thế này, các thánh thông công, tôi tin phép tha tội, tôi tin xác loài người ngày sau sống lại, tôi tin hằng sống vậy. Amen."
       }
     ],
     "padrenuestro": [
       {
         "rubrica": "Đầu mỗi chục kinh",
-        "titulo": "Our Father",
-        "texto": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven.\n\nGive us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen."
+        "titulo": "Kinh Lạy Cha",
+        "texto": "Lạy Cha chúng con ở trên trời, chúng con nguyện danh Cha cả sáng; nước Cha trị đến; ý Cha thể hiện dưới đất cũng như trên trời.\n\nXin Cha cho chúng con hôm nay lương thực hằng ngày; và tha nợ chúng con, như chúng con cũng tha kẻ có nợ chúng con; xin chớ để chúng con sa chước cám dỗ, nhưng cứu chúng con cho khỏi sự dữ. Amen."
       }
     ],
     "tresavemarias": [
       {
         "rubrica": "Khi bắt đầu Mân Côi",
         "titulo": "Ba Kinh Kính Mừng",
-        "texto": "Hail Mary most holy, Daughter of God the Father, most pure Virgin before childbirth; into your hands we entrust our Faith, that you may enlighten it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Kính mừng Maria rất thánh, Con gái Thiên Chúa Cha, Trinh Nữ rất tinh tuyền trước khi sinh con; trong tay Mẹ chúng con phó thác đức tin của chúng con, xin Mẹ soi sáng.\n\nĐầy ơn phúc, Đức Chúa Trời ở cùng Bà; Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ.\n\nThánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen."
       },
       {
         "rubrica": "Cho niềm hy vọng",
         "titulo": "",
-        "texto": "Hail Mary most holy, Mother of God the Son, most pure Virgin in childbirth; into your hands we entrust our Hope, that you may encourage it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Kính mừng Maria rất thánh, Mẹ Thiên Chúa Con, Trinh Nữ rất tinh tuyền khi sinh con; trong tay Mẹ chúng con phó thác niềm hy vọng của chúng con, xin Mẹ nâng đỡ.\n\nĐầy ơn phúc, Đức Chúa Trời ở cùng Bà; Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ.\n\nThánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen."
       },
       {
         "rubrica": "Cho đức mến",
         "titulo": "",
-        "texto": "Hail Mary most holy, Spouse of God the Holy Spirit, most pure Virgin after childbirth; into your hands we entrust our Charity, that you may inflame it.\n\nFull of grace, the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "texto": "Kính mừng Maria rất thánh, Bạn trăm năm của Chúa Thánh Thần, Trinh Nữ rất tinh tuyền sau khi sinh con; trong tay Mẹ chúng con phó thác đức mến của chúng con, xin Mẹ làm bừng cháy.\n\nĐầy ơn phúc, Đức Chúa Trời ở cùng Bà; Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ.\n\nThánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen."
       }
     ],
     "avemaria": [
       {
         "rubrica": "Mười lần trong mỗi chục kinh",
-        "titulo": "Hail Mary",
-        "texto": "Hail Mary, full of grace; the Lord is with thee; blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen."
+        "titulo": "Kinh Kính Mừng",
+        "texto": "Kính mừng Maria đầy ơn phúc, Đức Chúa Trời ở cùng Bà; Bà có phúc lạ hơn mọi người nữ, và Giêsu con lòng Bà gồm phúc lạ.\n\nThánh Maria, Đức Mẹ Chúa Trời, cầu cho chúng con là kẻ có tội, khi nay và trong giờ lâm tử. Amen."
       }
     ],
     "gloriapatri": [
       {
         "rubrica": "Cuối mỗi chục kinh",
-        "titulo": "Glory Be",
-        "texto": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
+        "titulo": "Kinh Sáng Danh",
+        "texto": "Sáng danh Đức Chúa Cha, và Đức Chúa Con, và Đức Chúa Thánh Thần. Như đã có trước vô cùng, và bây giờ, và hằng có, và đời đời chẳng cùng. Amen."
       }
     ],
     "fatima": [
       {
         "rubrica": "Được dạy tại Fatima · 1917",
-        "titulo": "Fatima Prayer",
-        "texto": "O my Jesus, forgive us our sins, save us from the fires of hell. Lead all souls to heaven, especially those most in need of thy mercy. Amen."
+        "titulo": "Kinh Fatima",
+        "texto": "Lạy Chúa Giêsu, xin tha tội cho chúng con, xin cứu chúng con khỏi lửa hỏa ngục. Xin đưa các linh hồn lên thiên đàng, nhất là những linh hồn cần đến lòng thương xót Chúa hơn. Amen."
       }
     ],
     "salve": [
       {
         "rubrica": "Kinh kết thúc",
-        "titulo": "Hail Holy Queen",
-        "texto": "Hail, holy Queen, Mother of mercy, our life, our sweetness and our hope.\n\nTo thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us; and after this our exile, show unto us the blessed fruit of thy womb, Jesus.\n\nO clement, O loving, O sweet Virgin Mary. Amen."
+        "titulo": "Kính chào Nữ Vương",
+        "texto": "Kính chào Nữ Vương, Mẹ nhân lành, làm cho chúng con được sống, được vui, được cậy.\n\nThân lạy Mẹ, chúng con con cháu Evà ở chốn khách đày kêu đến cùng Bà; chúng con ở nơi khóc lóc than thở kêu khẩn Bà thương. Hỡi ôi, Bà là Chủ bầu chúng con, xin ghé mắt thương xem chúng con; đến sau khỏi đày, xin cho chúng con được thấy Đức Chúa Giêsu, con lòng Bà gồm phúc lạ.\n\nÔi khoan thay, nhân thay, dịu thay, Thánh Maria trọn đời đồng trinh. Amen."
       }
     ]
   },
