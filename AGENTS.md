@@ -82,7 +82,7 @@ assets/                 Recursos fuente para iconos/splash
 - `npm.ps1` esta bloqueado por ExecutionPolicy; usar `npm.cmd`.
 - Node observado: `v25.8.2`.
 - npm observado: `11.11.1`.
-- Capacitor 7 requiere Java compatible con source 21; el build usa el JBR de Android Studio.
+- Capacitor 7 requiere Java compatible con source 21; `build-android.bat` detecta el JBR local de Android Studio via `%LOCALAPPDATA%` cuando existe. Evitar volver a meter rutas absolutas de usuario en `package.json`.
 - Android SDK local observado en `C:/Users/dazju/AppData/Local/Android/Sdk`.
 - `android/local.properties` es local y esta ignorado por git.
 

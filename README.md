@@ -67,6 +67,8 @@ npm.cmd run sync
 npm.cmd run build:android
 ```
 
+On Windows, `build-android.bat` uses the Android Studio JBR when it is available from the local Android Studio installation. Other environments should provide a Java version compatible with the Android Gradle Plugin.
+
 The debug APK is generated at:
 
 ```text
@@ -85,4 +87,5 @@ app-download/santo_rosario.apk
 - Language preference is stored in `localStorage` as `santoRosario.language.v1`, with migration from the former `santoRosario.idioma.v1`.
 - Rosary progress is stored in `localStorage` as `santoRosario.progress.v1`, with migration from the former `santoRosario.progreso.v1`.
 - `npm.cmd run build:android` compiles the debug APK and copies it to `app-download/santo_rosario.apk` for easy GitHub access.
+- Android build scripts avoid user-specific absolute paths; `build-android.bat` detects the local Android Studio JBR through `%LOCALAPPDATA%` when available.
 - `rosary.html` uses an interactive SVG rosary; the central cross is the primary advance control and has an initial pulse cue.
