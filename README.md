@@ -35,7 +35,7 @@ es, pt, en, it, fr, pl, de, fil, vi, ro, hr, hu, ko
 
 The language selector label intentionally stays as `Language` so it remains recognizable regardless of the active language. Korean uses standard UTF-8/Hangul support and does not need special runtime handling. Daily Scripture and Latin phrases are handled separately in `www/data/verses.js` and `www/data/latin.js`.
 
-Daily Scripture keeps the Spanish RVR1909 text as the base source and includes localized entries in `translations.*` for all non-Spanish supported languages. Missing non-Spanish verse translations fall back to English before Spanish.
+Daily Scripture keeps the Spanish RVR1909 text as the base source and includes localized entries in `translations.*` for all non-Spanish supported languages. Daily Latin phrases keep the Latin text as the displayed phrase and use localized translation entries when available. Missing non-Spanish daily content falls back to English before Spanish.
 
 Editorial note: translations are a functional first pass. Before publishing a language as pastorally final, review it with native speakers and appropriate liturgical sources, especially the longer prayers.
 
@@ -89,4 +89,7 @@ android/app/build/outputs/apk/debug/app-debug.apk
 - `tools/add_english_verses_from_kjv.py` repopulates `translations.en` in `www/data/verses.js` from public-domain KJV.
 - `tools/populate_all_verse_translations.py` repopulates daily verse translations from public-domain sources where available.
 - `tools/validate_verse_translations.py` validates daily verse translation coverage.
+- `tools/add_english_latin_translations.py` normalizes daily Latin phrases and repopulates `translations.en`.
+- `tools/populate_all_latin_translations.py` repopulates all daily Latin phrase translations.
+- `tools/validate_latin_translations.py` validates daily Latin phrase translation coverage.
 - `rosary.html` uses an interactive SVG rosary; the central cross is the primary advance control and has an initial pulse cue.

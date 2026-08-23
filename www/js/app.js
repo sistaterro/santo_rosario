@@ -101,6 +101,17 @@ function localizedVerse(verse) {
   };
 }
 
+function localizedLatinPhrase(phrase) {
+  const language = I18N_API?.getLanguage?.() || 'es';
+  const translations = phrase.translations || {};
+  const translated = translations[language] || (language === 'es' ? null : translations.en);
+
+  return {
+    latin: phrase.latin,
+    translation: translated?.text || phrase.traduccion,
+  };
+}
+
 async function loadDailyVerse() {
   const textElement = document.getElementById('daily-verse-text');
   const referenceElement = document.getElementById('daily-verse-reference');
@@ -145,8 +156,9 @@ function loadDailyLatinPhrase() {
     const phrase = data.frases?.find(item => item.id === assignment?.fraseId);
     if (!phrase) throw new Error(`No hay frase latina asignada para ${dateKey}.`);
 
-    latinEl.textContent = phrase.latin;
-    translationElement.textContent = phrase.traduccion;
+    const localized = localizedLatinPhrase(phrase);
+    latinEl.textContent = localized.latin;
+    translationElement.textContent = localized.translation;
   } catch (error) {
     latinEl.textContent = 'Sub tuum praesidium.';
     translationElement.textContent = 'Bajo tu amparo.';
