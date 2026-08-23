@@ -35,6 +35,8 @@ es, pt, en, it, fr, pl, de, fil, vi, ro, hr, hu, ko
 
 The language selector label intentionally stays as `Language` so it remains recognizable regardless of the active language. Korean uses standard UTF-8/Hangul support and does not need special runtime handling. Daily Scripture and Latin phrases are handled separately in `www/data/verses.js` and `www/data/latin.js`.
 
+Daily Scripture keeps the Spanish RVR1909 text as the base source and includes localized entries in `translations.*` for all non-Spanish supported languages. Missing non-Spanish verse translations fall back to English before Spanish.
+
 Editorial note: translations are a functional first pass. Before publishing a language as pastorally final, review it with native speakers and appropriate liturgical sources, especially the longer prayers.
 
 ## Project Structure
@@ -47,7 +49,7 @@ www/
   js/app.js
   i18n/
     languages.js
-    es.js, pt.js, en.js, pl.js, it.js, fr.js, fil.js, de.js, vi.js, ro.js, hr.js, hu.js
+    es.js, pt.js, en.js, pl.js, it.js, fr.js, fil.js, de.js, vi.js, ro.js, hr.js, hu.js, ko.js
     i18n.js
   data/
     verses.js
@@ -84,4 +86,7 @@ android/app/build/outputs/apk/debug/app-debug.apk
 - Language preference is stored in `localStorage` as `santoRosario.language.v1`, with migration from the former `santoRosario.idioma.v1`.
 - Rosary progress is stored in `localStorage` as `santoRosario.progress.v1`, with migration from the former `santoRosario.progreso.v1`.
 - `tools/generate_i18n.py` regenerates `languages.js` and the language catalogs.
+- `tools/add_english_verses_from_kjv.py` repopulates `translations.en` in `www/data/verses.js` from public-domain KJV.
+- `tools/populate_all_verse_translations.py` repopulates daily verse translations from public-domain sources where available.
+- `tools/validate_verse_translations.py` validates daily verse translation coverage.
 - `rosary.html` uses an interactive SVG rosary; the central cross is the primary advance control and has an initial pulse cue.

@@ -21,7 +21,8 @@ El archivo `prompt.md` contiene la intencion completa del usuario. Leerlo si se 
 - `www/index.html` muestra inicio informativo, misterios del dia, versiculo diario, frase latina diaria y seccion "Sobre nosotros".
 - `www/rosary.html` contiene la funcionalidad principal del rezo: rosario SVG interactivo, cruz central como avance, estado persistente diario y reset al cambiar de fecha.
 - `www/data/verses.js` y `www/data/latin.js` cargan contenido diario sin `fetch`, apto para offline/Capacitor.
-- `www/i18n/` contiene estructura de 12 idiomas. En primer arranque detecta `navigator.language`, guarda esa eleccion inicial en `localStorage` y luego respeta siempre la preferencia persistida del usuario. Usa ingles como fallback si no puede detectar un idioma compatible.
+- `www/data/verses.js` conserva RVR1909 en espanol y cuenta con traducciones completas para los 12 idiomas adicionales (`en`, `pt`, `pl`, `it`, `fr`, `fil`, `de`, `vi`, `ro`, `hr`, `hu`, `ko`) provenientes de fuentes de dominio publico. Si faltara una traduccion especifica, la app cae a ingles antes que a espanol.
+- `www/i18n/` contiene estructura de 13 idiomas, contando espanol. En primer arranque detecta `navigator.language`, guarda esa eleccion inicial en `localStorage` y luego respeta siempre la preferencia persistida del usuario. Usa ingles como fallback si no puede detectar un idioma compatible.
 
 ## Idiomas
 
@@ -38,6 +39,10 @@ La preferencia de idioma se guarda en `localStorage` con la clave `santoRosario.
 Importante: las traducciones son una primera version funcional. Antes de lanzar mercados no hispanos, revisar con hablantes nativos y fuentes liturgicas adecuadas, sobre todo las oraciones largas. La frase biblica diaria y la frase latina siguen fuera del sistema i18n y tienen su propio tratamiento.
 
 `tools/generate_i18n.py` regenera `www/i18n/languages.js` y todos los `www/i18n/*.js`. Si se corrige una traduccion generada, actualizar el generador tambien o el cambio se perdera al regenerar. Coreano usa `ko` y funciona por UTF-8/Hangul sin tratamiento especial.
+
+`tools/add_english_verses_from_kjv.py` regenera `translations.en` en `www/data/verses.js` desde KJV publico. `tools/populate_all_verse_translations.py` regenera todas las traducciones en `www/data/verses.js` desde fuentes de dominio publico. `tools/validate_verse_translations.py` valida la cobertura de traducciones (`--all` verifica los 12 idiomas destino).
+
+`prompt.md` contiene instrucciones para Antigravity/Google para auditar o completar traducciones de los versiculos diarios sin romper el esquema actual.
 
 ## Estructura Relevante
 
@@ -97,6 +102,22 @@ Antes de prometer APK actualizado, correr:
 ```bash
 npm.cmd run build:android
 ```
+
+## Herramientas y Archivos de Desarrollo a Revisar Antes de Publicar
+
+Estos archivos son utiles durante la construccion y auditoria, pero conviene hacer una pasada de limpieza antes de un release formal:
+
+- `prompt.md`: prompt operativo para Antigravity/Google. Es util como handoff de traducciones, pero no es parte de la app final. Borrarlo o moverlo a documentacion interna cuando ya no se use.
+- `language-list.csv`: listado fuente de idiomas. Sirvio para armar la estructura i18n; si `www/i18n/languages.js` queda como fuente real, este CSV puede pasar a ser residual.
+- `www/rvr1909-quotes.txt`: fuente editorial de las 366 citas RVR1909. Es valioso para auditoria, pero no lo consume la app. Decidir si queda como material fuente o si se remueve antes de publicar.
+- `tools/generate_i18n.py`: generador de catalogos UI. Mantenerlo mientras las traducciones sigan cambiando; si se edita un catalogo a mano, actualizar tambien este generador.
+- `tools/add_english_verses_from_kjv.py`: script puntual para poblar `translations.en` desde KJV. Probablemente se pueda retirar cuando las traducciones queden congeladas.
+- `tools/populate_all_verse_translations.py`: script puntual para regenerar traducciones de versiculos desde fuentes de dominio publico. Es potente, pero toca un archivo grande; conservarlo solo si se va a mantener ese flujo.
+- `tools/validate_verse_translations.py`: validador de cobertura de versiculos. Este si conviene conservar mientras existan traducciones, porque detecta faltantes y codigos mal escritos.
+- `assets/`: fuentes para icono/splash. Mantener mientras se regeneren assets Android; si se decide congelar iconos, igual puede servir como material fuente.
+- `docs/readme-images/`: capturas para README. Revisar antes de publicar si representan la UI actual.
+
+No borrar `www/data/verses.js`, `www/data/latin.js`, `www/i18n/*.js` ni assets generados de Android sin confirmar primero: esos si forman parte del funcionamiento actual o del empaquetado.
 
 ## Deudas Tecnicas
 

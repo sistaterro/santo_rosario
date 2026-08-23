@@ -89,6 +89,18 @@ function currentDateKey(date) {
   return `${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 }
 
+function localizedVerse(verse) {
+  const language = I18N_API?.getLanguage?.() || 'es';
+  const translations = verse.translations || {};
+  const translated = translations[language] || (language === 'es' ? null : translations.en);
+
+  return {
+    text: translated?.text || verse.texto,
+    reference: translated?.reference || verse.referencia,
+    source: translated?.source || verse.traduccion,
+  };
+}
+
 async function loadDailyVerse() {
   const textElement = document.getElementById('daily-verse-text');
   const referenceElement = document.getElementById('daily-verse-reference');
@@ -105,10 +117,11 @@ async function loadDailyVerse() {
     const verse = data.versiculos?.find(item => item.id === assignment?.versiculoId);
     if (!verse) throw new Error(`No hay versículo asignado para ${dateKey}.`);
 
-    textElement.textContent = `"${verse.texto}"`;
-    referenceElement.textContent = verse.traduccion
-      ? `${verse.referencia} · ${verse.traduccion}`
-      : verse.referencia;
+    const localized = localizedVerse(verse);
+    textElement.textContent = `"${localized.text}"`;
+    referenceElement.textContent = localized.source
+      ? `${localized.reference} · ${localized.source}`
+      : localized.reference;
   } catch (error) {
     textElement.textContent = i18nText('ui.verseError', 'No se pudo cargar el versículo del día.');
     referenceElement.textContent = i18nText('ui.dailyReading', 'Lectura diaria');

@@ -1,476 +1,142 @@
-Quiero que trabajes sobre una aplicación existente para rezar el rosario.
+# Task For Antigravity / Google
 
-## Contexto general
+This repository is a vanilla HTML/CSS/JS Capacitor Android app for praying the Santo Rosario. The app must keep working fully offline.
 
-La aplicación originalmente está hecha como una web simple en:
+## Goal
 
-* HTML
-* CSS
-* JavaScript
+Audit and, if needed, complete the daily Bible verse localization for every supported UI language.
 
-Ya existe un HTML funcional y quiero conservar esa base. No quiero reescribir la aplicación en Kotlin, Flutter, React Native ni otro framework móvil salvo que exista una razón técnica realmente necesaria.
-
-El objetivo es convertir esta aplicación web en una aplicación Android instalable como APK utilizando **Capacitor**.
-
-La idea arquitectónica general es:
+The Spanish daily verses are public-domain RVR1909 and live in:
 
 ```text
-HTML / CSS / JavaScript
-        ↓
-     Capacitor
-        ↓
- Proyecto Android nativo
-        ↓
-      Gradle
-        ↓
-       APK
+www/data/verses.js
 ```
 
-Android Studio estará instalado y podrá utilizarse para abrir, ejecutar y compilar el proyecto Android generado por Capacitor.
-
-## Filosofía del proyecto
-
-La aplicación debe ser deliberadamente simple.
-
-Está pensada principalmente para personas mayores que quieren rezar el rosario sin enfrentarse a una interfaz complicada.
-
-Principios:
-
-* interfaz extremadamente clara
-* botones grandes
-* tipografía legible
-* navegación mínima
-* evitar menús innecesarios
-* evitar registros, cuentas y contraseñas
-* evitar backend mientras no sea necesario
-* funcionar offline siempre que sea posible
-* mantener toda la lógica inicial del lado cliente
-* no agregar dependencias innecesarias
-* priorizar simplicidad y mantenibilidad
-* mantener HTML, CSS y JavaScript comprensibles
-
-La tecnología debe desaparecer detrás de la experiencia de uso.
-
-## Estructura deseada
-
-Quiero una estructura similar a esta:
-
-```text
-rosario/
-│
-├── package.json
-├── capacitor.config.ts
-│
-├── www/
-│   ├── index.html
-│   ├── css/
-│   │   └── styles.css
-│   ├── js/
-│   │   └── app.js
-│   ├── images/
-│   ├── audio/
-│   └── assets/
-│
-└── android/
-```
-
-La carpeta:
-
-```text
-www/
-```
-
-debe ser el `webDir` de Capacitor.
-
-Ejemplo conceptual de configuración:
-
-```ts
-const config = {
-  appId: 'com.rosario.app',
-  appName: 'Rosario',
-  webDir: 'www'
-};
-```
-
-Podés ajustar nombres si encontrás una organización mejor, pero mantené la arquitectura simple.
-
-## Capacitor
-
-Si todavía no está configurado, preparar el proyecto usando Capacitor.
-
-Dependencias esperadas:
-
-```bash
-npm install @capacitor/core @capacitor/cli
-npm install @capacitor/android
-```
-
-Inicialización conceptual:
-
-```bash
-npx cap init
-npx cap add android
-```
-
-Sincronización después de modificar el contenido web:
-
-```bash
-npx cap sync android
-```
-
-O, cuando corresponda:
-
-```bash
-npx cap copy android
-```
-
-El proyecto Android generado debe mantenerse dentro de:
-
-```text
-android/
-```
-
-y debe poder abrirse mediante:
-
-```bash
-npx cap open android
-```
-
-## Compilación
-
-Quiero poder compilar tanto desde Android Studio como eventualmente desde consola.
-
-Desde Gradle debería poder utilizarse algo equivalente a:
-
-```bash
-cd android
-gradlew.bat assembleDebug
-```
-
-en Windows.
-
-El APK debug debería quedar aproximadamente en:
-
-```text
-android/app/build/outputs/apk/debug/app-debug.apk
-```
-
-No dependas exclusivamente de Android Studio para tareas que Gradle pueda realizar automáticamente.
-
-## Pruebas
-
-Preferimos probar sobre un teléfono Android físico mediante USB debugging.
-
-No dependemos del emulador Android porque consume demasiados recursos.
-
-La prioridad es:
-
-```text
-Codex / editor
-    ↓
-web
-    ↓
-Capacitor
-    ↓
-Android
-    ↓
-teléfono físico
-```
-
-## Funcionamiento offline
-
-En la primera versión quiero evitar servidor y backend.
-
-HTML, CSS, JavaScript, imágenes y eventualmente audio deben poder empaquetarse dentro de la APK.
-
-La aplicación debería poder funcionar completamente sin Internet si todos sus recursos son locales.
-
-No introduzcas llamadas a APIs remotas salvo que yo lo solicite explícitamente.
-
-## Diseño funcional inicial
-
-La aplicación es un asistente para rezar el rosario.
-
-Conceptualmente, al abrirla debería ser posible mostrar algo extremadamente simple, por ejemplo:
-
-```text
-¿Rezamos el Rosario?
-
-[ Comenzar ]
-```
-
-Después puede determinar los misterios correspondientes al día.
-
-Ejemplo:
-
-```text
-Rosario de hoy
-
-Sábado
-
-Misterios Gozosos
-```
-
-El flujo podría incluir:
-
-```text
-Señal de la Cruz
-Credo
-Padre Nuestro
-3 Ave Marías
-Gloria
-```
-
-y posteriormente los cinco misterios.
-
-Cada misterio puede contener:
-
-* nombre
-* imagen opcional
-* breve texto o meditación
-* Padre Nuestro
-* diez Ave Marías
-* Gloria
-
-Quiero un contador visual sencillo para las cuentas.
-
-Ejemplo:
-
-```text
-● ● ● ● ● ○ ○ ○ ○ ○
-```
-
-La persona puede tocar un botón grande o una zona de la pantalla para avanzar.
-
-La interfaz debe dejar siempre muy claro:
-
-* dónde está dentro del rosario
-* qué oración corresponde ahora
-* cuántas cuentas lleva
-* cómo avanzar
-* cómo volver si avanzó accidentalmente
-
-## Posibles funciones futuras
-
-No es necesario implementar todo ahora.
-
-La arquitectura debería permitir agregar más adelante:
-
-* audio de las oraciones
-* voz guiando el rosario
-* vibración suave al completar una decena
-* intenciones personales
-* tamaño de fuente configurable
-* modo oscuro
-* mantener pantalla encendida durante el rezo
-* historial local de rosarios completados
-* recordatorios mediante notificaciones Android
-* calendario litúrgico
-* opción para compartir
-* almacenamiento local
-
-Si alguna función necesita un plugin de Capacitor, proponelo cuando corresponda.
-
-No instales plugins preventivamente si todavía no los necesitamos.
-
-## PWA
-
-Aunque el objetivo actual es APK Android mediante Capacitor, sería deseable conservar una arquitectura compatible con web/PWA.
-
-Por eso:
-
-* no acoples innecesariamente la lógica a Android
-* encapsulá llamadas nativas cuando aparezcan
-* mantené la mayor parte del código en la capa web
-
-## Restricciones de desarrollo
-
-No hagas una reescritura completa sin necesidad.
-
-Antes de modificar estructura o código:
-
-1. inspeccioná el proyecto existente
-2. identificá qué HTML, CSS y JS ya funcionan
-3. conservá lo que pueda reutilizarse
-4. mové o reorganizá archivos solamente cuando aporte claridad
-5. evitá abstracciones prematuras
-
-No quiero arquitectura empresarial para una aplicación pequeña.
-
-Evitar:
-
-* Redux
-* microservicios
-* backend innecesario
-* autenticación innecesaria
-* bases de datos remotas sin razón
-* frameworks pesados sólo por moda
-* capas y patrones que no aporten valor real
-
-Preferir:
-
-* vanilla JavaScript si alcanza
-* módulos JS simples
-* datos estructurados en objetos o JSON
-* funciones pequeñas
-* componentes visuales sencillos
-* estado local claro
-
-## Organización sugerida del JavaScript
-
-Si `app.js` empieza a crecer, se puede evolucionar gradualmente hacia:
-
-```text
-www/js/
-├── app.js
-├── rosary.js
-├── mysteries.js
-├── prayers.js
-├── storage.js
-└── ui.js
-```
-
-Responsabilidades aproximadas:
-
-```text
-app.js
-```
-
-Inicialización y coordinación.
-
-```text
-rosary.js
-```
-
-Estado y flujo del rosario.
-
-```text
-mysteries.js
-```
-
-Selección de misterios según día u otras reglas.
-
-```text
-prayers.js
-```
-
-Contenido estructurado de las oraciones.
-
-```text
-storage.js
-```
-
-Persistencia local.
-
-```text
-ui.js
-```
-
-Actualización del DOM y eventos visuales.
-
-No crees estos módulos si la aplicación actual todavía es suficientemente pequeña. Son una guía para crecer, no una obligación.
-
-## Datos separados de la interfaz
-
-Siempre que sea razonable, quiero separar contenido de presentación.
-
-Por ejemplo:
+English has already been populated from public-domain KJV. Other languages may also already be present; verify coverage before editing. Translation entries use:
 
 ```js
-const prayers = {
-  padreNuestro: {
-    title: 'Padre Nuestro',
-    text: '...'
-  }
-};
+verse.translations.en = {
+  text: "...",
+  reference: "...",
+  source: "KJV"
+}
 ```
 
-Y para misterios:
+Your job is to verify or add verse translations for:
+
+```text
+pt, pl, it, fr, fil, de, vi, ro, hr, hu, ko
+```
+
+Do not modify the Spanish `texto`, `referencia`, `libro`, `capitulo`, `versiculos`, or `traduccion` fields.
+
+## Required Schema
+
+For every item in `window.SANTO_ROSARIO_VERSES.versiculos`, preserve the current fields and add language entries under `translations`.
+
+Example:
 
 ```js
-const mysteries = {
-  joyful: [
-    {
-      title: 'La Anunciación',
-      meditation: '...'
+{
+  "id": "v001",
+  "texto": "... Spanish RVR1909 ...",
+  "referencia": "Salmos 89:1",
+  "libro": "Salmos",
+  "capitulo": 89,
+  "versiculos": "1",
+  "traduccion": "RVR1909",
+  "translations": {
+    "en": {
+      "text": "... KJV English ...",
+      "reference": "Psalms 89:1",
+      "source": "KJV"
+    },
+    "pt": {
+      "text": "...",
+      "reference": "Salmos 89:1",
+      "source": "Generated from RVR1909/KJV"
     }
-  ]
-};
+  }
+}
 ```
 
-La UI debería consumir esos datos en lugar de tener grandes cantidades de contenido duplicado directamente dentro del código de navegación.
+Use this exact field shape:
 
-## Experiencia de usuario
+```js
+translations[languageCode] = {
+  text: string,
+  reference: string,
+  source: string
+}
+```
 
-La aplicación está hecha inicialmente para dos usuarios reales, personas mayores.
+## Translation Guidance
 
-Por eso quiero que cualquier decisión de UI privilegie:
+- Prefer public-domain Bible wording in the target language when a reliable public-domain source is available.
+- If no public-domain Bible source is available, generate a faithful translation using the Spanish RVR1909 `texto` and the English KJV `translations.en.text` as guides.
+- Do not use copyrighted modern Bible translations.
+- Keep references localized when natural, but preserve chapter and verse numbers exactly.
+- Keep the devotional tone, but prioritize clarity for older readers.
+- Preserve verse ranges exactly, for example `John 10:27-28`.
+- Keep `source` explicit. Suggested values:
+  - public-domain source abbreviation if using one
+  - otherwise `Generated from RVR1909/KJV`
 
-* claridad
-* botones grandes
-* alto contraste
-* poco texto simultáneo
-* feedback inmediato
-* tolerancia a errores
-* posibilidad de retroceder
-* evitar gestos ocultos
-* evitar elementos pequeños
-* evitar navegación confusa
+## Runtime Behavior To Preserve
 
-Si para una función existen dos diseños posibles, preferí el que requiera menos explicación.
+The app reads the active language from `window.SantoRosarioI18n.getLanguage()`.
 
-## Forma de trabajar
+`www/js/app.js` currently resolves the daily verse like this:
 
-Quiero que actúes como desarrollador del proyecto.
+1. Use `verse.translations[currentLanguage]` if present.
+2. If the current language is not Spanish and the specific translation is missing, use `verse.translations.en`.
+3. Otherwise fall back to Spanish RVR1909 fields.
 
-Cuando inspecciones el repositorio:
+Do not break that behavior.
 
-* explicá brevemente qué encontraste
-* detectá problemas estructurales reales
-* proponé cambios pequeños y justificados
-* implementá directamente cuando el cambio sea claro
-* evitá reescribir archivos que ya funcionan
-* mantené compatibilidad con Capacitor
+## Validation Requirements
 
-Después de cada cambio importante, verificá que:
+After editing, run:
 
 ```bash
-npx cap sync android
+node --check www/data/verses.js
+node --check www/js/app.js
+npm.cmd run sync
+npm.cmd run build:android
 ```
 
-pueda ejecutarse correctamente.
+Also run the existing validation script:
 
-Cuando corresponda, verificá también el build Android con Gradle.
+```bash
+python tools/validate_verse_translations.py
+python tools/validate_verse_translations.py --all
+```
 
-Si aparece un error de build, investigá primero:
+The first command validates the current English baseline. The second command must pass after you add every target language.
 
-* versión de Java
-* versión de Gradle
-* Android Gradle Plugin
-* compileSdk
-* targetSdk
-* dependencias de Capacitor
+The validation checks:
 
-antes de modificar arbitrariamente el código de la aplicación.
+- all 366 verses exist
+- every verse has `translations.en`
+- every verse has the target languages listed above
+- every translation entry has non-empty `text`, `reference`, and `source`
+- no supported language code is misspelled
 
-## Objetivo inmediato
+## Do Not Do
 
-Primero quiero conseguir el camino mínimo funcional:
+- Do not add network calls to the app.
+- Do not add a backend.
+- Do not replace `www/data/verses.js` with JSON fetched at runtime.
+- Do not change the yearly calendar assignments.
+- Do not remove the original Spanish RVR1909 text.
+- Do not introduce React, TypeScript, or a heavy framework.
+
+## Notes
+
+The app supports these UI languages:
 
 ```text
-HTML existente
-      ↓
-Capacitor configurado
-      ↓
-Proyecto Android generado
-      ↓
-Build exitoso
-      ↓
-APK instalable
-      ↓
-Aplicación funcionando en teléfono físico
+es, pt, en, pl, it, fr, fil, de, vi, ro, hr, hu, ko
 ```
 
-Una vez logrado eso, recién después mejoraremos diseño, audio, funciones nativas y otras características.
-
-Priorizá obtener primero una APK funcional sin romper la aplicación web existente.
+The daily Latin phrase system in `www/data/latin.js` is separate. Do not change it for this task unless explicitly requested.
