@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 OUT = Path("www/i18n")
-AVAILABLE_LANGUAGES = {"es", "pt", "en", "it", "fr", "pl", "de", "fil", "vi", "ro", "hr", "hu"}
+AVAILABLE_LANGUAGES = {"es", "pt", "en", "it", "fr", "pl", "de", "fil", "vi", "ro", "hr", "hu", "ko"}
 
 
 LANGUAGES = [
@@ -19,6 +19,7 @@ LANGUAGES = [
     ("ro", "Rumano", "Română", ["Rumania", "diáspora rumana"]),
     ("hr", "Croata", "Hrvatski", ["Croacia", "Bosnia y Herzegovina"]),
     ("hu", "Húngaro", "Magyar", ["Hungría", "comunidades húngaras vecinas"]),
+    ("ko", "Coreano", "한국어", ["Corea del Sur", "diáspora coreana"]),
 ]
 
 
@@ -324,6 +325,63 @@ DATA["hu"]["prayers"] = {
     "salve": {"rubrica": "Záró ima", "titulo": "Üdvözlégy Királynő", "texto": "Üdvözlégy Királynő, irgalmasság Anyja, életünk, édességünk és reményünk, üdvözlégy.\n\nHozzád kiáltunk, Éva száműzött gyermekei; hozzád sóhajtunk, sírva és zokogva e siralom völgyében. Fordítsd hát, szószólónk, irgalmas szemeidet ránk; és e számkivetés után mutasd meg nekünk Jézust, méhednek áldott gyümölcsét.\n\nÓ kegyes, ó irgalmas, ó édes Szűz Mária. Ámen."},
 }
 DATA["hu"]["prayerPanels"] = panel(DATA["hu"]["prayers"], {"start": "A rózsafüzér kezdetén", "decade_start": "Minden tized elején", "start_rosary": "A rózsafüzér kezdetén", "hope": "A reményért", "charity": "A szeretetért", "ten_times": "Tízszer minden tizedben", "decade_end": "Minden tized végén", "fatima": "Fatimában tanított ima · 1917", "final": "Záró ima", "three_hail_marys": "Három Üdvözlégy"})
+
+DATA["ko"] = derived("ko", "한국어", {
+    "title": "묵주기도",
+    "rosaryPage": "묵주기도 바치기",
+    "mysteries": "신비",
+    "prayersNav": "기도문",
+    "about": "소개",
+    "start": "묵주기도 시작",
+    "home": "처음",
+    "eyebrow": "하느님의 어머니 마리아",
+    "subtitle": "교회의 기도",
+    "daily": "오늘의 말씀",
+    "loading": "오늘의 말씀을 불러오는 중...",
+    "error": "오늘의 말씀을 불러올 수 없습니다.",
+    "guide": "신비별 안내",
+    "four": "네 가지 신비",
+    "mystTitle": "묵주기도의 신비",
+    "today": "오늘의 묵주기도",
+    "intro": "각 단에서는 우리 주 예수 그리스도와 복되신 동정 마리아의 생애에 담긴 신비를 묵상합니다.",
+    "full": "전체 기도문",
+    "prayersTitle": "기도문",
+    "aboutTitle": "묵주기도를 위한 간단한 안내",
+    "aboutText": "Santo Rosario는 매일의 기도를 조용히 돕기 위해 만든 작은 오프라인 앱입니다. 신비와 묵주알, 기도문을 분명하게 따라가고 싶은 분들을 위해 설계되었습니다.",
+    "aboutLink": "개발자 알아보기",
+    "options": "묵주기도 옵션",
+    "image": "묵주알",
+    "next": "다음 기도",
+    "restart": "다시 시작",
+    "showGuide": "기도 안내 보이기",
+    "prep": "준비",
+    "close": "마침",
+    "goTo": "이동",
+    "count": "묵주알",
+    "tabs": ["시작", "주님의 기도", "성모송 세 번", "성모송", "영광송", "파티마 기도", "성모찬송"],
+    "days": ["주일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"],
+    "dayShort": {"gozosos": "월 · 토", "luminosos": "목", "dolorosos": "화 · 금", "gloriosos": "수 · 주일"},
+    "mnames": {
+        "gozosos": ("환희의 신비", ["천사가 마리아께 예수님 잉태를 알림", "마리아께서 엘리사벳을 찾아보심", "예수님께서 탄생하심", "예수님께서 성전에 봉헌되심", "예수님께서 성전에서 발견되심"]),
+        "luminosos": ("빛의 신비", ["예수님께서 요르단에서 세례를 받으심", "예수님께서 카나의 혼인 잔치에서 당신을 드러내심", "예수님께서 하느님 나라를 선포하심", "예수님께서 거룩하게 변모하심", "예수님께서 성체성사를 세우심"]),
+        "dolorosos": ("고통의 신비", ["예수님께서 겟세마니에서 기도하심", "예수님께서 매 맞으심", "예수님께서 가시관을 쓰심", "예수님께서 십자가를 지심", "예수님께서 십자가에 못 박혀 돌아가심"]),
+        "gloriosos": ("영광의 신비", ["예수님께서 부활하심", "예수님께서 하늘에 오르심", "성령께서 강림하심", "마리아께서 하늘에 올림을 받으심", "마리아께서 하늘의 모후로 관을 받으심"]),
+    },
+    "prayers": {
+        "signo": ("시작", "성호경", "성부와 성자와 성령의 이름으로. 아멘.\n\n주님, 거룩한 십자가의 표지로 저희를 원수들에게서 구하소서."),
+        "credo": ("신앙 고백", "사도신경", "전능하신 천주 성부, 천지의 창조주를 저는 믿나이다. 그 외아들 우리 주 예수 그리스도님, 성령으로 인하여 동정 마리아께 잉태되어 나시고, 본시오 빌라도 통치 아래서 고난을 받으시고 십자가에 못 박혀 돌아가시고 묻히셨으며, 저승에 가시어 사흗날에 죽은 이들 가운데서 부활하시고 하늘에 올라 전능하신 천주 성부 오른편에 앉으시며, 그리로부터 산 이와 죽은 이를 심판하러 오시리라 믿나이다. 성령을 믿으며, 거룩하고 보편된 교회와 모든 성인의 통공을 믿으며, 죄의 용서와 육신의 부활을 믿으며, 영원한 삶을 믿나이다. 아멘."),
+        "padre": ("주님의 기도", "주님의 기도", "하늘에 계신 우리 아버지, 아버지의 이름이 거룩히 빛나시며, 아버지의 나라가 오시며, 아버지의 뜻이 하늘에서와 같이 땅에서도 이루어지소서.\n\n오늘 저희에게 일용할 양식을 주시고, 저희에게 잘못한 이를 저희가 용서하오니 저희 죄를 용서하시고, 저희를 유혹에 빠지지 않게 하시고 악에서 구하소서. 아멘."),
+        "ave": ("천사의 인사", "성모송", "은총이 가득하신 마리아님, 기뻐하소서. 주님께서 함께 계시니 여인 중에 복되시며 태중의 아들 예수님 또한 복되시나이다.\n\n천주의 성모 마리아님, 이제와 저희 죽을 때에 저희 죄인을 위하여 빌어 주소서. 아멘."),
+        "aveFe": ("하느님 아버지의 따님", "성모송", "지극히 거룩하신 마리아님, 하느님 아버지의 따님이시며 출산 전에도 지극히 순결하신 동정녀시여, 저희 믿음을 당신 손에 맡기오니 밝혀 주소서.\n\n은총이 가득하신 마리아님, 기뻐하소서. 주님께서 함께 계시니 여인 중에 복되시며 태중의 아들 예수님 또한 복되시나이다.\n\n천주의 성모 마리아님, 이제와 저희 죽을 때에 저희 죄인을 위하여 빌어 주소서. 아멘."),
+        "aveEsperanza": ("하느님 아드님의 어머니", "성모송", "지극히 거룩하신 마리아님, 하느님 아드님의 어머니시며 출산 중에도 지극히 순결하신 동정녀시여, 저희 희망을 당신 손에 맡기오니 북돋아 주소서.\n\n은총이 가득하신 마리아님, 기뻐하소서. 주님께서 함께 계시니 여인 중에 복되시며 태중의 아들 예수님 또한 복되시나이다.\n\n천주의 성모 마리아님, 이제와 저희 죽을 때에 저희 죄인을 위하여 빌어 주소서. 아멘."),
+        "aveCaridad": ("하느님 성령의 정배", "성모송", "지극히 거룩하신 마리아님, 하느님 성령의 정배시며 출산 후에도 지극히 순결하신 동정녀시여, 저희 사랑을 당신 손에 맡기오니 타오르게 하소서.\n\n은총이 가득하신 마리아님, 기뻐하소서. 주님께서 함께 계시니 여인 중에 복되시며 태중의 아들 예수님 또한 복되시나이다.\n\n천주의 성모 마리아님, 이제와 저희 죽을 때에 저희 죄인을 위하여 빌어 주소서. 아멘."),
+        "gloria": ("영광송", "영광송", "영광이 성부와 성자와 성령께, 처음과 같이 이제와 항상 영원히. 아멘."),
+        "fatima": ("파티마 발현 · 1917", "파티마 기도", "오, 나의 예수님, 저희 죄를 용서하시며 저희를 지옥 불에서 구하시고 모든 영혼을 하늘로 이끌어 주소서. 특히 주님의 자비를 가장 필요로 하는 영혼들을 돌보소서. 아멘."),
+        "salve": ("마침 기도", "성모찬송", "모후이시며 사랑이 넘친 어머니, 우리의 생명, 기쁨, 희망이시여.\n\n당신께 부르짖나이다. 슬픔의 골짜기에서 눈물을 흘리며 탄식하는 하와의 자손들이 당신께 부르짖나이다. 저희의 변호자시여, 저희에게 자비로운 눈길을 돌리시고, 이 귀양살이가 끝난 뒤에 당신 태중의 복되신 아들 예수님을 보여 주소서.\n\n너그러우시고 자애로우시며 오, 아름다우신 동정 마리아님. 아멘."),
+    },
+    "rosary": ("신비 알림", "신비를 알리고, 주님의 기도를 바치기 전에 잠시 묵상합니다.", "믿음", "희망", "사랑", "중"),
+    "rubrics": ("묵주기도를 시작하며", "각 단을 시작하며", "묵주기도를 시작하며", "희망을 위하여", "사랑을 위하여", "각 단에서 열 번", "각 단을 마치며", "파티마에서 알려진 기도 · 1917", "마침 기도", "성모송 세 번"),
+})
 
 MYSTERY_OVERRIDES = {
     "de": {"gozosos": ("Freudenreiche Geheimnisse", ["Die Verkündigung an Maria", "Der Besuch Marias bei Elisabeth", "Die Geburt Jesu", "Die Darstellung Jesu im Tempel", "Jesus wird im Tempel wiedergefunden"]), "luminosos": ("Lichtreiche Geheimnisse", ["Die Taufe Jesu im Jordan", "Die Hochzeit zu Kana", "Die Verkündigung des Reiches Gottes", "Die Verklärung des Herrn", "Die Einsetzung der Eucharistie"]), "dolorosos": ("Schmerzhafte Geheimnisse", ["Die Todesangst Jesu im Garten", "Die Geißelung Jesu", "Die Dornenkrönung", "Jesus trägt das Kreuz", "Die Kreuzigung und der Tod Jesu"]), "gloriosos": ("Glorreiche Geheimnisse", ["Die Auferstehung Jesu", "Die Himmelfahrt des Herrn", "Die Herabkunft des Heiligen Geistes", "Die Aufnahme Mariens in den Himmel", "Die Krönung Mariens"])},

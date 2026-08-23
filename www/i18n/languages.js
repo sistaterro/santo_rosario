@@ -129,5 +129,15 @@ window.SANTO_ROSARIO_LANGUAGES = [
       "Hungría",
       "comunidades húngaras vecinas"
     ]
+  },
+  {
+    "code": "ko",
+    "name": "Coreano",
+    "nativeName": "한국어",
+    "status": "available",
+    "markets": [
+      "Corea del Sur",
+      "diáspora coreana"
+    ]
   }
 ];

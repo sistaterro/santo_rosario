@@ -23,17 +23,17 @@ The app is designed as a practical guide for the way the Rosary is commonly pray
 - Includes a large interactive rosary: the central cross advances the prayer and the beads update visually.
 - Persists rosary progress for the current day and resets automatically when the date changes.
 - Shows a completion state when the Rosary ends, with a clear restart option.
-- Includes i18n catalogs for 12 languages. On first run, it uses the device language when supported; otherwise it falls back to English. User changes persist afterward.
+- Includes i18n catalogs for 13 languages. On first run, it uses the device language when supported; otherwise it falls back to English. User changes persist afterward.
 
 ## Languages
 
 General UI copy lives in `www/i18n/`. Available catalogs:
 
 ```text
-es, pt, en, it, fr, pl, de, fil, vi, ro, hr, hu
+es, pt, en, it, fr, pl, de, fil, vi, ro, hr, hu, ko
 ```
 
-The language selector label intentionally stays as `Language` so it remains recognizable regardless of the active language. Daily Scripture and Latin phrases are handled separately in `www/data/verses.js` and `www/data/latin.js`.
+The language selector label intentionally stays as `Language` so it remains recognizable regardless of the active language. Korean uses standard UTF-8/Hangul support and does not need special runtime handling. Daily Scripture and Latin phrases are handled separately in `www/data/verses.js` and `www/data/latin.js`.
 
 Editorial note: translations are a functional first pass. Before publishing a language as pastorally final, review it with native speakers and appropriate liturgical sources, especially the longer prayers.
 

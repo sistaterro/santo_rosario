@@ -28,7 +28,7 @@ El archivo `prompt.md` contiene la intencion completa del usuario. Leerlo si se 
 Catalogos actuales:
 
 ```text
-es, pt, en, it, fr, pl, de, fil, vi, ro, hr, hu
+es, pt, en, it, fr, pl, de, fil, vi, ro, hr, hu, ko
 ```
 
 Todos estan marcados como `available`. La etiqueta del selector debe mantenerse siempre como `Language`, incluso cuando la app este traducida.
@@ -37,7 +37,7 @@ La preferencia de idioma se guarda en `localStorage` con la clave `santoRosario.
 
 Importante: las traducciones son una primera version funcional. Antes de lanzar mercados no hispanos, revisar con hablantes nativos y fuentes liturgicas adecuadas, sobre todo las oraciones largas. La frase biblica diaria y la frase latina siguen fuera del sistema i18n y tienen su propio tratamiento.
 
-`tools/generate_i18n.py` regenera `www/i18n/languages.js` y todos los `www/i18n/*.js`. Si se corrige una traduccion generada, actualizar el generador tambien o el cambio se perdera al regenerar.
+`tools/generate_i18n.py` regenera `www/i18n/languages.js` y todos los `www/i18n/*.js`. Si se corrige una traduccion generada, actualizar el generador tambien o el cambio se perdera al regenerar. Coreano usa `ko` y funciona por UTF-8/Hangul sin tratamiento especial.
 
 ## Estructura Relevante
 
