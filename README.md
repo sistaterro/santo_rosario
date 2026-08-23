@@ -54,12 +54,9 @@ www/
   data/
     verses.js
     latin.js
-  rvr1909-quotes.txt
 android/
 docs/readme-images/
 assets/
-tools/generate_i18n.py
-language-list.csv
 ```
 
 ## Useful Commands
@@ -85,11 +82,4 @@ android/app/build/outputs/apk/debug/app-debug.apk
 - Translatable UI copy is loaded from JS catalogs in `www/i18n/`.
 - Language preference is stored in `localStorage` as `santoRosario.language.v1`, with migration from the former `santoRosario.idioma.v1`.
 - Rosary progress is stored in `localStorage` as `santoRosario.progress.v1`, with migration from the former `santoRosario.progreso.v1`.
-- `tools/generate_i18n.py` regenerates `languages.js` and the language catalogs.
-- `tools/add_english_verses_from_kjv.py` repopulates `translations.en` in `www/data/verses.js` from public-domain KJV.
-- `tools/populate_all_verse_translations.py` repopulates daily verse translations from public-domain sources where available.
-- `tools/validate_verse_translations.py` validates daily verse translation coverage.
-- `tools/add_english_latin_translations.py` normalizes daily Latin phrases and repopulates `translations.en`.
-- `tools/populate_all_latin_translations.py` repopulates all daily Latin phrase translations.
-- `tools/validate_latin_translations.py` validates daily Latin phrase translation coverage.
 - `rosary.html` uses an interactive SVG rosary; the central cross is the primary advance control and has an initial pulse cue.

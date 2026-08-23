@@ -1,5 +1,5 @@
 window.SANTO_ROSARIO_LATIN = {
-  "fuente": "latin.txt procesado y normalizado",
+  "fuente": "Latin devotional phrase selection",
   "total": 43,
   "regla": "Las frases latinas se repiten desde el 1 de enero hasta completar el ano. En anos bisiestos, el 29 de febrero usa la misma frase asignada al 31 de diciembre.",
   "frases": [

@@ -1,7 +1,7 @@
 window.SANTO_ROSARIO_VERSES = {
-  "fuente": "www/rvr1909-quotes.txt processed from Reina-Valera 1909",
+  "fuente": "Reina-Valera 1909 public-domain selection",
   "total": 366,
-  "regla": "Cada d?a del a?o usa una cita RVR1909. El calendario normal usa las primeras 365; el calendario bisiesto usa las 366 citas en orden.",
+  "regla": "Cada dia del ano usa una cita RVR1909. El calendario normal usa las primeras 365; el calendario bisiesto usa las 366 citas en orden.",
   "versiculos": [
     {
       "id": "v001",
