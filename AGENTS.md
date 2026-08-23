@@ -15,7 +15,7 @@ Este archivo es la unica nota tecnica de handoff que queda en el repo despues de
 - App web en `www/`, usada como `webDir` de Capacitor.
 - Proyecto Android generado en `android/`.
 - `npm.cmd run sync`, `npm.cmd run run:android` y `npm.cmd run build:android` funcionan.
-- APK debug generado en `android/app/build/outputs/apk/debug/app-debug.apk`.
+- APK debug generado en `android/app/build/outputs/apk/debug/app-debug.apk` y copiado automaticamente a `app-download/santo_rosario.apk` con `npm.cmd run build:android`.
 - Iconos y splash configurados.
 - `@capacitor-community/keep-awake` mantiene la pantalla activa mientras la app esta visible.
 - `www/index.html` muestra inicio informativo, misterios del dia, versiculo diario, frase latina diaria y seccion "Sobre nosotros".
@@ -114,7 +114,6 @@ npm.cmd run build:android
 - Revisar UX en telefono fisico: tamano de letra, contraste, zonas tactiles, barra de estado y barra de navegacion Android.
 - Falta revision liturgica/nativa de traducciones no espanolas.
 - Falta revisar manifest/nombre visual de Android.
-- Crear un script de build/distribucion que, despues de generar el APK, copie `android/app/build/outputs/apk/debug/app-debug.apk` a una ruta facil del repo, por ejemplo `app-download/santo_rosario.apk`. La idea es tener una carpeta de descarga a no mas de un nivel para compartir/probar sin navegar por la estructura interna de Android.
 
 ## Riesgos / Cosas a No Romper
 

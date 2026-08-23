@@ -70,8 +70,10 @@ npm.cmd run build:android
 The debug APK is generated at:
 
 ```text
-android/app/build/outputs/apk/debug/app-debug.apk
+app-download/santo_rosario.apk
 ```
+
+`npm.cmd run build:android` also leaves Gradle's original debug APK at `android/app/build/outputs/apk/debug/app-debug.apk`.
 
 ## Technical Notes
 
@@ -82,4 +84,5 @@ android/app/build/outputs/apk/debug/app-debug.apk
 - Translatable UI copy is loaded from JS catalogs in `www/i18n/`.
 - Language preference is stored in `localStorage` as `santoRosario.language.v1`, with migration from the former `santoRosario.idioma.v1`.
 - Rosary progress is stored in `localStorage` as `santoRosario.progress.v1`, with migration from the former `santoRosario.progreso.v1`.
+- `npm.cmd run build:android` compiles the debug APK and copies it to `app-download/santo_rosario.apk` for easy GitHub access.
 - `rosary.html` uses an interactive SVG rosary; the central cross is the primary advance control and has an initial pulse cue.

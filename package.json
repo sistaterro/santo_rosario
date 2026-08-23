@@ -7,10 +7,11 @@
     "sync": "cap sync android",
     "copy": "cap copy android",
     "assets": "npx @capacitor/assets generate --android",
+    "apk:download": "copy /Y android\\app\\build\\outputs\\apk\\debug\\app-debug.apk app-download\\santo_rosario.apk",
     "clean": "cd android && gradlew.bat clean && cd ..",
     "open:android": "cap open android",
     "run:android": "npm run sync && npm run assets && set \"ANDROID_PREFS_ROOT=\" && set \"JAVA_HOME=C:\\Users\\dazju\\AppData\\Local\\Packages\\Microsoft.4297127D64EC6_8wekyb3d8bbwe\\LocalCache\\Local\\runtime\\java-runtime-delta\\windows-x64\\java-runtime-delta\" && npx cap run android",
-    "build:android": "npm run sync && npm run assets && cd android && set \"ANDROID_PREFS_ROOT=\" && set \"JAVA_HOME=C:\\Users\\dazju\\AppData\\Local\\Packages\\Microsoft.4297127D64EC6_8wekyb3d8bbwe\\LocalCache\\Local\\runtime\\java-runtime-delta\\windows-x64\\java-runtime-delta\" && gradlew.bat assembleDebug",
+    "build:android": "npm run sync && npm run assets && cd android && set \"ANDROID_PREFS_ROOT=\" && set \"JAVA_HOME=C:\\Users\\dazju\\AppData\\Local\\Packages\\Microsoft.4297127D64EC6_8wekyb3d8bbwe\\LocalCache\\Local\\runtime\\java-runtime-delta\\windows-x64\\java-runtime-delta\" && gradlew.bat assembleDebug && cd .. && npm run apk:download",
     "release:android": "npm run sync && npm run assets && cd android && set \"ANDROID_PREFS_ROOT=\" && set \"JAVA_HOME=C:\\Users\\dazju\\AppData\\Local\\Packages\\Microsoft.4297127D64EC6_8wekyb3d8bbwe\\LocalCache\\Local\\runtime\\java-runtime-delta\\windows-x64\\java-runtime-delta\" && gradlew.bat assembleRelease"
   },
   "dependencies": {
