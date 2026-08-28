@@ -115,6 +115,30 @@ npm.cmd run build:android
 - Falta revision liturgica/nativa de traducciones no espanolas.
 - Falta revisar manifest/nombre visual de Android.
 
+### Preparacion para F-Droid
+
+Auditoria inicial realizada el 2026-08-24 contra la politica y la guia de inclusion vigentes de F-Droid. No asumir que el proyecto ya esta listo para publicar: primero resolver los bloqueantes y luego probar una receta real en el entorno de `fdroidserver`.
+
+Bloqueantes o de prioridad alta:
+
+- **Licencia FLOSS ausente:** el repositorio no tiene `LICENSE`, `COPYING` ni avisos de copyright. Elegir una licencia reconocida por OSI/FSF (por ejemplo, GPL-3.0-or-later o Apache-2.0), agregar el archivo correspondiente y declarar su identificador SPDX en README y metadata. Confirmar tambien que el autor acepta licenciar con ella todo el codigo propio.
+- **Licencias y procedencia del contenido:** documentar por separado la procedencia y licencia/dominio publico de RVR1909, frases latinas, traducciones, iconos, splash y capturas. F-Droid revisa tambien textos y assets, no solamente codigo. Las traducciones generadas o adaptadas necesitan una licencia compatible y una declaracion clara de autoria/procedencia.
+- **Google Services residual:** `android/build.gradle` descarga `com.google.gms:google-services:4.4.2` y `android/app/build.gradle` conserva el bloque condicional de `google-services.json`, aunque la app no usa Firebase ni Play Services. Eliminar ambos antes de presentar la app; F-Droid rechaza dependencias/herramientas propietarias y sus scanners pueden marcar esta referencia.
+- **Build desde fuente en Linux no validado:** los scripts de release actuales usan `build-android.bat`, `gradlew.bat` y `copy`, todos orientados a Windows. Crear/documentar un camino POSIX reproducible (`npm ci`, sincronizacion Capacitor y `./gradlew assembleRelease`) y validarlo en Linux o en el contenedor oficial de F-Droid. La build no debe depender de Android Studio ni de rutas locales.
+- **APK precompilada dentro del arbol fuente:** `app-download/santo_rosario.apk` esta versionado. Mantener la descarga publica como un asset de GitHub Releases y sacar el APK del arbol fuente antes de enviar a F-Droid, o preparar la receta para eliminarlo durante el escaneo. F-Droid prefiere y verifica builds hechas desde fuente; un binario debug dentro del repositorio agrega ruido y puede disparar revision.
+- **Versionado Android sin proceso de releases:** `android/app/build.gradle` sigue fijo en `versionCode 1` y `versionName "1.0"`, `package.json` dice `0.1.0` y no existen tags Git. Definir una unica fuente/procedimiento de versionado, incrementar siempre `versionCode` y etiquetar cada commit publicado (por ejemplo `v1.0.0`) para que F-Droid detecte actualizaciones.
+
+Necesarias para una presentacion completa:
+
+- **Metadata F-Droid/Fastlane ausente:** crear `fastlane/metadata/android/en-US/` y, idealmente, `es-AR/` con `short_description.txt`, `full_description.txt`, icono, capturas y `changelogs/<versionCode>.txt`. Las imagenes actuales de README no estan en una ruta que F-Droid importe automaticamente.
+- **Receta F-Droid sin probar:** preparar y validar el YAML de `fdroiddata` para `com.santorosario.app`, incluyendo la instalacion reproducible de dependencias Node desde `package-lock.json`, el sync de Capacitor y la salida release. Confirmar que el scanner no detecte binarios o dependencias no libres.
+- **Application ID por confirmar:** comprobar que `com.santorosario.app` sea globalmente unico y no este usado por otra aplicacion. F-Droid recomienda un ID derivado de un dominio controlado por el desarrollador; evaluar cambiarlo antes de la primera publicacion, porque hacerlo despues rompe la ruta de actualizacion.
+- **Permiso de red posiblemente innecesario:** `AndroidManifest.xml` declara `android.permission.INTERNET`, aunque la app se presenta como offline y el unico enlace web visible apunta al sitio del desarrollador. Verificar si el enlace puede abrirse mediante una app externa sin ese permiso y retirarlo si no es necesario, siguiendo el principio de minimo privilegio.
+- **FileProvider demasiado amplio y aparentemente sin uso:** el manifiesto incluye un `FileProvider` y `file_paths.xml` expone `external-path` con `path="."`. Confirmar si Capacitor realmente lo necesita; si no hay funciones de compartir/archivos, quitar provider y rutas para reducir superficie de seguridad.
+- **Release reproducible y firma:** definir si F-Droid firmara sus builds o si se publicaran APK upstream firmadas y verificables. Si se quiere conservar la misma firma entre GitHub y F-Droid, configurar y probar builds reproducibles con `Binaries`/`AllowedAPKSigningKeys`; nunca versionar la clave privada.
+- **Pruebas insuficientes:** solo quedan tests de ejemplo generados por Capacitor. Agregar al menos pruebas automatizadas de calendario diario, persistencia/reset, seleccion de idioma, fallback de traducciones y secuencia cuenta-oracion; despues ejecutar una prueba de instalacion y flujo completo sobre el APK release.
+- **Privacidad y ficha de publicacion:** documentar que no hay tracking, publicidad, cuentas ni recoleccion de datos; revisar si el enlace externo o futuras funciones implican alguna Anti-Feature. Mantener la descripcion alineada con el comportamiento real offline.
+
 ## Riesgos / Cosas a No Romper
 
 - No reescribir la app desde cero sin razon fuerte.
